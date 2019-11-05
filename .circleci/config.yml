@@ -10,7 +10,10 @@ jobs:
       - checkout
       - run:
           name: install
-          command: npm install
+          command: yarn install
+      - run:
+          name: build
+          command: yarn build
       - run:
           name: release
-          command: npm run semantic-release || true
+          command: yarn run semantic-release || true
