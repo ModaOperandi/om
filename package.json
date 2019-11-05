@@ -7,8 +7,8 @@
   "author": "ModaOperandi",
   "license": "MIT",
   "scripts": {
-    "build:storybook": "build-storybook",
-    "build": "yarn compile && yarn types",
+    "build:storybook": "NODE_ENV=storybook build-storybook",
+    "build": "NODE_ENV=production yarn compile && yarn types",
     "clean": "rm -rf ./dist",
     "compile": "yarn webpack",
     "prepublishOnly": "yarn clean && yarn build",
