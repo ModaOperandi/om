@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "build:storybook": "NODE_ENV=storybook build-storybook",
-    "build:documentation": "NODE_ENV=production cd documentation && yarn build",
+    "build:documentation": "NODE_ENV=production yarn build && cd documentation && yarn build",
     "build": "NODE_ENV=production yarn compile && yarn types",
     "clean": "rm -rf ./dist",
     "compile": "yarn webpack",
