@@ -13,10 +13,12 @@
   ],
   "scripts": {
     "build:storybook": "NODE_ENV=storybook build-storybook",
+    "build:documentation": "NODE_ENV=production cd documentation && yarn build",
     "build": "NODE_ENV=production yarn compile && yarn types",
     "clean": "rm -rf ./dist",
     "compile": "yarn webpack",
     "prepublishOnly": "yarn clean && yarn build",
+    "start": "cd documentation && yarn start",
     "storybook": "start-storybook -p 6006",
     "types": "tsc -p tsconfig.json --emitDeclarationOnly"
   },
