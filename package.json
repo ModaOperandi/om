@@ -1,0 +1,9 @@
+{
+  "name": "@moda/om",
+  "version": "0.0.1",
+  "description": "Moda Operandi design system",
+  "main": "dist/index.js",
+  "repository": "git@github.com:ModaOperandi/om.git",
+  "author": "ModaOperandi",
+  "license": "MIT"
+}
