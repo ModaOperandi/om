@@ -1,0 +1,8 @@
+{
+  "short_name": "Om",
+  "name": "Moda Operandi - Om",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

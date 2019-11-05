@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "Moda Operandi design system",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/index.css",
   "repository": "git@github.com:ModaOperandi/om.git",
   "author": "ModaOperandi",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build:storybook": "NODE_ENV=storybook build-storybook",
     "build": "NODE_ENV=production yarn compile && yarn types",

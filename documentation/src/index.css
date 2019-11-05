@@ -1,0 +1,8 @@
+@import "~@moda/om/dist/index.css";
+
+body {
+  margin: 0;
+  font-family: "Moda Operandi Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
