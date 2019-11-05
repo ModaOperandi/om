@@ -19,6 +19,7 @@
     "compile": "yarn webpack",
     "predeploy:documentation": "NODE_ENV=production yarn build && cd documentation && yarn install && yarn build",
     "prepublishOnly": "yarn clean && yarn build",
+    "scaffold": "node scripts/scaffold",
     "semantic-release": "semantic-release",
     "start": "cd documentation && yarn start",
     "storybook": "start-storybook -p 6006",
