@@ -20,7 +20,13 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [{ loader: ExtractCssChunks.loader }, "css-loader", "sass-loader"]
+        use: [
+          ...(process.env.NODE_ENV === "production"
+            ? [{ loader: ExtractCssChunks.loader }]
+            : ["style-loader"]),
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   },
