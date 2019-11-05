@@ -5,5 +5,35 @@
   "main": "dist/index.js",
   "repository": "git@github.com:ModaOperandi/om.git",
   "author": "ModaOperandi",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "prepublishOnly": "yarn clean && yarn build",
+    "compile": "yarn webpack",
+    "types": "tsc -p tsconfig.json --emitDeclarationOnly",
+    "build": "yarn compile && yarn types"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "dependencies": {
+    "moda-themes": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.0",
+    "@types/react": "^16.9.11",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "extract-css-chunks-webpack-plugin": "^4.6.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.11.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
 }

@@ -1,0 +1,10 @@
+@import "~moda-themes";
+
+.Button {
+  padding: space(3) space(5);
+  color: color("black");
+  background-color: color("white");
+  border: 1px solid color("cement");
+  font-family: font-family("sans");
+  font-size: 1rem;
+}
