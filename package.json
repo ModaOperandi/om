@@ -1,6 +1,6 @@
 {
   "name": "@moda/om",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Moda Operandi design system",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,6 +19,7 @@
     "compile": "yarn webpack",
     "predeploy:documentation": "NODE_ENV=production yarn build && cd documentation && yarn install && yarn build",
     "prepublishOnly": "yarn clean && yarn build",
+    "semantic-release": "semantic-release",
     "start": "cd documentation && yarn start",
     "storybook": "start-storybook -p 6006",
     "types": "tsc -p tsconfig.json --emitDeclarationOnly"
@@ -34,6 +35,8 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-links": "^5.2.5",
     "@storybook/addons": "^5.2.5",
@@ -41,7 +44,9 @@
     "@types/react": "^16.9.11",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "cz-conventional-changelog": "3.0.2",
     "extract-css-chunks-webpack-plugin": "^4.6.0",
+    "husky": "^3.0.9",
     "node-sass": "^4.12.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -49,6 +54,20 @@
     "style-loader": "^1.0.0",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "semantic-release": "^15.13.30"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
