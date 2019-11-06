@@ -1,0 +1,14 @@
+@import "~moda-themes";
+
+.Text {
+  font-size: 1rem;
+  line-height: 1.25;
+
+  &--sans {
+    font-family: font-family("sans");
+  }
+
+  &--serif {
+    font-family: font-family("serif");
+  }
+}
