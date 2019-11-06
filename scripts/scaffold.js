@@ -36,11 +36,26 @@ export const Default = () => (
 );
 `;
 
+const TESTS = `
+import React from "react";
+import { shallow } from "enzyme";
+
+import { ${componentName} } from "./${componentName}";
+
+describe("${componentName}", () => {
+  it("renders correctly", () => {
+    const component = shallow(<${componentName} />);
+    expect(component.text()).toEqual("Hello");
+  });
+});
+`;
+
 const FILES = {
   "index.ts": `export * from "./${componentName}";`,
   [`${componentName}.tsx`]: COMPONENT,
   [`${componentName}.scss`]: STYLES,
-  [`${componentName}.stories.tsx`]: STORIES
+  [`${componentName}.stories.tsx`]: STORIES,
+  [`${componentName}.test.tsx`]: TESTS
 };
 
 fs.mkdir(`./src/components/${componentName}`, { recursive: true }, err => {
