@@ -1,0 +1,44 @@
+@import "~moda-themes";
+
+.Stack {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Stack--vertical {
+  flex-direction: column;
+
+  > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @each $value in $scale {
+    $i: index($scale, $value);
+
+    &.Stack--#{$i} {
+      > * + * {
+        margin-top: $value;
+      }
+    }
+  }
+}
+
+.Stack--horizontal {
+  flex-direction: row;
+
+  > * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @each $value in $scale {
+    $i: index($scale, $value);
+
+    &.Stack--#{$i} {
+      > * + * {
+        margin-left: $value;
+      }
+    }
+  }
+}
