@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const [componentName] = process.argv.slice(2);
+const [componentType, componentName] = process.argv.slice(2);
 
 const STYLES = `
 @import "~moda-themes";
@@ -29,7 +29,7 @@ import React from "react";
 
 import { ${componentName} } from "./${componentName}";
 
-export default { title: "${componentName}" };
+export default { title: "${componentType}|${componentName}" };
 
 export const Default = () => (
   <${componentName} />
@@ -58,15 +58,19 @@ const FILES = {
   [`${componentName}.test.tsx`]: TESTS
 };
 
-fs.mkdir(`./src/components/${componentName}`, { recursive: true }, err => {
-  if (err) throw err;
+fs.mkdir(
+  `./src/${componentType.toLowerCase()}/${componentName}`,
+  { recursive: true },
+  err => {
+    if (err) throw err;
 
-  Object.entries(FILES).forEach(([fileName, fileSource]) => {
-    const filePath = `./src/components/${componentName}/${fileName}`;
+    Object.entries(FILES).forEach(([fileName, fileSource]) => {
+      const filePath = `./src/${componentType.toLowerCase()}/${componentName}/${fileName}`;
 
-    fs.writeFile(filePath, fileSource, err => {
-      console.log(`Wrote: ${filePath}`);
-      if (err) console.error(err);
+      fs.writeFile(filePath, fileSource, err => {
+        console.log(`Wrote: ${filePath}`);
+        if (err) console.error(err);
+      });
     });
-  });
-});
+  }
+);
