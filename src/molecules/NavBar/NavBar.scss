@@ -1,0 +1,63 @@
+@import '~moda-themes';
+
+.NavBar {
+  $self: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: color('noise');
+  font-family: font-family('sans');
+  font-size: 0.75rem;
+
+  &__section {
+    display: flex;
+
+    > a {
+      color: color('black');
+      padding: 1.25em;
+      letter-spacing: letter-spacing('lg');
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 250ms;
+    }
+
+    &:hover {
+      // Display associated pulldown
+      #{$self}__pulldown {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__pulldown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms;
+    transition-delay: 100ms;
+  }
+
+  &:hover {
+    // Fade out all but active sections
+    #{$self}__section {
+      > a {
+        color: color('nokia');
+      }
+
+      &:hover > a {
+        color: color('black');
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 0.625rem;
+  }
+}
