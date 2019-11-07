@@ -3,7 +3,7 @@ import React from "react";
 import { Text } from "./Text";
 import { Stack } from "../Stack";
 
-export default { title: "Text" };
+export default { title: "Components|Text" };
 
 export const Default = () => (
   <Stack space={8}>
