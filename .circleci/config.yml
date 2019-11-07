@@ -1,11 +1,10 @@
 version: 2
+defaults: &defaults
+  docker:
+    - image: "circleci/node:latest"
 jobs:
   build:
-    branches:
-      only:
-        - master
-    docker:
-      - image: "circleci/node:latest"
+    <<: *defaults
     steps:
       - checkout
       - run:
@@ -15,5 +14,33 @@ jobs:
           name: build
           command: yarn build
       - run:
+          name: test
+          command: yarn test
+      - run:
           name: release
-          command: yarn run semantic-release || true
+          command: yarn semantic-release || true
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: install
+          command: yarn install
+      - run:
+          name: build
+          command: yarn build
+      - run:
+          name: test
+          command: yarn test
+workflows:
+  version: 2
+  pull_request:
+    jobs:
+      - test
+  master:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
