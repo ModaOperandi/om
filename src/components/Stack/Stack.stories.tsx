@@ -3,7 +3,7 @@ import { space } from "moda-themes";
 
 import { Stack } from "./Stack";
 
-export default { title: "Stack" };
+export default { title: "Components|Stack" };
 
 export const Default = () => (
   <Stack>

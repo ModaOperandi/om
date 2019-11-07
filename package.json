@@ -19,7 +19,8 @@
     "compile": "yarn webpack",
     "predeploy:documentation": "NODE_ENV=production yarn build && cd documentation && yarn install && yarn build",
     "prepublishOnly": "yarn clean && yarn build",
-    "scaffold": "node scripts/scaffold",
+    "scaffold:component": "node scripts/scaffold Components",
+    "scaffold:molecule": "node scripts/scaffold Molecules",
     "semantic-release": "semantic-release",
     "start": "cd documentation && yarn start",
     "storybook": "start-storybook -p 6006",
@@ -30,6 +31,7 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
+    "@moda/icons": "^3.4.0",
     "moda-themes": "^5.1.0"
   },
   "devDependencies": {
@@ -54,6 +56,7 @@
     "extract-css-chunks-webpack-plugin": "^4.6.0",
     "husky": "^3.0.9",
     "identity-obj-proxy": "^3.0.0",
+    "ignore-not-found-export-webpack-plugin": "^1.0.1",
     "jest": "^24.9.0",
     "node-sass": "^4.12.0",
     "react": "^16.11.0",

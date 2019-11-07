@@ -1339,6 +1339,11 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
+"@moda/icons@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-3.4.0.tgz#482288e444d66fc2d693da357df7f97ec1c899b0"
+  integrity sha512-/VK42ASdNzI4Ap1rmv99HCA+oWM2okm5feT2p3DnkgC6Au3xt5WGosMfMvTjrUhEL/gqPbRmFH04zbGLNwvB9A==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -6555,6 +6560,11 @@ iferr@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/iferr/-/iferr-1.0.2.tgz#e9fde49a9da06dc4a4194c6c9ed6d08305037a6d"
   integrity sha512-9AfeLfji44r5TKInjhz3W9DyZI1zR1JAf2hVBMGhddAKPqBsupb89jGfbCTHIGZd6fGZl9WlHdn4AObygyMKwg==
+
+ignore-not-found-export-webpack-plugin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ignore-not-found-export-webpack-plugin/-/ignore-not-found-export-webpack-plugin-1.0.1.tgz#9227691ea6a7478843563fede883e45c89297dc9"
+  integrity sha512-rVGtZt7wHdigYMlu3B/YHj9GHvutG7dG1D98UEgAY7sr3vj9Q8cQbqUTS9hDseFRkn8yzl9qvuuIRc4wncHsWg==
 
 ignore-walk@^3.0.1:
   version "3.0.3"

@@ -1,0 +1,56 @@
+@import '~moda-themes';
+
+.NavBarPulldownSubsection {
+  $self: &;
+  $columnWidth: 11rem;
+
+  min-width: $columnWidth;
+
+  > h3 {
+    margin: space(4) space(3);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: letter-spacing('lg');
+  }
+
+  &--default {
+    > a {
+      display: block;
+      width: 95%;
+      text-decoration: none;
+      color: color('black');
+      padding: space(3);
+      line-height: 1;
+      font-size: 0.8125rem;
+
+      &:hover {
+        background-color: color('noise');
+      }
+    }
+  }
+
+  &--highlighted {
+    #{$self}__links {
+      display: flex;
+      align-items: flex-start;
+
+      > a {
+        width: $columnWidth;
+        padding: 0 space(3);
+        text-decoration: none;
+
+        > img {
+          max-width: 100%;
+        }
+
+        > h4 {
+          margin: space(5);
+          font-size: 1rem;
+          font-family: font-family('serif');
+          text-align: center;
+          color: color('black');
+        }
+      }
+    }
+  }
+}

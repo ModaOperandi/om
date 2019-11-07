@@ -1,0 +1,10 @@
+@import '~moda-themes';
+
+.NavBarPulldown {
+  display: flex;
+  justify-content: center;
+  padding: space(5) space(5) space(8) space(5);
+  background-color: color('white');
+  border-bottom: 1px solid color('noise');
+  box-shadow: 0 space(5) space(5) -1em rgba(black, 0.2);
+}
