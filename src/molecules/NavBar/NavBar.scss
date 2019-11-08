@@ -1,27 +1,29 @@
-@import '~moda-themes';
+@import "~@moda/tokens";
 
 .NavBar {
   $self: &;
+  $transitionTime: 250ms;
+  $transitionDelay: 100ms;
 
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: center;
-  background-color: color('noise');
-  font-family: font-family('sans');
-  font-size: 0.75rem;
+  background-color: color("noise");
+  font-family: font-family("sans");
+  font-size: font-size(0);
 
   &__section {
     display: flex;
 
     > a {
-      color: color('black');
-      padding: 1.25em;
-      letter-spacing: letter-spacing('lg');
+      color: color("black");
+      padding: space(4);
+      letter-spacing: letter-spacing(3);
       text-decoration: none;
       text-transform: uppercase;
-      transition: color 250ms;
+      transition: color $transitionTime;
     }
 
     &:hover {
@@ -40,24 +42,20 @@
     top: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 250ms;
-    transition-delay: 100ms;
+    transition: opacity $transitionTime;
+    transition-delay: $transitionDelay;
   }
 
   &:hover {
     // Fade out all but active sections
     #{$self}__section {
       > a {
-        color: color('nokia');
+        color: color("nokia");
       }
 
       &:hover > a {
-        color: color('black');
+        color: color("black");
       }
     }
-  }
-
-  @media screen and (max-width: 800px) {
-    font-size: 0.625rem;
   }
 }

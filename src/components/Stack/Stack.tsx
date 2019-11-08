@@ -9,7 +9,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Stack: React.FC<Props> = ({
   children,
-  space = 5,
+  space = 4,
   direction = "vertical",
   ...rest
 }) => (

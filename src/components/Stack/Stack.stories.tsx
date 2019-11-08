@@ -1,5 +1,5 @@
 import React from "react";
-import { space } from "moda-themes";
+import { space } from "@moda/tokens";
 
 import { Stack } from "./Stack";
 
@@ -8,7 +8,7 @@ export default { title: "Components|Stack" };
 export const Default = () => (
   <Stack>
     <p>
-      Defaults to {`space={5}`} === {space.scale[5]}
+      Defaults to {`space={4}`} === {space.scale[4]}
     </p>
 
     <span>Notice the different element tags</span>
@@ -31,7 +31,7 @@ export const Spacing = () => {
       {space.scale.map((value, index) => {
         return (
           <Stack
-            style={{ border: "1em solid red", margin: "1em" }}
+            style={{ border: "1rem solid red", margin: "1rem" }}
             space={index}
           >
             <p

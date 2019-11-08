@@ -31,8 +31,7 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@moda/icons": "^3.4.0",
-    "moda-themes": "^5.1.0"
+    "@moda/icons": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.0",
@@ -41,6 +40,7 @@
     "@babel/preset-typescript": "^7.7.0",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@moda/tokens": "^1.0.2",
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-links": "^5.2.5",
     "@storybook/addons": "^5.2.5",

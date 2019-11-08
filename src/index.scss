@@ -1,5 +1,3 @@
-@import "~moda-themes";
+@import "~@moda/tokens";
 
 @include global-styles;
-@include set-root-theme("global");
-@include data-themes;

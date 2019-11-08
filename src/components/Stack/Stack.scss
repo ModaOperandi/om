@@ -1,4 +1,6 @@
-@import "~moda-themes";
+@import "~@moda/tokens";
+
+$scale: map-get($space, "scale");
 
 .Stack {
   display: flex;

@@ -1,4 +1,4 @@
-@import '~moda-themes';
+@import "~@moda/tokens";
 
 .NavBarPulldownSubsection {
   $self: &;
@@ -7,10 +7,10 @@
   min-width: $columnWidth;
 
   > h3 {
-    margin: space(4) space(3);
-    font-size: 0.75rem;
+    margin: space(3) space(2);
+    font-size: font-size(0);
     text-transform: uppercase;
-    letter-spacing: letter-spacing('lg');
+    letter-spacing: letter-spacing(3);
   }
 
   &--default {
@@ -18,13 +18,13 @@
       display: block;
       width: 95%;
       text-decoration: none;
-      color: color('black');
-      padding: space(3);
-      line-height: 1;
-      font-size: 0.8125rem;
+      color: color("black");
+      padding: space(2);
+      line-height: line-height(1);
+      font-size: font-size(1);
 
       &:hover {
-        background-color: color('noise');
+        background-color: color("noise");
       }
     }
   }
@@ -36,7 +36,7 @@
 
       > a {
         width: $columnWidth;
-        padding: 0 space(3);
+        padding: 0 space(2);
         text-decoration: none;
 
         > img {
@@ -44,11 +44,11 @@
         }
 
         > h4 {
-          margin: space(5);
-          font-size: 1rem;
-          font-family: font-family('serif');
+          margin: space(4);
+          font-size: font-size(2);
+          font-family: font-family("serif");
           text-align: center;
-          color: color('black');
+          color: color("black");
         }
       }
     }

@@ -1344,6 +1344,11 @@
   resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-3.4.0.tgz#482288e444d66fc2d693da357df7f97ec1c899b0"
   integrity sha512-/VK42ASdNzI4Ap1rmv99HCA+oWM2okm5feT2p3DnkgC6Au3xt5WGosMfMvTjrUhEL/gqPbRmFH04zbGLNwvB9A==
 
+"@moda/tokens@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-1.0.2.tgz#72588ef9b1763460e1d06f8594e82c4314c67c04"
+  integrity sha512-g4y8JPocGLddKvUuvktcHTjRnaubiro6ubkKitgwk1ueO1A+ZhayuPx53UZt08qJZTO42EJw25hIM4Weh1Pd4A==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -8726,11 +8731,6 @@ mkdirp@0.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdir
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
-
-moda-themes@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/moda-themes/-/moda-themes-5.1.0.tgz#e0d0421f0d5baba6dd310885eaaaaa848bb16185"
-  integrity sha512-S9y38YuMO/fpwrCJB6zhocafOaFnsWC2nvHfkBye9f0RXR4R8O3bfHTbph+50nyhYVQdMYXs168jMh+0rYvwGw==
 
 modify-values@^1.0.0:
   version "1.0.1"
