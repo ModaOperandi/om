@@ -1,0 +1,32 @@
+@import "~@moda/tokens";
+
+@mixin stack($index: 4, $direction: vertical) {
+  display: flex;
+  justify-content: flex-start;
+
+  @if $direction == vertical {
+    flex-direction: column;
+
+    > * {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    > * + * {
+      margin-top: space($index);
+    }
+  }
+
+  @if $direction == horizontal {
+    flex-direction: row;
+
+    > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    > * + * {
+      margin-left: space($index);
+    }
+  }
+}

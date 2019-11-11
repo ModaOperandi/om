@@ -1,4 +1,4 @@
-@import "~@moda/tokens";
+@import "~om";
 
 .NavBarPulldownSubsection {
   $self: &;
@@ -7,21 +7,18 @@
   min-width: $columnWidth;
 
   > h3 {
-    margin: space(3) space(2);
-    font-size: font-size(0);
-    text-transform: uppercase;
-    letter-spacing: letter-spacing(3);
+    @include text(h4);
+    margin: spacing(3, 2);
   }
 
   &--default {
     > a {
+      @include text(body);
       display: block;
       width: 95%;
       text-decoration: none;
       color: color("black");
       padding: space(2);
-      line-height: line-height(1);
-      font-size: font-size(1);
 
       &:hover {
         background-color: color("noise");
@@ -36,7 +33,7 @@
 
       > a {
         width: $columnWidth;
-        padding: 0 space(2);
+        padding: spacing(0, 2);
         text-decoration: none;
 
         > img {
@@ -44,9 +41,8 @@
         }
 
         > h4 {
+          @include text(h2);
           margin: space(4);
-          font-size: font-size(2);
-          font-family: font-family("serif");
           text-align: center;
           color: color("black");
         }

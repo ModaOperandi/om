@@ -1,5 +1,6 @@
 import React from "react";
-import { Button } from "@moda/om";
+
+import { Sidebar } from "./components/Sidebar";
 
 import "./App.scss";
 
@@ -8,7 +9,9 @@ const App: React.FC = () => {
     <div className="App">
       <h1>@moda/om</h1>
 
-      <Button>Button</Button>
+      <div className="App__content">
+        <Sidebar />
+      </div>
     </div>
   );
 };

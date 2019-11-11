@@ -1,4 +1,4 @@
-@import "~@moda/tokens";
+@import "~om";
 
 .NavBar {
   $self: &;
@@ -18,11 +18,10 @@
     display: flex;
 
     > a {
+      @include text(h4);
       color: color("black");
       padding: space(4);
-      letter-spacing: letter-spacing(3);
       text-decoration: none;
-      text-transform: uppercase;
       transition: color $transitionTime;
     }
 
