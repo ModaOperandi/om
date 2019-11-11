@@ -3,7 +3,7 @@ const fs = require("fs");
 const [componentType, componentName] = process.argv.slice(2);
 
 const STYLES = `
-@import "~@moda/tokens";
+@import "~om";
 
 .${componentName} {
   // Hello

@@ -1,6 +1,6 @@
 @import "./stack";
 
-.Story.stack {
+.Story.Mixins.stack {
   @include stack(4);
 
   > * {
