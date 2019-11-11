@@ -1,3 +1,13 @@
+@import "~@moda/om";
+
 .App {
-  text-align: center;
+  > h1 {
+    @include text(h1);
+    margin: space(8);
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+  }
 }
