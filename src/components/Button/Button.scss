@@ -1,10 +1,9 @@
-@import "~@moda/tokens";
+@import "~om";
 
 .Button {
-  padding: space(2) space(4);
+  @include text(body);
+  padding: spacing(2, 4);
   color: color("black");
   background-color: color("white");
   border: 1px solid color("cement");
-  font-family: font-family("sans");
-  font-size: font-size(2);
 }
