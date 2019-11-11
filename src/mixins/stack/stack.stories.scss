@@ -1,0 +1,13 @@
+@import "./stack";
+
+.Story.stack {
+  @include stack(4);
+
+  > * {
+    background-color: yellow;
+  }
+
+  &--horizontal {
+    @include stack(6, $direction: horizontal);
+  }
+}

@@ -1,5 +1,4 @@
 const path = require("path");
-const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -20,26 +19,17 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [
-          ...(process.env.NODE_ENV === "production"
-            ? [{ loader: ExtractCssChunks.loader }]
-            : ["style-loader"]),
-          "css-loader",
-          "sass-loader"
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js"]
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".scss"],
+    alias: {
+      om: path.join(__dirname, "src/index.scss")
+    }
   },
   externals: {
     react: "react"
-  },
-  plugins: [
-    new ExtractCssChunks({
-      filename: "index.css",
-      ignoreOrder: false
-    })
-  ]
+  }
 };

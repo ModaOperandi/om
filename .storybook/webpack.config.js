@@ -3,7 +3,14 @@ const baseConfig = require("../webpack.config");
 
 module.exports = ({ config }) => {
   config.resolve.extensions.push(...baseConfig.resolve.extensions);
+
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    ...baseConfig.resolve.alias
+  };
+
   config.module.rules.push(...baseConfig.module.rules);
+
   config.plugins.push(
     ...[
       // Webpack doesn't export type definitions so any types we choose to export

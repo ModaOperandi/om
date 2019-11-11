@@ -1,0 +1,12 @@
+@import "./text";
+
+.Story.text {
+  width: 50%;
+  margin: space(6);
+
+  @each $treatment in $treatments {
+    &--#{$treatment} {
+      @include text($treatment);
+    }
+  }
+}

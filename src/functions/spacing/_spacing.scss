@@ -1,0 +1,11 @@
+@import "~@moda/tokens";
+
+@function spacing($indices...) {
+  $spacing: ();
+
+  @each $index in $indices {
+    $spacing: append($spacing, space($index));
+  }
+
+  @return $spacing;
+}

@@ -4,12 +4,15 @@
   "description": "Moda Operandi design system",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "style": "dist/index.css",
+  "style": "src/index.scss",
   "repository": "git@github.com:ModaOperandi/om.git",
   "author": "ModaOperandi",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "src/functions",
+    "src/mixins",
+    "src/index.scss"
   ],
   "scripts": {
     "build:documentation": "NODE_ENV=production cd documentation && yarn build",

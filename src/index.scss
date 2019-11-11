@@ -1,3 +1,6 @@
 @import "~@moda/tokens";
 
+@import "./mixins/mixins";
+@import "./functions/functions";
+
 @include global-styles;
