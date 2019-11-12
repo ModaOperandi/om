@@ -11,3 +11,34 @@ Moda Operandi's design system expressed as React components.
 - **URLS**:
   - **Documentation**: https://moda-om-documentation.netlify.com/
   - **Storybook**: https://moda-om-storybook.netlify.com/
+
+## Getting Started
+
+```
+yarn add @moda/om
+```
+
+Import the Component/Molecule CSS in your global SCSS file:
+
+```scss
+@import "~@moda/om/dist/css";
+```
+
+Import and use components:
+
+```typescript
+import { Button } from "@moda/om";
+
+<Button>Click me</Button>;
+```
+
+Import and use the mixins/functions library:
+
+```scss
+@import "~@moda/om";
+
+body {
+  @include text(body);
+  padding: spacing(2, 4);
+}
+```
