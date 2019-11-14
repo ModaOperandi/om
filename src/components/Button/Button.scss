@@ -1,9 +1,9 @@
 @import '~om';
 
 .Button {
-  @include text(body);
+  @include text(body1);
   padding: spacing(2, 4);
-  color: color('black');
-  background-color: color('white');
-  border: 1px solid color('cement');
+  color: color(ink);
+  background-color: color(snow);
+  border: 1px solid color(cement);
 }

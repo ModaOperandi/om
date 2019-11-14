@@ -38,7 +38,7 @@ Import and use the mixins/functions library:
 @import '~@moda/om';
 
 body {
-  @include text(body);
+  @include text(body1);
   padding: spacing(2, 4);
 }
 ```
