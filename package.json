@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@moda/icons": "^3.4.0",
-    "@moda/tokens": "^1.0.2"
+    "@moda/tokens": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.0",
