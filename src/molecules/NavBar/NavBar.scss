@@ -10,7 +10,7 @@
   align-items: center;
   width: 100%;
   justify-content: center;
-  background-color: color('noise');
+  background-color: color(noise);
   font-family: font-family('sans');
   font-size: font-size(0);
 
@@ -18,8 +18,8 @@
     display: flex;
 
     > a {
-      @include text(h4);
-      color: color('black');
+      @include text(eyebrow);
+      color: color(ink);
       padding: space(4);
       text-decoration: none;
       transition: color $transitionTime;
@@ -49,11 +49,11 @@
     // Fade out all but active sections
     #{$self}__section {
       > a {
-        color: color('nokia');
+        color: color(fog);
       }
 
       &:hover > a {
-        color: color('black');
+        color: color(ink);
       }
     }
   }

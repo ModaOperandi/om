@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   padding: spacing(4, 4, 7, 4);
-  background-color: color('white');
-  border-bottom: 1px solid color('noise');
-  box-shadow: 0 space(4) space(4) -1rem color('black', 0.2);
+  background-color: color(snow);
+  border-bottom: 1px solid color(noise);
+  box-shadow: 0 space(4) space(4) -1rem color(ink, 0.2);
 }
