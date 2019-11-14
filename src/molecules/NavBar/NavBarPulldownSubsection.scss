@@ -1,4 +1,4 @@
-@import "~om";
+@import '~om';
 
 .NavBarPulldownSubsection {
   $self: &;
@@ -17,11 +17,11 @@
       display: block;
       width: 95%;
       text-decoration: none;
-      color: color("black");
+      color: color('black');
       padding: space(2);
 
       &:hover {
-        background-color: color("noise");
+        background-color: color('noise');
       }
     }
   }
@@ -44,7 +44,7 @@
           @include text(h2);
           margin: space(4);
           text-align: center;
-          color: color("black");
+          color: color('black');
         }
       }
     }

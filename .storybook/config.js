@@ -1,6 +1,6 @@
-import { configure, addDecorator } from "@storybook/react";
-import { globalStyles } from "./decorators/globalStyles";
+import { configure, addDecorator } from '@storybook/react';
+import { globalStyles } from './decorators/globalStyles';
 
 addDecorator(globalStyles);
 
-configure(require.context("../src", true, /\.stories\.tsx$/), module);
+configure(require.context('../src', true, /\.stories\.tsx$/), module);

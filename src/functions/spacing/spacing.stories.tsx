@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import "./spacing.stories.scss";
+import './spacing.stories.scss';
 
-export default { title: "Functions|spacing" };
+export default { title: 'Functions|spacing' };
 
 export const Default = () => (
-  <div className="Story Functions spacing">Inspect my margin/padding</div>
+  <div className='Story Functions spacing'>Inspect my margin/padding</div>
 );

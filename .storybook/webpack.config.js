@@ -1,5 +1,5 @@
-const IgnoreNotFoundExportPlugin = require("ignore-not-found-export-webpack-plugin");
-const baseConfig = require("../webpack.config");
+const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-webpack-plugin');
+const baseConfig = require('../webpack.config');
 
 module.exports = ({ config }) => {
   config.resolve.extensions.push(...baseConfig.resolve.extensions);
