@@ -4,22 +4,13 @@ import './Divider.scss';
 
 export interface Props {
   text: string;
-  noLine?: boolean;
-  doubleLine?: boolean;
+  type?: "no-line" | "two-line";
 }
 
-export const Divider: React.FC<Props> = ({text, noLine, doubleLine}) => {
-  const classes = classNames({
-    'Divider': true,
-    'Divider--no-line': noLine,
-    'Divider--is-double': doubleLine
-  });
-
+export const Divider: React.FC<Props> = ({text, type}) => {
   return (
-    <div className={classes}>
-      <hr className="Divider__left"/>
+    <div className={'Divider ' + (type ? `Divider--${type}` : '')}>
       <div className="Divider__text">{text}</div>
-      <hr className="Divider__right"/>
     </div>
   );
 };
