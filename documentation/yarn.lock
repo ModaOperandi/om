@@ -1323,8 +1323,8 @@
 
 "@moda/tokens@^1.0.2":
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-1.0.2.tgz#72588ef9b1763460e1d06f8594e82c4314c67c04"
-  integrity sha512-g4y8JPocGLddKvUuvktcHTjRnaubiro6ubkKitgwk1ueO1A+ZhayuPx53UZt08qJZTO42EJw25hIM4Weh1Pd4A==
+  resolved "https://moda.jfrog.io/moda/api/npm/npm/@moda/tokens/-/tokens-1.0.2.tgz#72588ef9b1763460e1d06f8594e82c4314c67c04"
+  integrity sha1-cliO+bF2NGDh0G+FlOgsQxTGfAQ=
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
