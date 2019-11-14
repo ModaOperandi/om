@@ -1,7 +1,7 @@
 version: 2
 defaults: &defaults
   docker:
-    - image: "circleci/node:latest"
+    - image: 'circleci/node:latest'
 jobs:
   build:
     <<: *defaults

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./NavBarPulldownSubsection.scss";
+import './NavBarPulldownSubsection.scss';
 
 export type Link = {
   label: string;
@@ -12,13 +12,13 @@ export type Thumb = Link & {
 };
 
 export type DefaultSubsection = {
-  type: "default";
+  type: 'default';
   label: string;
   links: Link[];
 };
 
 export type HighlightedSubsection = {
-  type: "highlighted";
+  type: 'highlighted';
   label: string;
   links: Thumb[];
 };
@@ -29,10 +29,7 @@ export interface Props {
   subsection: Subsection;
 }
 
-export const NavBarPulldownSubsection: React.FC<Props> = ({
-  subsection,
-  ...rest
-}) => {
+export const NavBarPulldownSubsection: React.FC<Props> = ({ subsection, ...rest }) => {
   return (
     <div
       className={`NavBarPulldownSubsection NavBarPulldownSubsection--${subsection.type}`}
@@ -40,15 +37,15 @@ export const NavBarPulldownSubsection: React.FC<Props> = ({
     >
       <h3>{subsection.label}</h3>
 
-      {subsection.type === "default" &&
+      {subsection.type === 'default' &&
         subsection.links.map(link => (
           <a key={link.href} href={link.href}>
             {link.label}
           </a>
         ))}
 
-      {subsection.type === "highlighted" && (
-        <div className="NavBarPulldownSubsection__links">
+      {subsection.type === 'highlighted' && (
+        <div className='NavBarPulldownSubsection__links'>
           {subsection.links.map(link => (
             <a key={link.href} href={link.href}>
               <img src={link.src} alt={link.label} />
