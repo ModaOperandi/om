@@ -7,7 +7,7 @@
 
   &__section {
     > h4 {
-      @include text(h6);
+      @include text(body1);
       margin-top: 0;
       margin-bottom: space(1);
     }

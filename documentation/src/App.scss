@@ -2,7 +2,7 @@
 
 .App {
   > h1 {
-    @include text(h3);
+    @include text(h4);
     margin: space(8);
     text-align: center;
   }
