@@ -1,6 +1,6 @@
 # @moda/om
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![](https://img.shields.io/npm/v/@moda/om/latest.svg)](https://www.npmjs.com/package/@moda/om) [![](https://img.shields.io/circleci/build/gh/ModaOperandi/om/master)](https://circleci.com/gh/ModaOperandi/om)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![](https://img.shields.io/npm/v/@moda/om)](https://www.npmjs.com/package/@moda/om) [![](https://img.shields.io/circleci/build/gh/ModaOperandi/om/master)](https://circleci.com/gh/ModaOperandi/om)
 
 Moda Operandi's design system expressed as React components.
 
