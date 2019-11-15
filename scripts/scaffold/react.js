@@ -1,6 +1,11 @@
 const fs = require('fs');
 
-const [componentType, componentName] = process.argv.slice(2);
+const [componentType = 'Components', componentName] = process.argv.slice(2);
+
+if (!componentName) {
+  console.error(`Please name your ${componentType.slice(0, -1)}!`);
+  return;
+}
 
 const STYLES = `
 @import "~om";

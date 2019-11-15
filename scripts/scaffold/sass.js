@@ -2,6 +2,11 @@ const fs = require('fs');
 
 const [sassType, sassName] = process.argv.slice(2);
 
+if (!sassName) {
+  console.error(`Please name your ${sassType.slice(0, -1)}!`);
+  return;
+}
+
 const SCSS = `
 @import "~@moda/tokens";
 
