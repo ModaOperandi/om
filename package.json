@@ -38,7 +38,7 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@moda/icons": "^3.4.0",
+    "@moda/icons": "^4.0.0",
     "@moda/tokens": "^2.1.0",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6"
