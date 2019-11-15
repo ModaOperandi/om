@@ -1,0 +1,24 @@
+@import '~om';
+
+.SiteFooterInlineItem {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  padding-right: space(3);
+  margin-right: space(3);
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-right: 1px solid color(ink, $opacity: 0.25);
+    height: 100%;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
