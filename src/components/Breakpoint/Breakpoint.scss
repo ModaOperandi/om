@@ -1,0 +1,38 @@
+@import '~om';
+
+.Breakpoint {
+  $keys: map-keys($breakpoints);
+
+  display: none;
+
+  @for $i from 1 through length($keys) {
+    $key: nth($keys, $i);
+    $width: map-get($breakpoints, $key);
+
+    $prevWidth: null;
+    @if $i - 1 > 1 {
+      $prevKey: nth($keys, $i - 1);
+      $prevWidth: map-get($breakpoints, $prevKey) + 1;
+    } @else {
+      $prevWidth: 0;
+    }
+
+    &--at-#{$key} {
+      @media (min-width: $prevWidth) and (max-width: $width) {
+        display: block;
+      }
+    }
+
+    &--gt-#{$key} {
+      @media (min-width: $width + 1) {
+        display: block;
+      }
+    }
+
+    &--lt-#{$key} {
+      @media (max-width: $width) {
+        display: block;
+      }
+    }
+  }
+}
