@@ -4,9 +4,12 @@
   $self: &;
 
   @include text(eyebrow);
+  display: inline-block;
   padding: spacing(4, 7);
-  cursor: pointer;
   border: 1px solid;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 
   &,
   &--primary {

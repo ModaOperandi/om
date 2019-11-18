@@ -54,3 +54,26 @@ export const Secondary = () => (
     </p>
   </>
 );
+
+export const PrimaryWithHref = () => (
+  <>
+    <p>
+      <Button href='#anchor'>Add to cart</Button>
+    </p>
+    <p>
+      <Button hover href='#anchor'>
+        Add to cart
+      </Button>
+    </p>
+
+    <p>
+      <Button focus href='#anchor'>
+        Add to cart
+      </Button>
+    </p>
+
+    <p>
+      <Button disabled>Please select a size first</Button>
+    </p>
+  </>
+);

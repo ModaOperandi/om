@@ -3,21 +3,37 @@ import classNames from 'classnames';
 
 import './Button.scss';
 
-export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type CommonProps = {
   secondary?: boolean;
   focus?: boolean;
   hover?: boolean;
-}
+};
 
-export const Button: React.FC<Props> = ({ children, secondary, hover, focus, ...rest }) => (
-  <button
-    className={classNames('Button', {
-      'Button--secondary': secondary,
-      'Button--hover': hover,
-      'Button--focus': focus
-    })}
-    {...rest}
-  >
-    {children}
-  </button>
-);
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  href?: undefined;
+};
+
+type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href?: string;
+};
+
+const hasHref = (props: ButtonProps | AnchorProps): props is AnchorProps => 'href' in props;
+
+export const Button: React.FC<CommonProps & (ButtonProps | AnchorProps)> = ({
+  secondary,
+  hover,
+  focus,
+  ...rest
+}) => {
+  const className = classNames('Button', {
+    'Button--secondary': secondary,
+    'Button--hover': hover,
+    'Button--focus': focus
+  });
+
+  return hasHref(rest) ? (
+    <a className={className} {...rest} />
+  ) : (
+    <button className={className} {...rest} />
+  );
+};
