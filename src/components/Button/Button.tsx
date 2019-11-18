@@ -1,11 +1,23 @@
-import React from "react";
+import React from 'react';
+import classNames from 'classnames';
 
-import "./Button.scss";
+import './Button.scss';
 
-export interface Props extends React.HTMLAttributes<HTMLButtonElement> {}
+export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  secondary?: boolean;
+  focus?: boolean;
+  hover?: boolean;
+}
 
-export const Button: React.FC<Props> = ({ children, ...rest }) => (
-  <button className="Button" {...rest}>
+export const Button: React.FC<Props> = ({ children, secondary, hover, focus, ...rest }) => (
+  <button
+    className={classNames('Button', {
+      'Button--secondary': secondary,
+      'Button--hover': hover,
+      'Button--focus': focus
+    })}
+    {...rest}
+  >
     {children}
   </button>
 );

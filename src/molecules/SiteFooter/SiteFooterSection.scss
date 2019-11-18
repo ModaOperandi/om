@@ -1,0 +1,17 @@
+@import '~om';
+
+.SiteFooterSection {
+  flex: 2;
+  > h3 {
+    @include text(eyebrow);
+    margin: spacing(0, 0, 3, 0);
+  }
+
+  > a {
+    display: block;
+  }
+
+  &:last-child {
+    flex: 4;
+  }
+}

@@ -1,4 +1,4 @@
-@import "~@moda/tokens";
+@import '~@moda/tokens';
 
 @mixin stack($index: 4, $direction: vertical) {
   display: flex;

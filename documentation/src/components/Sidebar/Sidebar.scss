@@ -1,25 +1,25 @@
-@import "~@moda/om";
+@import '~@moda/om';
 
 .Sidebar {
   @include stack(5);
   padding: space(5);
-  background-color: color("noise");
+  background-color: color(noise);
 
   &__section {
     > h4 {
-      @include text(h4);
+      @include text(body1);
       margin-top: 0;
       margin-bottom: space(1);
     }
 
     > a {
-      @include text(body);
+      @include text(body1);
       display: block;
       padding: spacing(0, 0, 0, 2);
       transition: opacity 200ms;
       cursor: pointer;
       text-decoration: none;
-      color: color("black");
+      color: color(ink);
 
       &:hover {
         opacity: 0.5;

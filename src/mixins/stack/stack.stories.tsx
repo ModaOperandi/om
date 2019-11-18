@@ -1,12 +1,12 @@
-import React from "react";
-import { space } from "@moda/tokens";
+import React from 'react';
+import { space } from '@moda/tokens';
 
-import "./stack.stories.scss";
+import './stack.stories.scss';
 
-export default { title: "Mixins|stack" };
+export default { title: 'Mixins|stack' };
 
 export const Default = () => (
-  <div className="Story Mixins stack">
+  <div className='Story Mixins stack'>
     <p>
       Defaults to {`$space: 4`} === {space.scale[4]}
     </p>
@@ -18,7 +18,7 @@ export const Default = () => (
 );
 
 export const Horizontal = () => (
-  <div className="Story Mixins stack stack--horizontal">
+  <div className='Story Mixins stack stack--horizontal'>
     <p>Accepts {`$direction: horizontal`}</p>
 
     <span>Notice the different element tags</span>

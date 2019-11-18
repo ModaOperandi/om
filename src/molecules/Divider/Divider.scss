@@ -1,49 +1,46 @@
-@import "~om";
-
+@import '~om';
 
 .Divider {
+  $self: &;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: '';
     flex: 1;
     border: none;
-    background-color: color('cashmere');
+    background-color: color(elephant);
     height: 1px;
     width: 50%;
   }
 
   &__text {
     width: auto;
-    padding: 0px space(4);
-    @include text(h2);
-
+    padding: 0 space(4);
+    @include text(h6, serif);
   }
 
   &--two-line {
-    .Divider__text {
-      @include text(h4);
+    #{$self}__text {
+      @include text(eyebrow);
     }
 
-    &:before, &:after {
-      $space-between-lines: .175rem;
+    &:before,
+    &:after {
+      $space-between-lines: 0.175rem;
       $offset: $space-between-lines/2;
       transform: translateY(calc(-#{$offset}));
-      background-color: color('black');
-      box-shadow: 0 $space-between-lines 0 0 color('black');
+      background-color: color(ink);
+      box-shadow: 0 $space-between-lines 0 0 color(ink);
     }
-
   }
 
   &--no-line {
-    &__text {
-      @include text(h1);
-    }
-
-    &:before, &:after {
+    &:before,
+    &:after {
       display: none;
     }
   }

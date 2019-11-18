@@ -1,7 +1,7 @@
-@import "~@moda/om";
-@import "~@moda/om/dist/styles";
+@import '~@moda/om';
+@import '~@moda/om/dist/styles';
 
 body {
   margin: 0;
-  @include text(body);
+  @include text(body1);
 }

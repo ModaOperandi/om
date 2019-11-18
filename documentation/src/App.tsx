@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { Sidebar } from "./components/Sidebar";
+import { Sidebar } from './components/Sidebar';
 
-import { Button } from "@moda/om";
+import { Button } from '@moda/om';
 
-import "./App.scss";
+import './App.scss';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>@moda/om</h1>
 
-      <div className="App__content">
+      <div className='App__content'>
         <Sidebar />
 
         <div>

@@ -1,6 +1,11 @@
-const fs = require("fs");
+const fs = require('fs');
 
-const [componentType, componentName] = process.argv.slice(2);
+const [componentType = 'Components', componentName] = process.argv.slice(2);
+
+if (!componentName) {
+  console.error(`Please name your ${componentType.slice(0, -1)}!`);
+  return;
+}
 
 const STYLES = `
 @import "~om";
@@ -51,26 +56,22 @@ describe("${componentName}", () => {
 `;
 
 const FILES = {
-  "index.ts": `export * from "./${componentName}";`,
+  'index.ts': `export * from "./${componentName}";`,
   [`${componentName}.tsx`]: COMPONENT,
   [`${componentName}.scss`]: STYLES,
   [`${componentName}.stories.tsx`]: STORIES,
   [`${componentName}.test.tsx`]: TESTS
 };
 
-fs.mkdir(
-  `./src/${componentType.toLowerCase()}/${componentName}`,
-  { recursive: true },
-  err => {
-    if (err) throw err;
+fs.mkdir(`./src/${componentType.toLowerCase()}/${componentName}`, { recursive: true }, err => {
+  if (err) throw err;
 
-    Object.entries(FILES).forEach(([fileName, fileSource]) => {
-      const filePath = `./src/${componentType.toLowerCase()}/${componentName}/${fileName}`;
+  Object.entries(FILES).forEach(([fileName, fileSource]) => {
+    const filePath = `./src/${componentType.toLowerCase()}/${componentName}/${fileName}`;
 
-      fs.writeFile(filePath, fileSource, err => {
-        console.log(`Wrote: ${filePath}`);
-        if (err) console.error(err);
-      });
+    fs.writeFile(filePath, fileSource, err => {
+      console.log(`Wrote: ${filePath}`);
+      if (err) console.error(err);
     });
-  }
-);
+  });
+});

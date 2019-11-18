@@ -1,8 +1,8 @@
-@import "~@moda/om";
+@import '~@moda/om';
 
 .App {
   > h1 {
-    @include text(h1);
+    @include text(h4);
     margin: space(8);
     text-align: center;
   }

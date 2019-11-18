@@ -21,6 +21,7 @@
     "build": "NODE_ENV=production yarn compile && yarn types",
     "clean": "rm -rf ./dist",
     "compile": "yarn webpack",
+    "format": "prettier --write '**/*'",
     "predeploy:documentation": "NODE_ENV=production yarn build && cd documentation && yarn install && yarn build",
     "prepublishOnly": "yarn clean && yarn build",
     "scaffold:component": "node scripts/scaffold/react Components",
@@ -37,8 +38,8 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@moda/icons": "^3.4.0",
-    "@moda/tokens": "^1.0.2",
+    "@moda/icons": "^4.0.0",
+    "@moda/tokens": "^2.1.0",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6"
   },
@@ -51,6 +52,7 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@storybook/addon-actions": "^5.2.6",
     "@storybook/addon-links": "^5.2.6",
+    "@storybook/addon-viewport": "^5.2.6",
     "@storybook/addons": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "@types/enzyme": "^3.10.3",
@@ -67,6 +69,7 @@
     "ignore-not-found-export-webpack-plugin": "^1.0.1",
     "jest": "^24.9.0",
     "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "sass-loader": "^8.0.0",

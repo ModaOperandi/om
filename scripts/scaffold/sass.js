@@ -1,6 +1,11 @@
-const fs = require("fs");
+const fs = require('fs');
 
 const [sassType, sassName] = process.argv.slice(2);
+
+if (!sassName) {
+  console.error(`Please name your ${sassType.slice(0, -1)}!`);
+  return;
+}
 
 const SCSS = `
 @import "~@moda/tokens";
@@ -38,19 +43,15 @@ const FILES = {
   [`${sassName}.stories.scss`]: STORIES_SCSS
 };
 
-fs.mkdir(
-  `./src/${sassType.toLowerCase()}/${sassName}`,
-  { recursive: true },
-  err => {
-    if (err) throw err;
+fs.mkdir(`./src/${sassType.toLowerCase()}/${sassName}`, { recursive: true }, err => {
+  if (err) throw err;
 
-    Object.entries(FILES).forEach(([fileName, fileSource]) => {
-      const filePath = `./src/${sassType.toLowerCase()}/${sassName}/${fileName}`;
+  Object.entries(FILES).forEach(([fileName, fileSource]) => {
+    const filePath = `./src/${sassType.toLowerCase()}/${sassName}/${fileName}`;
 
-      fs.writeFile(filePath, fileSource, err => {
-        console.log(`Wrote: ${filePath}`);
-        if (err) console.error(err);
-      });
+    fs.writeFile(filePath, fileSource, err => {
+      console.log(`Wrote: ${filePath}`);
+      if (err) console.error(err);
     });
-  }
-);
+  });
+});
