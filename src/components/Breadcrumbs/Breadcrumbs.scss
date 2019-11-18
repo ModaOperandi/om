@@ -1,0 +1,41 @@
+@import '~om';
+
+.Breadcrumbs {
+  @include text(body1);
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    position: relative;
+    padding-right: space(4);
+    margin-right: space(4);
+
+    > a {
+      color: color(cement);
+      text-decoration: none;
+
+      &:hover {
+        color: color(ink);
+        text-decoration: underline;
+      }
+    }
+
+    // Separators
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      border-right: 1px solid color(fog);
+      height: 75%;
+      transform: translateY(-50%) rotate(25deg);
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
+  }
+}
