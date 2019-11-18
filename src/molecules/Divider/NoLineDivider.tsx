@@ -1,10 +1,7 @@
 import React from 'react';
 import { Divider } from './Divider';
+import { Props as DividerProps } from './Divider';
 
-export interface Props {
-  text: string;
-}
-
-export const NoLineDivider: React.FC<Props> = props => {
+export const NoLineDivider: React.FC<DividerProps> = props => {
   return <Divider {...props} type={'no-line'} />;
 };
