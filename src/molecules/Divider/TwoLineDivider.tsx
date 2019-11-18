@@ -1,12 +1,7 @@
-import React from 'react';
-import {Divider} from "./Divider";
+import React from "react";
+import { Divider } from "./Divider";
+import { Props as DividerProps } from "./Divider";
 
-export interface Props {
-  text: string;
-}
-
-export const TwoLineDivider: React.FC<Props> = (props) => {
-  return (
-    <Divider {...props} type={"two-line"}/>
-  );
+export const TwoLineDivider: React.FC<DividerProps> = props => {
+  return <Divider {...props} type={"two-line"} />;
 };

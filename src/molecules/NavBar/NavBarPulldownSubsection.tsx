@@ -35,7 +35,9 @@ export const NavBarPulldownSubsection: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className={`NavBarPulldownSubsection NavBarPulldownSubsection--${subsection.type}`}
+      className={`NavBarPulldownSubsection NavBarPulldownSubsection--${
+        subsection.type
+      }`}
       {...rest}
     >
       <h3>{subsection.label}</h3>

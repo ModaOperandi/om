@@ -1,18 +1,15 @@
 import React from "react";
 
-import {Divider, NoLineDivider, TwoLineDivider} from "./";
+import { Divider, NoLineDivider, TwoLineDivider } from "./";
 
-export default {title: "Molecules|Divider"};
+export default { title: "Molecules|Divider" };
 
 export const Default = () => (
-  <Divider text="Default Divider"/>
+  <Divider verticalPadding={"30px"} text="Default Divider" />
 );
 
-export const withNoLine = () => (
-  <NoLineDivider text="Divider with No Line"/>
-);
+export const withNoLine = () => <NoLineDivider text="Divider with No Line" />;
 
 export const withDoubleLine = () => (
-  <TwoLineDivider text="Divider with Double Line"/>
+  <TwoLineDivider text="Divider with Double Line" />
 );
-
