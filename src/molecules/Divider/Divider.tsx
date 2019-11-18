@@ -9,7 +9,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Divider: React.FC<Props> = ({ text, type, ...rest }) => {
   return (
-    <div className={'Divider ' + (type ? `Divider--${type}` : '')} style={rest}>
+    <div className={'Divider ' + (type ? `Divider--${type}` : '')} {...rest}>
       <div className='Divider__text'>{text}</div>
     </div>
   );
