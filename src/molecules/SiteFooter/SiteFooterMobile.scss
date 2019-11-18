@@ -1,0 +1,26 @@
+@import '~om';
+
+.SiteFooterMobile {
+  > h3 {
+    @include text(eyebrow);
+    margin: spacing(0, 0, 3, 0);
+  }
+
+  &__buttons {
+    @include stack(3, $direction: horizontal);
+
+    > button,
+    > a {
+      flex: 1;
+    }
+  }
+
+  &__open-hours {
+    margin: space(3) 0;
+    text-align: center;
+  }
+
+  &__basement {
+    @include text(body2);
+  }
+}

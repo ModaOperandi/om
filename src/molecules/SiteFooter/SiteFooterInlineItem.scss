@@ -7,6 +7,16 @@
   padding-right: space(3);
   margin-right: space(3);
 
+  > a {
+    color: color(ink);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Trailing pipe
   &::after {
     display: block;
     content: '';
@@ -18,7 +28,7 @@
     height: 100%;
   }
 
-  &:last-child::after {
+  &:last-of-type::after {
     display: none;
   }
 }

@@ -1,8 +1,6 @@
 @import '~om';
 
-@import './SiteFooterSection.scss';
 @import './SiteFooterInlineItem.scss';
-@import './SiteFooterSub.scss';
 
 .SiteFooter {
   $borderWidth: space(1);
@@ -15,30 +13,4 @@
   @include text(body1);
   padding: spacing(6, 8);
   background-color: color(cream);
-
-  > h3 {
-    @include text(eyebrow);
-    margin: spacing(0, 0, 3, 0);
-  }
-
-  > div {
-    margin: spacing(3, 0);
-  }
-
-  a {
-    color: color(ink);
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &__sections {
-    display: flex;
-    padding: spacing(5, 0);
-    margin: spacing(5, 0);
-    border-top: 1px solid color(ink);
-    border-bottom: 1px solid color(ink);
-  }
 }

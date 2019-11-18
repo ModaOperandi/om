@@ -10,6 +10,8 @@ export interface GenerateMediaQuery {
 
 const breakpointKeys = Object.keys(breakpoints);
 
+const ONE_PIXEL = 1 / 16;
+
 export const generateMediaQuery = ({ mode, breakpoint }: GenerateMediaQuery): string => {
   switch (mode) {
     case 'at': {
@@ -17,12 +19,12 @@ export const generateMediaQuery = ({ mode, breakpoint }: GenerateMediaQuery): st
       const prevWidth =
         prevIndex === -1
           ? 0
-          : `${parseInt(breakpoints[breakpointKeys[prevIndex] as Breakpoint], 10) + 1}px`;
+          : `${parseInt(breakpoints[breakpointKeys[prevIndex] as Breakpoint], 10) + ONE_PIXEL}rem`;
 
       return `(min-width: ${prevWidth}) and (max-width: ${breakpoints[breakpoint]})`;
     }
     case 'gt':
-      return `(min-width: ${parseInt(breakpoints[breakpoint], 10) + 1}px)`;
+      return `(min-width: ${parseInt(breakpoints[breakpoint], 10) + ONE_PIXEL}rem)`;
     case 'lt':
       return `(max-width: ${breakpoints[breakpoint]})`;
   }

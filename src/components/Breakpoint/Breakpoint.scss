@@ -1,6 +1,7 @@
 @import '~om';
 
 .Breakpoint {
+  $onePixel: 1/16;
   $keys: map-keys($breakpoints);
 
   display: none;
@@ -12,7 +13,7 @@
     $prevWidth: null;
     @if $i - 1 > 1 {
       $prevKey: nth($keys, $i - 1);
-      $prevWidth: map-get($breakpoints, $prevKey) + 1;
+      $prevWidth: map-get($breakpoints, $prevKey) + $onePixel;
     } @else {
       $prevWidth: 0;
     }
@@ -24,7 +25,7 @@
     }
 
     &--gt-#{$key} {
-      @media (min-width: $width + 1) {
+      @media (min-width: $width + $onePixel) {
         display: block;
       }
     }
