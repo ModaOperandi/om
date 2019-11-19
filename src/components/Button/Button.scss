@@ -33,11 +33,13 @@
       background-color: color(fog);
     }
 
+    &#{$self}--disabled,
     &:disabled {
       color: color(cement);
       border-color: color(elephant);
       background-color: color(elephant);
       cursor: default;
+      pointer-events: none;
     }
   }
 
@@ -62,11 +64,13 @@
       background-color: color(fog);
     }
 
+    &#{$self}--disabled,
     &:disabled {
       color: color(cement);
       border-color: color(cement);
       background-color: color(elephant);
       cursor: default;
+      pointer-events: none;
     }
   }
 }

@@ -1,0 +1,18 @@
+@import '~om';
+
+.States {
+  @include stack(6);
+
+  &__props {
+    display: block;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: font-size(1);
+    color: color(fog);
+    padding: spacing(3, 2);
+
+    > strong {
+      text-decoration: underline;
+      color: color(ink);
+    }
+  }
+}
