@@ -1,0 +1,31 @@
+@import '~om';
+
+.DefinitionList {
+  @include text(body1);
+  margin: 0;
+
+  > dt,
+  > dd {
+    display: inline-block;
+    margin: 0;
+  }
+
+  > dt {
+    color: color(ink);
+    margin-right: space(2);
+  }
+
+  > dd {
+    &,
+    > a {
+      color: color(cement);
+    }
+
+    > a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
