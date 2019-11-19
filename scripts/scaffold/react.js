@@ -75,3 +75,18 @@ fs.mkdir(`./src/${componentType.toLowerCase()}/${componentName}`, { recursive: t
     });
   });
 });
+
+const indexFilePath = `./src/${componentType.toLowerCase()}/index.ts`;
+
+fs.readFile(indexFilePath, 'utf8', (err, data) => {
+  if (err) throw err;
+
+  fs.writeFile(
+    indexFilePath,
+    data + `export { ${componentName} } from './${componentName}';\n`,
+    err => {
+      console.log(`Updated index.`);
+      if (err) console.error(err);
+    }
+  );
+});
