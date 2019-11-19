@@ -1,79 +1,29 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
+import { States } from '../../utilities/States';
 import { Button } from './Button';
 
 export default { title: 'Components|Button' };
 
 export const Primary = () => (
-  <>
-    <p>
-      <Button onClick={action('clicked')}>Add to cart</Button>
-    </p>
-    <p>
-      <Button hover onClick={action('clicked')}>
-        Add to cart
-      </Button>
-    </p>
-
-    <p>
-      <Button focus onClick={action('clicked')}>
-        Add to cart
-      </Button>
-    </p>
-
-    <p>
-      <Button disabled>Please select a size first</Button>
-    </p>
-  </>
+  <States states={[null, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button onClick={action('clicked')}>Add to Cart</Button>
+  </States>
 );
 
 export const Secondary = () => (
-  <>
-    <p>
-      <Button secondary onClick={action('clicked')}>
-        Add to cart
-      </Button>
-    </p>
-    <p>
-      <Button secondary hover onClick={action('clicked')}>
-        Add to cart
-      </Button>
-    </p>
-
-    <p>
-      <Button secondary focus onClick={action('clicked')}>
-        Add to cart
-      </Button>
-    </p>
-
-    <p>
-      <Button secondary disabled>
-        Please select a size first
-      </Button>
-    </p>
-  </>
+  <States states={[null, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button secondary onClick={action('clicked')}>
+      Add to Cart
+    </Button>
+  </States>
 );
 
 export const PrimaryWithHref = () => (
-  <>
-    <p>
-      <Button href='#anchor'>Add to cart</Button>
-    </p>
-    <p>
-      <Button hover href='#anchor'>
-        Add to cart
-      </Button>
-    </p>
-
-    <p>
-      <Button focus href='#anchor'>
-        Add to cart
-      </Button>
-    </p>
-
-    <p>
-      <Button disabled>Please select a size first</Button>
-    </p>
-  </>
+  <States states={[null, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button href='#href' onClick={action('clicked')}>
+      Add to Cart
+    </Button>
+  </States>
 );

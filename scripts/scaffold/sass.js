@@ -55,3 +55,14 @@ fs.mkdir(`./src/${sassType.toLowerCase()}/${sassName}`, { recursive: true }, err
     });
   });
 });
+
+const indexFilePath = `./src/${sassType.toLowerCase()}/_${sassType.toLowerCase()}.scss`;
+
+fs.readFile(indexFilePath, 'utf8', (err, data) => {
+  if (err) throw err;
+
+  fs.writeFile(indexFilePath, data + `@import '${sassName}/${sassName}';\n`, err => {
+    console.log(`Updated index.`);
+    if (err) console.error(err);
+  });
+});
