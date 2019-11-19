@@ -1,0 +1,61 @@
+@import '~om';
+
+.Expandable {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    @include text(eyebrow);
+    position: relative;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    padding: spacing(3, 0);
+    user-select: none;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 2px;
+      width: space(3);
+      background-color: currentColor;
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(90deg);
+      transition: transform 200ms;
+    }
+
+    &:focus {
+      outline: 0;
+      text-decoration: underline;
+    }
+  }
+
+  &__contents {
+    @include text(body1);
+    display: none;
+  }
+
+  &--expanded {
+    #{$self}__name {
+      &::before {
+        transform: translateY(-50%);
+      }
+    }
+
+    #{$self}__contents {
+      display: block;
+    }
+  }
+}
