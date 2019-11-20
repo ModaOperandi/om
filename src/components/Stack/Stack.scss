@@ -1,0 +1,13 @@
+@import '~om';
+
+.Stack {
+  $scale: map-get($space, 'scale');
+  @each $direction in (horizontal, vertical) {
+    @each $value in $scale {
+      $i: (index($scale, $value) - 1);
+      &.Stack--#{$direction}-#{$i} {
+        @include stack($i, $direction);
+      }
+    }
+  }
+}
