@@ -4,3 +4,4 @@ export { Breadcrumbs } from './Breadcrumbs';
 export { Expandable } from './Expandable';
 export { DefinitionList } from './DefinitionList';
 export { Badge } from './Badge';
+export { Stack } from './Stack';

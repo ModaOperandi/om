@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 
 import { States } from '../../utilities/States';
 import { Button } from './Button';
+import { Stack } from '../Stack';
 import Heart from '@moda/icons/favorite-outline-16';
 
 export default { title: 'Components|Button' };
@@ -43,4 +44,13 @@ export const SecondaryWithIcon = () => (
       <Heart /> Add to Favorites
     </Button>
   </States>
+);
+
+export const VerticallyStacked = () => (
+  <Stack space={2}>
+    <Button>Add to cart</Button>
+    <Button secondary>
+      <Heart /> Add to Favorites
+    </Button>
+  </Stack>
 );
