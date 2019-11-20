@@ -13,6 +13,7 @@ export const Expandable: React.FC<Props> = ({
   name,
   expanded: __expanded__ = false,
   children,
+  className,
   ...rest
 }) => {
   const [expanded, setExpanded] = useState(__expanded__);
@@ -20,14 +21,13 @@ export const Expandable: React.FC<Props> = ({
 
   return (
     <div
-      className={classNames('Expandable', {
-        'Expandable--expanded': expanded
-      })}
+      className={classNames('Expandable', { 'Expandable--expanded': expanded }, className)}
       {...rest}
     >
       <button className='Expandable__name' onClick={handleClick}>
         {name}
       </button>
+
       <div className='Expandable__contents'>{children}</div>
     </div>
   );

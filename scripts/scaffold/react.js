@@ -8,7 +8,7 @@ if (!componentName) {
 }
 
 const STYLES = `
-@import "~om";
+@import '~om';
 
 .${componentName} {
   // Hello
@@ -16,25 +16,26 @@ const STYLES = `
 `;
 
 const COMPONENT = `
-import React from "react";
+import React from 'react';
+import classNames from 'classnames';
 
-import "./${componentName}.scss";
+import './${componentName}.scss';
 
 export interface Props extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const ${componentName}: React.FC<Props> = ({ ...rest }) => (
-  <div className="${componentName}" {...rest}>
+export const ${componentName}: React.FC<Props> = ({ className, ...rest }) => (
+  <div className={classNames('${componentName}', className)} {...rest}>
     Hello
   </div>
 );
 `;
 
 const STORIES = `
-import React from "react";
+import React from 'react';
 
-import { ${componentName} } from "./${componentName}";
+import { ${componentName} } from './${componentName}';
 
-export default { title: "${componentType}|${componentName}" };
+export default { title: '${componentType}|${componentName}' };
 
 export const Default = () => (
   <${componentName} />
@@ -42,21 +43,21 @@ export const Default = () => (
 `;
 
 const TESTS = `
-import React from "react";
-import { shallow } from "enzyme";
+import React from 'react';
+import { shallow } from 'enzyme';
 
-import { ${componentName} } from "./${componentName}";
+import { ${componentName} } from './${componentName}';
 
-describe("${componentName}", () => {
-  it("renders correctly", () => {
+describe('${componentName}', () => {
+  it('renders correctly', () => {
     const component = shallow(<${componentName} />);
-    expect(component.text()).toEqual("Hello");
+    expect(component.text()).toEqual('Hello');
   });
 });
 `;
 
 const FILES = {
-  'index.ts': `export * from "./${componentName}";`,
+  'index.ts': `export * from './${componentName}';`,
   [`${componentName}.tsx`]: COMPONENT,
   [`${componentName}.scss`]: STYLES,
   [`${componentName}.stories.tsx`]: STORIES,

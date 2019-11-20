@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import './DefinitionList.scss';
 
@@ -7,8 +8,8 @@ export interface Props extends React.HTMLAttributes<HTMLDListElement> {
   children: React.ReactNode;
 }
 
-export const DefinitionList: React.FC<Props> = ({ term, children, ...rest }) => (
-  <dl className='DefinitionList' {...rest}>
+export const DefinitionList: React.FC<Props> = ({ term, children, className, ...rest }) => (
+  <dl className={classNames('DefinitionList', className)} {...rest}>
     <dt>{term}</dt>
     <dd>{children}</dd>
   </dl>
