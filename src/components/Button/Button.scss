@@ -6,6 +6,7 @@
   @include text(eyebrow);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: spacing(4, 7);
   border: 1px solid;
   cursor: pointer;
