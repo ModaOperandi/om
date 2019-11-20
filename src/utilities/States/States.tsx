@@ -7,6 +7,11 @@ interface Props {
   children: JSX.Element;
 }
 
+const omit = (obj: object, ...keys: string[]) =>
+  Object.entries(obj)
+    .filter(([key]) => !keys.includes(key))
+    .reduce((obj, [key, val]) => Object.assign(obj, { [key]: val }), {});
+
 const stringifyProps = (props: any) => {
   return Object.entries(props || {}).reduce((memo: string, [key, value]) => {
     if (key === 'children') return `${memo} children={...}`;
@@ -25,7 +30,7 @@ export const States: React.FC<Props> = ({ states, children, ...rest }) => {
           {React.cloneElement(children, props)}
           <code className='States__props'>
             <strong>{stringifyProps(props)}</strong>
-            {stringifyProps(children.props)}
+            {stringifyProps(omit(children.props, ...Object.keys(props || {})))}
           </code>
         </div>
       ))}

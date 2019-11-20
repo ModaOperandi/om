@@ -4,12 +4,18 @@
   $self: &;
 
   @include text(eyebrow);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: spacing(4, 7);
   border: 1px solid;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+
+  // Insert space after icon if present
+  > * {
+    margin-right: space(2);
+  }
 
   &,
   &--primary {

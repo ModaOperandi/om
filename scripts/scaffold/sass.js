@@ -8,7 +8,7 @@ if (!sassName) {
 }
 
 const SCSS = `
-@import "~@moda/tokens";
+@import '~@moda/tokens';
 
 @${sassType.toLowerCase().slice(0, -1)} ${sassName}() {
   // Hello
@@ -16,21 +16,21 @@ const SCSS = `
 `;
 
 const STORIES_TSX = `
-import React from "react";
+import React from 'react';
 
-import "./${sassName}.stories.scss";
+import './${sassName}.stories.scss';
 
-export default { title: "${sassType}|${sassName}" };
+export default { title: '${sassType}|${sassName}' };
 
 export const Default = () => (
-  <div className="Story ${sassType} ${sassName}">
+  <div className='Story ${sassType} ${sassName}'>
     Hello
   </div>
 );
 `;
 
 const STORIES_SCSS = `
-@import "./${sassName}";
+@import './${sassName}';
 
 .Story.${sassName} {
   @include ${sassName}();
