@@ -4,14 +4,16 @@
   $self: &;
 
   @include text(eyebrow);
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin: 0;
   padding: spacing(4, 7);
   border: 1px solid;
   cursor: pointer;
   text-decoration: none;
-  text-align: center;
 
   // Insert space after icon if present
   > * {

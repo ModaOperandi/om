@@ -12,10 +12,12 @@
 
   &__props {
     display: block;
-    margin-top: space(3);
+    margin-top: space(2);
+    padding-top: space(2);
     font-family: $code;
     font-size: font-size(1);
     color: color(fog);
+    border-top: 1px dotted color(elephant);
 
     > strong {
       text-decoration: underline;

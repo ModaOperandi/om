@@ -43,8 +43,26 @@
   }
 
   &__contents {
+    @include stack(2);
     @include text(body1);
+    padding-bottom: space(1);
     display: none;
+
+    > ul,
+    > ol {
+      padding-left: space(4);
+      list-style: disc;
+    }
+
+    > a,
+    > p > a {
+      color: color(ink);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &--expanded {
@@ -57,5 +75,9 @@
     #{$self}__contents {
       display: block;
     }
+  }
+
+  & + & {
+    border-top: 1px solid color(noise);
   }
 }

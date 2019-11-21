@@ -1,0 +1,37 @@
+import React from 'react';
+import { typography, colors } from '@moda/tokens';
+
+import { States } from '../../utilities/States';
+import { Text } from './Text';
+
+export default { title: 'Components|Text' };
+
+export const Treatments = () => (
+  <States states={Object.keys(typography['text-treatments']).map(treatment => ({ treatment }))}>
+    <Text>Moda Operandi</Text>
+  </States>
+);
+
+export const Colors = () => (
+  <States states={Object.keys(colors.all).map(color => ({ color }))}>
+    <Text treatment='h5'>Moda Operandi</Text>
+  </States>
+);
+
+export const Families = () => (
+  <States states={Object.keys(typography.fonts).map(family => ({ family }))}>
+    <Text treatment='h5'>Moda Operandi</Text>
+  </States>
+);
+
+export const Complex = () => (
+  <Text>
+    <Text treatment='h6' color='fuchsia' family='serif'>
+      Moda Operandi
+    </Text>
+    {' — '}
+    <Text color='money-good' treatment='eyebrow'>
+      Happy <Text color='code-red'>Holidays</Text>
+    </Text>
+  </Text>
+);

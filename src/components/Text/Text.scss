@@ -1,0 +1,16 @@
+@import '~om';
+
+.Text {
+  $treatments: map-get($typography, 'text-treatments');
+  @each $name, $_values in $treatments {
+    &--#{$name} {
+      @include text($name);
+    }
+  }
+
+  @each $family in (sans, serif) {
+    &--#{$family} {
+      font-family: font-family($family);
+    }
+  }
+}

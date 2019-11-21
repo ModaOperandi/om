@@ -1,0 +1,10 @@
+@import '~om';
+
+.SelectableOptions {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    margin: spacing(0, 2, 2, 0);
+  }
+}

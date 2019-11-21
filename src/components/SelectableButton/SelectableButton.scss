@@ -1,0 +1,65 @@
+@import '~om';
+
+.SelectableButton {
+  $self: &;
+
+  @include text(body2);
+  text-transform: uppercase;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+  margin: 0;
+  padding: spacing(2, 3);
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  color: color(ink);
+  border: 1px solid color(elephant);
+  background-color: transparent;
+  transition: background-color 200ms;
+
+  > span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--hover,
+  &:hover {
+    color: color(ink);
+    border-color: color(elephant);
+    background-color: color(noise);
+  }
+
+  &--selected {
+    &,
+    &:hover {
+      color: color(ink);
+      border-color: color(ink);
+      background-color: transparent;
+    }
+  }
+
+  &--unavailable {
+    &,
+    &:hover {
+      color: color(elephant);
+      border-color: color(elephant);
+      background: linear-gradient(
+        to bottom right,
+        white calc(50% - 1px),
+        color(elephant),
+        white calc(50% + 1px)
+      );
+    }
+  }
+}

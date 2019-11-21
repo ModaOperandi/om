@@ -17,7 +17,7 @@ const stringifyProps = (props: any) => {
     if (key === 'children') return `${memo} children={...}`;
     if (typeof value === 'string') return `${memo} ${key}="${value}"`;
     if (typeof value === 'function') return `${memo} ${key}={fn}`;
-    if (typeof value === 'boolean') return `${memo} ${key}`;
+    if (typeof value === 'boolean') return `${memo} ${key}${value ? '' : '={false}'}`;
     if (typeof value === 'number') return `${key}={${value}}`;
     return `${memo} ${key}=${value}`;
   }, '');
