@@ -1,0 +1,11 @@
+@import './font-smoothing';
+
+.Story.font-smoothing {
+  &--antialiased {
+    @include font-smoothing(antialiased);
+  }
+
+  &--subpixel {
+    @include font-smoothing(subpixel);
+  }
+}
