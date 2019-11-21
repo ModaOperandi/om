@@ -14,6 +14,7 @@
   border: 1px solid;
   cursor: pointer;
   text-decoration: none;
+  transition: background-color 200ms;
 
   // Insert space after icon if present
   > * {
@@ -25,6 +26,7 @@
     color: color(snow);
     border-color: color(ink);
     background-color: color(ink);
+    @include font-smoothing(subpixel);
 
     &#{$self}--hover,
     &:hover {
@@ -61,7 +63,7 @@
     &:hover {
       color: color(ink);
       border-color: color(ink);
-      background-color: color(elephant);
+      background-color: color(noise);
     }
 
     &#{$self}--focus,
@@ -70,7 +72,7 @@
       text-decoration: underline;
       color: color(ink);
       border-color: color(ink);
-      background-color: color(fog);
+      background-color: color(elephant);
     }
 
     &#{$self}--disabled,
