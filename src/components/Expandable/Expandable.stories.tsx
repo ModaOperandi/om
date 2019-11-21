@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { States } from '../../utilities/States';
+import { Stack } from '../Stack';
 import { Expandable } from './Expandable';
 
 export default { title: 'Components|Expandable' };
@@ -16,3 +17,38 @@ export const Default = () => (
     </Expandable>
   </States>
 );
+
+export const Stacked = () => (
+  <Stack space={2}>
+    <Expandable name='Editor’s Note' expanded>
+      <p>
+        Acne Studios' '1996' jeans are fitted with a high-rise waist and straight-leg silhouette.
+        Designed in a dark-blue wash, this five-pocket style is detailed with contrast top-stitching
+        to mirror vintage pairs.
+      </p>
+    </Expandable>
+
+    <Expandable name='Product Details'>
+      <ul>
+        <li>Belt loops, five-pocket style</li>
+        <li>Button and concealed zip fastening at front</li>
+        <li>Composition: 100% cotton</li>
+        <li>Machine wash</li>
+      </ul>
+      <p>Made in Italy Product Code 684196</p>
+    </Expandable>
+    <Expandable name='Size &amp; Fit'>
+      <ul>
+        <li>Model measurements: height 6'2"/188cm - neck 15.5"/39cm - waist 30"/76cm</li>
+        <li>Model is wearing US 30</li>
+        <li>This style fits true to size</li>
+        <li>We suggest taking your normal size</li>
+      </ul>
+      <p>
+        Questions? Please contact <a href='mailto:care@modaoperandi.com'>care@modaoperandi.com</a>.
+      </p>
+    </Expandable>
+  </Stack>
+);
+
+Stacked.story = { parameters: { viewport: { defaultViewport: 'xs' } } };
