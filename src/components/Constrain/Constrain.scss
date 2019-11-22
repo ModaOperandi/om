@@ -1,0 +1,11 @@
+@import '~om';
+
+.Constrain {
+  width: 90%;
+  margin: 0 auto;
+  max-width: map-get($breakpoints, xl);
+
+  @include breakpoint(md, max-width) {
+    width: 100%;
+  }
+}

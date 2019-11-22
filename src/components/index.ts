@@ -8,3 +8,4 @@ export { Stack } from './Stack';
 export { SelectableButton } from './SelectableButton';
 export { SelectableOptions } from './SelectableOptions';
 export { Text } from './Text';
+export { Constrain } from './Constrain';
