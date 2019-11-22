@@ -33,7 +33,8 @@
     "start": "cd documentation && yarn start",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
-    "types": "tsc -p tsconfig.json --emitDeclarationOnly"
+    "types": "tsc -p tsconfig.json --emitDeclarationOnly",
+    "unlink-all": "yalc remove --all && yarn --check-files"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
