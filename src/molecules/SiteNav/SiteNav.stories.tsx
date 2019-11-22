@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { TopNav } from './TopNav';
+import { SiteNav } from './SiteNav';
 import { Subsection } from '../NavBar';
 
-export default { title: 'Molecules|TopNav' };
+export default { title: 'Molecules|SiteNav' };
 
 const TRUNKSHOW_SUBSECTIONS: Subsection[] = [
   {
@@ -155,4 +155,4 @@ const SECTIONS = [
   { label: 'Home', href: '#home' }
 ];
 
-export const Default = () => <TopNav sections={SECTIONS} />;
+export const Default = () => <SiteNav sections={SECTIONS} />;
