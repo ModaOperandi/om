@@ -6,12 +6,13 @@ import SocialInstagramIcon from '@moda/icons/social-instagram-16';
 import SocialPinterestIcon from '@moda/icons/social-pinterest-16';
 import SocialTwitterIcon from '@moda/icons/social-twitter-16';
 
+import { Constrain } from '../../components/Constrain';
 import { ShippingAndReturns, AboutModa, HowToShop } from './SiteFooterLinks';
 
 import './SiteFooterDesktop.scss';
 
 export const SiteFooterDesktop = () => (
-  <div className='SiteFooterDesktop'>
+  <Constrain className='SiteFooterDesktop'>
     <h3>Contact Client Services</h3>
 
     <section>
@@ -93,5 +94,5 @@ export const SiteFooterDesktop = () => (
         © {new Date().getFullYear()} Moda Operandi, Inc. All Rights Reserved.
       </div>
     </section>
-  </div>
+  </Constrain>
 );
