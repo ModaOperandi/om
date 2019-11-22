@@ -20,7 +20,7 @@
   &__text {
     width: auto;
     padding: 0 space(4);
-    @include text(h6, serif);
+    @include text(h5, serif);
   }
 
   &--two-line {

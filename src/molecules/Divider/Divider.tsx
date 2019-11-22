@@ -1,4 +1,6 @@
 import React from 'react';
+import classNames from 'classnames';
+
 import './Divider.scss';
 
 export interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -7,9 +9,9 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   verticalPadding?: string;
 }
 
-export const Divider: React.FC<Props> = ({ text, type, ...rest }) => {
+export const Divider: React.FC<Props> = ({ text, type, className, ...rest }) => {
   return (
-    <div className={'Divider ' + (type ? `Divider--${type}` : '')} {...rest}>
+    <div className={classNames(`Divider ${type ? `Divider--${type}` : ''}`, className)} {...rest}>
       <div className='Divider__text'>{text}</div>
     </div>
   );

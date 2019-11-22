@@ -2,10 +2,17 @@ import React from 'react';
 
 import './States.scss';
 
+type RenderProps = {
+  (props: any): JSX.Element;
+};
+
 interface Props {
   states: any[];
-  children: JSX.Element;
+  children: JSX.Element | RenderProps;
 }
+
+const isRenderProps = (children: JSX.Element | RenderProps): children is RenderProps =>
+  typeof children === 'function';
 
 const omit = (obj: object, ...keys: string[]) =>
   Object.entries(obj)
@@ -28,10 +35,13 @@ export const States: React.FC<Props> = ({ states, children, ...rest }) => {
     <div className='States'>
       {states.map(props => (
         <div className='States__specimen' key={JSON.stringify(props)} {...rest}>
-          {React.cloneElement(children, props)}
+          {isRenderProps(children) ? children(props) : React.cloneElement(children, props)}
+
           <code className='States__props'>
             <strong>{stringifyProps(props)}</strong>
-            {stringifyProps(omit(children.props, ...Object.keys(props || {})))}
+
+            {!isRenderProps(children) &&
+              stringifyProps(omit(children.props, ...Object.keys(props || {})))}
           </code>
         </div>
       ))}
