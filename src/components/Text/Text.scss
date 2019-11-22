@@ -13,4 +13,10 @@
       font-family: font-family($family);
     }
   }
+
+  @each $smoothing in (antialiased, subpixel) {
+    &--#{$smoothing} {
+      @include font-smoothing($smoothing);
+    }
+  }
 }

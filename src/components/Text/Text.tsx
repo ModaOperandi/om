@@ -8,6 +8,7 @@ export interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   treatment?: keyof typeof typography['text-treatments'];
   color?: keyof typeof colors.all;
   family?: keyof typeof typography.fonts;
+  fontSmoothing?: 'subpixel' | 'antialiased';
 }
 
 export const Text: React.FC<Props> = ({
@@ -17,10 +18,16 @@ export const Text: React.FC<Props> = ({
   family,
   children,
   style,
+  fontSmoothing,
   ...rest
 }) => (
   <span
-    className={classNames(`Text Text--${treatment} ${family ? `Text--${family}` : ''}`, className)}
+    className={classNames(
+      `Text Text--${treatment} ${family ? `Text--${family}` : ''} ${
+        fontSmoothing ? `Text--${fontSmoothing}` : ''
+      }`,
+      className
+    )}
     style={{ color: colors.all[color], ...style }}
     {...rest}
   >

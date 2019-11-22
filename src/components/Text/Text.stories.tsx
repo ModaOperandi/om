@@ -8,7 +8,31 @@ export default { title: 'Components|Text' };
 
 export const Treatments = () => (
   <States states={Object.keys(typography['text-treatments']).map(treatment => ({ treatment }))}>
-    <Text>Moda Operandi</Text>
+    {props => (
+      <>
+        <Text {...props} style={{ padding: '0 0.125em' }}>
+          Moda Operandi
+        </Text>
+        <br />
+        <Text fontSmoothing='subpixel' style={{ padding: '0 0.125em' }} {...props}>
+          Moda Operandi
+        </Text>
+
+        <br />
+
+        <Text {...props} style={{ backgroundColor: 'black', color: 'white', padding: '0 0.125em' }}>
+          Moda Operandi
+        </Text>
+        <br />
+        <Text
+          fontSmoothing='subpixel'
+          {...props}
+          style={{ backgroundColor: 'black', color: 'white', padding: '0 0.125em' }}
+        >
+          Moda Operandi
+        </Text>
+      </>
+    )}
   </States>
 );
 
