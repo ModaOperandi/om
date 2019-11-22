@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@moda/icons": "^4.0.0",
-    "@moda/tokens": "^2.1.0",
+    "@moda/tokens": "^3.0.0",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6"
   },
