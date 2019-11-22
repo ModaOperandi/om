@@ -45,7 +45,7 @@
   &__contents {
     @include stack(2);
     @include text(body1);
-    padding-bottom: space(1);
+    padding-bottom: space(3);
     display: none;
 
     > ul,
