@@ -40,7 +40,7 @@
         }
 
         > h4 {
-          @include text(h7, serif);
+          @include text(h6, serif);
           margin: space(2) 0;
           text-align: center;
           color: color(ink);
