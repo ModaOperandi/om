@@ -1,5 +1,6 @@
 @import 'stack/stack';
 @import 'font-smoothing/font-smoothing';
+@import '~@moda/tokens';
 
 @mixin global-styles() {
   html {
