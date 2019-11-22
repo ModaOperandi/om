@@ -8,7 +8,9 @@ export default {
 };
 
 export const Destkop = () => <SiteFooter />;
+
 export const Mobile = () => <SiteFooter />;
+
 Mobile.story = {
   parameters: {
     viewport: { defaultViewport: 'sm' }
