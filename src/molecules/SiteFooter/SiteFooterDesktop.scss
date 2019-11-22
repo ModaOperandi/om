@@ -1,6 +1,10 @@
 @import '~om';
 
 .SiteFooterDesktop {
+  @include breakpoint(md, max-width) {
+    padding: spacing(0, 6);
+  }
+
   > h3 {
     @include text(eyebrow);
     margin: spacing(0, 0, 3, 0);
@@ -20,6 +24,7 @@
 
   &__category {
     flex: 2;
+    padding-right: space(6);
 
     > h3 {
       @include text(eyebrow);
@@ -58,6 +63,7 @@
   }
 
   &__icon {
+    flex-shrink: 0;
     margin: spacing(0, 1);
     color: color(ink);
   }
