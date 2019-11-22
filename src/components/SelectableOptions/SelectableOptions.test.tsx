@@ -9,10 +9,7 @@ describe('SelectableOptions', () => {
     const component = mount(
       <SelectableOptions
         onSelect={onSelect}
-        options={[
-          { label: 'one', value: 1 },
-          { label: 'two', value: 2 }
-        ]}
+        options={[{ label: 'one', value: 1 }, { label: 'two', value: 2 }]}
       />
     );
 
