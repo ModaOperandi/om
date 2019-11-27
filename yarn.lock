@@ -1427,9 +1427,9 @@
     rimraf "^2.5.2"
 
 "@moda/icons@^4.0.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-4.1.0.tgz#4e6e85f0d16879e6fbccd82dd015d916d8ab4a14"
-  integrity sha512-20is5cL5u+StGplYualu6qCkB4Wo1PbJT/1JdFunm6lhrFzzFYEPPVJiJSHyrDR5xInaQgL3e1anaNOHLsahkA==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-4.1.1.tgz#bad1349f59c13fe9031d0ba17fed5aa34ce4d881"
+  integrity sha512-INNNApokRiAyF3ILu+jTPJwksaUHl6GKxliLk3+zvxR5KknNBkPJmpSltUBPOhio4QUZoLqEWmQU6HyzJQgkJA==
 
 "@moda/tokens@^3.1.0":
   version "3.1.0"
