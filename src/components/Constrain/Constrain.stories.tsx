@@ -5,7 +5,7 @@ import { Constrain } from './Constrain';
 
 export default { title: 'Components|Constrain' };
 
-export const Default = () => {
+const Constrained = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [constrainWidth, setConstrainWidth] = useState(ref.current && ref.current.offsetWidth);
@@ -35,3 +35,12 @@ export const Default = () => {
     </Constrain>
   );
 };
+
+export const LargeViewport = () => <Constrained />;
+LargeViewport.story = { parameters: { viewport: { defaultViewport: 'lg' } } };
+
+export const MediumViewport = () => <Constrained />;
+MediumViewport.story = { parameters: { viewport: { defaultViewport: 'md' } } };
+
+export const SmallViewport = () => <Constrained />;
+SmallViewport.story = { parameters: { viewport: { defaultViewport: 'sm' } } };

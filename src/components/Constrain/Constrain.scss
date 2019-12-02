@@ -7,5 +7,6 @@
 
   @include breakpoint(md, max-width) {
     width: 100%;
+    padding: spacing(0, 6);
   }
 }
