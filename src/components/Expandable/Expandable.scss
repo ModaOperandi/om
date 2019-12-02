@@ -9,10 +9,6 @@
   &__name {
     @include text(eyebrow);
     position: relative;
-    appearance: none;
-    border: 0;
-    padding: 0;
-    background-color: transparent;
     text-align: left;
     cursor: pointer;
     padding: spacing(3, 0);
