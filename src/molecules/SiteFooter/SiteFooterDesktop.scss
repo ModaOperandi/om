@@ -1,10 +1,6 @@
 @import '~om';
 
 .SiteFooterDesktop {
-  @include breakpoint(md, max-width) {
-    padding: spacing(0, 6);
-  }
-
   > h3 {
     @include text(eyebrow);
     margin: spacing(0, 0, 3, 0);

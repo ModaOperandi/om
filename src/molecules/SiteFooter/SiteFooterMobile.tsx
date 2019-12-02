@@ -16,7 +16,7 @@ export const SiteFooterMobile: React.FC = () => {
         <Button href='mailto:care@modaoperandi.com'>Email</Button>
       </div>
 
-      <Expandable className='SiteFooterMobile__more' name='More Information' expanded>
+      <Expandable className='SiteFooterMobile__more' name='More Information'>
         <div className='SiteFooterMobile__more-links'>
           <ShippingAndReturns />
           <AboutModa />
