@@ -1,0 +1,77 @@
+@import '~om';
+
+.ColorSwatch {
+  // Uses transparent black to blend with underlaid colors
+  $overlay-border-color: rgba(black, 0.1);
+  $outer-border-color: rgba(black, 0.25);
+  $on-sale-dot-size: space(1);
+
+  position: relative;
+  width: space(6);
+  height: space(6);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: space(1);
+  cursor: pointer;
+
+  &__chip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid $overlay-border-color;
+    }
+  }
+
+  &:hover,
+  &--hover {
+    border-color: color(elephant);
+  }
+
+  &:focus,
+  &--selected {
+    &,
+    &:hover {
+      border-color: $outer-border-color;
+    }
+  }
+
+  &--sold-out {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      width: 100%;
+      height: 1px;
+      transform: rotate(-45deg);
+      background-color: $outer-border-color;
+      z-index: 1;
+    }
+  }
+
+  &--on-sale {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -($on-sale-dot-size / 2);
+      right: -($on-sale-dot-size / 2);
+      width: $on-sale-dot-size;
+      height: $on-sale-dot-size;
+      border-radius: 50%;
+      background-color: color('fuchsia');
+    }
+  }
+}
