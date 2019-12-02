@@ -5,13 +5,11 @@
 
   @include text(body2);
   text-transform: uppercase;
-  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   max-width: 100%;
-  margin: 0;
   padding: spacing(2, 3);
   cursor: pointer;
   text-decoration: none;

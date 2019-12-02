@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
+import { Clickable, Props as ClickableProps } from '../Clickable';
 
 import { SKU_COLORS, SkuColor } from './skuColors';
 
 import './ColorSwatch.scss';
 
-export interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
+export interface Props extends Omit<ClickableProps, 'onClick'> {
   color: SkuColor | string;
   hover?: boolean;
   selected?: boolean;
@@ -24,12 +25,12 @@ export const ColorSwatch: React.FC<Props> = ({
   onClick,
   ...rest
 }) => {
-  const handleClick = useCallback((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleClick = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     onClick && onClick(color);
   }, []);
 
   return (
-    <button
+    <Clickable
       className={classNames(
         'ColorSwatch',
         {
@@ -49,6 +50,6 @@ export const ColorSwatch: React.FC<Props> = ({
           backgroundColor: SKU_COLORS[color as SkuColor] || color
         }}
       />
-    </button>
+    </Clickable>
   );
 };

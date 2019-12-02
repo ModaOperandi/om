@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import classNames from 'classnames';
 
+import { Clickable } from '../Clickable';
+
 import './Expandable.scss';
 
 export interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -24,9 +26,9 @@ export const Expandable: React.FC<Props> = ({
       className={classNames('Expandable', { 'Expandable--expanded': expanded }, className)}
       {...rest}
     >
-      <button className='Expandable__name' onClick={handleClick}>
+      <Clickable className='Expandable__name' onClick={handleClick}>
         {name}
-      </button>
+      </Clickable>
 
       <div className='Expandable__contents'>{children}</div>
     </div>

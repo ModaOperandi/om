@@ -1,9 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Clickable, Props as ClickableProps } from '../Clickable';
 
 import './SelectableButton.scss';
 
-export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface Props extends ClickableProps {
   hover?: boolean;
   selected?: boolean;
   unavailable?: boolean;
@@ -17,7 +18,7 @@ export const SelectableButton: React.FC<Props> = ({
   children,
   ...rest
 }) => (
-  <button
+  <Clickable
     className={classNames(
       'SelectableButton',
       {
@@ -30,5 +31,5 @@ export const SelectableButton: React.FC<Props> = ({
     {...rest}
   >
     <span>{children}</span>
-  </button>
+  </Clickable>
 );
