@@ -11,3 +11,5 @@ export { Text } from './Text';
 export { Constrain } from './Constrain';
 export { ColorSwatch } from './ColorSwatch';
 export { Clickable } from './Clickable';
+export { Input } from './Input';
+export { Divider, TwoLineDivider, NoLineDivider, DividerProps } from './Divider';
