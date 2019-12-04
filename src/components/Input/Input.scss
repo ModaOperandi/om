@@ -1,0 +1,28 @@
+@import '~om';
+
+.Input {
+  @include text(body1);
+  line-height: 1;
+  padding: spacing(3, 4);
+  border: 1px solid color(elephant);
+  background-color: color(snow);
+
+  &--focus,
+  &:focus {
+    outline: none;
+    border-color: color(cement);
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: 0.75;
+  }
+
+  &--valid {
+    border-color: color(money-good);
+  }
+
+  &--error {
+    border-color: color(code-red);
+  }
+}
