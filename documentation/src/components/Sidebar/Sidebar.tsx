@@ -34,12 +34,6 @@ export const Sidebar: React.FC = () => {
         <h4>Components</h4>
         <a>Button</a>
       </div>
-
-      <div className='Sidebar__section'>
-        <h4>Molecules</h4>
-        <a>NavBar</a>
-        <a>TopNav</a>
-      </div>
     </div>
   );
 };
