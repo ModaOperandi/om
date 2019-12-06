@@ -6,7 +6,6 @@ export { DefinitionList } from './DefinitionList';
 export { Badge } from './Badge';
 export { Stack } from './Stack';
 export { SelectableButton } from './SelectableButton';
-export { SelectableOptions } from './SelectableOptions';
 export { Text } from './Text';
 export { Constrain } from './Constrain';
 export { ColorSwatch } from './ColorSwatch';
