@@ -26,7 +26,6 @@
     "predeploy:documentation": "NODE_ENV=production yarn build && cd documentation && yarn install && yarn build",
     "prepublishOnly": "yarn clean && yarn build",
     "scaffold:component": "node scripts/scaffold/react Components",
-    "scaffold:molecule": "node scripts/scaffold/react Molecules",
     "scaffold:mixin": "node scripts/scaffold/sass Mixins",
     "scaffold:function": "node scripts/scaffold/sass Functions",
     "semantic-release": "semantic-release",

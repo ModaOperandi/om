@@ -8,4 +8,3 @@ export const tokens = {
 };
 
 export * from './components';
-export * from './molecules';

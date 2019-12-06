@@ -24,7 +24,7 @@ cd om
 yarn install
 ```
 
-This repo includes scaffolders for generating folder/file structure for: React Components + Molecules, as well as SASS mixins and functions.
+This repo includes scaffolders for generating folder/file structure for: React Components, as well as SASS mixins and functions.
 
 ```
 yarn scaffold:component FooBar
@@ -77,7 +77,7 @@ When you're happy push to a feature branch and once the code is in `master`, sem
 yarn add @moda/om
 ```
 
-Import the Component/Molecule CSS in your global SCSS file:
+Import the Component CSS in your global SCSS file:
 
 ```scss
 @import '~@moda/om/dist/css';
