@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack } from '../../components/Stack';
 import { isRenderProps } from './isRenderProps';
 import { stringifyProps } from './stringifyProps';
-import { omit } from './omit';
+import { omit } from '../omit';
 import './StatesProps.scss';
 
 interface Props {
