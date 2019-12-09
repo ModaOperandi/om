@@ -33,12 +33,15 @@ export const ${componentName}: React.FC<Props> = ({ className, ...rest }) => (
 const STORIES = `
 import React from 'react';
 
+import { States } from '../../utilities/States';
 import { ${componentName} } from './${componentName}';
 
 export default { title: '${componentType}|${componentName}' };
 
 export const Default = () => (
-  <${componentName} />
+  <States>
+    <${componentName} />
+  </States>
 );
 `;
 
