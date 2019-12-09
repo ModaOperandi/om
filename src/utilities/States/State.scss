@@ -1,0 +1,11 @@
+@import '~om';
+
+.State {
+  border: 1px dotted color(fog);
+  padding: spacing(2);
+
+  &__props {
+    display: block;
+    margin-top: space(2);
+  }
+}
