@@ -4,8 +4,6 @@
   $self: &;
 
   @include text(eyebrow);
-
-  position: relative;
   appearance: none;
   display: inline-flex;
   align-items: center;
@@ -13,24 +11,14 @@
   text-align: center;
   margin: 0;
   padding: spacing(4, 7);
-  border: 0;
+  border: 1px solid;
   cursor: pointer;
   text-decoration: none;
+  transition: background-color 200ms;
 
   // Insert space after icon if present
   > * {
     margin-right: space(2);
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: transparent;
-    transition: background-color 200ms;
   }
 
   &,
@@ -43,9 +31,8 @@
     &#{$self}--hover,
     &:hover {
       color: color(snow);
-      &:after {
-        background-color: color(fog, 0.16);
-      }
+      border-color: #424343;
+      background-color: #424343;
     }
 
     &#{$self}--focus,
@@ -53,10 +40,8 @@
       outline: none;
       text-decoration: underline;
       color: color(snow);
-
-      &:after {
-        background-color: color(fog, 0.32);
-      }
+      border-color: #555757;
+      background-color: #555757;
     }
 
     &#{$self}--disabled,
