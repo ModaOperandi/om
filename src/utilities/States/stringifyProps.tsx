@@ -5,6 +5,7 @@ export const stringifyProps = (props: any) => {
     if (typeof value === 'function') return `${memo} ${key}={fn}`;
     if (typeof value === 'boolean') return `${memo} ${key}${value ? '' : '={false}'}`;
     if (typeof value === 'number') return `${key}={${value}}`;
+    if (typeof value === 'object') return `${key}={...}`;
     return `${memo} ${key}=${value}`;
   }, '');
 
