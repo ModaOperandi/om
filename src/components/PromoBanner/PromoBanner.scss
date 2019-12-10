@@ -1,0 +1,56 @@
+@import '~om';
+
+.PromoBanner {
+  $self: &;
+
+  @include text(body2);
+
+  background-color: color(burnt-orange);
+  border-bottom: space(1) solid color(lilac);
+
+  &__constrain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__child {
+    @include font-smoothing(subpixel);
+
+    min-width: space(11);
+    padding: spacing(2, 3);
+    color: color(snow);
+
+    &--center {
+      @include text(body2, $font: serif);
+
+      flex: 1;
+      text-align: center;
+    }
+
+    &--first {
+      padding-left: 0;
+    }
+
+    &--right {
+      padding-right: 0;
+      text-align: right;
+    }
+
+    > a {
+      color: color(snow);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include breakpoint(sm, $prop: max-width) {
+    #{$self}__child--left,
+    #{$self}__child--right {
+      display: none;
+    }
+  }
+}
