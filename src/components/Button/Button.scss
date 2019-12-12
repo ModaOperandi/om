@@ -1,19 +1,29 @@
 @import '~om';
 
+@keyframes trickling {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .Button {
   $self: &;
+  $transition-duration: 500ms;
 
   @include text(eyebrow);
+
+  position: relative;
   appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: spacing(4, 7);
-  border: 1px solid;
+  border: 0;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 200ms;
+  overflow: hidden;
 
   // Insert space after icon if present
   > * {
@@ -23,14 +33,12 @@
   &,
   &--primary {
     color: color(snow);
-    border-color: color(ink);
     background-color: color(ink);
     @include font-smoothing(subpixel);
 
     &#{$self}--hover,
     &:hover {
       color: color(snow);
-      border-color: color(cement);
       background-color: color(cement);
     }
 
@@ -39,17 +47,27 @@
       outline: none;
       text-decoration: underline;
       color: color(snow);
-      border-color: color(fog);
       background-color: color(fog);
     }
 
     &#{$self}--disabled,
     &:disabled {
       color: color(cement);
-      border-color: color(elephant);
       background-color: color(elephant);
       cursor: default;
       pointer-events: none;
+    }
+
+    &#{$self}--loading {
+      color: color(snow);
+      background-color: color(ink);
+      text-decoration: none;
+    }
+
+    &#{$self}--success {
+      color: color(snow);
+      background-color: color(burnt-orange);
+      text-decoration: none;
     }
   }
 
@@ -82,5 +100,22 @@
       cursor: default;
       pointer-events: none;
     }
+  }
+
+  &__loader {
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: space(1);
+    animation: trickling 5s cubic-bezier(0.1, 0.3, 0.2, 1);
+    animation-fill-mode: forwards;
+    transform: translate3d(0, 0, 0);
+    background-color: color(burnt-orange);
+  }
+
+  &__children {
+    position: relative;
+    z-index: 1;
   }
 }
