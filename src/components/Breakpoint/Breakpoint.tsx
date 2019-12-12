@@ -33,6 +33,7 @@ export const Breakpoint: React.FC<At | GreaterThan | LessThan> = ({ children, ..
   React.useEffect(() => {
     const mql = window.matchMedia(mediaQuery);
     mql.addListener(handleChange);
+    setMatches(mql.matches);
     return (): void => mql.removeListener(handleChange);
   }, [handleChange, mediaQuery]);
 
