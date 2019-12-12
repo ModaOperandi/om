@@ -107,7 +107,7 @@
     bottom: 0;
     left: -100%;
     width: 100%;
-    height: space(1);
+    height: 100%;
     animation: trickling 5s cubic-bezier(0.1, 0.3, 0.2, 1);
     animation-fill-mode: forwards;
     transform: translate3d(0, 0, 0);
