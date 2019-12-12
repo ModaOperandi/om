@@ -1,3 +1,3 @@
-import '../../src/index.scss';
+import './globalStyles.scss';
 
 export const globalStyles = storyFn => storyFn();

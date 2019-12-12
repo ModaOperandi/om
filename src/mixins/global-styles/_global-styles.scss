@@ -1,4 +1,5 @@
 @import '~@moda/tokens';
+@import '../font-smoothing/font-smoothing';
 
 @mixin global-styles() {
   html {
@@ -27,6 +28,10 @@
     font-weight: normal;
   }
 
+  button {
+    margin: 0;
+  }
+
   ol,
   ul {
     list-style: none;
@@ -35,5 +40,10 @@
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  body,
+  input {
+    @include font-smoothing(antialiased);
   }
 }

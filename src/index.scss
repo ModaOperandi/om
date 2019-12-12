@@ -2,10 +2,3 @@
 
 @import './mixins/mixins';
 @import './functions/functions';
-
-@include global-styles;
-
-body,
-input {
-  @include font-smoothing(antialiased);
-}
