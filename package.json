@@ -36,7 +36,8 @@
     "unlink-all": "yalc remove --all && yarn --check-files"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "dependencies": {
     "@moda/icons": "^4.0.0",
