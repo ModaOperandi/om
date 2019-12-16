@@ -1,0 +1,43 @@
+@import '~om';
+
+.SearchInput {
+  $icon-width: space(7);
+
+  position: relative;
+  display: inline-block;
+
+  &__icon,
+  &__clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $icon-width;
+    height: 100%;
+    color: color(cement);
+  }
+
+  &__icon {
+    left: 0;
+    pointer-events: none;
+  }
+
+  &__clear {
+    right: 0;
+
+    &:hover {
+      color: color(ink);
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    > input {
+      width: 100%;
+      padding-right: $icon-width;
+      padding-left: $icon-width;
+    }
+  }
+}
