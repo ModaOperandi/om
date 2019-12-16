@@ -4,27 +4,56 @@ import classNames from 'classnames';
 import './Input.scss';
 
 export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  focus?: boolean;
   disabled?: boolean;
+  error?: boolean | string;
+  focus?: boolean;
+  label?: string;
   valid?: boolean;
-  error?: boolean;
 }
 
-export const Input: React.FC<Props> = ({ className, focus, disabled, valid, error, ...rest }) => {
+export const Input: React.FC<Props> = ({
+  className,
+  disabled,
+  error,
+  focus,
+  label,
+  placeholder,
+  valid,
+  ...rest
+}) => {
   return (
-    <input
+    <label
       className={classNames(
         'Input',
-        {
-          'Input--focus': focus,
-          'Input--disabled': disabled,
-          'Input--valid': valid,
-          'Input--error': error
-        },
         className
       )}
-      disabled={disabled}
-      {...rest}
-    />
-  );
+    >
+      <input
+        className={classNames(
+          'Input__input',
+          {
+            'Input__input--focus': focus,
+            'Input__input--disabled': disabled,
+            'Input__input--valid': valid,
+            'Input__input--error': error
+          }
+        )}
+        disabled={disabled}
+        placeholder={placeholder}
+        {...rest}
+      />
+      <span
+        className={classNames(
+          'Input__label',
+          {
+            'Input__label--hidden': placeholder && !error && !label,
+            'Input__label--error': error
+          }
+        )}
+      >
+        {error || label || placeholder}
+      </span>
+    </label>
+  )
+
 };
