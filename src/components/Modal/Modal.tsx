@@ -10,6 +10,7 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Modal: React.FC<Props> = ({ className, children, onClose, ...rest }) => {
+  const wrapper = useRef(null);
   const el = useRef(document.createElement('div'));
 
   const handleKeydown = React.useCallback(
@@ -22,6 +23,15 @@ export const Modal: React.FC<Props> = ({ className, children, onClose, ...rest }
       }
     },
     [onClose]
+  );
+
+  const handleWrapperClick = React.useCallback(
+    (e: React.MouseEvent) => {
+      if (e.target === wrapper.current) {
+        onClose();
+      }
+    },
+    [onClose, wrapper]
   );
 
   useEffect(() => {
@@ -39,7 +49,11 @@ export const Modal: React.FC<Props> = ({ className, children, onClose, ...rest }
   }, [handleKeydown]);
 
   return createPortal(
-    <div className={classNames('Modal', className)} onClick={onClose} {...rest}>
+    <div
+      className={classNames('Modal', className)}
+      onClick={handleWrapperClick}
+      ref={wrapper}
+      {...rest}>
       {children}
     </div>,
     el.current
