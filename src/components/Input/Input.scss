@@ -3,26 +3,46 @@
 .Input {
   @include text(body1);
   line-height: 1;
-  padding: spacing(3, 4);
-  border: 1px solid color(elephant);
-  background-color: color(snow);
 
-  &--focus,
-  &:focus {
-    outline: none;
-    border-color: color(cement);
+  &__input {
+    padding: spacing(3, 4);
+    border: 1px solid color(elephant);
+    background-color: color(snow);
+
+    &--focus,
+    &:focus {
+      outline: none;
+      border-color: color(cement);
+    }
+
+    &--disabled,
+    &:disabled {
+      opacity: 0.75;
+    }
+
+    &--valid {
+      border-color: color(money-good);
+    }
+
+    &--error {
+      border-color: color(code-red);
+    }
   }
 
-  &--disabled,
-  &:disabled {
-    opacity: 0.75;
-  }
+  &__label {
+    &--error {
+      color: color(code-red);
+    }
 
-  &--valid {
-    border-color: color(money-good);
-  }
-
-  &--error {
-    border-color: color(code-red);
+    &--hidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
   }
 }

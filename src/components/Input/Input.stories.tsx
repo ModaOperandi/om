@@ -13,7 +13,8 @@ export const Default = () => (
       { disabled: true },
       { defaultValue: 'With value' },
       { valid: true },
-      { error: true, defaultValue: 'With value' }
+      { error: 'Error', defaultValue: 'With value' },
+      { label: 'Label' }
     ]}
   >
     <Input placeholder='An input' />
