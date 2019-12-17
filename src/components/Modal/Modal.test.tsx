@@ -7,7 +7,7 @@ import { Modal } from './Modal';
 
 describe('Modal', () => {
   it('renders correctly', () => {
-    const component = shallow(<Modal onClose={() => { }}>Hello</Modal>);
+    const component = shallow(<Modal onClose={() => {}}>Hello</Modal>);
     expect(component.text()).toEqual('Hello');
   });
 
@@ -15,8 +15,10 @@ describe('Modal', () => {
     const onClose = jest.fn();
     const onClickButton = jest.fn();
     const { getByTestId } = render(
-      <Modal data-testid="modal" onClose={onClose}>
-        <button data-testid="button" onClick={onClickButton}>Click Me</button>
+      <Modal data-testid='modal' onClose={onClose}>
+        <button data-testid='button' onClick={onClickButton}>
+          Click Me
+        </button>
       </Modal>
     );
     const modal = getByTestId('modal');

@@ -16,3 +16,4 @@ export { Loading } from './Loading';
 export { PromoBanner } from './PromoBanner';
 export { Popover } from './Popover';
 export { Modal } from './Modal';
+export { SearchInput } from './SearchInput';
