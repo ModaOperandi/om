@@ -1,8 +1,12 @@
 @import '~om';
 
 .Input {
-  @include text(body1);
-  line-height: 1;
+  &__input,
+  &__label {
+    @include text(body1);
+
+    line-height: 1;
+  }
 
   &__input {
     padding: spacing(3, 4);
