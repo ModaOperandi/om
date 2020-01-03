@@ -11,6 +11,7 @@ export { Constrain } from './Constrain';
 export { ColorSwatch } from './ColorSwatch';
 export { Clickable } from './Clickable';
 export { Input } from './Input';
+export { Textarea } from './Textarea';
 export { Divider, TwoLineDivider, NoLineDivider, DividerProps } from './Divider';
 export { Loading } from './Loading';
 export { PromoBanner } from './PromoBanner';
