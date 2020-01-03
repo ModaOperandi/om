@@ -53,7 +53,8 @@ export const Modal: React.FC<Props> = ({ className, children, onClose, ...rest }
       className={classNames('Modal', className)}
       onClick={handleWrapperClick}
       ref={wrapper}
-      {...rest}>
+      {...rest}
+    >
       {children}
     </div>,
     el.current
