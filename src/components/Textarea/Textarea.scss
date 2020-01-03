@@ -1,0 +1,5 @@
+@import '~om';
+
+.Textarea {
+  @include input-styles(textarea);
+}
