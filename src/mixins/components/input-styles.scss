@@ -1,11 +1,19 @@
 @mixin input-styles($element-type) {
+  @include stack(2);
+
   &__#{$element-type},
   &__label {
     @include text(body1);
     line-height: 1;
   }
 
+  &__context {
+    flex: 1;
+    position: relative;
+  }
+
   &__#{$element-type} {
+    width: 100%;
     padding: spacing(3, 4);
     border: 1px solid color(elephant);
     background-color: color(snow);
@@ -17,7 +25,7 @@
     &--focus,
     &:focus {
       outline: none;
-      border-color: color(cement);
+      border-color: color(burnt-orange);
     }
 
     &--disabled,
@@ -30,8 +38,19 @@
     }
 
     &--error {
-      border-color: color(code-red);
+      border-bottom-color: color(code-red);
+      // Creates 1px thicker border without shifting contents
+      box-shadow: 0 1px 0 color(code-red);
     }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: space(2);
+    color: color(code-red);
+    transform: translateY(-50%);
+    pointer-events: none;
   }
 
   &__label {

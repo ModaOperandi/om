@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import AlertIcon from '@moda/icons/alert-16';
 
 import './Input.scss';
 
@@ -18,18 +19,27 @@ export const Input = React.forwardRef(
   ) => {
     return (
       <label className={classNames('Input', className)}>
-        <input
-          className={classNames('Input__input', {
-            'Input__input--focus': focus,
-            'Input__input--disabled': disabled,
-            'Input__input--valid': valid,
-            'Input__input--error': error
-          })}
-          disabled={disabled}
-          placeholder={placeholder}
-          ref={ref}
-          {...rest}
-        />
+        <span className='Input__context'>
+          <input
+            className={classNames('Input__input', {
+              'Input__input--focus': focus,
+              'Input__input--disabled': disabled,
+              'Input__input--valid': valid,
+              'Input__input--error': error
+            })}
+            disabled={disabled}
+            placeholder={placeholder}
+            ref={ref}
+            {...rest}
+          />
+
+          {error && (
+            <span className='Input__icon'>
+              <AlertIcon />
+            </span>
+          )}
+        </span>
+
         <span
           className={classNames('Input__label', {
             'Input__label--hidden': placeholder && !error && !label,
@@ -42,3 +52,5 @@ export const Input = React.forwardRef(
     );
   }
 );
+
+Input.displayName = 'Input';
