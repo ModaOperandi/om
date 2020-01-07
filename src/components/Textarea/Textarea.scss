@@ -1,5 +1,8 @@
 @import '~om';
 
 .Textarea {
-  @include input-styles(textarea);
+  @include input-styles();
+  @include text(body1);
+
+  resize: none;
 }

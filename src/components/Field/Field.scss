@@ -1,0 +1,33 @@
+@import '~om';
+
+.Field {
+  @include stack(1);
+
+  &__context {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: space(2);
+    color: color(code-red);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &__label,
+  &__error {
+    @include text(body1);
+  }
+
+  &__label {
+    color: color(cement);
+  }
+
+  &__error {
+    color: color(code-red);
+    // Offset error border-thickness
+    padding-top: 1px;
+  }
+}

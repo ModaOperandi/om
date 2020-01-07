@@ -1,0 +1,5 @@
+@import '~om';
+
+.TextInput {
+  @include input-styles();
+}

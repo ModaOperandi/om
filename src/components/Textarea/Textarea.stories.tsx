@@ -5,6 +5,9 @@ import { Textarea } from './Textarea';
 
 export default { title: 'Components|Textarea' };
 
+const MULTI_LINE_TEXT_EXAMPLE =
+  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus iusto neque quidem dolor optio dignissimos, perspiciatis cumque voluptates! Maxime fugit at similique nemo illum tenetur excepturi maiores consequuntur eveniet quidem.';
+
 export const Default = () => (
   <States
     states={[
@@ -12,9 +15,8 @@ export const Default = () => (
       { focus: true },
       { disabled: true },
       { defaultValue: 'With value' },
-      { valid: true },
       { error: 'Error', defaultValue: 'With value' },
-      { label: 'Label' }
+      { defaultValue: MULTI_LINE_TEXT_EXAMPLE }
     ]}
   >
     <Textarea placeholder='A textarea' />

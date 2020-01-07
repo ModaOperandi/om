@@ -34,11 +34,9 @@
     }
   }
 
-  &__input {
-    input {
-      width: 100%;
-      padding-right: $icon-width;
-      padding-left: $icon-width;
-    }
+  > input {
+    width: 100%;
+    padding-right: $icon-width;
+    padding-left: $icon-width;
   }
 }
