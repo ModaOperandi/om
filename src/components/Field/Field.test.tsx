@@ -18,7 +18,7 @@ describe('Field', () => {
     );
 
     expect(component.html()).toEqual(
-      '<label class="Field"><span class="Field__label">Label</span><span class="Field__context"><input class="TextInput" placeholder="Placeholder" aria-label="Placeholder" value="Hello"/></span></label>'
+      '<label class="Field"><span class="Field__label">Label</span><span class="Field__context"><input class="TextInput" placeholder="Placeholder" aria-label="Label" value="Hello"/></span></label>'
     );
   });
 
@@ -28,7 +28,7 @@ describe('Field', () => {
     );
 
     expect(component.html()).toEqual(
-      '<label class="Field"><span class="Field__label">Label</span><span class="Field__context"><input class="TextInput TextInput--error" placeholder="Placeholder" aria-label="Placeholder" value="Hello"/><span class="Field__icon"></span></span><span class="Field__error">Error</span></label>'
+      '<label class="Field"><span class="Field__label">Label</span><span class="Field__context"><input class="TextInput TextInput--error" placeholder="Placeholder" aria-label="Label" value="Hello"/><span class="Field__icon"></span></span><span class="Field__error">Error</span></label>'
     );
   });
 
@@ -38,7 +38,19 @@ describe('Field', () => {
     );
 
     expect(component.html()).toEqual(
-      '<label class="Field Custom"><span class="Field__label">Label</span><span class="Field__context"><input class="TextInput" placeholder="Placeholder" aria-label="Placeholder" value="Hello"/></span></label>'
+      '<label class="Field Custom"><span class="Field__label">Label</span><span class="Field__context"><input class="TextInput" placeholder="Placeholder" aria-label="Label" value="Hello"/></span></label>'
+    );
+  });
+
+  it('supports custom children', () => {
+    const component = shallow(
+      <Field placeholder='Placeholder' defaultValue='Hello' label='Label'>
+        <textarea />
+      </Field>
+    );
+
+    expect(component.html()).toEqual(
+      '<label class="Field"><span class="Field__label">Label</span><span class="Field__context"><textarea placeholder="Placeholder" label="Label">Hello</textarea></span></label>'
     );
   });
 });

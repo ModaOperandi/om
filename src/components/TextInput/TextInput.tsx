@@ -6,13 +6,14 @@ export type InputProps = {
   disabled?: boolean;
   error?: boolean | string;
   focus?: boolean;
+  label?: string;
 };
 
 export type Props = InputProps & React.InputHTMLAttributes<HTMLInputElement>;
 
 export const TextInput = React.forwardRef(
   (
-    { className, disabled, error, focus, placeholder, ...rest }: Props,
+    { className, disabled, error, focus, placeholder, label, ...rest }: Props,
     ref: React.Ref<HTMLInputElement>
   ) => {
     return (
@@ -24,7 +25,7 @@ export const TextInput = React.forwardRef(
         })}
         disabled={disabled}
         placeholder={placeholder}
-        aria-label={placeholder}
+        aria-label={label || placeholder}
         ref={ref}
         {...rest}
       />

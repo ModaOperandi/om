@@ -18,7 +18,7 @@ describe('Textarea', () => {
     );
 
     expect(component.html()).toEqual(
-      '<textarea class="Textarea Textarea--error" placeholder="Placeholder" aria-label="Placeholder" label="Label">Hello</textarea>'
+      '<textarea class="Textarea Textarea--error" placeholder="Placeholder" aria-label="Label">Hello</textarea>'
     );
   });
 
@@ -28,7 +28,7 @@ describe('Textarea', () => {
     );
 
     expect(component.html()).toEqual(
-      '<textarea class="Textarea Custom" placeholder="Placeholder" aria-label="Placeholder" label="Label">Hello</textarea>'
+      '<textarea class="Textarea Custom" placeholder="Placeholder" aria-label="Label">Hello</textarea>'
     );
   });
 });

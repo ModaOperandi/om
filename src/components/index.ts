@@ -21,3 +21,4 @@ export { Modal } from './Modal';
 export { SearchInput } from './SearchInput';
 export { RadioButton } from './RadioButton';
 export { Label } from './Label';
+export { Checkbox } from './Checkbox';

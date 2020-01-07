@@ -1,11 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import AlertIcon from '@moda/icons/alert-16';
+import WarningIcon from '@moda/icons/warning-16';
 import { TextInput, InputProps } from '../TextInput';
 import './Field.scss';
 
 export type FieldProps = {
-  label?: string;
   children?: JSX.Element;
 };
 
@@ -23,14 +22,21 @@ export const Field = React.forwardRef(
         {/* TODO: Codify some kind of IconWrapper component */}
         <span className='Field__context'>
           {children ? (
-            React.cloneElement(children, { ref, error, placeholder, ...rest, ...children.props })
+            React.cloneElement(children, {
+              ref,
+              error,
+              placeholder,
+              label,
+              ...rest,
+              ...children.props
+            })
           ) : (
-            <TextInput ref={ref} placeholder={placeholder} error={error} {...rest} />
+            <TextInput ref={ref} placeholder={placeholder} label={label} error={error} {...rest} />
           )}
 
           {error && (
             <span className='Field__icon'>
-              <AlertIcon />
+              <WarningIcon />
             </span>
           )}
         </span>

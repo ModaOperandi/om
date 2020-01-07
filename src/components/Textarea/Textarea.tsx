@@ -7,7 +7,7 @@ export type Props = InputProps & React.TextareaHTMLAttributes<HTMLTextAreaElemen
 
 export const Textarea = React.forwardRef(
   (
-    { className, disabled, error, focus, placeholder, ...rest }: Props,
+    { className, disabled, error, focus, placeholder, label, ...rest }: Props,
     ref: React.Ref<HTMLTextAreaElement>
   ) => {
     return (
@@ -19,7 +19,7 @@ export const Textarea = React.forwardRef(
         })}
         disabled={disabled}
         placeholder={placeholder}
-        aria-label={placeholder}
+        aria-label={label || placeholder}
         ref={ref}
         {...rest}
       />
