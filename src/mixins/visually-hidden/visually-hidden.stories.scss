@@ -1,0 +1,6 @@
+
+@import './visually-hidden';
+
+.Story.visually-hidden {
+  @include visually-hidden();
+}
