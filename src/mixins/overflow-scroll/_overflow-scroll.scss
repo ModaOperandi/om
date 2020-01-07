@@ -1,0 +1,6 @@
+@import '~@moda/tokens';
+
+@mixin overflow-scroll() {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}

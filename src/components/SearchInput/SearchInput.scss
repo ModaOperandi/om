@@ -22,6 +22,7 @@
   &__icon {
     left: 0;
     pointer-events: none;
+    z-index: 1;
   }
 
   &__clear {
@@ -33,11 +34,9 @@
     }
   }
 
-  &__input {
-    > input {
-      width: 100%;
-      padding-right: $icon-width;
-      padding-left: $icon-width;
-    }
+  > input {
+    width: 100%;
+    padding-right: $icon-width;
+    padding-left: $icon-width;
   }
 }

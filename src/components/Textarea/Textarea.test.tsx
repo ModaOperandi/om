@@ -8,17 +8,7 @@ describe('Textarea', () => {
     const component = shallow(<Textarea placeholder='Placeholder' defaultValue='Hello' />);
 
     expect(component.html()).toEqual(
-      '<label class="Textarea"><textarea class="Textarea__textarea" placeholder="Placeholder">Hello</textarea><span class="Textarea__label Textarea__label--hidden">Placeholder</span></label>'
-    );
-  });
-
-  it('renders with a label', () => {
-    const component = shallow(
-      <Textarea placeholder='Placeholder' defaultValue='Hello' label='Label' />
-    );
-
-    expect(component.html()).toEqual(
-      '<label class="Textarea"><textarea class="Textarea__textarea" placeholder="Placeholder">Hello</textarea><span class="Textarea__label">Label</span></label>'
+      '<textarea class="Textarea" placeholder="Placeholder" aria-label="Placeholder">Hello</textarea>'
     );
   });
 
@@ -28,7 +18,7 @@ describe('Textarea', () => {
     );
 
     expect(component.html()).toEqual(
-      '<label class="Textarea"><textarea class="Textarea__textarea Textarea__textarea--error" placeholder="Placeholder">Hello</textarea><span class="Textarea__label Textarea__label--error">Error</span></label>'
+      '<textarea class="Textarea Textarea--error" placeholder="Placeholder" aria-label="Label">Hello</textarea>'
     );
   });
 
@@ -38,7 +28,7 @@ describe('Textarea', () => {
     );
 
     expect(component.html()).toEqual(
-      '<label class="Textarea Custom"><textarea class="Textarea__textarea" placeholder="Placeholder">Hello</textarea><span class="Textarea__label">Label</span></label>'
+      '<textarea class="Textarea Custom" placeholder="Placeholder" aria-label="Label">Hello</textarea>'
     );
   });
 });

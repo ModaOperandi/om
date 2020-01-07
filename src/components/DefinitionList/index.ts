@@ -1,1 +1,1 @@
-export * from "./DefinitionList";
+export * from './DefinitionList';

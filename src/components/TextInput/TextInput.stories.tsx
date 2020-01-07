@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { States } from '../../utilities/States';
-import { Input } from './Input';
+import { TextInput } from './TextInput';
 
-export default { title: 'Components|Input' };
+export default { title: 'Components|TextInput' };
 
 export const Default = () => (
   <States
@@ -12,11 +12,9 @@ export const Default = () => (
       { focus: true },
       { disabled: true },
       { defaultValue: 'With value' },
-      { valid: true },
-      { error: 'Error', defaultValue: 'With value' },
-      { label: 'Label' }
+      { error: 'Error', defaultValue: 'With value' }
     ]}
   >
-    <Input placeholder='An input' />
+    <TextInput placeholder='An input' />
   </States>
 );

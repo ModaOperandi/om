@@ -17,7 +17,7 @@ export const StatesProps: React.FC<Props> = ({ props, children }) => {
 
   return (
     <Stack className='StatesProps' space={2} direction='horizontal'>
-      <span>{children.type.name}</span>
+      <span>{children.type.displayName || children.type.name}</span>
       {!isEmpty(props) && <strong>{stringifyProps(props)}</strong>}
       {!isRenderProps(children) && !isEmpty(childrenProps) && (
         <span>{stringifyProps(childrenProps)}</span>

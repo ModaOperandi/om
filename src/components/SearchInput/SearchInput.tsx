@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import ExitIcon from '@moda/icons/exit-20';
 import SearchIcon from '@moda/icons/search-20';
 
-import { Input, Props as InputProps } from '../Input';
+import { TextInput, Props as TextInputProps } from '../TextInput';
 import { Clickable } from '../Clickable';
 
 import './SearchInput.scss';
 
-export interface Props extends InputProps {
+export interface Props extends TextInputProps {
   value?: string;
   onClear?(): void;
   onChangeValue?(value: string): void;
@@ -55,7 +55,7 @@ export const SearchInput: React.FC<Props> = ({
         <SearchIcon />
       </div>
 
-      <Input
+      <TextInput
         className='SearchInput__input'
         onChange={handleChange}
         value={controlledValue}
