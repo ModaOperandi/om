@@ -31,7 +31,7 @@
     "semantic-release": "semantic-release",
     "start": "cd documentation && yarn start",
     "storybook": "start-storybook -p 6006",
-    "test": "jest",
+    "test": "jest -w 1",
     "types": "tsc -p tsconfig.json --emitDeclarationOnly",
     "unlink-all": "yalc remove --all && yarn --check-files"
   },
