@@ -1,0 +1,6 @@
+
+@import './overflow-scroll';
+
+.Story.overflow-scroll {
+  @include overflow-scroll();
+}
