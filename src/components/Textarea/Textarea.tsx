@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { InputProps } from '../Field';
+import { InputProps } from '../TextInput';
 import './Textarea.scss';
 
 export type Props = InputProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;

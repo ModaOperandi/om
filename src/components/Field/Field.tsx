@@ -1,20 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
 import AlertIcon from '@moda/icons/alert-16';
-import { TextInput } from '../TextInput';
+import { TextInput, InputProps } from '../TextInput';
 import './Field.scss';
 
-export type InputProps = {
-  disabled?: boolean;
-  error?: boolean | string;
-  focus?: boolean;
+export type FieldProps = {
   label?: string;
+  children?: JSX.Element;
 };
 
-export type Props = InputProps &
-  React.InputHTMLAttributes<HTMLInputElement> & {
-    children?: JSX.Element;
-  };
+export type Props = InputProps & FieldProps & React.InputHTMLAttributes<HTMLInputElement>;
 
 export const Field = React.forwardRef(
   (

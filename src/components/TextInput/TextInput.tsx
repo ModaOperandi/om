@@ -1,7 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
-import { InputProps } from '../Field';
 import './TextInput.scss';
+
+export type InputProps = {
+  disabled?: boolean;
+  error?: boolean | string;
+  focus?: boolean;
+};
 
 export type Props = InputProps & React.InputHTMLAttributes<HTMLInputElement>;
 
