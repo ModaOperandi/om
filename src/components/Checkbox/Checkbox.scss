@@ -1,0 +1,21 @@
+@import '~om';
+
+.Checkbox {
+  @include stack(1, $direction: horizontal);
+
+  position: relative;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  color: color(ink);
+
+  &__input {
+    @include visually-hidden();
+  }
+
+  &__label {
+    @include text(body1);
+
+    color: color(cement);
+  }
+}
