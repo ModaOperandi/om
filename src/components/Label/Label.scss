@@ -1,0 +1,11 @@
+@import '~om';
+
+.Label {
+  @include text(body1);
+
+  color: color(cement);
+
+  &--hidden {
+    @include visually-hidden();
+  }
+}
