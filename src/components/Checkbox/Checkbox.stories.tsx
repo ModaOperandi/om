@@ -39,3 +39,8 @@ export const Check = () => {
     </>
   );
 };
+
+const LONG_LABEL =
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet rem at possimus ipsam cupiditate labore velit molestiae odio provident suscipit rerum minima, perferendis repellat vero recusandae quasi quos maxime incidunt!';
+
+export const LongLabel = () => <Checkbox label={LONG_LABEL} />;

@@ -33,7 +33,9 @@ export const Checkbox: React.FC<Props> = ({
         'Checkbox--checked': checked
       })}
     >
-      {isChecked ? <CheckboxCheckedIcon /> : <CheckboxUncheckedIcon />}
+      <span className='Checkbox__indicator'>
+        {isChecked ? <CheckboxCheckedIcon /> : <CheckboxUncheckedIcon />}
+      </span>
 
       <input
         className='Checkbox__input'

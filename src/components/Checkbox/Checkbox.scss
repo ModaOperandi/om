@@ -1,7 +1,7 @@
 @import '~om';
 
 .Checkbox {
-  @include stack(1, $direction: horizontal);
+  @include stack(2, $direction: horizontal);
 
   position: relative;
   align-items: center;
@@ -9,12 +9,16 @@
   cursor: pointer;
   color: color(ink);
 
+  &__indicator {
+    flex-shrink: 0;
+  }
+
   &__input {
     @include visually-hidden();
   }
 
   &__label {
-    @include text(body1);
+    @include text(body2);
 
     color: color(cement);
   }

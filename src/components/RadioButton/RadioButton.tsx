@@ -16,7 +16,9 @@ export const RadioButton: React.FC<Props> = ({ className, checked, label, value,
         'RadioButton--checked': checked
       })}
     >
-      {checked ? <RadioSelectedIcon /> : <RadioUnselectedIcon />}
+      <span className='RadioButton__indicator'>
+        {checked ? <RadioSelectedIcon /> : <RadioUnselectedIcon />}
+      </span>
 
       <input
         className='RadioButton__input'
