@@ -72,7 +72,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "extract-css-chunks-webpack-plugin": "^4.6.0",
-    "husky": "^3.0.9",
+    "husky": "^4.0.0",
     "identity-obj-proxy": "^3.0.0",
     "ignore-not-found-export-webpack-plugin": "^1.0.1",
     "jest": "^24.9.0",
