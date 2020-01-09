@@ -11,4 +11,9 @@
   justify-content: center;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  &--overlay {
+    align-items: baseline;
+    background: rgba(255, 255, 255, 0.9);
+  }
 }

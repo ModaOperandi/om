@@ -7,9 +7,10 @@ import './Modal.scss';
 
 export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   onClose(): void;
+  overlay?: boolean;
 }
 
-export const Modal: React.FC<Props> = ({ className, children, onClose, ...rest }) => {
+export const Modal: React.FC<Props> = ({ className, children, onClose, overlay, ...rest }) => {
   const wrapper = useRef(null);
   const el = useRef(document.createElement('div'));
 
@@ -50,7 +51,7 @@ export const Modal: React.FC<Props> = ({ className, children, onClose, ...rest }
 
   return createPortal(
     <div
-      className={classNames('Modal', className)}
+      className={classNames('Modal', className, { 'Modal--overlay': overlay })}
       onClick={handleWrapperClick}
       ref={wrapper}
       {...rest}
