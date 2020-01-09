@@ -18,6 +18,7 @@ export { Loading } from './Loading';
 export { PromoBanner } from './PromoBanner';
 export { Popover } from './Popover';
 export { Modal } from './Modal';
+export { ModalOverlay } from './ModalOverlay';
 export { SearchInput } from './SearchInput';
 export { RadioButton } from './RadioButton';
 export { Label } from './Label';
