@@ -12,15 +12,15 @@ const ModalComponent: React.FC = () => {
       Modal Content
     </ModalOverlay>
   ) : (
-      <button data-testid='button' onClick={() => setShowModal(true)}>
-        Click Me
+    <button data-testid='button' onClick={() => setShowModal(true)}>
+      Click Me
     </button>
-    );
+  );
 };
 
 describe('ModalOverlay', () => {
   it('renders correctly', () => {
-    const { queryByText } = render(<ModalOverlay onClose={() => { }}>Hello</ModalOverlay>);
+    const { queryByText } = render(<ModalOverlay onClose={() => {}}>Hello</ModalOverlay>);
 
     expect(queryByText('Hello')).not.toBeNull();
   });
