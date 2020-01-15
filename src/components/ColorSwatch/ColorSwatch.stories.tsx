@@ -34,8 +34,8 @@ export const Swatches = () => (
         backgroundUrl='https://cdn-integration.modaoperandi.com/mojo/assets/variants/black_and_white-500bdf259c1ca9877872d3e91c1a75375c6b6a09db1f5fdce715a01260b4d4a5.png'
         color='nude'
         onSale
-        onMouseOver={color => alert(color)}
-        onMouseOut={() => alert('out')}
+        onMouseEnter={action('onMouseEnter')}
+        onMouseLeave={action('onMouseLeave')}
       />
     </Stack>
   </States>

@@ -6,7 +6,7 @@ import { SKU_COLORS, SkuColor } from './skuColors';
 
 import './ColorSwatch.scss';
 
-export interface Props extends Omit<ClickableProps, 'onClick'> {
+export interface Props extends Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnter'> {
   color: SkuColor | string;
   backgroundUrl?: string;
   hover?: boolean;
@@ -14,8 +14,8 @@ export interface Props extends Omit<ClickableProps, 'onClick'> {
   soldOut?: boolean;
   onSale?: boolean;
   onClick?(color: string): void;
-  handleMouseOver?(color: string): void;
-  handleMouseOut?(): void;
+  onMouseEnter?(color: string): void;
+  onMouseLeave?(): void;
 }
 
 export const ColorSwatch: React.FC<Props> = ({
@@ -27,21 +27,27 @@ export const ColorSwatch: React.FC<Props> = ({
   soldOut,
   onSale,
   onClick,
-  handleMouseOver,
-  handleMouseOut,
+  onMouseEnter,
+  onMouseLeave,
   ...rest
 }) => {
   const handleClick = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     onClick && onClick(color);
   }, []);
 
-  const onMouseOver = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    handleMouseOver && handleMouseOver(color);
-  }, []);
+  const handleMouseEnter = useCallback(
+    (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      onMouseEnter && onMouseEnter(color);
+    },
+    []
+  );
 
-  const onMouseOut = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    handleMouseOut && handleMouseOut();
-  }, []);
+  const handleMouseLeave = useCallback(
+    (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      onMouseLeave && onMouseLeave();
+    },
+    []
+  );
 
   let styles: React.CSSProperties = {
     backgroundColor: SKU_COLORS[color as SkuColor] || color
@@ -68,8 +74,8 @@ export const ColorSwatch: React.FC<Props> = ({
         className
       )}
       onClick={handleClick}
-      onMouseOver={onMouseOver}
-      onMouseOut={onMouseOut}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       {...rest}
     >
       <div className='ColorSwatch__chip' style={styles} />
