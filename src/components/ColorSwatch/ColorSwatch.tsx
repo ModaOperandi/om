@@ -15,7 +15,6 @@ export interface Props extends Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnt
   onSale?: boolean;
   onClick?(color: string): void;
   onMouseEnter?(color: string): void;
-  onMouseLeave?(): void;
 }
 
 export const ColorSwatch: React.FC<Props> = ({
@@ -28,7 +27,6 @@ export const ColorSwatch: React.FC<Props> = ({
   onSale,
   onClick,
   onMouseEnter,
-  onMouseLeave,
   ...rest
 }) => {
   const handleClick = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -38,13 +36,6 @@ export const ColorSwatch: React.FC<Props> = ({
   const handleMouseEnter = useCallback(
     (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       onMouseEnter && onMouseEnter(color);
-    },
-    []
-  );
-
-  const handleMouseLeave = useCallback(
-    (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      onMouseLeave && onMouseLeave();
     },
     []
   );
@@ -75,7 +66,6 @@ export const ColorSwatch: React.FC<Props> = ({
       )}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       {...rest}
     >
       <div className='ColorSwatch__chip' style={styles} />
