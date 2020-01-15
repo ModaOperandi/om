@@ -14,7 +14,8 @@ export interface Props extends Omit<ClickableProps, 'onClick'> {
   soldOut?: boolean;
   onSale?: boolean;
   onClick?(color: string): void;
-  onHover?(color: string | undefined): void;
+  handleMouseOver?(color: string): void;
+  handleMouseOut?(): void;
 }
 
 export const ColorSwatch: React.FC<Props> = ({
@@ -26,11 +27,20 @@ export const ColorSwatch: React.FC<Props> = ({
   soldOut,
   onSale,
   onClick,
-  onHover,
+  handleMouseOver,
+  handleMouseOut,
   ...rest
 }) => {
   const handleClick = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     onClick && onClick(color);
+  }, []);
+
+  const onMouseOver = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    handleMouseOver && handleMouseOver(color);
+  }, []);
+
+  const onMouseOut = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    handleMouseOut && handleMouseOut();
   }, []);
 
   let styles: React.CSSProperties = {
@@ -58,8 +68,8 @@ export const ColorSwatch: React.FC<Props> = ({
         className
       )}
       onClick={handleClick}
-      onMouseOver={() => onHover && onHover(color)}
-      onMouseOut={() => onHover && onHover(undefined)}
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
       {...rest}
     >
       <div className='ColorSwatch__chip' style={styles} />
