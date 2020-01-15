@@ -33,6 +33,18 @@ export const ColorSwatch: React.FC<Props> = ({
     onClick && onClick(color);
   }, []);
 
+  let styles: React.CSSProperties = {
+    backgroundColor: SKU_COLORS[color as SkuColor] || color
+  };
+
+  if (backgroundUrl) {
+    styles = {
+      ...styles,
+      backgroundImage: `url(${backgroundUrl})`,
+      backgroundSize: 'cover'
+    };
+  }
+
   return (
     <Clickable
       className={classNames(
@@ -50,14 +62,7 @@ export const ColorSwatch: React.FC<Props> = ({
       onMouseOut={() => onHover && onHover(undefined)}
       {...rest}
     >
-      <div
-        className='ColorSwatch__chip'
-        style={{
-          backgroundColor: SKU_COLORS[color as SkuColor] || color,
-          backgroundImage: `url(${backgroundUrl})`,
-          backgroundSize: 'cover'
-        }}
-      />
+      <div className='ColorSwatch__chip' style={styles} />
     </Clickable>
   );
 };
