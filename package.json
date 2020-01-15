@@ -81,7 +81,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "sass-loader": "^8.0.0",
-    "semantic-release": "^15.13.30",
+    "semantic-release": "^16.0.2",
     "style-loader": "^1.0.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.7.2",
