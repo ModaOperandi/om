@@ -8,26 +8,42 @@ import './ColorSwatch.scss';
 
 export interface Props extends Omit<ClickableProps, 'onClick'> {
   color: SkuColor | string;
+  backgroundUrl?: string;
   hover?: boolean;
   selected?: boolean;
   soldOut?: boolean;
   onSale?: boolean;
   onClick?(color: string): void;
+  onHover?(color: string | undefined): void;
 }
 
 export const ColorSwatch: React.FC<Props> = ({
   className,
   color,
+  backgroundUrl,
   hover,
   selected,
   soldOut,
   onSale,
   onClick,
+  onHover,
   ...rest
 }) => {
   const handleClick = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     onClick && onClick(color);
   }, []);
+
+  let styles: React.CSSProperties = {
+    backgroundColor: SKU_COLORS[color as SkuColor] || color
+  };
+
+  if (backgroundUrl) {
+    styles = {
+      ...styles,
+      backgroundImage: `url(${backgroundUrl})`,
+      backgroundSize: 'cover'
+    };
+  }
 
   return (
     <Clickable
@@ -42,14 +58,11 @@ export const ColorSwatch: React.FC<Props> = ({
         className
       )}
       onClick={handleClick}
+      onMouseOver={() => onHover && onHover(color)}
+      onMouseOut={() => onHover && onHover(undefined)}
       {...rest}
     >
-      <div
-        className='ColorSwatch__chip'
-        style={{
-          backgroundColor: SKU_COLORS[color as SkuColor] || color
-        }}
-      />
+      <div className='ColorSwatch__chip' style={styles} />
     </Clickable>
   );
 };
