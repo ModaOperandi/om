@@ -11,8 +11,8 @@ export const Default = () => (
     states={[
       {},
       { checked: true },
-      { label: 'With label' },
-      { label: 'With label', checked: true }
+      { children: 'With label' },
+      { children: 'With label', checked: true }
     ]}
   >
     <RadioButton />
@@ -33,12 +33,13 @@ export const Select = () => {
           key={value}
           name={value}
           value={value}
-          label={value}
           checked={selected === value}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
             select(event.currentTarget.value)
           }
-        />
+        >
+          {value}
+        </RadioButton>
       ))}
     </>
   );

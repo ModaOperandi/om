@@ -12,8 +12,9 @@ export const Default = () => (
       {},
       { checked: true },
       { defaultChecked: true },
-      { label: 'Remember me' },
-      { label: 'Remember me', checked: true }
+      { children: 'Remember me' },
+      { children: 'Remember me', checked: true },
+      { children: <Text color='code-red'>Important!</Text> }
     ]}
   >
     <Checkbox />
@@ -30,12 +31,13 @@ export const Check = () => {
       <Checkbox
         id='rememberMe'
         name='rememberMe'
-        label='Remember me'
         checked={checked}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           check(event.target.checked);
         }}
-      />
+      >
+        Remember me
+      </Checkbox>
     </>
   );
 };
@@ -43,4 +45,4 @@ export const Check = () => {
 const LONG_LABEL =
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet rem at possimus ipsam cupiditate labore velit molestiae odio provident suscipit rerum minima, perferendis repellat vero recusandae quasi quos maxime incidunt!';
 
-export const LongLabel = () => <Checkbox label={LONG_LABEL} />;
+export const LongLabel = () => <Checkbox>{LONG_LABEL}</Checkbox>;

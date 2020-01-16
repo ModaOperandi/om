@@ -5,14 +5,14 @@ import CheckboxUncheckedIcon from '@moda/icons/checkbox-unchecked-12';
 import './Checkbox.scss';
 
 export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
+  children?: JSX.Element | string;
 }
 
 export const Checkbox: React.FC<Props> = ({
   className,
   defaultChecked,
   checked,
-  label,
+  children,
   value,
   onChange,
   ...rest
@@ -46,7 +46,7 @@ export const Checkbox: React.FC<Props> = ({
         {...rest}
       />
 
-      {label && <span className='Checkbox__label'>{label}</span>}
+      {children && <span className='Checkbox__label'>{children}</span>}
     </label>
   );
 };
