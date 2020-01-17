@@ -1580,16 +1580,16 @@
     ts-dedent "^1.1.0"
 
 "@storybook/addon-viewport@^5.2.6":
-  version "5.3.5"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-5.3.5.tgz#4ba5e80c6b393541bc172f4bdb15dda7c942566e"
-  integrity sha512-7E55UqHRyuRgEz8SddexpJMo3xbJlHyzbQ9TCphDrD7rSVSFNUiGBaK7ZJT76N6eMdkAWyYqZSAKVCVMd2Wf/w==
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-5.3.6.tgz#cf41f616eb2784004bcc790f1cdf570f2d947798"
+  integrity sha512-cWLVovkhf1dijQVafU9OMXQLVhbldLxbCRjtH2KLlxM+jt5T5Y/44VDnCwP3BFcuIyyvw+llGfVawxmSzLI11w==
   dependencies:
-    "@storybook/addons" "5.3.5"
-    "@storybook/api" "5.3.5"
-    "@storybook/client-logger" "5.3.5"
-    "@storybook/components" "5.3.5"
-    "@storybook/core-events" "5.3.5"
-    "@storybook/theming" "5.3.5"
+    "@storybook/addons" "5.3.6"
+    "@storybook/api" "5.3.6"
+    "@storybook/client-logger" "5.3.6"
+    "@storybook/components" "5.3.6"
+    "@storybook/core-events" "5.3.6"
+    "@storybook/theming" "5.3.6"
     core-js "^3.0.1"
     global "^4.3.2"
     memoizerific "^1.11.3"
@@ -1742,6 +1742,33 @@
   dependencies:
     "@storybook/client-logger" "5.3.5"
     "@storybook/theming" "5.3.5"
+    "@types/react-syntax-highlighter" "11.0.2"
+    "@types/react-textarea-autosize" "^4.3.3"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    lodash "^4.17.15"
+    markdown-to-jsx "^6.9.1"
+    memoizerific "^1.11.3"
+    polished "^3.3.1"
+    popper.js "^1.14.7"
+    prop-types "^15.7.2"
+    react "^16.8.3"
+    react-dom "^16.8.3"
+    react-focus-lock "^2.1.0"
+    react-helmet-async "^1.0.2"
+    react-popper-tooltip "^2.8.3"
+    react-syntax-highlighter "^11.0.2"
+    react-textarea-autosize "^7.1.0"
+    simplebar-react "^1.0.0-alpha.6"
+    ts-dedent "^1.1.0"
+
+"@storybook/components@5.3.6":
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-5.3.6.tgz#6fe38ac9ba62c982842bfcb06690c3f4fef8be06"
+  integrity sha512-9XhQyTF884XFdCdsJT2/xRTmMW2a1CBpZCHHC/Xvs85AZ9YeLcp7eDfeu72KMa7FApKH5wuh4JiY5nBgmkQShg==
+  dependencies:
+    "@storybook/client-logger" "5.3.6"
+    "@storybook/theming" "5.3.6"
     "@types/react-syntax-highlighter" "11.0.2"
     "@types/react-textarea-autosize" "^4.3.3"
     core-js "^3.0.1"
