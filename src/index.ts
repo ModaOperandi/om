@@ -8,3 +8,7 @@ export const tokens = {
 };
 
 export * from './components';
+
+import { States } from './utilities';
+
+export const Utilities = { States };

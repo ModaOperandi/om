@@ -3,7 +3,7 @@ import { RenderProps } from './isRenderProps';
 import { State } from './State';
 import './States.scss';
 
-interface Props {
+export interface Props {
   states?: any[];
   children: JSX.Element | RenderProps;
 }
