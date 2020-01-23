@@ -5,11 +5,12 @@ import './Badge.scss';
 
 export const TRENDING_THEME = 'trending';
 export const BESTSELLER_THEME = 'bestseller';
+export const FALL_ESSENTIAL_THEME = 'fall-essential';
 
 const THEMES = {
   [BESTSELLER_THEME]: 'Bestseller',
   [TRENDING_THEME]: 'Trending',
-  'fall-essential': 'Fall Essential'
+  [FALL_ESSENTIAL_THEME]: 'Fall Essential'
 } as const;
 
 type Theme = keyof typeof THEMES;
