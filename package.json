@@ -68,7 +68,7 @@
     "babel-loader": "^8.0.6",
     "commitizen": "^4.0.3",
     "css-loader": "^3.2.0",
-    "cz-conventional-changelog": "3.0.2",
+    "cz-conventional-changelog": "3.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "extract-css-chunks-webpack-plugin": "^4.6.0",
