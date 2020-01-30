@@ -1404,9 +1404,9 @@
   integrity sha512-GxsfrbfVkl5o/Zk2xq3m4V2PHIiiRorej4zdMFqYo2I1JYDIz4AqDFVP8RS9r8bZQ8jrShlJU1qNuEte9PPGVQ==
 
 "@moda/tokens@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-4.0.0.tgz#756ec590f12acdeb9c608d653fc099ab4e804a74"
-  integrity sha512-vaIEuzO15rRnyd173eO3Rs9c1/JCVs4H24l4QkgKXLIW2DrVUtu4aKy+d07in8CiB8+HG2uftpLOqnBGFUqfkA==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-4.1.0.tgz#f359a1a2fdadf729e897d40bbdb5b5be846eaf53"
+  integrity sha512-zYYRjds0jlRplefnZw14bTX/s+FCcJo5JIXjrfEd9XffSfORJmG0lYJmGeSFIm5ADKc3H5dfigVHiQPx1eFYtw==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
