@@ -1403,7 +1403,7 @@
   resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-4.6.0.tgz#090f13a9da0ccf5834e39820a3f4f90587586991"
   integrity sha512-GxsfrbfVkl5o/Zk2xq3m4V2PHIiiRorej4zdMFqYo2I1JYDIz4AqDFVP8RS9r8bZQ8jrShlJU1qNuEte9PPGVQ==
 
-"@moda/tokens@^4.0.0":
+"@moda/tokens@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-4.1.0.tgz#f359a1a2fdadf729e897d40bbdb5b5be846eaf53"
   integrity sha512-zYYRjds0jlRplefnZw14bTX/s+FCcJo5JIXjrfEd9XffSfORJmG0lYJmGeSFIm5ADKc3H5dfigVHiQPx1eFYtw==
