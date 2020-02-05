@@ -27,7 +27,7 @@ export const Loading: React.FC<Props> = ({ className, style, speed = 250, ...res
   useEffect(() => {
     const interval = setInterval(() => setKey(Date.now()), speed);
     return () => clearInterval(interval);
-  }, []);
+  }, [speed]);
 
   return (
     <div

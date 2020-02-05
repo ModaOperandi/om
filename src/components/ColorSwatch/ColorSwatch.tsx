@@ -31,13 +31,13 @@ export const ColorSwatch: React.FC<Props> = ({
 }) => {
   const handleClick = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     onClick && onClick(color);
-  }, []);
+  }, [color, onClick]);
 
   const handleMouseEnter = useCallback(
     (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       onMouseEnter && onMouseEnter(color);
     },
-    []
+    [color, onMouseEnter]
   );
 
   let styles: React.CSSProperties = {

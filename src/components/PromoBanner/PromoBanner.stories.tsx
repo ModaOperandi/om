@@ -10,18 +10,22 @@ export const Default = () => (
     states={[
       { children: <span>Center</span> },
       {
-        children: [<span>Left</span>, <span>Right</span>]
-      },
-      {
-        children: [<span>Left</span>, <span>Center</span>, <span>Right</span>]
+        children: [<span key='left'>Left</span>, <span key='right'>Right</span>]
       },
       {
         children: [
-          <span>Currency: USA (USD $)</span>,
-          <span className='FOO'>
+          <span key='left'>Left</span>,
+          <span key='center'>Center</span>,
+          <span key='right'>Right</span>
+        ]
+      },
+      {
+        children: [
+          <span key='left'>Currency: USA (USD $)</span>,
+          <span key='center' className='FOO'>
             Order by Dec. 12 for delivery by Dec. 25 — <a href='#'>LEARN MORE</a>
           </span>,
-          <span>Hi, Friend</span>
+          <span key='right'>Hi, Friend</span>
         ]
       }
     ]}

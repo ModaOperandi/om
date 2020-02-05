@@ -12,7 +12,9 @@ export const States: React.FC<Props> = ({ states = [{}], children, ...rest }) =>
   return (
     <div className='States'>
       {states.map((props, i) => (
-        <State key={i} props={props} children={children} {...rest} />
+        <State key={i} props={props} {...rest}>
+          {children}
+        </State>
       ))}
     </div>
   );
