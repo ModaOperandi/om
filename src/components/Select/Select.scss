@@ -13,9 +13,12 @@
     display: block;
     width: 100%;
     text-align: left;
-    padding: spacing(2, 3);
+    padding: spacing(2, 7, 2, 3);
     color: color(ink);
     border: 1px solid color(elephant);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     &:focus {
       border-color: color(cement);
