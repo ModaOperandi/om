@@ -1,0 +1,41 @@
+@import '~om';
+
+.Select {
+  $self: &;
+
+  position: relative;
+  display: flex;
+  cursor: pointer;
+
+  &__value {
+    @include text(body1);
+
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: spacing(2, 3);
+    color: color(ink);
+    border: 1px solid color(elephant);
+
+    &:focus {
+      border-color: color(cement);
+      outline: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: space(4);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-top: -1px;
+  }
+}

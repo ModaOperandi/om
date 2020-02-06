@@ -1,0 +1,11 @@
+@import '~om';
+
+.SelectOptions {
+  background-color: color(snow);
+  border: 1px solid color(elephant);
+
+  &:focus {
+    outline: 0;
+    border-color: color(cement);
+  }
+}
