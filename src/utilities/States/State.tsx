@@ -1,8 +1,6 @@
 import React from 'react';
 import { isRenderProps, RenderProps } from './isRenderProps';
-
 import { StatesProps } from './StatesProps';
-
 import './State.scss';
 
 interface Props {
@@ -19,7 +17,7 @@ export const State: React.FC<Props> = ({ props, children, ...rest }) => {
       {Specimen}
 
       <code className='State__props'>
-        <StatesProps props={props} children={innerChildren} />
+        <StatesProps props={props}>{innerChildren}</StatesProps>
       </code>
     </div>
   );

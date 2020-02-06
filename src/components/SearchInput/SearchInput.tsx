@@ -2,10 +2,8 @@ import React, { useCallback, useRef, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import ExitIcon from '@moda/icons/exit-20';
 import SearchIcon from '@moda/icons/search-20';
-
 import { TextInput, Props as TextInputProps } from '../TextInput';
 import { Clickable } from '../Clickable';
-
 import './SearchInput.scss';
 
 export interface Props extends TextInputProps {
@@ -21,7 +19,6 @@ export const SearchInput: React.FC<Props> = ({
   onChange,
   onChangeValue,
   onClear,
-  size,
   value = DEFAULT_INPUT_VALUE,
   ...rest
 }) => {
@@ -35,7 +32,7 @@ export const SearchInput: React.FC<Props> = ({
     if (ref.current) {
       ref.current.focus();
     }
-  }, []);
+  }, [onClear]);
 
   const handleChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {

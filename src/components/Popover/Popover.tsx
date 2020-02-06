@@ -28,13 +28,13 @@ export const Popover: React.FC<Props> = ({
       timeout.current && clearTimeout(timeout.current);
       setOpen(true);
     }
-  }, []);
+  }, [open]);
 
   const handleMouseLeave = useCallback(() => {
     if (!open) {
       timeout.current = setTimeout(() => setOpen(false), POPOVER_MOUSEOUT_DELAY_MS);
     }
-  }, []);
+  }, [open]);
 
   useEffect(() => setOpen(open), [open]);
 

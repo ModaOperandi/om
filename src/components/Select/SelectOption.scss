@@ -1,0 +1,20 @@
+@import '~om';
+
+.SelectOption {
+  @include text(body1);
+
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: spacing(2, 3);
+  color: color(ink);
+
+  &--selected {
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &--active {
+    background-color: color(noise);
+  }
+}

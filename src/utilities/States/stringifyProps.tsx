@@ -10,8 +10,8 @@ export const stringifyProps = (props: any) => {
     if (typeof value === 'string') return `${memo} ${key}="${truncate(value)}"`;
     if (typeof value === 'function') return `${memo} ${key}={fn}`;
     if (typeof value === 'boolean') return `${memo} ${key}${value ? '' : '={false}'}`;
-    if (typeof value === 'number') return `${key}={${value}}`;
-    if (typeof value === 'object') return `${key}={...}`;
+    if (typeof value === 'number') return `${memo} ${key}={${value}}`;
+    if (typeof value === 'object') return `${memo} ${key}={...}`;
 
     return `${memo} ${key}=${value}`;
   }, '');

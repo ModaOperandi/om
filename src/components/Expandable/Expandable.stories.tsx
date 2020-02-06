@@ -9,9 +9,9 @@ export default { title: 'Components|Expandable' };
 export const Default = () => (
   <States states={[null, { expanded: true }]}>
     <Expandable name='Editor’s Note'>
-      Mark Cross' 'Cole' duffle bag is crafted from textured grain leather with ample space for your
+      Mark Cross’ ‘Cole’ duffle bag is crafted from textured grain leather with ample space for your
       long-haul travels. It opens to reveal red twill lining and ample compartments for your
-      essentials. It has polished silver-tone palladium hardware and is stamped with the label's
+      essentials. It has polished silver-tone palladium hardware and is stamped with the label’s
       signature foil logo along the front. Adjust the removable shoulder strap for easy navigation
       through busy airport terminals.
     </Expandable>
@@ -22,7 +22,7 @@ export const Stacked = () => (
   <Stack space={2}>
     <Expandable name='Editor’s Note' expanded>
       <p>
-        Acne Studios' '1996' jeans are fitted with a high-rise waist and straight-leg silhouette.
+        Acne Studios’ ‘1996’ jeans are fitted with a high-rise waist and straight-leg silhouette.
         Designed in a dark-blue wash, this five-pocket style is detailed with contrast top-stitching
         to mirror vintage pairs.
       </p>
@@ -39,7 +39,10 @@ export const Stacked = () => (
     </Expandable>
     <Expandable name='Size &amp; Fit'>
       <ul>
-        <li>Model measurements: height 6'2"/188cm - neck 15.5"/39cm - waist 30"/76cm</li>
+        <li>
+          Model measurements: height 6&apos;2&quot;/188cm - neck 15.5&quot;/39cm - waist
+          30&quot;/76cm
+        </li>
         <li>Model is wearing US 30</li>
         <li>This style fits true to size</li>
         <li>We suggest taking your normal size</li>
