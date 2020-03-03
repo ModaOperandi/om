@@ -1,0 +1,7 @@
+@import './thin-underline';
+
+.Story.thin-underline {
+  @include thin-underline();
+
+  display: inline-block;
+}
