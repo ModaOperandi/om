@@ -5,8 +5,8 @@
 
   @include text(body2);
 
-  background-color: color(burnt-orange);
-  border-bottom: space(1) solid color(lilac);
+  background-color: color(cream);
+  border-top: space(1) solid color(burnt-orange);
 
   &__constrain {
     display: flex;
@@ -15,15 +15,11 @@
   }
 
   &__child {
-    @include font-smoothing(subpixel);
-
     min-width: space(11);
     padding: spacing(2, 3);
-    color: color(snow);
+    color: color(ink);
 
     &--center {
-      @include text(body2, $font: serif);
-
       flex: 1;
       text-align: center;
     }
@@ -38,12 +34,9 @@
     }
 
     > a {
-      color: color(snow);
-      text-decoration: underline;
+      color: color(ink);
 
-      &:hover {
-        text-decoration: none;
-      }
+      @include thin-underline();
     }
   }
 
