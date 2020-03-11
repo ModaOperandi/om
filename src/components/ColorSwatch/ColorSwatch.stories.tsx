@@ -7,19 +7,26 @@ import { ColorSwatch } from './ColorSwatch';
 
 export default { title: 'Components|ColorSwatch' };
 
+const STATES = [
+  null,
+  { hover: true },
+  { selected: true },
+  { onSale: true },
+  { soldOut: true },
+  { onSale: true, soldOut: true },
+  { selected: true, onSale: true, soldOut: true },
+  { disabled: true }
+];
+
 export const Default = () => (
-  <States
-    states={[
-      null,
-      { hover: true },
-      { selected: true },
-      { onSale: true },
-      { soldOut: true },
-      { onSale: true, soldOut: true },
-      { selected: true, onSale: true, soldOut: true }
-    ]}
-  >
+  <States states={STATES}>
     <ColorSwatch color='yellow' onClick={action('onClick')} />
+  </States>
+);
+
+export const Small = () => (
+  <States states={STATES}>
+    <ColorSwatch size='small' color='yellow' onClick={action('onClick')} />
   </States>
 );
 
