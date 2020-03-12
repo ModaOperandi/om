@@ -1,19 +1,25 @@
 @import '~om';
 
 .ColorSwatch {
-  // Uses transparent black to blend with underlaid colors
-  $overlay-border-color: rgba(black, 0.1);
+  $self: &;
   $outer-border-color: rgba(black, 0.5);
   $on-sale-dot-size: space(1);
+  $default-size: space(6);
+  $small-size: space(5);
 
   position: relative;
-  width: space(6);
-  height: space(6);
+  width: $default-size;
+  height: $default-size;
   border: 1px solid transparent;
   background-color: transparent;
   border-radius: 50%;
-  padding: space(1);
+  padding: 1px;
   cursor: pointer;
+
+  &--small {
+    width: $small-size;
+    height: $small-size;
+  }
 
   &__chip {
     position: relative;
@@ -21,8 +27,8 @@
     height: 100%;
     border-radius: 50%;
 
-    &::after {
-      display: block;
+    // Transparent overlay
+    &::before {
       content: '';
       position: absolute;
       top: 0;
@@ -30,26 +36,55 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      border: 1px solid $overlay-border-color;
+      background-color: rgba(black, 0.2);
+      opacity: 0;
+      transition: opacity 200ms;
+    }
+
+    // Inset dot
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: color(snow);
     }
   }
 
   &:hover,
   &--hover {
     border-color: color(elephant);
+
+    #{$self}__chip {
+      // Transparent overlay
+      &::before {
+        opacity: 1;
+      }
+
+      // Inset dot
+      &::after {
+        display: block;
+      }
+    }
   }
 
   &:focus,
   &--selected {
     outline: none;
 
-    &,
-    &:hover {
-      border-color: $outer-border-color;
+    // Inset dot
+    #{$self}__chip::after {
+      display: block;
     }
   }
 
   &--sold-out {
+    // Slash
     &::before {
       content: '';
       display: block;
@@ -58,13 +93,14 @@
       left: 0%;
       width: 100%;
       height: 1px;
-      transform: rotate(-45deg);
+      transform: rotate(-45deg) translateY(-50%);
       background-color: $outer-border-color;
       z-index: 1;
     }
   }
 
   &--on-sale {
+    // Small top-right dot
     &::after {
       content: '';
       display: block;
@@ -76,5 +112,11 @@
       border-radius: 50%;
       background-color: color('fuchsia');
     }
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 }

@@ -7,6 +7,7 @@ import { SKU_COLORS, SkuColor } from './skuColors';
 import './ColorSwatch.scss';
 
 export interface Props extends Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnter'> {
+  size?: 'default' | 'small';
   color: SkuColor | string;
   backgroundUrl?: string;
   hover?: boolean;
@@ -19,6 +20,7 @@ export interface Props extends Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnt
 
 export const ColorSwatch: React.FC<Props> = ({
   className,
+  size,
   color,
   backgroundUrl,
   hover,
@@ -29,9 +31,12 @@ export const ColorSwatch: React.FC<Props> = ({
   onMouseEnter,
   ...rest
 }) => {
-  const handleClick = useCallback((_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    onClick && onClick(color);
-  }, [color, onClick]);
+  const handleClick = useCallback(
+    (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      onClick && onClick(color);
+    },
+    [color, onClick]
+  );
 
   const handleMouseEnter = useCallback(
     (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -57,6 +62,7 @@ export const ColorSwatch: React.FC<Props> = ({
       className={classNames(
         'ColorSwatch',
         {
+          'ColorSwatch--small': size === 'small',
           'ColorSwatch--hover': hover,
           'ColorSwatch--selected': selected,
           'ColorSwatch--sold-out': soldOut,
