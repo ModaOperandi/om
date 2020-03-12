@@ -1,0 +1,20 @@
+@import '~om';
+
+.Tab {
+  @include text(eyebrow);
+
+  padding: spacing(4, 0);
+  border-bottom: 2px solid transparent;
+  color: color(cement);
+  text-align: left;
+
+  &--active {
+    color: color(ink);
+    border-bottom: 2px solid color(ink);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

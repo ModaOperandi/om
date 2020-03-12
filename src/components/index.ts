@@ -25,3 +25,4 @@ export { Label } from './Label';
 export { Checkbox } from './Checkbox';
 export { Select } from './Select';
 export { AspectRatioBox } from './AspectRatioBox';
+export { Tabs } from './Tabs';
