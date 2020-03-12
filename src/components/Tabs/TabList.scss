@@ -1,0 +1,7 @@
+@import '~om';
+
+.TabList {
+  @include stack(4, $direction: horizontal);
+
+  border-bottom: 1px solid color(elephant);
+}
