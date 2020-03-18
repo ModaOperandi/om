@@ -3,3 +3,7 @@
 .Story.overflow-scroll {
   @include overflow-scroll();
 }
+
+.Story.overflow-scroll-x {
+  @include overflow-scroll(x);
+}
