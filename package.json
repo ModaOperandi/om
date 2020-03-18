@@ -44,7 +44,7 @@
     "@moda/icons": "^4.0.0",
     "@moda/tokens": "^4.2.0",
     "@types/classnames": "^2.2.9",
-    "body-scroll-lock": "^2.6.4",
+    "body-scroll-lock": "^3.0.1",
     "classnames": "^2.2.6",
     "proportional-scale": "^2.1.1",
     "use-keyboard-list-navigation": "^1.1.0"
