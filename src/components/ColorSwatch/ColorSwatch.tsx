@@ -10,6 +10,7 @@ export interface Props extends Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnt
   size?: 'default' | 'small';
   color: SkuColor | string;
   backgroundUrl?: string;
+  focus?: boolean;
   hover?: boolean;
   selected?: boolean;
   soldOut?: boolean;
@@ -23,12 +24,14 @@ export const ColorSwatch: React.FC<Props> = ({
   size,
   color,
   backgroundUrl,
+  focus,
   hover,
   selected,
   soldOut,
   onSale,
   onClick,
   onMouseEnter,
+  disabled,
   ...rest
 }) => {
   const handleClick = useCallback(
@@ -60,10 +63,11 @@ export const ColorSwatch: React.FC<Props> = ({
   return (
     <Clickable
       className={classNames(
-        'ColorSwatch',
+        `ColorSwatch ColorSwatch--${color}`,
         {
           'ColorSwatch--small': size === 'small',
           'ColorSwatch--hover': hover,
+          'ColorSwatch--focus': focus,
           'ColorSwatch--selected': selected,
           'ColorSwatch--sold-out': soldOut,
           'ColorSwatch--on-sale': onSale
@@ -72,6 +76,7 @@ export const ColorSwatch: React.FC<Props> = ({
       )}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
+      disabled={disabled}
       {...rest}
     >
       <div className='ColorSwatch__chip' style={styles} />
