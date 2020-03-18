@@ -21,6 +21,21 @@
     height: $small-size;
   }
 
+  // Inset dot
+  &::before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 33%;
+    height: 33%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: color(snow);
+    z-index: 1;
+  }
+
   &__chip {
     position: relative;
     width: 100%;
@@ -40,62 +55,51 @@
       opacity: 0;
       transition: opacity 200ms;
     }
-
-    // Inset dot
-    &::after {
-      display: none;
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 50%;
-      height: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background-color: color(snow);
-    }
   }
 
   &:hover,
   &--hover {
     border-color: color(elephant);
 
+    // Inset dot
+    &::before {
+      display: block;
+    }
+
     #{$self}__chip {
       // Transparent overlay
       &::before {
         opacity: 1;
       }
-
-      // Inset dot
-      &::after {
-        display: block;
-      }
     }
   }
 
   &:focus,
+  &--focus,
   &--selected {
     outline: none;
 
     // Inset dot
-    #{$self}__chip::after {
+    &::before {
       display: block;
     }
   }
 
   &--sold-out {
-    // Slash
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 0%;
-      width: 100%;
-      height: 1px;
-      transform: rotate(-45deg) translateY(-50%);
-      background-color: $outer-border-color;
-      z-index: 1;
+    #{$self}__chip {
+      // Slash
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 1px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background-color: $outer-border-color;
+        z-index: 1;
+      }
     }
   }
 
@@ -110,13 +114,25 @@
       width: $on-sale-dot-size;
       height: $on-sale-dot-size;
       border-radius: 50%;
-      background-color: color('fuchsia');
+      background-color: color('code-red');
     }
   }
 
   &:disabled,
   &--disabled {
-    opacity: 0.5;
     pointer-events: none;
+  }
+
+  &--clear,
+  &--ivory,
+  &--white {
+    // Inset dot
+    &::before {
+      background-color: color(ink);
+    }
+
+    #{$self}__chip {
+      border: 1px solid color(ink, 0.25);
+    }
   }
 }
