@@ -99,6 +99,15 @@ export const Select: React.FC<SelectProps> = ({
     didMountRef.current = true;
   }, [onChange, state.value]);
 
+  useEffect(() => {
+    if (didMountRef.current) {
+      value && dispatch({ type: 'SELECT', payload: { value } });
+      return;
+    }
+
+    didMountRef.current = true;
+  }, [onChange, value]);
+
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
   useClickOutside(selectRef, handleClickOutside);
 
