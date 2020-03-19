@@ -2,17 +2,17 @@ import React, { useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import { useKeyboardListNavigation } from 'use-keyboard-list-navigation';
 import { SelectOption } from './SelectOption';
-import { Option } from './Select';
+import { SelectableOption } from './Select';
 import './SelectOptions.scss';
 
-export interface Props extends Omit<React.HTMLAttributes<HTMLUListElement>, 'onSelect'> {
+export type SelectOptionsProps = Omit<React.HTMLAttributes<HTMLUListElement>, 'onSelect'> & {
   idRef: string;
-  options: Option[];
-  selectedOption: Option;
-  onSelect(option: Option): void;
-}
+  options: SelectableOption[];
+  selectedOption: SelectableOption;
+  onSelect(option: SelectableOption): void;
+};
 
-export const SelectOptions: React.FC<Props> = ({
+export const SelectOptions: React.FC<SelectOptionsProps> = ({
   idRef,
   options,
   selectedOption,

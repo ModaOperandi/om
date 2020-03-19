@@ -20,8 +20,9 @@ type ThemeProps = { theme: Theme };
 const isThemed = (props: CustomProps | ThemeProps): props is ThemeProps =>
   'theme' in props && props.theme !== undefined && Object.keys(THEMES).indexOf(props.theme) > -1;
 
-export const Badge: React.FC<(CustomProps | ThemeProps) &
-  React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({ className, ...rest }) => {
+export type BadgeProps = (CustomProps | ThemeProps) & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export const Badge: React.FC<BadgeProps> = ({ className, ...rest }) => {
   if (isThemed(rest)) {
     const { theme, ...remaining } = rest;
     return (

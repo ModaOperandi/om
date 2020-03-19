@@ -1,10 +1,10 @@
 import React from 'react';
 import './TabPanel.scss';
 
-interface Props {
+export type TabPanelProps = {
   children: React.ReactNode;
-}
+};
 
-export const TabPanel: React.FC<Props> = ({ children }) => {
-  return <div className="TabPanel">{children}</div>;
+export const TabPanel: React.FC<TabPanelProps> = ({ children }) => {
+  return <div className='TabPanel'>{children}</div>;
 };

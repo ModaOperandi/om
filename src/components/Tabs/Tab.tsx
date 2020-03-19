@@ -2,19 +2,19 @@ import React, { useCallback } from 'react';
 import { Clickable } from '../Clickable';
 import './Tab.scss';
 
-export interface Tab {
+export type Tab = {
   name: string;
   title: string;
   panel: JSX.Element;
-}
+};
 
-interface Props {
+export type TabProps = {
   tab: Tab;
   activeTab: string;
   onTabChosen(tabName: string): void;
-}
+};
 
-export const Tab: React.FC<Props> = ({ tab, onTabChosen, activeTab }) => {
+export const Tab: React.FC<TabProps> = ({ tab, onTabChosen, activeTab }) => {
   const handleClick = useCallback(() => onTabChosen(tab.name), [tab.name, onTabChosen]);
 
   const handleKeyDown = useCallback(

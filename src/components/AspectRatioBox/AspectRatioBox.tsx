@@ -8,15 +8,15 @@ export const DEFAULT_PRODUCT_ASPECT_HEIGHT = 205;
 export const DEFAULT_PRODUCT_ASPECT_RATIO =
   DEFAULT_PRODUCT_ASPECT_HEIGHT / DEFAULT_PRODUCT_ASPECT_WIDTH;
 
-export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export type AspectRatioBoxProps = React.HTMLAttributes<HTMLDivElement> & {
   aspectWidth?: number;
   aspectHeight?: number;
   maxWidth: number;
   maxHeight: number;
   outlined?: boolean;
-}
+};
 
-export const AspectRatioBox: React.FC<Props> = ({
+export const AspectRatioBox: React.FC<AspectRatioBoxProps> = ({
   aspectWidth = DEFAULT_PRODUCT_ASPECT_WIDTH,
   aspectHeight = DEFAULT_PRODUCT_ASPECT_HEIGHT,
   maxWidth,

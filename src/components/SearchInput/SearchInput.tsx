@@ -2,19 +2,19 @@ import React, { useCallback, useRef, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import ExitIcon from '@moda/icons/exit-20';
 import SearchIcon from '@moda/icons/search-20';
-import { TextInput, Props as TextInputProps } from '../TextInput';
+import { TextInput, TextInputProps } from '../TextInput';
 import { Clickable } from '../Clickable';
 import './SearchInput.scss';
 
-export interface Props extends TextInputProps {
+export type SearchInputProps = TextInputProps & {
   value?: string;
   onClear?(): void;
   onChangeValue?(value: string): void;
-}
+};
 
 const DEFAULT_INPUT_VALUE = '';
 
-export const SearchInput: React.FC<Props> = ({
+export const SearchInput: React.FC<SearchInputProps> = ({
   className,
   onChange,
   onChangeValue,

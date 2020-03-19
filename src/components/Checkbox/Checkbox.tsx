@@ -4,11 +4,11 @@ import CheckboxCheckedIcon from '@moda/icons/checkbox-checked-12';
 import CheckboxUncheckedIcon from '@moda/icons/checkbox-unchecked-12';
 import './Checkbox.scss';
 
-export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+export type CheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
   children?: JSX.Element | string;
-}
+};
 
-export const Checkbox: React.FC<Props> = ({
+export const Checkbox: React.FC<CheckboxProps> = ({
   className,
   defaultChecked,
   checked,

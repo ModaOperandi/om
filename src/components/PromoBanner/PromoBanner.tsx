@@ -1,14 +1,13 @@
 import React, { Children, cloneElement } from 'react';
 import classNames from 'classnames';
 import { Constrain } from '../Constrain';
-
 import './PromoBanner.scss';
 
-export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export type PromoBannerProps = React.HTMLAttributes<HTMLDivElement> & {
   children: JSX.Element | [JSX.Element, JSX.Element] | [JSX.Element, JSX.Element, JSX.Element];
-}
+};
 
-export const PromoBanner: React.FC<Props> = ({ className, children, ...rest }) => {
+export const PromoBanner: React.FC<PromoBannerProps> = ({ className, children, ...rest }) => {
   const length = Children.count(children);
   return (
     <div className={classNames('PromoBanner', className)} {...rest}>

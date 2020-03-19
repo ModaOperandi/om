@@ -7,15 +7,15 @@ import { SelectOptions } from './SelectOptions';
 import { useClickOutside } from './useClickOutside';
 import './Select.scss';
 
-export type Option = { value: string; label: string };
+export type SelectableOption = { value: string; label: string };
 
-export interface Props extends Omit<React.HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'> {
+export type SelectProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'> & {
   idRef?: string;
   label: string;
   value?: string;
-  options: Option[];
+  options: SelectableOption[];
   onChange?(value: string): void;
-}
+};
 
 enum Mode {
   Resting,
@@ -40,7 +40,7 @@ const reducer = (state: State, action: Action) => {
   }
 };
 
-export const Select: React.FC<Props> = ({
+export const Select: React.FC<SelectProps> = ({
   idRef = '',
   className,
   value,
@@ -56,7 +56,7 @@ export const Select: React.FC<Props> = ({
 
   const selectRef = useRef<HTMLDivElement>(null);
 
-  const handleSelect = useCallback((option: Option) => {
+  const handleSelect = useCallback((option: SelectableOption) => {
     dispatch({ type: 'SELECT', payload: { value: option.value } });
   }, []);
 

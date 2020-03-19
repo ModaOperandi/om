@@ -2,14 +2,14 @@ import React from 'react';
 import { Tab, TabPanel } from '.';
 import './TabPanels.scss';
 
-interface Props {
+export type TabPanelsProps = {
   panels: Tab[];
   activePanel: string;
-}
+};
 
-export const TabPanels: React.FC<Props> = ({ panels, activePanel }) => {
+export const TabPanels: React.FC<TabPanelsProps> = ({ panels, activePanel }) => {
   return (
-    <div className="TabPanels">
+    <div className='TabPanels'>
       {panels
         .filter(tab => tab.name === activePanel)
         .map(tab => (
