@@ -2,14 +2,19 @@ import React from 'react';
 import classNames from 'classnames';
 import RadioSelectedIcon from '@moda/icons/radio-selected-16';
 import RadioUnselectedIcon from '@moda/icons/radio-unselected-16';
-
 import './RadioButton.scss';
 
-export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+export type RadioButtonProps = React.InputHTMLAttributes<HTMLInputElement> & {
   children?: JSX.Element | string;
-}
+};
 
-export const RadioButton: React.FC<Props> = ({ className, checked, children, value, ...rest }) => {
+export const RadioButton: React.FC<RadioButtonProps> = ({
+  className,
+  checked,
+  children,
+  value,
+  ...rest
+}) => {
   return (
     <label
       className={classNames('RadioButton', className, {

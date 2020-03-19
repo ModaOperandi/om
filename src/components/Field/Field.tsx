@@ -4,15 +4,14 @@ import WarningIcon from '@moda/icons/warning-16';
 import { TextInput, InputProps } from '../TextInput';
 import './Field.scss';
 
-export type FieldProps = {
-  children?: JSX.Element;
-};
-
-export type Props = InputProps & FieldProps & React.InputHTMLAttributes<HTMLInputElement>;
+export type FieldProps = InputProps &
+  React.InputHTMLAttributes<HTMLInputElement> & {
+    children?: JSX.Element;
+  };
 
 export const Field = React.forwardRef(
   (
-    { className, children, error, label, placeholder, ...rest }: Props,
+    { className, children, error, label, placeholder, ...rest }: FieldProps,
     ref: React.Ref<HTMLInputElement>
   ) => {
     return (

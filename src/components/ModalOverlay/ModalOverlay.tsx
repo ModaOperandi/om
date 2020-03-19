@@ -1,9 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Modal, Props } from '../Modal';
+import { Modal, ModalProps } from '../Modal';
 import './ModalOverlay.scss';
 
-export const ModalOverlay: React.FC<Props> = ({ children, className, ...rest }) => {
+export type ModalOverlayProps = ModalProps;
+
+export const ModalOverlay: React.FC<ModalOverlayProps> = ({ children, className, ...rest }) => {
   return (
     <Modal overlay {...rest}>
       <div className={classNames('ModalOverlay', className)}>{children}</div>

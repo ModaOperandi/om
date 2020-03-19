@@ -1,14 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-
 import './Stack.scss';
 
-export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export type StackProps = React.HTMLAttributes<HTMLDivElement> & {
   space: number;
   direction?: 'vertical' | 'horizontal';
-}
+};
 
-export const Stack: React.FC<Props> = ({
+export const Stack: React.FC<StackProps> = ({
   className,
   children,
   space,

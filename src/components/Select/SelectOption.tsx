@@ -1,16 +1,22 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
-import { Option } from './Select';
+import { SelectableOption } from './Select';
 import './SelectOption.scss';
 
-interface Props extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
+export type SelectOptionProps = Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> & {
   active: boolean;
   selected: boolean;
-  option: Option;
-  onClick: (option: Option) => void;
-}
+  option: SelectableOption;
+  onClick: (option: SelectableOption) => void;
+};
 
-export const SelectOption: React.FC<Props> = ({ active, selected, option, onClick, className }) => {
+export const SelectOption: React.FC<SelectOptionProps> = ({
+  active,
+  selected,
+  option,
+  onClick,
+  className
+}) => {
   const handleClick = useCallback(() => onClick(option), [onClick, option]);
 
   return (

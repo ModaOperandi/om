@@ -1,16 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Clickable, Props as ClickableProps } from '../Clickable';
-
+import { Clickable, ClickableProps } from '../Clickable';
 import './SelectableButton.scss';
 
-export interface Props extends ClickableProps {
+export type SelectableButtonProps = ClickableProps & {
   hover?: boolean;
   selected?: boolean;
   unavailable?: boolean;
-}
+};
 
-export const SelectableButton: React.FC<Props> = ({
+export const SelectableButton: React.FC<SelectableButtonProps> = ({
   className,
   hover,
   selected,

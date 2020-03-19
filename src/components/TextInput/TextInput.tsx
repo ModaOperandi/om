@@ -9,11 +9,11 @@ export type InputProps = {
   label?: string;
 };
 
-export type Props = InputProps & React.InputHTMLAttributes<HTMLInputElement>;
+export type TextInputProps = InputProps & React.InputHTMLAttributes<HTMLInputElement>;
 
 export const TextInput = React.forwardRef(
   (
-    { className, disabled, error, focus, placeholder, label, ...rest }: Props,
+    { className, disabled, error, focus, placeholder, label, ...rest }: TextInputProps,
     ref: React.Ref<HTMLInputElement>
   ) => {
     return (

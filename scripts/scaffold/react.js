@@ -18,10 +18,9 @@ const STYLES = `
 const COMPONENT = `
 import React from 'react';
 import classNames from 'classnames';
-
 import './${componentName}.scss';
 
-export interface Props extends React.HTMLAttributes<HTMLDivElement> {}
+export type ${componentName}Props = React.HTMLAttributes<HTMLDivElement>;
 
 export const ${componentName}: React.FC<Props> = ({ className, ...rest }) => (
   <div className={classNames('${componentName}', className)} {...rest}>
@@ -85,12 +84,8 @@ const indexFilePath = `./src/${componentType.toLowerCase()}/index.ts`;
 fs.readFile(indexFilePath, 'utf8', (err, data) => {
   if (err) throw err;
 
-  fs.writeFile(
-    indexFilePath,
-    data + `export { ${componentName} } from './${componentName}';\n`,
-    err => {
-      console.log(`Updated index.`);
-      if (err) console.error(err);
-    }
-  );
+  fs.writeFile(indexFilePath, data + `export * from './${componentName}';\n`, err => {
+    console.log(`Updated index.`);
+    if (err) console.error(err);
+  });
 });

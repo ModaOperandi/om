@@ -1,16 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
 import { typography, colors } from '@moda/tokens';
-
 import './Text.scss';
 
-export interface Props extends React.HTMLAttributes<HTMLSpanElement> {
+export type TextProps = React.HTMLAttributes<HTMLSpanElement> & {
   treatment?: keyof typeof typography['text-treatments'];
   color?: keyof typeof colors.all;
   family?: keyof typeof typography.fonts;
-}
+};
 
-export const Text: React.FC<Props> = ({
+export const Text: React.FC<TextProps> = ({
   className,
   treatment = 'body1',
   color = 'ink',

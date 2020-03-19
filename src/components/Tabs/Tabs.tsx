@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import { TabList, TabPanels } from '.';
+import { Tab, TabList, TabPanels } from '.';
 import './Tabs.scss';
 
-interface Tab {
-  name: string;
-  title: string;
-  panel: JSX.Element;
-}
-
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export type TabsProps = React.HTMLAttributes<HTMLDivElement> & {
   tabs: Tab[];
-}
+};
 
-export const Tabs: React.FC<Props> = ({ tabs, className, ...rest }) => {
+export const Tabs: React.FC<TabsProps> = ({ tabs, className, ...rest }) => {
   const [activePanel, setActivePanel] = useState(tabs[0].name);
 
   return (

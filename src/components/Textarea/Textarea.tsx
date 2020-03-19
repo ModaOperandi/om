@@ -3,11 +3,11 @@ import classNames from 'classnames';
 import { InputProps } from '../TextInput';
 import './Textarea.scss';
 
-export type Props = InputProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+export type TextareaProps = InputProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export const Textarea = React.forwardRef(
   (
-    { className, disabled, error, focus, placeholder, label, ...rest }: Props,
+    { className, disabled, error, focus, placeholder, label, ...rest }: TextareaProps,
     ref: React.Ref<HTMLTextAreaElement>
   ) => {
     return (

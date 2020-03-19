@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { colors } from '@moda/tokens';
-
 import { omit } from '../../utilities/omit';
 import { RandomShape } from './RandomShape';
 import { sample } from '../../utilities/sample';
-
 import './Loading.scss';
 
 const SCHEME = {
@@ -17,11 +15,11 @@ const SCHEME = {
 type Color = keyof typeof SCHEME;
 const COLORS = Object.keys(SCHEME) as Color[];
 
-export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export type LoadingProps = React.HTMLAttributes<HTMLDivElement> & {
   speed?: number;
-}
+};
 
-export const Loading: React.FC<Props> = ({ className, style, speed = 250, ...rest }) => {
+export const Loading: React.FC<LoadingProps> = ({ className, style, speed = 250, ...rest }) => {
   const [key, setKey] = useState(Date.now());
 
   useEffect(() => {

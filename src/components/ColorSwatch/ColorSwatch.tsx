@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
-import { Clickable, Props as ClickableProps } from '../Clickable';
-
+import { Clickable, ClickableProps } from '../Clickable';
 import { SKU_COLORS, SkuColor } from './skuColors';
-
 import './ColorSwatch.scss';
 
-export interface Props extends Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnter'> {
-  size?: 'default' | 'small';
+export type ColorSwatchSize = 'default' | 'small';
+
+export type ColorSwatchProps = Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnter'> & {
+  size?: ColorSwatchSize;
   color: SkuColor | string;
   backgroundUrl?: string;
   focus?: boolean;
@@ -17,9 +17,9 @@ export interface Props extends Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnt
   onSale?: boolean;
   onClick?(color: string): void;
   onMouseEnter?(color: string): void;
-}
+};
 
-export const ColorSwatch: React.FC<Props> = ({
+export const ColorSwatch: React.FC<ColorSwatchProps> = ({
   className,
   size,
   color,

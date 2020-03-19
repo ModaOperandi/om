@@ -10,13 +10,16 @@ type CommonProps = {
   disabled?: boolean;
 };
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
+type ButtonElProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+type AnchorElProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-const isAnchor = (props: ButtonProps | AnchorProps): props is AnchorProps => 'href' in props;
-const isButton = (props: ButtonProps | AnchorProps): props is ButtonProps => !('href' in props);
+const isAnchor = (props: ButtonElProps | AnchorElProps): props is AnchorElProps => 'href' in props;
+const isButton = (props: ButtonElProps | AnchorElProps): props is ButtonElProps =>
+  !('href' in props);
 
-export const Button: React.FC<CommonProps & (ButtonProps | AnchorProps)> = ({
+export type ButtonProps = CommonProps & (ButtonElProps | AnchorElProps);
+
+export const Button: React.FC<ButtonProps> = ({
   secondary,
   hover,
   focus,

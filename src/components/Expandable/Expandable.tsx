@@ -1,17 +1,15 @@
 import React, { useCallback, useState } from 'react';
 import classNames from 'classnames';
-
 import { Clickable } from '../Clickable';
-
 import './Expandable.scss';
 
-export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export type ExpandableProps = React.HTMLAttributes<HTMLDivElement> & {
   name: string;
   expanded?: boolean;
   children: React.ReactNode;
-}
+};
 
-export const Expandable: React.FC<Props> = ({
+export const Expandable: React.FC<ExpandableProps> = ({
   name,
   expanded: __expanded__ = false,
   children,

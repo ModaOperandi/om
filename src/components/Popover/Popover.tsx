@@ -1,18 +1,17 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import classNames from 'classnames';
-
 import './Popover.scss';
 
-export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
   content: JSX.Element;
   children: JSX.Element;
   open?: boolean;
   anchor?: 'left' | 'right';
-}
+};
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
 
-export const Popover: React.FC<Props> = ({
+export const Popover: React.FC<PopoverProps> = ({
   className,
   children,
   content,

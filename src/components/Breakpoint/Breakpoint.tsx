@@ -11,7 +11,7 @@ type At = { at: string };
 type GreaterThan = { gt: string };
 type LessThan = { lt: string };
 
-const discriminate = (
+export const discriminate = (
   props: At | GreaterThan | LessThan
 ): { mode: ModeType; breakpoint: BreakpointType } => {
   if ('at' in props) return { mode: 'at' as ModeType, breakpoint: props.at as BreakpointType };
@@ -19,7 +19,9 @@ const discriminate = (
   return { mode: 'gt' as ModeType, breakpoint: props.gt as BreakpointType };
 };
 
-export const Breakpoint: React.FC<At | GreaterThan | LessThan> = ({ children, ...rest }) => {
+export type BreakpointProps = At | GreaterThan | LessThan;
+
+export const Breakpoint: React.FC<BreakpointProps> = ({ children, ...rest }) => {
   const { mode, breakpoint } = discriminate(rest);
   const mediaQuery = generateMediaQuery({ mode, breakpoint });
 
