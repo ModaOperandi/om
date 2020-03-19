@@ -49,6 +49,8 @@ export const Select: React.FC<SelectProps> = ({
   onChange,
   ...rest
 }) => {
+  const didMountRef = useRef(false);
+
   const [state, dispatch] = useReducer(reducer, {
     value: value || options[0].value,
     mode: Mode.Resting
@@ -88,7 +90,14 @@ export const Select: React.FC<SelectProps> = ({
     };
   }, [handleKeyDown]);
 
-  useEffect(() => onChange && onChange(state.value), [onChange, state.value]);
+  useEffect(() => {
+    if (didMountRef.current) {
+      onChange && onChange(state.value);
+      return;
+    }
+
+    didMountRef.current = true;
+  }, [onChange, state.value]);
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
   useClickOutside(selectRef, handleClickOutside);
