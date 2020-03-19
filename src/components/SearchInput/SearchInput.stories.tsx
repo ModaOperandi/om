@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
-
-import { States } from '../../utilities/States';
+import { States } from 'storybook-states';
 import { Text } from '../Text';
-import { SearchInput } from './SearchInput';
+import { SearchInput, SearchInputProps } from './SearchInput';
 
 export default { title: 'Components|SearchInput' };
 
 export const Default = () => (
-  <States states={[null, { value: 'prada' }, { autoFocus: true }]}>
+  <States<SearchInputProps> states={[{}, { value: 'prada' }, { autoFocus: true }]}>
     <SearchInput
       placeholder='Search'
       onChange={action('onChange')}

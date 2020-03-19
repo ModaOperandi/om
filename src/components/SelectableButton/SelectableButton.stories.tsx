@@ -1,14 +1,16 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
-import { States } from '../../utilities/States';
-import { SelectableButton } from './SelectableButton';
+import { States } from 'storybook-states';
+import { SelectableButton, SelectableButtonProps } from './SelectableButton';
 import { Stack } from '../Stack';
 
 export default { title: 'Components|SelectableButton' };
 
 export const Default = () => (
-  <States states={[null, { hover: true }, { selected: true }, { unavailable: true }]}>
+  <States<SelectableButtonProps>
+    states={[{}, { hover: true }, { selected: true }, { unavailable: true }]}
+  >
     <SelectableButton onClick={action('clicked')}>US 30</SelectableButton>
   </States>
 );

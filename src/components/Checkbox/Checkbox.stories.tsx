@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import { States } from 'storybook-states';
 
-import { States } from '../../utilities/States';
 import { Text } from '../Text';
-import { Checkbox } from './Checkbox';
+import { Checkbox, CheckboxProps } from './Checkbox';
 
 export default { title: 'Components|Checkbox' };
 
 export const Default = () => (
-  <States
+  <States<CheckboxProps>
     states={[
       {},
       { checked: true },

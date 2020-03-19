@@ -1,12 +1,12 @@
 import React from 'react';
+import { States } from 'storybook-states';
 
-import { States } from '../../utilities/States';
-import { Breadcrumbs } from './Breadcrumbs';
+import { Breadcrumbs, BreadcrumbsProps } from './Breadcrumbs';
 
 export default { title: 'Components|Breadcrumbs' };
 
 export const Default = () => (
-  <States>
+  <States<BreadcrumbsProps>>
     <Breadcrumbs>
       <a href='#men'>Men</a>
       <a href='#clothing'>Clothing</a>

@@ -1,14 +1,13 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-
-import { States } from '../../utilities/States';
+import { States } from 'storybook-states';
 import { Stack } from '../Stack';
-import { ColorSwatch } from './ColorSwatch';
+import { ColorSwatch, ColorSwatchProps } from './ColorSwatch';
 
 export default { title: 'Components|ColorSwatch' };
 
 const STATES = [
-  null,
+  {},
   { hover: true },
   { focus: true },
   { selected: true },
@@ -20,25 +19,25 @@ const STATES = [
 ];
 
 export const Default = () => (
-  <States states={STATES}>
+  <States<Partial<ColorSwatchProps>> states={STATES}>
     <ColorSwatch color='yellow' onClick={action('onClick')} />
   </States>
 );
 
 export const Small = () => (
-  <States states={STATES}>
+  <States<Partial<ColorSwatchProps>> states={STATES}>
     <ColorSwatch size='small' color='yellow' onClick={action('onClick')} />
   </States>
 );
 
 export const White = () => (
-  <States states={STATES}>
+  <States<Partial<ColorSwatchProps>> states={STATES}>
     <ColorSwatch size='small' color='white' onClick={action('onClick')} />
   </States>
 );
 
 export const Swatches = () => (
-  <States>
+  <States<ColorSwatchProps>>
     <Stack space={1} direction='horizontal'>
       <ColorSwatch onClick={action('onClick')} color='red' />
       <ColorSwatch onClick={action('onClick')} color='white' />

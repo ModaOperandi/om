@@ -1,18 +1,20 @@
 import React from 'react';
+import { States } from 'storybook-states';
 
-import { Badge } from './Badge';
-import { States } from '../../utilities/States';
+import { Badge, BadgeProps } from './Badge';
 
 export default { title: 'Components|Badge' };
 
 export const Themes = () => (
-  <States states={[{ theme: 'bestseller' }, { theme: 'trending' }, { theme: 'fall-essential' }]}>
+  <States<BadgeProps>
+    states={[{ theme: 'bestseller' }, { theme: 'trending' }, { theme: 'fall-essential' }]}
+  >
     <Badge theme='bestseller' />
   </States>
 );
 
 export const CustomChildren = () => (
-  <States states={[{}]}>
+  <States<BadgeProps>>
     <Badge>Exclusive</Badge>
   </States>
 );
