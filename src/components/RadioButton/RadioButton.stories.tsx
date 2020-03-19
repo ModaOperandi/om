@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-
-import { States } from '../../utilities/States';
+import { States } from 'storybook-states';
 import { Text } from '../Text';
-import { RadioButton } from './RadioButton';
+import { RadioButton, RadioButtonProps } from './RadioButton';
 
 export default { title: 'Components|RadioButton' };
 
 export const Default = () => (
-  <States
+  <States<RadioButtonProps>
     states={[
       {},
       { checked: true },

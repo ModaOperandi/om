@@ -1,12 +1,12 @@
 import React from 'react';
+import { States } from 'storybook-states';
 
-import { States } from '../../utilities/States';
-import { AspectRatioBox } from './AspectRatioBox';
+import { AspectRatioBox, AspectRatioBoxProps } from './AspectRatioBox';
 
 export default { title: 'Components|AspectRatioBox' };
 
 export const Default = () => (
-  <States
+  <States<Partial<AspectRatioBoxProps>>
     states={[
       { aspectWidth: 3, aspectHeight: 4 },
       { aspectWidth: 4, aspectHeight: 3 },

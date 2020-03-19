@@ -1,12 +1,11 @@
 import React from 'react';
-
-import { States } from '../../utilities/States';
-import { PromoBanner } from './PromoBanner';
+import { States } from 'storybook-states';
+import { PromoBanner, PromoBannerProps } from './PromoBanner';
 
 export default { title: 'Components|PromoBanner' };
 
 export const Default = () => (
-  <States
+  <States<PromoBannerProps>
     states={[
       { children: <span>Center</span> },
       {
@@ -35,7 +34,7 @@ export const Default = () => (
 );
 
 export const Mobile = () => (
-  <States>
+  <States<PromoBannerProps>>
     <PromoBanner>
       <span>Currency: USA (USD $)</span>
       <span>

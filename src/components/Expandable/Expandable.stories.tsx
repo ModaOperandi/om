@@ -1,13 +1,12 @@
 import React from 'react';
-
-import { States } from '../../utilities/States';
+import { States } from 'storybook-states';
 import { Stack } from '../Stack';
-import { Expandable } from './Expandable';
+import { Expandable, ExpandableProps } from './Expandable';
 
 export default { title: 'Components|Expandable' };
 
 export const Default = () => (
-  <States states={[null, { expanded: true }]}>
+  <States<Partial<ExpandableProps>> states={[{}, { expanded: true }]}>
     <Expandable name='Editor’s Note'>
       Mark Cross’ ‘Cole’ duffle bag is crafted from textured grain leather with ample space for your
       long-haul travels. It opens to reveal red twill lining and ample compartments for your

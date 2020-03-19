@@ -1,15 +1,14 @@
 import React from 'react';
-
-import { States } from '../../utilities/States';
-import { Field } from './Field';
+import { States } from 'storybook-states';
+import { Field, FieldProps } from './Field';
 import { Textarea } from '../Textarea';
 
 export default { title: 'Components|Field' };
 
 export const Default = () => (
-  <States
+  <States<FieldProps>
     states={[
-      null,
+      {},
       { focus: true },
       { disabled: true },
       { defaultValue: 'With value' },
@@ -23,9 +22,9 @@ export const Default = () => (
 );
 
 export const AribitraryChildren = () => (
-  <States
+  <States<FieldProps>
     states={[
-      null,
+      {},
       { focus: true },
       { disabled: true },
       { defaultValue: 'With value' },

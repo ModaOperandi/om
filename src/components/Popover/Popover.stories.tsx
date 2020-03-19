@@ -1,8 +1,7 @@
 import React from 'react';
-
-import { States } from '../../utilities/States';
+import { States } from 'storybook-states';
 import { Text } from '../Text';
-import { Popover } from './Popover';
+import { Popover, PopoverProps } from './Popover';
 
 export default { title: 'Components|Popover' };
 
@@ -16,7 +15,7 @@ const Content = (
 );
 
 export const Default = () => (
-  <States states={[null, { anchor: 'right' }, { open: true }]}>
+  <States<Partial<PopoverProps>> states={[{}, { anchor: 'right' }, { open: true }]}>
     <Popover content={Content}>
       <Text>Hover over me</Text>
     </Popover>

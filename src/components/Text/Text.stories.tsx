@@ -1,25 +1,34 @@
 import React from 'react';
 import { typography, colors } from '@moda/tokens';
-
-import { States } from '../../utilities/States';
-import { Text } from './Text';
+import { States } from 'storybook-states';
+import { Text, TextProps, TextTreatment, TextColor, TextFontFamily } from './Text';
 
 export default { title: 'Components|Text' };
 
+const TREATMENTS = Object.keys(typography['text-treatments']).map(treatment => ({
+  treatment
+})) as { treatment: TextTreatment }[];
+
+const COLORS = Object.keys(colors.all).map(color => ({ color })) as { color: TextColor }[];
+
+const FAMILIES = Object.keys(typography.fonts).map(family => ({ family })) as {
+  family: TextFontFamily;
+}[];
+
 export const Treatments = () => (
-  <States states={Object.keys(typography['text-treatments']).map(treatment => ({ treatment }))}>
+  <States<TextProps> states={TREATMENTS}>
     <Text>Moda Operandi</Text>
   </States>
 );
 
 export const Colors = () => (
-  <States states={Object.keys(colors.all).map(color => ({ color }))}>
+  <States<Partial<TextProps>> states={COLORS}>
     <Text treatment='h5'>Moda Operandi</Text>
   </States>
 );
 
 export const Families = () => (
-  <States states={Object.keys(typography.fonts).map(family => ({ family }))}>
+  <States<Partial<TextProps>> states={FAMILIES}>
     <Text treatment='h5'>Moda Operandi</Text>
   </States>
 );

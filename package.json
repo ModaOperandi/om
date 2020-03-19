@@ -90,6 +90,7 @@
     "react-dom": "^16.11.0",
     "sass-loader": "^8.0.0",
     "semantic-release": "^17.0.1",
+    "storybook-states": "^1.0.2",
     "style-loader": "^1.0.0",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.2",

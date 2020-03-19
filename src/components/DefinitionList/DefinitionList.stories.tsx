@@ -1,13 +1,12 @@
 import React from 'react';
-
-import { States } from '../../utilities/States';
-import { DefinitionList } from './DefinitionList';
+import { States } from 'storybook-states';
+import { DefinitionList, DefinitionListProps } from './DefinitionList';
 import { Text } from '../Text';
 
 export default { title: 'Components|DefinitionList' };
 
 export const Default = () => (
-  <States
+  <States<DefinitionListProps>
     states={[
       { term: 'Color', children: 'Black' },
       { term: 'Size', children: 'Please select a size' },
