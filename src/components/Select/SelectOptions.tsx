@@ -4,11 +4,16 @@ import { useKeyboardListNavigation } from 'use-keyboard-list-navigation';
 import { SelectOption } from './SelectOption';
 import { SelectableOption } from './Select';
 import './SelectOptions.scss';
+import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 
-export type SelectOptionsProps = Omit<React.HTMLAttributes<HTMLUListElement>, 'onSelect'> & {
+export type SelectOptionsProps = Omit<
+  React.HTMLAttributes<HTMLUListElement>,
+  'onSelect' | 'onFocus'
+> & {
   idRef: string;
   options: SelectableOption[];
   selectedOption: SelectableOption;
+  onFocus?(option: SelectableOption): void;
   onSelect(option: SelectableOption): void;
 };
 
@@ -17,12 +22,14 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   options,
   selectedOption,
   onSelect,
+  onFocus,
   className,
   ...rest
 }) => {
   const { index: activeIndex, selected: activeOption } = useKeyboardListNavigation({
     list: options,
-    onEnter: onSelect
+    onEnter: onSelect,
+    extractValue: option => option.label.toLowerCase()
   });
 
   const ref = useRef<HTMLUListElement>(null);
@@ -30,6 +37,10 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   useEffect(() => {
     ref.current && ref.current.focus();
   }, []);
+
+  useUpdateEffect(() => {
+    onFocus && onFocus(options[activeIndex]);
+  }, [activeIndex, onFocus, options]);
 
   return (
     <ul

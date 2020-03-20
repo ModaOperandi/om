@@ -47,13 +47,13 @@
     "body-scroll-lock": "^3.0.1",
     "classnames": "^2.2.6",
     "proportional-scale": "^2.1.1",
-    "use-keyboard-list-navigation": "^1.1.0"
+    "use-keyboard-list-navigation": "^1.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.0",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.7.0",
-    "@babel/preset-typescript": "^7.7.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@storybook/addon-actions": "^5.3.12",
@@ -70,7 +70,7 @@
     "@types/react-dom": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.1.0",
     "commitizen": "^4.0.3",
     "css-loader": "^3.2.0",
     "cz-conventional-changelog": "3.1.0",

@@ -5,6 +5,7 @@ import ChevronUpIcon from '@moda/icons/chevron-up-12';
 import { Clickable } from '../Clickable';
 import { SelectOptions } from './SelectOptions';
 import { useClickOutside } from './useClickOutside';
+import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 import './Select.scss';
 
 export type SelectableOption = { value: string; label: string };
@@ -24,10 +25,15 @@ enum Mode {
 
 type State = {
   value: string;
+  focused: string | null;
   mode: Mode;
 };
 
-type Action = { type: 'OPEN' } | { type: 'CLOSE' } | { type: 'SELECT'; payload: { value: string } };
+type Action =
+  | { type: 'OPEN' }
+  | { type: 'CLOSE' }
+  | { type: 'SELECT'; payload: { value: string } }
+  | { type: 'FOCUS'; payload: { value: string } };
 
 const reducer = (state: State, action: Action) => {
   switch (action.type) {
@@ -36,7 +42,9 @@ const reducer = (state: State, action: Action) => {
     case 'CLOSE':
       return { ...state, mode: Mode.Resting };
     case 'SELECT':
-      return { ...state, value: action.payload.value, mode: Mode.Resting };
+      return { ...state, value: action.payload.value, focused: null, mode: Mode.Resting };
+    case 'FOCUS':
+      return { ...state, focused: action.payload.value };
   }
 };
 
@@ -49,28 +57,29 @@ export const Select: React.FC<SelectProps> = ({
   onChange,
   ...rest
 }) => {
-  const didMountRef = useRef(false);
-
+  const initialValue = value || options[0].value;
   const [state, dispatch] = useReducer(reducer, {
-    value: value || options[0].value,
+    value: initialValue,
+    focused: initialValue,
     mode: Mode.Resting
   });
 
   const selectRef = useRef<HTMLDivElement>(null);
 
-  const handleSelect = useCallback((option: SelectableOption) => {
-    dispatch({ type: 'SELECT', payload: { value: option.value } });
-  }, []);
+  const handleSelect = useCallback(
+    (option: SelectableOption) => dispatch({ type: 'SELECT', payload: { value: option.value } }),
+    []
+  );
+
+  const handleFocus = useCallback(
+    (option: SelectableOption) => dispatch({ type: 'FOCUS', payload: { value: option.value } }),
+    []
+  );
 
   const handleToggle = useCallback(
     () => dispatch({ type: state.mode === Mode.Resting ? 'OPEN' : 'CLOSE' }),
     [state.mode]
   );
-
-  const selected = useMemo(() => options.find(option => state.value === option.value)!, [
-    options,
-    state.value
-  ]);
 
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     switch (event.key) {
@@ -90,26 +99,27 @@ export const Select: React.FC<SelectProps> = ({
     };
   }, [handleKeyDown]);
 
-  useEffect(() => {
-    if (didMountRef.current) {
-      onChange && onChange(state.value);
-      return;
-    }
-
-    didMountRef.current = true;
+  useUpdateEffect(() => {
+    onChange && onChange(state.value);
   }, [onChange, state.value]);
 
-  useEffect(() => {
-    if (didMountRef.current) {
-      value && dispatch({ type: 'SELECT', payload: { value } });
-      return;
-    }
-
-    didMountRef.current = true;
-  }, [onChange, value]);
+  useUpdateEffect(() => {
+    value && dispatch({ type: 'SELECT', payload: { value } });
+  }, [value]);
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
+
   useClickOutside(selectRef, handleClickOutside);
+
+  const selected = useMemo(() => options.find(option => state.value === option.value)!, [
+    options,
+    state.value
+  ]);
+
+  const focused = useMemo(() => options.find(option => state.focused === option.value)!, [
+    options,
+    state.focused
+  ]);
 
   return (
     <div
@@ -126,7 +136,7 @@ export const Select: React.FC<SelectProps> = ({
         aria-expanded={state.mode === Mode.Open}
         aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
       >
-        <label id={`Select__label--${idRef}`}>{label}</label> {selected.label}
+        <label id={`Select__label--${idRef}`}>{label}</label> {(focused ?? selected).label}
         <span className='Select__icon'>
           {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </span>
@@ -138,6 +148,7 @@ export const Select: React.FC<SelectProps> = ({
           className='Select__options'
           options={options}
           onSelect={handleSelect}
+          onFocus={handleFocus}
           selectedOption={selected}
         />
       )}

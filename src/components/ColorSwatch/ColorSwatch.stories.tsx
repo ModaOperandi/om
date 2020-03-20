@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
 import { Stack } from '../Stack';
-import { ColorSwatch, ColorSwatchProps } from './ColorSwatch';
+import { ColorSwatch, ColorSwatchProps, SKU_COLORS } from '.';
 
 export default { title: 'Components|ColorSwatch' };
 
@@ -53,4 +53,12 @@ export const Swatches = () => (
       />
     </Stack>
   </States>
+);
+
+export const Constrained = () => (
+  <Stack direction='horizontal' space={3}>
+    {Object.keys(SKU_COLORS).map(color => (
+      <ColorSwatch key={color} onClick={action('onClick')} color={color} />
+    ))}
+  </Stack>
 );
