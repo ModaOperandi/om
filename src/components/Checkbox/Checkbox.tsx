@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import classNames from 'classnames';
 import CheckboxCheckedIcon from '@moda/icons/checkbox-checked-12';
 import CheckboxUncheckedIcon from '@moda/icons/checkbox-unchecked-12';
@@ -17,20 +17,24 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   onChange,
   ...rest
 }) => {
-  const [isChecked, setIsChecked] = useState(defaultChecked || checked);
+  const [isChecked, setIsChecked] = useState(checked ?? defaultChecked ?? false);
+
+  useEffect(() => {
+    if (typeof checked !== 'undefined') setIsChecked(checked);
+  }, [checked]);
 
   const handleChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
-      setIsChecked(event.currentTarget.checked);
+      if (typeof checked === 'undefined') setIsChecked(event.currentTarget.checked);
       onChange && onChange(event);
     },
-    [onChange]
+    [onChange, checked]
   );
 
   return (
     <label
       className={classNames('Checkbox', className, {
-        'Checkbox--checked': checked
+        'Checkbox--checked': isChecked
       })}
     >
       <span className='Checkbox__indicator'>
