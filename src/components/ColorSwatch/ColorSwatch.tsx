@@ -48,23 +48,24 @@ export const ColorSwatch: React.FC<ColorSwatchProps> = ({
     [color, onMouseEnter]
   );
 
-  let styles: React.CSSProperties = {
-    backgroundColor: SKU_COLORS[color as SkuColor] || color
-  };
+  const backgroundColor = SKU_COLORS[color as SkuColor];
 
-  if (backgroundUrl) {
-    styles = {
-      ...styles,
-      backgroundImage: `url(${backgroundUrl})`,
-      backgroundSize: 'cover'
-    };
-  }
+  const styles: React.CSSProperties = {
+    backgroundColor: backgroundColor ?? color,
+    ...(backgroundUrl
+      ? {
+          backgroundImage: `url(${backgroundUrl})`,
+          backgroundSize: 'cover'
+        }
+      : {})
+  };
 
   return (
     <Clickable
       className={classNames(
-        `ColorSwatch ColorSwatch--${color}`,
+        `ColorSwatch`,
         {
+          'ColorSwatch--light': !backgroundColor || backgroundColor === '#fff',
           'ColorSwatch--small': size === 'small',
           'ColorSwatch--hover': hover,
           'ColorSwatch--focus': focus,

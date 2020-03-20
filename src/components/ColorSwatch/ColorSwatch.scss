@@ -15,6 +15,7 @@
   border-radius: 50%;
   padding: 1px;
   cursor: pointer;
+  flex-shrink: 0;
 
   &--small {
     width: $small-size;
@@ -123,9 +124,7 @@
     pointer-events: none;
   }
 
-  &--clear,
-  &--ivory,
-  &--white {
+  &--light {
     // Inset dot
     &::before {
       background-color: color(ink);
