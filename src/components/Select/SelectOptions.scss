@@ -1,8 +1,11 @@
 @import '~om';
 
 .SelectOptions {
+  @include overflow-scroll();
+
   background-color: color(snow);
   border: 1px solid color(elephant);
+  max-height: space(12);
 
   &:focus {
     outline: 0;

@@ -20,8 +20,14 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 
+    &:hover {
+      border-color: color(cement);
+      background-color: color(noise);
+    }
+
     &:focus {
       border-color: color(cement);
+      background-color: color(elephant);
       outline: 0;
     }
   }
@@ -39,6 +45,6 @@
     left: 0;
     right: 0;
     z-index: 1;
-    margin-top: -1px;
+    margin-top: space(1);
   }
 }
