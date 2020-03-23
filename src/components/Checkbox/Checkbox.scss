@@ -1,6 +1,9 @@
 @import '~om';
 
 .Checkbox {
+  $checkbox-size: space(4);
+  $checkbox-check-offset: space(1) / 2;
+
   @include stack(2, $direction: horizontal);
 
   position: relative;
@@ -10,7 +13,25 @@
   color: color(ink);
 
   &__indicator {
+    position: relative;
+    width: $checkbox-size;
+    height: $checkbox-size;
     flex-shrink: 0;
+    border: 1px solid;
+
+    &--checked {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: $checkbox-check-offset;
+        right: $checkbox-check-offset;
+        bottom: $checkbox-check-offset;
+        left: $checkbox-check-offset;
+        border-radius: 50%;
+        background-color: color(ink);
+      }
+    }
   }
 
   &__input {
@@ -18,7 +39,7 @@
   }
 
   &__label {
-    @include text(body2);
+    @include text(body1);
 
     color: color(ink);
   }

@@ -7,7 +7,7 @@ describe('RadioButton', () => {
   it('renders correctly', () => {
     const component = mount(<RadioButton />);
     expect(component.html()).toEqual(
-      '<label class="RadioButton"><span class="RadioButton__indicator"></span><input class="RadioButton__input" type="radio" value=""></label>'
+      '<label class="RadioButton"><span class="RadioButton__indicator RadioButton__indicator--unchecked"></span><input class="RadioButton__input" type="radio" value=""></label>'
     );
   });
 

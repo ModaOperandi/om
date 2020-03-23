@@ -1,7 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import classNames from 'classnames';
-import CheckboxCheckedIcon from '@moda/icons/checkbox-checked-12';
-import CheckboxUncheckedIcon from '@moda/icons/checkbox-unchecked-12';
 import './Checkbox.scss';
 
 export type CheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -37,9 +35,11 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         'Checkbox--checked': isChecked
       })}
     >
-      <span className='Checkbox__indicator'>
-        {isChecked ? <CheckboxCheckedIcon /> : <CheckboxUncheckedIcon />}
-      </span>
+      <span
+        className={`Checkbox__indicator Checkbox__indicator--${
+          isChecked ? 'checked' : 'unchecked'
+        }`}
+      />
 
       <input
         className='Checkbox__input'

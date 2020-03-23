@@ -11,6 +11,14 @@ export const Default = () => (
   </States>
 );
 
-export const WithNoLine = () => <NoLineDivider text='Divider with No Line' />;
+export const WithNoLine = () => (
+  <States>
+    <NoLineDivider text='Divider with No Line' />
+  </States>
+);
 
-export const WithDoubleLine = () => <TwoLineDivider text='Divider with Double Line' />;
+export const WithDoubleLine = () => (
+  <States>
+    <TwoLineDivider text='Divider with Double Line' />
+  </States>
+);

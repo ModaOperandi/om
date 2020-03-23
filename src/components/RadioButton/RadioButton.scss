@@ -1,7 +1,10 @@
 @import '~om';
 
 .RadioButton {
-  @include stack(1, $direction: horizontal);
+  $radio-button-size: space(4);
+  $radio-button-check-offset: space(1);
+
+  @include stack(2, $direction: horizontal);
 
   position: relative;
   align-items: center;
@@ -10,7 +13,26 @@
   color: color(ink);
 
   &__indicator {
+    position: relative;
+    width: $radio-button-size;
+    height: $radio-button-size;
     flex-shrink: 0;
+    border: 1px solid;
+    border-radius: 50%;
+
+    &--checked {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: $radio-button-check-offset;
+        right: $radio-button-check-offset;
+        bottom: $radio-button-check-offset;
+        left: $radio-button-check-offset;
+        border-radius: 50%;
+        background-color: color(ink);
+      }
+    }
   }
 
   &__input {
@@ -18,7 +40,7 @@
   }
 
   &__label {
-    @include text(body2);
+    @include text(body1);
 
     color: color(ink);
   }
