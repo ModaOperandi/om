@@ -31,17 +31,21 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 
   return (
     <label
+      role='button'
+      tabIndex={0}
       className={classNames('Checkbox', className, {
-        'Checkbox--checked': isChecked
+        'Checkbox--checked': isChecked,
       })}
     >
       <span
+        tabIndex={-1}
         className={`Checkbox__indicator Checkbox__indicator--${
           isChecked ? 'checked' : 'unchecked'
         }`}
       />
 
       <input
+        tabIndex={-1}
         className='Checkbox__input'
         type='checkbox'
         checked={isChecked}

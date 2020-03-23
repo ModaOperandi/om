@@ -78,8 +78,6 @@
   &:focus,
   &--focus,
   &--selected {
-    outline: none;
-
     // Inset dot
     &::before {
       display: block;

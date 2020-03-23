@@ -32,10 +32,6 @@
       transform: translateY(-50%) rotate(90deg);
       transition: transform 200ms;
     }
-
-    &:focus {
-      outline: 0;
-    }
   }
 
   &__contents {

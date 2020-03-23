@@ -15,17 +15,21 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
 }) => {
   return (
     <label
+      role='button'
+      tabIndex={0}
       className={classNames('RadioButton', className, {
-        'RadioButton--checked': checked
+        'RadioButton--checked': checked,
       })}
     >
       <span
+        tabIndex={-1}
         className={`RadioButton__indicator RadioButton__indicator--${
           checked ? 'checked' : 'unchecked'
         }`}
       />
 
       <input
+        tabIndex={-1}
         className='RadioButton__input'
         type='radio'
         checked={checked}
