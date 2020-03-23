@@ -36,7 +36,6 @@
 
     &#{$self}--focus,
     &:focus {
-      outline: none;
       text-decoration: underline;
       color: color(snow);
       border-color: color(fog);
@@ -67,7 +66,6 @@
 
     &#{$self}--focus,
     &:focus {
-      outline: none;
       text-decoration: underline;
       color: color(ink);
       border-color: color(ink);

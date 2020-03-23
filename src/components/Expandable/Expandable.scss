@@ -8,6 +8,7 @@
 
   &__name {
     @include text(eyebrow);
+
     position: relative;
     text-align: left;
     cursor: pointer;
@@ -23,26 +24,23 @@
       right: 0;
       transform: translateY(-50%);
       height: 2px;
-      width: space(3);
-      background-color: currentColor;
+      width: space(4);
+      background-color: color(cement);
     }
 
     &::before {
       transform: translateY(-50%) rotate(90deg);
       transition: transform 200ms;
     }
-
-    &:focus {
-      outline: 0;
-      text-decoration: underline;
-    }
   }
 
   &__contents {
     @include stack(2);
     @include text(body1);
+
     padding-bottom: space(3);
     display: none;
+    color: color(cement);
 
     ul,
     ol {
@@ -52,9 +50,9 @@
 
     > a,
     > p > a {
-      color: color(ink);
-      text-decoration: underline;
+      @include thin-underline();
 
+      color: color(cement);
       &:hover {
         text-decoration: none;
       }
