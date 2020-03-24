@@ -1,39 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useCursor } from 'use-cursor';
 import classNames from 'classnames';
 import { colors } from '@moda/tokens';
-import { omit } from '../../utilities/omit';
-import { RandomShape } from './RandomShape';
-import { sample } from '../../utilities/sample';
+import { Brancusi, Bradley, Oval, Keyhole, Mirror } from '../Shape';
 import './Loading.scss';
-
-const SCHEME = {
-  ...colors.global,
-  // Remove colors with poor contrast ratios on white
-  ...omit(colors.mens, 'noise', 'blush'),
-  ...omit(colors.womens, 'cream')
-};
-type Color = keyof typeof SCHEME;
-const COLORS = Object.keys(SCHEME) as Color[];
 
 export type LoadingProps = React.HTMLAttributes<HTMLDivElement> & {
   speed?: number;
 };
 
-export const Loading: React.FC<LoadingProps> = ({ className, style, speed = 250, ...rest }) => {
-  const [key, setKey] = useState(Date.now());
+const FRAMES = [
+  <Brancusi key='brancusi' style={{ fill: colors.all.brick }} />,
+  <Bradley key='bradley' style={{ fill: colors.all.fuchsia }} />,
+  <Oval key='oval' style={{ fill: colors.all['cornflower-blue'] }} />,
+  <Keyhole key='keyhole' style={{ fill: colors.all.seafoam }} />,
+  <Mirror key='mirror' style={{ fill: colors.all.goldenrod }} />,
+];
+
+export const Loading: React.FC<LoadingProps> = ({ className, speed = 250, ...rest }) => {
+  const { index, handleNext } = useCursor({ max: FRAMES.length });
 
   useEffect(() => {
-    const interval = setInterval(() => setKey(Date.now()), speed);
+    const interval = setInterval(handleNext, speed);
     return () => clearInterval(interval);
-  }, [speed]);
+  }, [handleNext, speed]);
 
   return (
-    <div
-      className={classNames('Loading', className)}
-      style={{ color: SCHEME[sample(COLORS)], ...style }}
-      {...rest}
-    >
-      <RandomShape key={key} />
+    <div className={classNames('Loading', className)} {...rest}>
+      {FRAMES[index]}
     </div>
   );
 };

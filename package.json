@@ -48,6 +48,7 @@
     "classnames": "^2.2.6",
     "focus-visible": "^5.0.2",
     "proportional-scale": "^2.1.1",
+    "use-cursor": "^1.0.0",
     "use-keyboard-list-navigation": "^1.4.0"
   },
   "devDependencies": {

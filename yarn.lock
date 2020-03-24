@@ -14256,6 +14256,13 @@ use-callback-ref@^1.2.1:
   resolved "https://registry.yarnpkg.com/use-callback-ref/-/use-callback-ref-1.2.1.tgz#898759ccb9e14be6c7a860abafa3ffbd826c89bb"
   integrity sha512-C3nvxh0ZpaOxs9RCnWwAJ+7bJPwQI8LHF71LzbQ3BvzH5XkdtlkMadqElGevg5bYBDFip4sAnD4m06zAKebg1w==
 
+use-cursor@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/use-cursor/-/use-cursor-1.0.0.tgz#3e9234a36f7b3d7fbb956e755ac18955dfbcd349"
+  integrity sha512-vaUDAGtqYtIAy5KeA2uYfqIFVi+ucTt778JjcSePBVadhncvXUB7SgvAlSBo9e/eUyeCtIz18BNkDO0lJunYDQ==
+  dependencies:
+    map-cursor-to-max "^1.0.0"
+
 use-keyboard-list-navigation@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-1.4.0.tgz#3c479e3c54e64d56d12d27eb16e5bf85acb9cb38"
