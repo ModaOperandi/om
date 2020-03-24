@@ -14241,9 +14241,9 @@ use-callback-ref@^1.2.1:
   integrity sha512-C3nvxh0ZpaOxs9RCnWwAJ+7bJPwQI8LHF71LzbQ3BvzH5XkdtlkMadqElGevg5bYBDFip4sAnD4m06zAKebg1w==
 
 use-keyboard-list-navigation@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-1.4.0.tgz#3c479e3c54e64d56d12d27eb16e5bf85acb9cb38"
-  integrity sha512-CxBTtJzhQWlj0bYpmU9KUhhXIOf8OilJinwKSfAhrJcZLsfIVx+leKs8e0nbiDkUVH5us5/9A4TTRciMe7HJFg==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-1.4.1.tgz#9c96ad39e927c4676347daa1a6d451d6d758727a"
+  integrity sha512-588pJvx7t05itE4PwKvdn5pd9WF5MfDWx7NqcU6HqkeTU917uack4gKXBfIq+oGlMv39GWDAccMqYrFj5Ls07Q==
   dependencies:
     map-cursor-to-max "^1.0.0"
 
