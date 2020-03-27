@@ -61,7 +61,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
       />
 
       {controlledValue && (
-        <Clickable className='SearchInput__clear' onClick={handleClick}>
+        <Clickable className='SearchInput__clear' onClick={handleClick} type='reset'>
           <ExitIcon />
         </Clickable>
       )}
