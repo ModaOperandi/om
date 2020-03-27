@@ -14299,9 +14299,9 @@ use-cursor@^1.0.0:
     map-cursor-to-max "^1.0.0"
 
 use-keyboard-list-navigation@^1.4.0:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-1.4.1.tgz#9c96ad39e927c4676347daa1a6d451d6d758727a"
-  integrity sha512-588pJvx7t05itE4PwKvdn5pd9WF5MfDWx7NqcU6HqkeTU917uack4gKXBfIq+oGlMv39GWDAccMqYrFj5Ls07Q==
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-1.5.0.tgz#51af270ebdeeea2efc19bb7ac7492e8c3b1feaab"
+  integrity sha512-5HU8X9phyhY6nwxqeex9ptzNNHrA86mgkJ6Ln3tZV1hLdZ3ysLyPfNDmwg2TNi7+Au2LNWRXw/nuQ1rzZlRshw==
   dependencies:
     map-cursor-to-max "^1.0.0"
 
