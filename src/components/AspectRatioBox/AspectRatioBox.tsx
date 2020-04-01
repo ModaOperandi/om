@@ -16,37 +16,45 @@ export type AspectRatioBoxProps = React.HTMLAttributes<HTMLDivElement> & {
   outlined?: boolean;
 };
 
-export const AspectRatioBox: React.FC<AspectRatioBoxProps> = ({
-  aspectWidth = DEFAULT_PRODUCT_ASPECT_WIDTH,
-  aspectHeight = DEFAULT_PRODUCT_ASPECT_HEIGHT,
-  maxWidth,
-  maxHeight,
-  outlined = false,
-  children,
-  className,
-  ...rest
-}) => {
-  const { width, paddingBottom } = scale({
-    width: aspectWidth,
-    height: aspectHeight,
-    maxWidth,
-    maxHeight
-  });
+export const AspectRatioBox = React.forwardRef(
+  (
+    {
+      aspectWidth = DEFAULT_PRODUCT_ASPECT_WIDTH,
+      aspectHeight = DEFAULT_PRODUCT_ASPECT_HEIGHT,
+      maxWidth,
+      maxHeight,
+      outlined = false,
+      children,
+      className,
+      ...rest
+    }: AspectRatioBoxProps,
+    forwardedRef: React.Ref<HTMLDivElement>
+  ) => {
+    const { width, paddingBottom } = scale({
+      width: aspectWidth,
+      height: aspectHeight,
+      maxWidth,
+      maxHeight,
+    });
 
-  return (
-    <div
-      className={classNames(
-        'AspectRatioBox',
-        {
-          'AspectRatioBox--outlined': outlined
-        },
-        className
-      )}
-      style={{ maxWidth: `${width}px` }}
-      {...rest}
-    >
-      <div className='AspectRatioBox__wrapper' style={{ paddingBottom }} />
-      <div className='AspectRatioBox__content'>{children}</div>
-    </div>
-  );
-};
+    return (
+      <div
+        ref={forwardedRef}
+        className={classNames(
+          'AspectRatioBox',
+          {
+            'AspectRatioBox--outlined': outlined,
+          },
+          className
+        )}
+        style={{ maxWidth: `${width}px` }}
+        {...rest}
+      >
+        <div className='AspectRatioBox__wrapper' style={{ paddingBottom }} />
+        <div className='AspectRatioBox__content'>{children}</div>
+      </div>
+    );
+  }
+);
+
+AspectRatioBox.displayName = 'AspectRatioBox';

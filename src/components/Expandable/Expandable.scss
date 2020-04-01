@@ -23,9 +23,9 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
-      height: 2px;
+      height: 1px;
       width: space(4);
-      background-color: color(cement);
+      background-color: color(ink);
     }
 
     &::before {
@@ -40,7 +40,7 @@
 
     padding-bottom: space(3);
     display: none;
-    color: color(cement);
+    color: color(ink);
 
     ul,
     ol {
@@ -48,11 +48,10 @@
       list-style: disc;
     }
 
-    > a,
-    > p > a {
+    a {
       @include thin-underline();
 
-      color: color(cement);
+      color: color(ink);
       &:hover {
         text-decoration: none;
       }

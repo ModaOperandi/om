@@ -16,7 +16,7 @@ export const Default = () => (
       { defaultChecked: true },
       { children: 'Remember me' },
       { children: 'Remember me', checked: true },
-      { children: <Text color='code-red'>Important!</Text> }
+      { children: <Text color='code-red'>Important!</Text> },
     ]}
   >
     <Checkbox />
@@ -67,6 +67,37 @@ export const StackExample = () => (
       <Checkbox>Down Coats</Checkbox>
       <Checkbox>Parkas</Checkbox>
       <Checkbox>Vest</Checkbox>
+    </Stack>
+  </States>
+);
+
+export const LongStackExample = () => (
+  <States>
+    <Stack space={2}>
+      <Checkbox>Menswear Newsletter</Checkbox>
+      <Checkbox>
+        <>
+          Special Announcements
+          <br />
+          (Sale alerts, Moda Friends Events, and exclusive news)
+        </>
+      </Checkbox>
+      <Checkbox>Shopping Bag Reminders</Checkbox>
+      <Checkbox>
+        <>
+          Emails from your Personal Stylist
+          <br />
+          (special event invitations and exclusive access)
+        </>
+      </Checkbox>
+      <Checkbox>Designer Announcements</Checkbox>
+      <Checkbox>
+        <>
+          Trunkshow iOS Notification
+          <br />
+          (messages about your preferred designers from the MO app)
+        </>
+      </Checkbox>
     </Stack>
   </States>
 );

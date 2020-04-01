@@ -9,14 +9,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: './index.js',
     libraryTarget: 'umd',
-    globalObject: 'this'
+    globalObject: 'this',
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)?$/,
         loader: 'babel-loader',
-        exclude: [/node_modules/]
+        exclude: [/node_modules/],
       },
       {
         test: /\.scss$/i,
@@ -25,25 +25,26 @@ module.exports = {
             ? [{ loader: ExtractCssChunks.loader }]
             : ['style-loader']),
           'css-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+          'postcss-loader',
+          'sass-loader',
+        ],
+      },
+    ],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss'],
     alias: {
-      om: path.join(__dirname, 'src/index.scss')
-    }
+      om: path.join(__dirname, 'src/index.scss'),
+    },
   },
   externals: {
     react: 'react',
-    'react-dom': 'react-dom'
+    'react-dom': 'react-dom',
   },
   plugins: [
     new ExtractCssChunks({
       filename: 'styles.css',
-      ignoreOrder: false
-    })
-  ]
+      ignoreOrder: false,
+    }),
+  ],
 };

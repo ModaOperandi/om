@@ -1,11 +1,17 @@
 @mixin input-styles() {
   @include text(body1);
 
+  appearance: none;
   line-height: 1;
   width: 100%;
   padding: spacing(3, 4);
   border: 1px solid color(elephant);
   background-color: color(snow);
+  border-radius: 0;
+
+  &::placeholder {
+    line-height: normal;
+  }
 
   &--focus,
   &:focus {

@@ -21,6 +21,8 @@
     border-radius: 50%;
 
     &--checked {
+      background-color: color(ink);
+
       &::after {
         content: '';
         display: block;
@@ -30,7 +32,7 @@
         bottom: $radio-button-check-offset;
         left: $radio-button-check-offset;
         border-radius: 50%;
-        background-color: color(ink);
+        background-color: color(snow);
       }
     }
   }
