@@ -12,7 +12,13 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ children, className, .
     {...rest}
   >
     {Children.map(children, (child, i) => (
-      <li key={i} itemProp='itemListElement' itemScope itemType='http://schema.org/ListItem'>
+      <li
+        key={i}
+        className='Breadcrumbs__crumb'
+        itemProp='itemListElement'
+        itemScope
+        itemType='http://schema.org/ListItem'
+      >
         {child}
       </li>
     ))}
