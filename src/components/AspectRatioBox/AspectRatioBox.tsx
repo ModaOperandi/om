@@ -56,3 +56,5 @@ export const AspectRatioBox = React.forwardRef(
     );
   }
 );
+
+AspectRatioBox.displayName = 'AspectRatioBox';
