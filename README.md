@@ -80,7 +80,7 @@ yarn add @moda/om
 Import the Component CSS in your global SCSS file:
 
 ```scss
-@import '~@moda/om/dist/css';
+@import '~@moda/om/dist/styles';
 ```
 
 Import and use components:
