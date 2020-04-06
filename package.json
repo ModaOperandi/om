@@ -41,8 +41,8 @@
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@moda/icons": "^4.0.0",
-    "@moda/tokens": "^5.0.1",
+    "@moda/icons": "4.0.0",
+    "@moda/tokens": "5.0.1",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6",
     "focus-visible": "^5.0.2",
