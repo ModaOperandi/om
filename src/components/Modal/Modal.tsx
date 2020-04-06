@@ -39,12 +39,12 @@ export const Modal: React.FC<ModalProps> = ({ className, children, onClose, over
 
     document.body.appendChild(_el);
     disableBodyScroll(_el);
-    window.addEventListener('keydown', handleKeydown);
+    document.addEventListener('keydown', handleKeydown);
 
     return () => {
       _el && _el.parentElement && _el.parentElement.removeChild(_el);
       clearAllBodyScrollLocks();
-      window.removeEventListener('keydown', handleKeydown);
+      document.removeEventListener('keydown', handleKeydown);
     };
   }, [handleKeydown]);
 

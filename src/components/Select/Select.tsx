@@ -20,7 +20,7 @@ export type SelectProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'value' | '
 
 enum Mode {
   Resting,
-  Open
+  Open,
 }
 
 type State = {
@@ -61,7 +61,7 @@ export const Select: React.FC<SelectProps> = ({
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
     focused: initialValue,
-    mode: Mode.Resting
+    mode: Mode.Resting,
   });
 
   const selectRef = useRef<HTMLDivElement>(null);
@@ -93,9 +93,9 @@ export const Select: React.FC<SelectProps> = ({
   }, []);
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
 
@@ -111,14 +111,14 @@ export const Select: React.FC<SelectProps> = ({
 
   useClickOutside(selectRef, handleClickOutside);
 
-  const selected = useMemo(() => options.find(option => state.value === option.value)!, [
+  const selected = useMemo(() => options.find((option) => state.value === option.value)!, [
     options,
-    state.value
+    state.value,
   ]);
 
-  const focused = useMemo(() => options.find(option => state.focused === option.value)!, [
+  const focused = useMemo(() => options.find((option) => state.focused === option.value)!, [
     options,
-    state.focused
+    state.focused,
   ]);
 
   return (
