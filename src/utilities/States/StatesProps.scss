@@ -1,11 +1,9 @@
 @import '~om';
 
 .StatesProps {
-  $code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  @include text(body1, $font: code);
 
   padding-top: space(2);
-  font-family: $code;
-  font-size: font-size(1);
   color: color(fog);
   border-top: 1px dotted color(elephant);
 
