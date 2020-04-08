@@ -96,9 +96,11 @@ export const Select: React.FC<SelectProps> = ({
   }, []);
 
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
+    const el = selectRef.current;
+    if (!el) return;
+    el.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      el.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
 
