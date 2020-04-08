@@ -59,7 +59,8 @@ export const Select: React.FC<SelectProps> = ({
   onChange,
   ...rest
 }) => {
-  const initialValue = value || options[0].value;
+  const initialValue =
+    value || options.find((option) => !option.disabled)?.value || options[0].value;
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
     focused: initialValue,
