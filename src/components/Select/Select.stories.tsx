@@ -9,21 +9,27 @@ const OPTIONS = [
   { value: 'featured', label: 'Featured' },
   {
     value: 'recency',
-    label: "What's New"
+    label: "What's New",
+    disabled: true,
   },
   {
     value: 'high',
-    label: 'Price High to Low'
+    label: 'Price High to Low',
   },
   {
     value: 'low',
-    label: 'Price Low to High'
-  }
+    label: 'Price Low to High',
+  },
 ];
 
 export const Default = () => (
   <States<Partial<SelectProps>>
-    states={[{ idRef: '1' }, { idRef: '2', value: 'high' }, { idRef: '3', label: 'Sort — ' }]}
+    states={[
+      { idRef: '1' },
+      { idRef: '2', value: 'high' },
+      { idRef: '3', label: 'Sort — ' },
+      { disabled: true, idRef: '4', label: 'Sort:' },
+    ]}
   >
     <Select label='Sort by:' options={OPTIONS} onChange={action('onChange')} />
   </States>
@@ -37,7 +43,7 @@ export const ChangingValue = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCursor(prevCursor => prevCursor + 1);
+      setCursor((prevCursor) => prevCursor + 1);
     }, 500);
     return () => clearInterval(interval);
   }, []);
@@ -241,12 +247,12 @@ const COUNTRIES = [
   'Vietnam',
   'Yemen',
   'Zambia',
-  'Zimbabwe'
+  'Zimbabwe',
 ];
 
 export const Long = () => (
   <Select
     label='Choose country:'
-    options={COUNTRIES.map(country => ({ label: country, value: country }))}
+    options={COUNTRIES.map((country) => ({ label: country, value: country }))}
   />
 );

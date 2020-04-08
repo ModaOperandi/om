@@ -17,4 +17,13 @@
   &--active {
     background-color: color(noise);
   }
+
+  &--disabled {
+    color: color(fog);
+    cursor: default;
+
+    &:hover {
+      background-color: color(snow);
+    }
+  }
 }

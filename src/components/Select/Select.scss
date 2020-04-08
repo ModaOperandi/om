@@ -7,6 +7,21 @@
   display: flex;
   cursor: pointer;
 
+  &--disabled {
+    cursor: default;
+
+    #{$self}__value {
+      color: color(fog);
+      cursor: default;
+
+      &:hover,
+      &:focus {
+        border-color: color(elephant);
+        background-color: color(snow);
+      }
+    }
+  }
+
   &__value {
     @include text(body1);
 
@@ -19,6 +34,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    cursor: pointer;
 
     &:hover {
       border-color: color(cement);

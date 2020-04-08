@@ -8,12 +8,13 @@ import { useClickOutside } from './useClickOutside';
 import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 import './Select.scss';
 
-export type SelectableOption = { value: string; label: string };
+export type SelectableOption = { value: string; label: string; disabled?: boolean };
 
 export type SelectProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'> & {
   idRef?: string;
   label: string;
   value?: string;
+  disabled?: boolean;
   options: SelectableOption[];
   onChange?(value: string): void;
 };
@@ -54,6 +55,7 @@ export const Select: React.FC<SelectProps> = ({
   value,
   options,
   label,
+  disabled,
   onChange,
   ...rest
 }) => {
@@ -124,13 +126,14 @@ export const Select: React.FC<SelectProps> = ({
   return (
     <div
       id={`Select--${idRef}`}
-      className={classNames('Select', className)}
+      className={classNames('Select', { 'Select--disabled': disabled }, className)}
       ref={selectRef}
       {...rest}
     >
       <Clickable
         id={`Select__value--${idRef}`}
         className='Select__value'
+        disabled={disabled}
         onClick={handleToggle}
         aria-haspopup='listbox'
         aria-expanded={state.mode === Mode.Open}

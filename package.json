@@ -97,6 +97,7 @@
     "style-loader": "^1.0.0",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.2",
+    "waait": "^1.0.5",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
