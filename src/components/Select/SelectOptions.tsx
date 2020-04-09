@@ -39,7 +39,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   }, []);
 
   useUpdateEffect(() => {
-    onFocus && onFocus(activeOption);
+    onFocus && activeOption && onFocus(activeOption);
   }, [activeOption, onFocus]);
 
   return (
@@ -49,7 +49,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
       role='listbox'
       ref={ref}
       aria-labelledby={`Select__label--${idRef}`}
-      aria-activedescendant={`SelectOption--${activeOption.value}-${idRef}`}
+      aria-activedescendant={`SelectOption--${activeOption?.value}-${idRef}`}
       {...rest}
     >
       {options.map((option) => (
@@ -57,7 +57,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
           id={`SelectOption--${option.value}-${idRef}`}
           key={option.value}
           option={option}
-          active={activeOption.value === option.value}
+          active={activeOption?.value === option.value}
           selected={selectedOption.value === option.value}
           onClick={onSelect}
         >
