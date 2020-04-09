@@ -44,3 +44,6 @@ MediumViewport.story = { parameters: { viewport: { defaultViewport: 'md' } } };
 
 export const SmallViewport = () => <Constrained />;
 SmallViewport.story = { parameters: { viewport: { defaultViewport: 'sm' } } };
+
+export const XSmallViewport = () => <Constrained />;
+XSmallViewport.story = { parameters: { viewport: { defaultViewport: 'xs' } } };

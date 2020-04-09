@@ -5,8 +5,18 @@
   margin: 0 auto;
   max-width: map-get($breakpoints, xl);
 
-  @include breakpoint(md, max-width) {
+  @include breakpoint(md, $prop: max-width) {
     width: 100%;
     padding: spacing(0, 6);
+  }
+
+  @include breakpoint(sm, $prop: max-width) {
+    width: 100%;
+    padding: spacing(0, 4);
+  }
+
+  @include breakpoint(xs, $prop: max-width) {
+    width: 100%;
+    padding: spacing(0, 2);
   }
 }
