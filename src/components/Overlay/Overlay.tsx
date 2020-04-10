@@ -3,14 +3,10 @@ import classNames from 'classnames';
 
 import './Overlay.scss';
 
-interface Props {
-  className: string;
-}
+export type OverlayProps = React.HTMLAttributes<HTMLDivElement>;
 
-export const Overlay: React.FC<Props> = ({ children, className, ...rest }) => {
-  return (
-    <div className={classNames('ModalOverlay', className)} {...rest}>
-      {children}
-    </div>
-  );
-};
+export const Overlay: React.FC<OverlayProps> = ({ className, children, ...rest }) => (
+  <div className={classNames('Overlay', className)} {...rest}>
+    {children}
+  </div>
+);
