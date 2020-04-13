@@ -26,3 +26,4 @@ export * from './Checkbox';
 export * from './Select';
 export * from './AspectRatioBox';
 export * from './Tabs';
+export * from './Overlay';

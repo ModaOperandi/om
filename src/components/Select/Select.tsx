@@ -141,6 +141,7 @@ export const Select: React.FC<SelectProps> = ({
         aria-haspopup='listbox'
         aria-expanded={state.mode === Mode.Open}
         aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
+        type='button'
       >
         <label id={`Select__label--${idRef}`}>{label}</label> {(focused ?? selected).label}
         <span className='Select__icon'>
