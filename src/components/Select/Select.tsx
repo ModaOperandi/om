@@ -127,41 +127,39 @@ export const Select: React.FC<SelectProps> = ({
   ]);
 
   return (
-    <div>
+    <div
+      id={idRef ? `Select--${idRef}` : undefined}
+      className={classNames('Select', { 'Select--disabled': disabled }, className)}
+      ref={selectRef}
+      {...rest}
+    >
       <input id={idRef} name={idRef} type='hidden' value={value} />
-      <div
-        id={idRef ? `Select--${idRef}` : undefined}
-        className={classNames('Select', { 'Select--disabled': disabled }, className)}
-        ref={selectRef}
-        {...rest}
+      <Clickable
+        id={`Select__value--${idRef}`}
+        className='Select__value'
+        disabled={disabled}
+        onClick={handleToggle}
+        aria-haspopup='listbox'
+        aria-expanded={state.mode === Mode.Open}
+        aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
+        type='button'
       >
-        <Clickable
-          id={`Select__value--${idRef}`}
-          className='Select__value'
-          disabled={disabled}
-          onClick={handleToggle}
-          aria-haspopup='listbox'
-          aria-expanded={state.mode === Mode.Open}
-          aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
-          type='button'
-        >
-          <label id={`Select__label--${idRef}`}>{label}</label> {(focused ?? selected).label}
-          <span className='Select__icon'>
-            {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
-          </span>
-        </Clickable>
+        <label id={`Select__label--${idRef}`}>{label}</label> {(focused ?? selected).label}
+        <span className='Select__icon'>
+          {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
+        </span>
+      </Clickable>
 
-        {state.mode === Mode.Open && (
-          <SelectOptions
-            idRef={idRef}
-            className='Select__options'
-            options={options}
-            onSelect={handleSelect}
-            onFocus={handleFocus}
-            selectedOption={selected}
-          />
-        )}
-      </div>
+      {state.mode === Mode.Open && (
+        <SelectOptions
+          idRef={idRef}
+          className='Select__options'
+          options={options}
+          onSelect={handleSelect}
+          onFocus={handleFocus}
+          selectedOption={selected}
+        />
+      )}
     </div>
   );
 };
