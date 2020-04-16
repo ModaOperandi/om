@@ -11362,10 +11362,10 @@ property-information@^5.0.0:
   dependencies:
     xtend "^4.0.1"
 
-proportional-scale@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/proportional-scale/-/proportional-scale-2.1.1.tgz#3f68d19d1b3d42e25eb638458bcee8162d9970c4"
-  integrity sha512-1mpVn6+QyIjGl1OOOo2Q2iSzZzR6D3S22jev4w4vAlXID0AKpiufQNMn70A6WnbB8kSS+U2G/L6YS9YMiROPqw==
+proportional-scale@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/proportional-scale/-/proportional-scale-3.0.0.tgz#0dd18547b596d2bcb14479b5c48e9184c976ddd4"
+  integrity sha512-nkjqoDTsfYfmVksCDK5I0nK+0endS0Cgh1CMcN91E2Oj364m/RTFT7aVf9jUT17b9/0W/5tTL1r2Yj+3yAzTwA==
 
 proto-list@~1.2.1:
   version "1.2.4"
