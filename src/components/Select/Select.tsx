@@ -128,11 +128,12 @@ export const Select: React.FC<SelectProps> = ({
 
   return (
     <div
-      id={`Select--${idRef}`}
+      id={idRef ? `Select--${idRef}` : undefined}
       className={classNames('Select', { 'Select--disabled': disabled }, className)}
       ref={selectRef}
       {...rest}
     >
+      <input id={idRef} name={idRef} type='hidden' value={value} />
       <Clickable
         id={`Select__value--${idRef}`}
         className='Select__value'
