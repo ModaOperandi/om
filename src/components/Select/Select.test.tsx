@@ -15,7 +15,7 @@ describe('Select', () => {
   it('renders correctly', () => {
     const { container } = render(<Select idRef='1' label='Sort by:' options={options} />);
     expect(container.innerHTML).toEqual(
-      '<input id="1" type="hidden" value=""><div id="Select--1" class="Select"><button class="Clickable Select__value" id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button"><label id="Select__label--1">Sort by:</label> Foo<span class="Select__icon"></span></button></div>'
+      '<div><input id="1" name="1" type="hidden" value=""><div id="Select--1" class="Select"><button class="Clickable Select__value" id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button"><label id="Select__label--1">Sort by:</label> Foo<span class="Select__icon"></span></button></div></div>'
     );
   });
 
@@ -24,7 +24,7 @@ describe('Select', () => {
     const button = container.querySelector('#Select__value--1')!;
     userEvent.click(button);
     expect(container.innerHTML).toEqual(
-      '<input id="1" type="hidden" value=""><div id="Select--1" class="Select"><button class="Clickable Select__value" id="Select__value--1" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="Select__label--1 Select__value--1" type="button"><label id="Select__label--1">Sort by:</label> Foo<span class="Select__icon"></span></button><ul class="SelectOptions Select__options" tabindex="-1" role="listbox" aria-labelledby="Select__label--1" aria-activedescendant="SelectOption--foo-1"><li class="SelectOption SelectOption--active SelectOption--selected" aria-label="Foo" aria-selected="true" role="option">Foo</li><li class="SelectOption" aria-label="Bar" aria-selected="false" role="option">Bar</li><li class="SelectOption SelectOption--disabled" aria-label="Baz" aria-selected="false" role="option">Baz</li></ul></div>'
+      '<div><input id="1" name="1" type="hidden" value=""><div id="Select--1" class="Select"><button class="Clickable Select__value" id="Select__value--1" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="Select__label--1 Select__value--1" type="button"><label id="Select__label--1">Sort by:</label> Foo<span class="Select__icon"></span></button><ul class="SelectOptions Select__options" tabindex="-1" role="listbox" aria-labelledby="Select__label--1" aria-activedescendant="SelectOption--foo-1"><li class="SelectOption SelectOption--active SelectOption--selected" aria-label="Foo" aria-selected="true" role="option">Foo</li><li class="SelectOption" aria-label="Bar" aria-selected="false" role="option">Bar</li><li class="SelectOption SelectOption--disabled" aria-label="Baz" aria-selected="false" role="option">Baz</li></ul></div></div>'
     );
   });
 
@@ -33,7 +33,7 @@ describe('Select', () => {
     const button = container.querySelector('#Select__value--1')!;
     userEvent.click(button);
     expect(container.innerHTML).toEqual(
-      '<input id="1" type="hidden" value=""><div id="Select--1" class="Select Select--disabled"><button class="Clickable Select__value" id="Select__value--1" disabled="" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button"><label id="Select__label--1">Sort by:</label> Foo<span class="Select__icon"></span></button></div>'
+      '<div><input id="1" name="1" type="hidden" value=""><div id="Select--1" class="Select Select--disabled"><button class="Clickable Select__value" id="Select__value--1" disabled="" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button"><label id="Select__label--1">Sort by:</label> Foo<span class="Select__icon"></span></button></div></div>'
     );
   });
 
