@@ -127,8 +127,8 @@ export const Select: React.FC<SelectProps> = ({
   ]);
 
   return (
-    <>
-      <input id={idRef} type='hidden' value={value} />
+    <div>
+      <input id={idRef} name={idRef} type='hidden' value={value} />
       <div
         id={idRef ? `Select--${idRef}` : undefined}
         className={classNames('Select', { 'Select--disabled': disabled }, className)}
@@ -162,6 +162,6 @@ export const Select: React.FC<SelectProps> = ({
           />
         )}
       </div>
-    </>
+    </div>
   );
 };
