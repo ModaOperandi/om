@@ -28,7 +28,9 @@
   &--anchor-topLeft {
     #{$self}__content {
       top: 100%;
+      bottom: auto;
       left: 0;
+      right: auto;
       transform: translateY($offset);
     }
   }
@@ -36,7 +38,9 @@
   &--anchor-topCenter {
     #{$self}__content {
       top: 100%;
+      bottom: auto;
       left: 50%;
+      right: auto;
       transform: translate(-50%, $offset);
     }
   }
@@ -44,6 +48,8 @@
   &--anchor-topRight {
     #{$self}__content {
       top: 100%;
+      bottom: auto;
+      left: auto;
       right: 0;
       transform: translateY($offset);
     }
@@ -51,23 +57,29 @@
 
   &--anchor-bottomLeft {
     #{$self}__content {
+      top: auto;
       bottom: 100%;
       left: 0;
+      right: auto;
       transform: translateY(-#{$offset});
     }
   }
 
   &--anchor-bottomCenter {
     #{$self}__content {
+      top: auto;
       bottom: 100%;
       left: 50%;
+      right: auto;
       transform: translate(-50%, -#{$offset});
     }
   }
 
   &--anchor-bottomRight {
     #{$self}__content {
+      top: auto;
       bottom: 100%;
+      left: auto;
       right: 0;
       transform: translateY(-#{$offset});
     }
@@ -79,7 +91,9 @@
     #{$self}__caret {
       &:after,
       &:before {
+        top: auto;
         bottom: -($border-width + $offset);
+        border-top: none;
         border-bottom: $caret-size solid color(snow);
       }
 
@@ -96,7 +110,9 @@
       &:after,
       &:before {
         top: -($border-width + $offset);
+        bottom: auto;
         border-top: $caret-size solid color(snow);
+        border-bottom: none;
       }
 
       &:before {
@@ -107,7 +123,7 @@
 
   &__trigger {
     position: relative;
-    display: inline-block;
+    display: block;
   }
 
   &__caret {
