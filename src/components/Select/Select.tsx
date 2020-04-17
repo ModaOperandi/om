@@ -62,7 +62,11 @@ export const Select: React.FC<SelectProps> = ({
   ...rest
 }) => {
   const initialValue =
+<<<<<<< HEAD
     value || defaultValue || options.find((option) => !option.disabled)?.value || options[0].value;
+=======
+    defaultValue || value || options.find((option) => !option.disabled)?.value || options[0].value;
+>>>>>>> fix: 🐛 fix <Select /> for some undefined cases
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
     focused: initialValue,
@@ -111,7 +115,7 @@ export const Select: React.FC<SelectProps> = ({
   }, [onChange, state.value]);
 
   useUpdateEffect(() => {
-    value && state.value !== value && dispatch({ type: 'SELECT', payload: { value } });
+    value && dispatch({ type: 'SELECT', payload: { value } });
   }, [value, state.value]);
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
