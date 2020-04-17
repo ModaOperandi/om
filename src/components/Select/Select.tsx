@@ -112,7 +112,7 @@ export const Select: React.FC<SelectProps> = ({
 
   useUpdateEffect(() => {
     value && dispatch({ type: 'SELECT', payload: { value } });
-  }, [value, state.value]);
+  }, [value]);
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
 
