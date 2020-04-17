@@ -12,7 +12,7 @@ export type SelectOptionsProps = Omit<
 > & {
   idRef: string;
   options: SelectableOption[];
-  selectedOption: SelectableOption;
+  selectedOption: SelectableOption | undefined;
   onFocus?(option: SelectableOption): void;
   onSelect(option: SelectableOption): void;
 };
@@ -29,7 +29,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   const { selected: activeOption } = useKeyboardListNavigation({
     list: options.filter((option) => !option.disabled),
     onEnter: onSelect,
-    extractValue: (option) => option.label.toLowerCase(),
+    extractValue: (option) => option?.label.toLowerCase(),
   });
 
   const ref = useRef<HTMLUListElement>(null);
@@ -58,7 +58,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
           key={option.value}
           option={option}
           active={activeOption?.value === option.value}
-          selected={selectedOption.value === option.value}
+          selected={selectedOption?.value === option.value}
           onClick={onSelect}
         >
           {option.label}
