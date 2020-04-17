@@ -62,15 +62,7 @@ export const Select: React.FC<SelectProps> = ({
   ...rest
 }) => {
   const initialValue =
-<<<<<<< HEAD
-<<<<<<< HEAD
     value || defaultValue || options.find((option) => !option.disabled)?.value || options[0].value;
-=======
-    defaultValue || value || options.find((option) => !option.disabled)?.value || options[0].value;
->>>>>>> fix: 🐛 fix <Select /> for some undefined cases
-=======
-    value || defaultValue || options.find((option) => !option.disabled)?.value || options[0].value;
->>>>>>> fix: 🐛 readded <Select/> effect and prioritized value prop
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
     focused: initialValue,
