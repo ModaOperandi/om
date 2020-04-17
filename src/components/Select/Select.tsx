@@ -13,6 +13,7 @@ export type SelectableOption = { value: string; label: string; disabled?: boolea
 export type SelectProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'> & {
   idRef?: string;
   label: string;
+  defaultValue?: string;
   value?: string;
   disabled?: boolean;
   options: SelectableOption[];
@@ -52,6 +53,7 @@ const reducer = (state: State, action: Action) => {
 export const Select: React.FC<SelectProps> = ({
   idRef = '',
   className,
+  defaultValue,
   value,
   options,
   label,
@@ -60,7 +62,7 @@ export const Select: React.FC<SelectProps> = ({
   ...rest
 }) => {
   const initialValue =
-    value || options.find((option) => !option.disabled)?.value || options[0].value;
+    value || defaultValue || options.find((option) => !option.disabled)?.value || options[0].value;
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
     focused: initialValue,
@@ -109,8 +111,8 @@ export const Select: React.FC<SelectProps> = ({
   }, [onChange, state.value]);
 
   useUpdateEffect(() => {
-    value && dispatch({ type: 'SELECT', payload: { value } });
-  }, [value]);
+    value && state.value !== value && dispatch({ type: 'SELECT', payload: { value } });
+  }, [value, state.value]);
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
 
@@ -144,7 +146,7 @@ export const Select: React.FC<SelectProps> = ({
         aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
         type='button'
       >
-        <label id={`Select__label--${idRef}`}>{label}</label> {(focused ?? selected).label}
+        <label id={`Select__label--${idRef}`}>{label}</label> {(focused ?? selected)?.label}
         <span className='Select__icon'>
           {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </span>
