@@ -15,9 +15,21 @@ const Content = (
 );
 
 export const Default = () => (
-  <States<Partial<PopoverProps>> states={[{}, { anchor: 'right' }, { open: true }]}>
-    <Popover content={Content}>
-      <Text>Hover over me</Text>
-    </Popover>
-  </States>
+  <div style={{ textAlign: 'center' }}>
+    <States<Partial<PopoverProps>>
+      states={[
+        {},
+        { anchor: 'topCenter' },
+        { anchor: 'topRight' },
+        { anchor: 'bottomLeft' },
+        { anchor: 'bottomCenter' },
+        { anchor: 'bottomRight' },
+        { open: true },
+      ]}
+    >
+      <Popover content={Content} style={{ display: 'inline-block' }}>
+        <Text>Hover over me</Text>
+      </Popover>
+    </States>
+  </div>
 );

@@ -10,8 +10,6 @@
 
   &__content {
     position: absolute;
-    top: 100%;
-    transform: translateY($offset);
     background-color: color(snow);
     border: $border-width solid color(elephant);
     z-index: 1;
@@ -27,21 +25,105 @@
     }
   }
 
-  &--anchor-right {
+  &--anchor-topLeft {
     #{$self}__content {
-      right: 0;
+      top: 100%;
+      bottom: auto;
+      left: 0;
+      right: auto;
+      transform: translateY($offset);
     }
   }
 
-  &--anchor-left {
+  &--anchor-topCenter {
     #{$self}__content {
+      top: 100%;
+      bottom: auto;
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, $offset);
+    }
+  }
+
+  &--anchor-topRight {
+    #{$self}__content {
+      top: 100%;
+      bottom: auto;
+      left: auto;
+      right: 0;
+      transform: translateY($offset);
+    }
+  }
+
+  &--anchor-bottomLeft {
+    #{$self}__content {
+      top: auto;
+      bottom: 100%;
       left: 0;
+      right: auto;
+      transform: translateY(-#{$offset});
+    }
+  }
+
+  &--anchor-bottomCenter {
+    #{$self}__content {
+      top: auto;
+      bottom: 100%;
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, -#{$offset});
+    }
+  }
+
+  &--anchor-bottomRight {
+    #{$self}__content {
+      top: auto;
+      bottom: 100%;
+      left: auto;
+      right: 0;
+      transform: translateY(-#{$offset});
+    }
+  }
+
+  &--anchor-topLeft,
+  &--anchor-topCenter,
+  &--anchor-topRight {
+    #{$self}__caret {
+      &:after,
+      &:before {
+        top: auto;
+        bottom: -($border-width + $offset);
+        border-top: none;
+        border-bottom: $caret-size solid color(snow);
+      }
+
+      &:before {
+        border-bottom: $caret-size solid color(ink);
+      }
+    }
+  }
+
+  &--anchor-bottomLeft,
+  &--anchor-bottomCenter,
+  &--anchor-bottomRight {
+    #{$self}__caret {
+      &:after,
+      &:before {
+        top: -($border-width + $offset);
+        bottom: auto;
+        border-top: $caret-size solid color(snow);
+        border-bottom: none;
+      }
+
+      &:before {
+        border-top: $caret-size solid color(ink);
+      }
     }
   }
 
   &__trigger {
     position: relative;
-    display: inline-block;
+    display: block;
   }
 
   &__caret {
@@ -54,16 +136,10 @@
     &:before {
       content: '';
       position: absolute;
-      bottom: -($border-width + $offset);
       left: 50%;
       transform: translateX(-50%);
       border-left: $caret-size solid transparent;
       border-right: $caret-size solid transparent;
-      border-bottom: $caret-size solid color(snow);
-    }
-
-    &:before {
-      border-bottom: $caret-size solid color(ink);
     }
   }
 }
