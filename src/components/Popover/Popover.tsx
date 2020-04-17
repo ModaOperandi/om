@@ -6,7 +6,7 @@ export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
   content: JSX.Element;
   children: JSX.Element;
   open?: boolean;
-  anchor?: 'left' | 'right';
+  anchor?: 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight';
 };
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
@@ -16,7 +16,7 @@ export const Popover: React.FC<PopoverProps> = ({
   children,
   content,
   open = false,
-  anchor = 'left',
+  anchor = 'topLeft',
   ...rest
 }) => {
   const [isOpen, setOpen] = useState(open);
