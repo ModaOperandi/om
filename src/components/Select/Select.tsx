@@ -137,7 +137,7 @@ export const Select: React.FC<SelectProps> = ({
       ref={selectRef}
       {...rest}
     >
-      <input id={idRef} name={name || idRef} type='hidden' value={state.value} />
+      <input id={idRef} name={name} type='hidden' value={state.value} />
       <Clickable
         id={`Select__value--${idRef}`}
         className='Select__value'
