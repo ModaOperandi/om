@@ -13,6 +13,7 @@ export type SelectableOption = { value: string; label: string; disabled?: boolea
 export type SelectProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'> & {
   idRef?: string;
   label: string;
+  name: string;
   defaultValue?: string;
   value?: string;
   disabled?: boolean;
@@ -57,6 +58,7 @@ export const Select: React.FC<SelectProps> = ({
   value,
   options,
   label,
+  name,
   disabled,
   onChange,
   ...rest
@@ -135,7 +137,7 @@ export const Select: React.FC<SelectProps> = ({
       ref={selectRef}
       {...rest}
     >
-      <input id={idRef} name={idRef} type='hidden' value={state.value} />
+      <input id={idRef} name={name} type='hidden' value={state.value} />
       <Clickable
         id={`Select__value--${idRef}`}
         className='Select__value'
