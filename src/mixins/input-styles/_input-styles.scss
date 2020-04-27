@@ -33,11 +33,7 @@
   &--error {
     &,
     &:focus {
-      border-color: color(elephant);
-      border-bottom-color: color(code-red);
+      border-color: color(code-red);
     }
-
-    // Creates 1px thicker border without shifting contents
-    box-shadow: 0 1px 0 color(code-red);
   }
 }
