@@ -74,8 +74,11 @@ export const Select: React.FC<SelectProps> = ({
   const selectRef = useRef<HTMLDivElement>(null);
 
   const handleSelect = useCallback(
-    (option: SelectableOption) => dispatch({ type: 'SELECT', payload: { value: option.value } }),
-    []
+    (option: SelectableOption) => {
+      dispatch({ type: 'SELECT', payload: { value: option.value } });
+      onChange && onChange(option.value);
+    },
+    [onChange]
   );
 
   const handleFocus = useCallback(
@@ -107,10 +110,6 @@ export const Select: React.FC<SelectProps> = ({
       el.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
-
-  useUpdateEffect(() => {
-    onChange && onChange(state.value);
-  }, [onChange, state.value]);
 
   useUpdateEffect(() => {
     value && dispatch({ type: 'SELECT', payload: { value } });
