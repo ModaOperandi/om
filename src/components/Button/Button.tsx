@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Link, LinkProps } from 'react-router-dom';
 
 import './Button.scss';
 
@@ -13,11 +14,14 @@ type CommonProps = {
 type ButtonElProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 type AnchorElProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-const isAnchor = (props: ButtonElProps | AnchorElProps): props is AnchorElProps => 'href' in props;
-const isButton = (props: ButtonElProps | AnchorElProps): props is ButtonElProps =>
+const isLink = (props: ButtonElProps | AnchorElProps | LinkProps): props is LinkProps =>
+  'to' in props;
+const isAnchor = (props: ButtonElProps | AnchorElProps | LinkProps): props is AnchorElProps =>
+  'href' in props;
+const isButton = (props: ButtonElProps | AnchorElProps | LinkProps): props is ButtonElProps =>
   !('href' in props);
 
-export type ButtonProps = CommonProps & (ButtonElProps | AnchorElProps);
+export type ButtonProps = CommonProps & (ButtonElProps | AnchorElProps | LinkProps);
 
 export const Button: React.FC<ButtonProps> = ({
   secondary,
@@ -33,11 +37,12 @@ export const Button: React.FC<ButtonProps> = ({
       'Button--secondary': secondary,
       'Button--hover': hover,
       'Button--focus': focus,
-      'Button--disabled': disabled
+      'Button--disabled': disabled,
     },
     className
   );
 
+  if (isLink(rest)) return <Link className={cn} {...rest} />;
   if (isAnchor(rest)) return <a className={cn} {...rest} />;
   if (isButton(rest)) return <button disabled={disabled} className={cn} {...rest} />;
 
