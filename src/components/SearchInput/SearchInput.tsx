@@ -42,6 +42,8 @@ export const SearchInput: React.FC<SearchInputProps> = ({
     [onChange, setValue]
   );
 
+  useEffect(() => setValue(value), [value]);
+
   useEffect(() => {
     onChangeValue && onChangeValue(controlledValue);
   }, [controlledValue, onChangeValue]);
