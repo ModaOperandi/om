@@ -27,6 +27,7 @@ export const DropdownExample = () => {
 
   useEffect(() => {
     window.addEventListener('keypress', keyPressHandler);
+
     return () => {
       window.removeEventListener('keypress', keyPressHandler);
     };
