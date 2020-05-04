@@ -14,7 +14,9 @@
     cursor: pointer;
     padding: spacing(3, 0);
     user-select: none;
+  }
 
+  &__name--plusMinus {
     &::before,
     &::after {
       content: '';
@@ -32,6 +34,14 @@
       transform: translateY(-50%) rotate(90deg);
       transition: transform 200ms;
     }
+  }
+
+  &__icon {
+    height: 100%;
+    padding-top: space(4);
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   &__contents {
