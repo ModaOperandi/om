@@ -9,7 +9,7 @@ export type ExpandableProps = React.HTMLAttributes<HTMLDivElement> & {
   name: string;
   expanded?: boolean;
   children: React.ReactNode;
-  icon?: 'chevron' | 'default';
+  icon?: 'chevron' | 'plus-minus';
 };
 
 export const Expandable: React.FC<ExpandableProps> = ({
@@ -17,7 +17,7 @@ export const Expandable: React.FC<ExpandableProps> = ({
   expanded: __expanded__ = false,
   children,
   className,
-  icon = 'default',
+  icon = 'plus-minus',
   ...rest
 }) => {
   const [expanded, setExpanded] = useState(__expanded__);
@@ -28,9 +28,9 @@ export const Expandable: React.FC<ExpandableProps> = ({
       className={classNames('Expandable', { 'Expandable--expanded': expanded }, className)}
       {...rest}
     >
-      <Clickable className={classNames('Expandable__name', { 'Expandable__name--plusMinus': icon === 'default' })} onClick={handleClick}>
+      <Clickable className={classNames('Expandable__name', { 'Expandable__name--plusMinus': icon === 'plus-minus' })} onClick={handleClick}>
         {name}
-        {icon !== 'default' &&
+        {icon !== 'plus-minus' &&
           <div className="Expandable__icon">
             {icon === 'chevron' && expanded && <ChevronUpIcon />}
             {icon === 'chevron' && !expanded && <ChevronDownIcon />}
