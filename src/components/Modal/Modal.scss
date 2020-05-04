@@ -15,5 +15,14 @@
   &--overlay {
     align-items: baseline;
     background: rgba(255, 255, 255, 0.9);
+    padding: spacing(8, 6);
+
+    @include breakpoint(sm, $prop: max-width) {
+      padding: spacing(8, 4);
+    }
+
+    @include breakpoint(xs, $prop: max-width) {
+      padding: spacing(8, 2);
+    }
   }
 }
