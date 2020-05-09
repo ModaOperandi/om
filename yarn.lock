@@ -14414,9 +14414,9 @@ use-cursor@^1.0.0:
     map-cursor-to-max "^1.0.0"
 
 use-keyboard-list-navigation@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-2.0.0.tgz#e16c33ce8c337e066febe00b251b55a9e4b79dfc"
-  integrity sha512-cGE9Bsbu4JevuwMls5mFMBow5ROgrhRnoVg6Owv1oXwS65NjECjkVsGS7W3U/9BGpDKeSL+zKuqcINpCzmHtCA==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-2.0.1.tgz#a5ccf2c59e215aec03bfb8eba5ae85ef56ec8c79"
+  integrity sha512-uAIIA0m/oejL4E0qet8jVZZaM/95QlT6SEl5PxUEpKPLoWcSyufqy/S1U0/yx3bPHq4Ny3iBLB3ZN7T4agBKZQ==
   dependencies:
     map-cursor-to-max "^1.0.0"
 
