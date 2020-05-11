@@ -3,14 +3,17 @@ import InputMask, { Props as InputMaskProps } from 'react-input-mask';
 import creditCardType from 'credit-card-type';
 import { Field, FieldProps } from '../Field';
 
-export type Props = Omit<InputMaskProps & FieldProps, 'mask' | 'value' | 'defaultValue'> & {
+export type CreditCardNumberInputProps = Omit<
+  InputMaskProps & FieldProps,
+  'mask' | 'value' | 'defaultValue'
+> & {
   value?: string;
   defaultValue?: string;
 };
 
 const DEFAULT_MASK = '9999 9999 9999 9999';
 
-export const CreditCardNumberInput: React.FC<Props> = ({
+export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
   value: propsValue,
   disabled,
   readOnly,
@@ -34,9 +37,8 @@ export const CreditCardNumberInput: React.FC<Props> = ({
 
     const length = lengths[lengths.length - 1];
     const digits = Array(length).fill('9');
-    return [...gaps]
-      .reverse()
-      .reduce(
+    return gaps
+      .reduceRight(
         (mask, gapIndex) => [...mask.slice(0, gapIndex), ' ', ...mask.slice(gapIndex)],
         digits
       )

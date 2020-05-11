@@ -1,6 +1,18 @@
 import React from 'react';
-import { CreditCardNumberInput } from './CreditCardNumberInput';
+import { States } from 'storybook-states';
+import { CreditCardNumberInput, CreditCardNumberInputProps } from './CreditCardNumberInput';
 
 export default { title: 'Components|CreditCardNumberInput' };
 
-export const Default = () => <CreditCardNumberInput label='Card Number' />;
+export const Default = () => (
+  <States<CreditCardNumberInputProps>
+    states={[
+      {},
+      { alwaysShowMask: true },
+      { alwaysShowMask: true, maskChar: '-' },
+      { maskChar: '' }
+    ]}
+  >
+    <CreditCardNumberInput label='Card Number' />
+  </States>
+);
