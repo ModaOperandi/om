@@ -1506,10 +1506,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@moda/icons@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.0.0.tgz#6320ba68b72a6fd3ab9718a699ff2625dbeddc06"
-  integrity sha512-e+rCdPOA7rX3M/T6jrOTJkX16//jJDzV0CdqIe08WrTb3tA50iWlxIijlP3q6JxbkvlbhmfFQ1zNCi1C41QRwg==
+"@moda/icons@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.1.0.tgz#c19a372870211ee7705f62c7e36b81ab64813954"
+  integrity sha512-CSYzc4nzU9fYOKgw2DMqmk0wJc/vuNjN/31AnX/oUZo6igU8ByNb/nvY/m5rA1szhfNchfWUYmXSdA2rbs3Ovg==
 
 "@moda/tokens@5.1.1":
   version "5.1.1"
