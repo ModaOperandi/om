@@ -15,16 +15,22 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
   selected,
   option,
   onClick,
-  className,
+  className
 }) => {
-  const handleClick = useCallback(() => !option.disabled && onClick(option), [onClick, option]);
+  const handleClick = useCallback(
+    event => {
+      event.preventDefault();
+      !option.disabled && onClick(option);
+    },
+    [onClick, option]
+  );
 
   return (
     <li
       className={classNames('SelectOption', className, {
         'SelectOption--active': active,
         'SelectOption--selected': selected,
-        'SelectOption--disabled': option.disabled,
+        'SelectOption--disabled': option.disabled
       })}
       onClick={handleClick}
       aria-label={option.label}
