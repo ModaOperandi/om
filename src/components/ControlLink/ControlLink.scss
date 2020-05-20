@@ -2,13 +2,13 @@
 
 .ControlLink {
   $self: &;
+  @include text(body1);
+
+  display: inline-flex;
 
   &:not(&--disabled) {
     cursor: pointer;
   }
-  width: fit-content;
-
-  @include text(body1);
 
   &:hover,
   &:focus {
