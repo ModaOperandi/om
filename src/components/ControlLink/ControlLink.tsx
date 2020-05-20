@@ -25,6 +25,7 @@ export const ControlLink: React.FC<ControlLinkProps> = ({
       { 'ControlLink--disabled': disabled },
       className
     )}
+    disabled={disabled}
     onClick={disabled ? undefined : onClick}
   >
     {children}
