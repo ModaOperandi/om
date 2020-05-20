@@ -1,0 +1,41 @@
+@import '~om';
+
+.ControlLink {
+  &:not(&--disabled) {
+    cursor: pointer;
+  }
+  width: fit-content;
+
+  @include text(h6);
+
+  &--cement {
+    color: color(cement);
+  }
+
+  &--ink {
+    color: color(ink);
+  }
+
+  &:hover,
+  &:focus {
+    &:not(.ControlLink--disabled) {
+      @include thin-underline();
+      color: color(ink);
+    }
+  }
+
+  &--underlined {
+    @include thin-underline();
+
+    &:hover,
+    &:focus {
+      &:not(.ControlLink--disabled) {
+        color: color(burnt-orange);
+      }
+    }
+  }
+
+  &--disabled {
+    color: color(fog);
+  }
+}
