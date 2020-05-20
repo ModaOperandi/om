@@ -28,3 +28,4 @@ export * from './AspectRatioBox';
 export * from './Tabs';
 export * from './Overlay';
 export * from './CreditCardNumberInput';
+export * from './ControlLink';

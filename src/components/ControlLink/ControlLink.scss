@@ -1,0 +1,35 @@
+@import '~om';
+
+.ControlLink {
+  $self: &;
+  @include text(body1);
+
+  display: inline-flex;
+
+  &:not(&--disabled) {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    &:not(#{$self}--disabled) {
+      @include thin-underline();
+      color: color(ink);
+    }
+  }
+
+  &--underlined {
+    @include thin-underline();
+
+    &:hover,
+    &:focus {
+      &:not(#{$self}--disabled) {
+        color: color(burnt-orange);
+      }
+    }
+  }
+
+  &--disabled {
+    color: color(fog);
+  }
+}
