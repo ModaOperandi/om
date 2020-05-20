@@ -12,7 +12,7 @@
 
   &:hover,
   &:focus {
-    &:not($self--disabled) {
+    &:not(#{$self}--disabled) {
       @include thin-underline();
       color: color(ink);
     }
@@ -23,7 +23,7 @@
 
     &:hover,
     &:focus {
-      &:not($self--disabled) {
+      &:not(#{$self}--disabled) {
         color: color(burnt-orange);
       }
     }
