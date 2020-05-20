@@ -6,10 +6,10 @@ import { ControlLink, ControlLinkProps } from './ControlLink';
 export default { title: 'Components|ControlLink' };
 
 const states = [
-  { color: 'cement' },
-  { color: 'ink' },
-  { color: 'cement', disabled: true },
-  { color: 'ink', disabled: true }
+  { color: 'cement' as 'cement' },
+  { color: 'ink' as 'ink' },
+  { color: 'cement' as 'cement', disabled: true },
+  { color: 'ink' as 'ink', disabled: true }
 ];
 
 export const Underlined = () => (
