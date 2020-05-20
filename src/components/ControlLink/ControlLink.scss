@@ -1,24 +1,18 @@
 @import '~om';
 
 .ControlLink {
+  $self: &;
+
   &:not(&--disabled) {
     cursor: pointer;
   }
   width: fit-content;
 
-  @include text(h6);
-
-  &--cement {
-    color: color(cement);
-  }
-
-  &--ink {
-    color: color(ink);
-  }
+  @include text(body1);
 
   &:hover,
   &:focus {
-    &:not(.ControlLink--disabled) {
+    &:not($self--disabled) {
       @include thin-underline();
       color: color(ink);
     }
@@ -29,7 +23,7 @@
 
     &:hover,
     &:focus {
-      &:not(.ControlLink--disabled) {
+      &:not($self--disabled) {
         color: color(burnt-orange);
       }
     }

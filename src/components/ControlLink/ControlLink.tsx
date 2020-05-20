@@ -5,17 +5,15 @@ import { Clickable, ClickableProps } from '../Clickable';
 import './ControlLink.scss';
 
 export type ControlLinkProps = ClickableProps & {
-  color?: 'cement' | 'ink';
   disabled?: boolean;
   underlined?: boolean;
 };
 
 export const ControlLink: React.FC<ControlLinkProps> = ({
   className,
-  color = 'cement',
   disabled,
   children,
-  underlined,
+  underlined = true,
   onClick
 }) => (
   <Clickable
@@ -23,7 +21,6 @@ export const ControlLink: React.FC<ControlLinkProps> = ({
       'ControlLink',
       { 'ControlLink--underlined': underlined },
       { 'ControlLink--disabled': disabled },
-      `ControlLink--${color}`,
       className
     )}
     disabled={disabled}

@@ -5,12 +5,7 @@ import { ControlLink, ControlLinkProps } from './ControlLink';
 
 export default { title: 'Components|ControlLink' };
 
-const states = [
-  { color: 'cement' as 'cement' },
-  { color: 'ink' as 'ink' },
-  { color: 'cement' as 'cement', disabled: true },
-  { color: 'ink' as 'ink', disabled: true }
-];
+const states = [{}, { disabled: true }];
 
 export const Underlined = () => (
   <States<ControlLinkProps> states={states}>
