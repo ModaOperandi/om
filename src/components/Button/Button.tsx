@@ -4,14 +4,12 @@ import { Clickable, ClickableProps } from '../Clickable';
 
 import './Button.scss';
 
-type CommonProps = {
+export type ButtonProps = {
   secondary?: boolean;
   focus?: boolean;
   hover?: boolean;
   disabled?: boolean;
-};
-
-export type ButtonProps = CommonProps & ClickableProps;
+} & ClickableProps<React.ButtonHTMLAttributes<HTMLButtonElement>>;
 
 export const Button: React.FC<ButtonProps> = ({
   secondary,

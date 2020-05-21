@@ -6,7 +6,10 @@ import './ColorSwatch.scss';
 
 export type ColorSwatchSize = 'default' | 'small';
 
-export type ColorSwatchProps = Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnter'> & {
+export type ColorSwatchProps = Omit<
+  Omit<ClickableProps<React.ButtonHTMLAttributes<HTMLButtonElement>>, 'onClick'>,
+  'onMouseEnter'
+> & {
   size?: ColorSwatchSize;
   color: SkuColor | string;
   backgroundUrl?: string;
