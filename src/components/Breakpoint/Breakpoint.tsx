@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import {
   generateMediaQuery,
   Mode as ModeType,
@@ -19,9 +20,11 @@ export const discriminate = (
   return { mode: 'gt' as ModeType, breakpoint: props.gt as BreakpointType };
 };
 
-export type BreakpointProps = At | GreaterThan | LessThan;
+export type BreakpointProps = (At | GreaterThan | LessThan) & {
+  className?: string;
+};
 
-export const Breakpoint: React.FC<BreakpointProps> = ({ children, ...rest }) => {
+export const Breakpoint: React.FC<BreakpointProps> = ({ children, className, ...rest }) => {
   const { mode, breakpoint } = discriminate(rest);
   const mediaQuery = generateMediaQuery({ mode, breakpoint });
 
@@ -40,6 +43,8 @@ export const Breakpoint: React.FC<BreakpointProps> = ({ children, ...rest }) => 
   }, [handleChange, mediaQuery]);
 
   return matches ? (
-    <div className={`Breakpoint Breakpoint--${mode}-${breakpoint}`}>{children}</div>
+    <div className={classNames(`Breakpoint Breakpoint--${mode}-${breakpoint}`, className)}>
+      {children}
+    </div>
   ) : null;
 };
