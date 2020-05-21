@@ -6,12 +6,24 @@ import { BrowserRouter } from 'react-router-dom';
 
 export default { title: 'Components|Clickable' };
 
-const states = [{ onClick: action('onClick') }, { href: '#href' }, { to: '#href' }];
+export const Button = () => (
+  <States<ClickableProps>>
+    <Clickable onClick={action('onClick')}>
+      Useful to extend in place of &lt;button/&gt;. Click me.
+    </Clickable>
+  </States>
+);
 
-export const Default = () => (
+export const Anchor = () => (
+  <States<ClickableProps>>
+    <Clickable href={'#'}>Useful to extend in place of &lt;a/&gt;. Click me.</Clickable>
+  </States>
+);
+
+export const Link = () => (
   <BrowserRouter>
-    <States<ClickableProps> states={states}>
-      <Clickable>Useful to extend in place of &lt;button&gt;. Click me.</Clickable>
+    <States<ClickableProps>>
+      <Clickable to='#href'>Useful to extend in place of &lt;Link/&gt;. Click me.</Clickable>
     </States>
   </BrowserRouter>
 );
