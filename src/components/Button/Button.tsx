@@ -9,7 +9,7 @@ export type ButtonProps = {
   focus?: boolean;
   hover?: boolean;
   disabled?: boolean;
-} & ClickableProps<React.ButtonHTMLAttributes<HTMLButtonElement>>;
+} & ClickableProps;
 
 export const Button: React.FC<ButtonProps> = ({
   secondary,

@@ -7,7 +7,7 @@ import './Clickable.scss';
 type ButtonElProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 type AnchorElProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export type ClickableProps<T> = T & {
+export type ClickableProps<T = ButtonElProps | AnchorElProps | LinkProps> = T & {
   disabled?: boolean;
   styleless?: boolean;
 };
