@@ -15,18 +15,12 @@
     &:not(#{$self}--disabled) {
       @include thin-underline();
       color: color(ink);
+      opacity: 0.7;
     }
   }
 
   &--underlined {
     @include thin-underline();
-
-    &:hover,
-    &:focus {
-      &:not(#{$self}--disabled) {
-        color: color(burnt-orange);
-      }
-    }
   }
 
   &--disabled {
