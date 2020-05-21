@@ -10,7 +10,6 @@ type AnchorElProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 export type ClickableProps = {
   disabled?: boolean;
   styleless?: boolean;
-  ref?: React.Ref<any>;
 } & (ButtonElProps | AnchorElProps | LinkProps);
 
 const isLink = (props: ButtonElProps | AnchorElProps | LinkProps): props is LinkProps =>
@@ -21,17 +20,19 @@ const isButton = (props: ButtonElProps | AnchorElProps | LinkProps): props is Bu
   !('href' in props);
 
 export const Clickable = React.forwardRef(
-  ({ className, styleless = false, ref, disabled, ...rest }: ClickableProps) => {
+  (
+    { className, styleless = false, disabled, ...rest }: ClickableProps,
+    ref: React.Ref<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
     const props = {
       ...rest,
       className: classNames({ Clickable: !styleless, 'Clickable--disabled': disabled }, className),
-      ref,
       disabled
     };
 
-    if (isLink(props)) return <Link {...props} />;
-    if (isAnchor(props)) return <a {...props} />;
-    if (isButton(props)) return <button {...props} />;
+    if (isLink(props)) return <Link {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
+    if (isAnchor(props)) return <a {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
+    if (isButton(props)) return <button {...props} ref={ref as React.Ref<HTMLButtonElement>} />;
 
     return null;
   }
