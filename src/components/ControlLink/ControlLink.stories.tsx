@@ -17,6 +17,8 @@ export const Underlined = () => (
 
 export const Blank = () => (
   <States<ControlLinkProps> states={states}>
-    <ControlLink onClick={action('onClick')}>Blank Control Link</ControlLink>
+    <ControlLink onClick={action('onClick')} underlined={false}>
+      Blank Control Link
+    </ControlLink>
   </States>
 );
