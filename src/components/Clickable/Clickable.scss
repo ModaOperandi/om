@@ -1,9 +1,17 @@
 @import '~om';
 
 .Clickable {
+  @include text(body1);
+
+  &:not(&--disabled) {
+    cursor: pointer;
+  }
+
   appearance: none;
-  padding: 0;
-  border: 0;
   background-color: transparent;
+  border: 0;
+  color: inherit;
   font-size: __dangerously-get-font-size__(2);
+  padding: 0;
+  text-decoration: none;
 }

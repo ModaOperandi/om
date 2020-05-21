@@ -14,7 +14,6 @@ export const ControlLink: React.FC<ControlLinkProps> = ({
   disabled,
   children,
   underlined = true,
-  onClick,
   ...rest
 }) => (
   <Clickable
@@ -26,7 +25,6 @@ export const ControlLink: React.FC<ControlLinkProps> = ({
       className
     )}
     disabled={disabled}
-    onClick={disabled ? undefined : onClick}
   >
     {children}
   </Clickable>

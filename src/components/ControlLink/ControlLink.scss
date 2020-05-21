@@ -6,10 +6,6 @@
 
   display: inline-flex;
 
-  &:not(&--disabled) {
-    cursor: pointer;
-  }
-
   &:hover,
   &:focus {
     &:not(#{$self}--disabled) {
