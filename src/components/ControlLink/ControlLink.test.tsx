@@ -14,7 +14,7 @@ describe('ControlLink', () => {
   it('renders correctly while disabled', () => {
     const component = shallow(<ControlLink disabled> do not click me! </ControlLink>);
     expect(component.html()).toEqual(
-      '<button class="Clickable ControlLink ControlLink--underlined ControlLink--disabled" disabled=""> do not click me! </button>'
+      '<button class="Clickable Clickable--disabled ControlLink ControlLink--underlined ControlLink--disabled" disabled=""> do not click me! </button>'
     );
   });
 

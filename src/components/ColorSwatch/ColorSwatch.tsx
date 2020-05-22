@@ -1,12 +1,15 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
-import { Clickable, ClickableProps } from '../Clickable';
+import { Clickable } from '../Clickable';
 import { SKU_COLORS, SkuColor } from './skuColors';
 import './ColorSwatch.scss';
 
 export type ColorSwatchSize = 'default' | 'small';
 
-export type ColorSwatchProps = Omit<Omit<ClickableProps, 'onClick'>, 'onMouseEnter'> & {
+export type ColorSwatchProps = Omit<
+  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'>,
+  'onMouseEnter'
+> & {
   size?: ColorSwatchSize;
   color: SkuColor | string;
   backgroundUrl?: string;
