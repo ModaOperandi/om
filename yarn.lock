@@ -1468,10 +1468,10 @@
   resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.2.0.tgz#f259bd4ad0dd9207e46b1306017e44e2e378377b"
   integrity sha512-ZhGeR4basW+P+5lxZoqOo+wtq75XKmdbWFB9avm+UIuXced1Lc4czi7nUekXycfDvARyL7o89bLuSecANQ5iWQ==
 
-"@moda/tokens@5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.1.1.tgz#47963e4395b3a7ce1756c4d1c8d6037502d7d37a"
-  integrity sha512-5QtKlQ8yBuFBegkOfaA496X0TerjR1ABJGthaWgodua4Ek0zqlRg6L8LOUoWBpU9gL/iyC8enDLBQEwQeYDcxw==
+"@moda/tokens@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.1.2.tgz#1e7c6e756f22a9715ff5e71154455509957df1ff"
+  integrity sha512-C403G9TqwRDaD+KZ3hFxXCq5qRoHBY0mt6nls0HYlMalM0ymtGBE8wE+vlTF7hiiJ7T3Zhcjrh6oGgIRGVwrAg==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
