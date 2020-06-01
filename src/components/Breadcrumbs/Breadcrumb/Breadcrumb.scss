@@ -1,0 +1,43 @@
+@import '~om';
+
+.Breadcrumb {
+  position: relative;
+  padding-right: space(4);
+  margin-right: space(2);
+  white-space: nowrap;
+  overflow: hidden;
+
+  > a {
+    color: color(cement);
+    text-decoration: none;
+
+    &:hover {
+      color: color(ink);
+      text-decoration: underline;
+    }
+  }
+
+  // Separators
+  &::after {
+    display: block;
+    content: '\2022';
+    position: absolute;
+    top: 50%;
+    right: space(1);
+    transform: translateY(-50%) rotate(25deg);
+
+    @include breakpoint('sm') {
+      border-right: 1px solid color(fog);
+      content: ' ';
+      height: 75%;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
