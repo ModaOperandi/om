@@ -4,6 +4,7 @@
   @include text(body1);
 
   display: flex;
+  flex-flow: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
