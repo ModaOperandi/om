@@ -58,15 +58,6 @@
       padding-left: space(4);
       list-style: disc;
     }
-
-    a {
-      @include thin-underline();
-
-      color: color(ink);
-      &:hover {
-        text-decoration: none;
-      }
-    }
   }
 
   &--expanded {
