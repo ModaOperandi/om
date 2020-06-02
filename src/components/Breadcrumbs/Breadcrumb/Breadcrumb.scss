@@ -7,16 +7,6 @@
   white-space: nowrap;
   overflow: hidden;
 
-  > a {
-    color: color(cement);
-    text-decoration: none;
-
-    &:hover {
-      color: color(ink);
-      text-decoration: underline;
-    }
-  }
-
   // Separators
   &::after {
     display: block;
