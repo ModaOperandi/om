@@ -5,14 +5,14 @@
   display: inline-block;
   color: color(ink);
   border: 1px solid;
-  padding: spacing(1, 3);
+  padding: space(1);
   user-select: none;
 
   &,
   &--default {
     background-color: transparent;
-    border-color: color(ink);
-    color: color(ink);
+    border-color: color(fog);
+    color: color(cement);
   }
 
   &--bestseller {
