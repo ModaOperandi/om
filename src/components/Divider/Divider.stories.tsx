@@ -22,3 +22,9 @@ export const WithDoubleLine = () => (
     <TwoLineDivider text='Divider with Double Line' />
   </States>
 );
+
+export const WithNoText = () => (
+  <States>
+    <TwoLineDivider />
+  </States>
+);
