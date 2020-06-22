@@ -10,25 +10,36 @@ import './Select.scss';
 
 export type SelectableOption = { value: string; label: string; disabled?: boolean };
 
-export type SelectProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'> & {
+type CommonSelectProps = Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  'defaultValue' | 'value' | 'onChange'
+> & {
   idRef?: string;
   label: string;
   name?: string;
-  defaultValue?: string;
-  value?: string;
   disabled?: boolean;
   options: SelectableOption[];
   onChange?(value: string): void;
 };
 
+type ControlledSpecificProps = {
+  value: string | undefined;
+};
+
+type UncontrolledSpecificProps = {
+  defaultValue: string | undefined;
+};
+
+export type SelectProps = CommonSelectProps & (ControlledSpecificProps | UncontrolledSpecificProps);
+
 enum Mode {
   Resting,
-  Open,
+  Open
 }
 
 type State = {
-  value: string;
-  focused: string | null;
+  value: string | undefined;
+  focused: string | undefined;
   mode: Mode;
 };
 
@@ -45,7 +56,7 @@ const reducer = (state: State, action: Action) => {
     case 'CLOSE':
       return { ...state, mode: Mode.Resting };
     case 'SELECT':
-      return { ...state, value: action.payload.value, focused: null, mode: Mode.Resting };
+      return { ...state, value: action.payload.value, focused: undefined, mode: Mode.Resting };
     case 'FOCUS':
       return { ...state, focused: action.payload.value };
   }
@@ -54,8 +65,6 @@ const reducer = (state: State, action: Action) => {
 export const Select: React.FC<SelectProps> = ({
   idRef = '',
   className,
-  defaultValue,
-  value,
   options,
   label,
   name,
@@ -64,11 +73,12 @@ export const Select: React.FC<SelectProps> = ({
   ...rest
 }) => {
   const initialValue =
-    value || defaultValue || options.find((option) => !option.disabled)?.value || options[0].value;
+    (rest as ControlledSpecificProps).value || (rest as UncontrolledSpecificProps).defaultValue;
+
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
     focused: initialValue,
-    mode: Mode.Resting,
+    mode: Mode.Resting
   });
 
   const selectRef = useRef<HTMLDivElement>(null);
@@ -112,21 +122,23 @@ export const Select: React.FC<SelectProps> = ({
   }, [handleKeyDown]);
 
   useUpdateEffect(() => {
+    const { value } = rest as ControlledSpecificProps;
+
     value && dispatch({ type: 'SELECT', payload: { value } });
-  }, [value]);
+  }, [(rest as ControlledSpecificProps).value]);
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
 
   useClickOutside(selectRef, handleClickOutside);
 
-  const selected = useMemo(() => options.find((option) => state.value === option.value)!, [
+  const selected = useMemo(() => options.find(option => state.value === option.value)!, [
     options,
-    state.value,
+    state.value
   ]);
 
-  const focused = useMemo(() => options.find((option) => state.focused === option.value)!, [
+  const focused = useMemo(() => options.find(option => state.focused === option.value)!, [
     options,
-    state.focused,
+    state.focused
   ]);
 
   return (
