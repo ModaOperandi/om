@@ -31,12 +31,7 @@ export const Default = () => (
       { disabled: true, idRef: '4', label: 'Sort:' }
     ]}
   >
-    <Select
-      defaultValue={undefined}
-      label='Sort by:'
-      options={OPTIONS}
-      onChange={action('onChange')}
-    />
+    <Select label='Sort by:' options={OPTIONS} onChange={action('onChange')} />
   </States>
 );
 
@@ -257,7 +252,6 @@ const COUNTRIES = [
 
 export const Long = () => (
   <Select
-    defaultValue={undefined}
     label='Choose country:'
     options={COUNTRIES.map(country => ({ label: country, value: country }))}
   />

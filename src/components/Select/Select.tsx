@@ -10,27 +10,19 @@ import './Select.scss';
 
 export type SelectableOption = { value: string; label: string; disabled?: boolean };
 
-type CommonSelectProps = Omit<
+export type SelectProps = Omit<
   React.HTMLAttributes<HTMLDivElement>,
   'defaultValue' | 'value' | 'onChange'
 > & {
-  idRef?: string;
-  label: string;
-  name?: string;
+  defaultValue?: string | undefined;
   disabled?: boolean;
+  idRef?: string;
+  label?: string;
+  name?: string;
+  onChange?: (value: string) => void;
   options: SelectableOption[];
+  value?: string | undefined;
 };
-
-type ControlledSpecificProps = {
-  onChange(value: string): void;
-  value: string | undefined;
-};
-
-type UncontrolledSpecificProps = {
-  defaultValue: string | undefined;
-};
-
-export type SelectProps = CommonSelectProps & (ControlledSpecificProps | UncontrolledSpecificProps);
 
 enum Mode {
   Resting,
@@ -66,13 +58,15 @@ export const Select: React.FC<SelectProps> = ({
   idRef = '',
   className,
   options,
-  label,
+  label = '',
   name,
   disabled,
+  value,
+  onChange,
+  defaultValue,
   ...rest
 }) => {
-  const initialValue =
-    (rest as ControlledSpecificProps).value || (rest as UncontrolledSpecificProps).defaultValue;
+  const initialValue = value ?? defaultValue;
 
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
@@ -85,11 +79,9 @@ export const Select: React.FC<SelectProps> = ({
   const handleSelect = useCallback(
     (option: SelectableOption) => {
       dispatch({ type: 'SELECT', payload: { value: option.value } });
-
-      const { onChange } = rest as ControlledSpecificProps;
       onChange && onChange(option.value);
     },
-    [rest]
+    [onChange]
   );
 
   const handleFocus = useCallback(
@@ -123,10 +115,8 @@ export const Select: React.FC<SelectProps> = ({
   }, [handleKeyDown]);
 
   useUpdateEffect(() => {
-    const { value } = rest as ControlledSpecificProps;
-
     value && dispatch({ type: 'SELECT', payload: { value } });
-  }, [(rest as ControlledSpecificProps).value]);
+  }, [value]);
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
 

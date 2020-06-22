@@ -14,7 +14,7 @@ describe('Select', () => {
 
   it('renders correctly', () => {
     const { container } = render(
-      <Select defaultValue={undefined} idRef='1' name='name-1' label='Sort by:' options={options} />
+      <Select idRef='1' name='name-1' label='Sort by:' options={options} />
     );
     expect(container.innerHTML).toEqual(
       '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value=""><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Select__value"><label id="Select__label--1">Sort by:</label> <span class="Select__icon"></span></button></div>'
@@ -23,7 +23,7 @@ describe('Select', () => {
 
   it('expands when clicked', () => {
     const { container } = render(
-      <Select defaultValue={undefined} idRef='1' name='name-1' label='Sort by:' options={options} />
+      <Select idRef='1' name='name-1' label='Sort by:' options={options} />
     );
     const button = container.querySelector('#Select__value--1')!;
     userEvent.click(button);
