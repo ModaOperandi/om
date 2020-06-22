@@ -19,10 +19,10 @@ type CommonSelectProps = Omit<
   name?: string;
   disabled?: boolean;
   options: SelectableOption[];
-  onChange?(value: string): void;
 };
 
 type ControlledSpecificProps = {
+  onChange(value: string): void;
   value: string | undefined;
 };
 
@@ -69,7 +69,6 @@ export const Select: React.FC<SelectProps> = ({
   label,
   name,
   disabled,
-  onChange,
   ...rest
 }) => {
   const initialValue =
@@ -86,9 +85,11 @@ export const Select: React.FC<SelectProps> = ({
   const handleSelect = useCallback(
     (option: SelectableOption) => {
       dispatch({ type: 'SELECT', payload: { value: option.value } });
+
+      const { onChange } = rest as ControlledSpecificProps;
       onChange && onChange(option.value);
     },
-    [onChange]
+    [rest]
   );
 
   const handleFocus = useCallback(
@@ -147,8 +148,10 @@ export const Select: React.FC<SelectProps> = ({
       className={classNames('Select', { 'Select--disabled': disabled }, className)}
       ref={selectRef}
       {...rest}
+      onChange={undefined}
     >
       {name && <input id={idRef} name={name} type='hidden' value={state.value} />}
+
       <Clickable
         id={`Select__value--${idRef}`}
         className='Select__value'
