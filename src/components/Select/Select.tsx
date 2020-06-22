@@ -138,7 +138,6 @@ export const Select: React.FC<SelectProps> = ({
       className={classNames('Select', { 'Select--disabled': disabled }, className)}
       ref={selectRef}
       {...rest}
-      onChange={undefined}
     >
       {name && <input id={idRef} name={name} type='hidden' value={state.value} />}
 
