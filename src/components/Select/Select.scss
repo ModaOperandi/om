@@ -3,6 +3,7 @@
 .Select {
   $self: &;
 
+  min-height: 2.5625rem;
   position: relative;
   display: flex;
   cursor: pointer;
