@@ -11562,9 +11562,9 @@ property-information@^5.0.0:
     xtend "^4.0.1"
 
 proportional-scale@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/proportional-scale/-/proportional-scale-3.0.0.tgz#0dd18547b596d2bcb14479b5c48e9184c976ddd4"
-  integrity sha512-nkjqoDTsfYfmVksCDK5I0nK+0endS0Cgh1CMcN91E2Oj364m/RTFT7aVf9jUT17b9/0W/5tTL1r2Yj+3yAzTwA==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/proportional-scale/-/proportional-scale-3.0.1.tgz#321801b38dd00fa76708dd13697de9e211cdf04b"
+  integrity sha512-Jxf/kFvVqbOA0tgMJaU/ujX8idBY+vy39+13mRSWWTbFeZ5eSb6gT/a/AGeKwbboGYigFGinnshaTAUeJNNgfg==
 
 proto-list@~1.2.1:
   version "1.2.4"
