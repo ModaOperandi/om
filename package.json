@@ -46,7 +46,7 @@
     "@moda/tokens": "5.1.2",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6",
-    "credit-card-type": "^8.3.0",
+    "credit-card-type": "^9.0.0",
     "focus-visible": "^5.0.2",
     "proportional-scale": "^3.0.0",
     "react-focus-on": "^3.3.0",
