@@ -39,7 +39,6 @@ export const Stacked = () => (
           top-stitching to mirror vintage pairs.
         </p>
       </Expandable>
-
       <Expandable name='Product Details'>
         <ul>
           <li>Belt loops, five-pocket style</li>
@@ -63,6 +62,13 @@ export const Stacked = () => (
           Questions? Please contact <a href='mailto:care@modaoperandi.com'>care@modaoperandi.com</a>
           .
         </p>
+      </Expandable>
+      <Expandable name='Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum laoreet urna nec
+        consequat. Morbi et volutpat nulla, a vehicula nisl. Nullam tincidunt ac neque ornare
+        mattis. Donec eget dapibus enim. Aliquam ut tortor pretium dui pretium tincidunt. Donec quis
+        lacus maximus, dignissim arcu nec, lacinia arcu. Sed placerat leo velit. Ut vehicula sodales
+        egestas. Nunc sed dapibus tortor.
       </Expandable>
     </Stack>
   </States>
