@@ -13,8 +13,10 @@
     position: relative;
     text-align: left;
     cursor: pointer;
-    padding: spacing(3, 0);
+    padding: spacing(3, 5, 3, 0);
     user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__name--plusMinus {
