@@ -14,7 +14,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ children, className, .
     {...rest}
   >
     {Children.map(children, (child, i) => (
-      <Breadcrumb key={i}>{child}</Breadcrumb>
+      child && <Breadcrumb key={i}>{child}</Breadcrumb>
     ))}
   </ol>
 );
