@@ -1,0 +1,25 @@
+@import '~om';
+
+.Tag {
+  @include stack(2, $direction: horizontal);
+  @include text(body1);
+
+  display: inline-flex;
+  align-items: center;
+  padding: spacing(2);
+  border: 1px solid color(elephant);
+
+  &:hover,
+  &:focus {
+    border-color: color(ink);
+  }
+
+  &--disabled {
+    color: color(fog);
+
+    &:hover,
+    &:focus {
+      border-color: color(elephant);
+    }
+  }
+}
