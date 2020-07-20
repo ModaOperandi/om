@@ -8,6 +8,7 @@
   align-items: center;
   padding: spacing(2);
   border: 1px solid color(elephant);
+  white-space: nowrap;
 
   &:hover,
   &:focus {
