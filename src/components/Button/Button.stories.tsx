@@ -15,10 +15,26 @@ export const Primary = () => (
   </States>
 );
 
+export const PrimaryChip = () => (
+  <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button chip onClick={action('clicked')}>
+      Add to Favorites
+    </Button>
+  </States>
+);
+
 export const Secondary = () => (
   <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
     <Button secondary onClick={action('clicked')}>
       Add to Cart
+    </Button>
+  </States>
+);
+
+export const SecondaryChip = () => (
+  <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button secondary chip onClick={action('clicked')}>
+      Add to Favorites
     </Button>
   </States>
 );
@@ -61,6 +77,15 @@ export const VerticallyStacked = () => (
   <Stack space={2}>
     <Button>Add to cart</Button>
     <Button secondary>
+      <Heart /> Add to Favorites
+    </Button>
+  </Stack>
+);
+
+export const VerticallyStackedChips = () => (
+  <Stack space={2}>
+    <Button chip>Add to cart</Button>
+    <Button secondary chip>
       <Heart /> Add to Favorites
     </Button>
   </Stack>
