@@ -1,0 +1,10 @@
+@import '~om';
+
+.VerticalDivider {
+  border-left: 1px solid color(ink);
+
+  &--double {
+    width: 0.175rem;
+    border-right: 1px solid color(ink);
+  }
+}
