@@ -4,6 +4,7 @@ import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
 import { Clickable } from '../Clickable';
 import { SelectOptions } from './SelectOptions';
+import { SelectLabel } from './SelectLabel';
 import { useClickOutside } from './useClickOutside';
 import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 import './Select.scss';
@@ -151,7 +152,8 @@ export const Select: React.FC<SelectProps> = ({
         aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
         type='button'
       >
-        <label id={`Select__label--${idRef}`}>{label}</label> {(focused ?? selected)?.label}
+        <SelectLabel idRef={idRef} label={label} hasValue={state.value !== undefined} />
+        {(focused ?? selected)?.label}
         <span className='Select__icon'>
           {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </span>

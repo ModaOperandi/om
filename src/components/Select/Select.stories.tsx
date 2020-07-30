@@ -28,11 +28,11 @@ export const Default = () => (
       { idRef: '1' },
       { idRef: '2', value: 'high' },
       { idRef: '3', label: 'Sort — ' },
-      { disabled: true, idRef: '4', label: 'Sort:' },
+      { disabled: true, idRef: '4', label: 'Sort' },
       { idRef: '5', label: '' }
     ]}
   >
-    <Select label='Sort by:' options={OPTIONS} onChange={action('onChange')} />
+    <Select label='Sort by' options={OPTIONS} onChange={action('onChange')} />
   </States>
 );
 
@@ -49,7 +49,7 @@ export const ChangingValue = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <Select label='Sort by:' options={OPTIONS} onChange={action('onChange')} value={value} />;
+  return <Select label='Sort by' options={OPTIONS} onChange={action('onChange')} value={value} />;
 };
 
 const COUNTRIES = [
@@ -253,7 +253,7 @@ const COUNTRIES = [
 
 export const Long = () => (
   <Select
-    label='Choose country:'
+    label='Choose country'
     options={COUNTRIES.map(country => ({ label: country, value: country }))}
   />
 );
