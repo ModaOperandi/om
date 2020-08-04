@@ -9,7 +9,7 @@ export default { title: 'Components|Overlay' };
 export const Default = () => (
   <States>
     <>
-      {`This content is blured by the <Overlay /> component.`}
+      {`This content is blurred by the <Overlay /> component.`}
       <Overlay>
         <Loading />
       </Overlay>

@@ -31,4 +31,3 @@ export * from './CreditCardNumberInput';
 export * from './ControlLink';
 export * from './Tag';
 export * from './VerticalDivider';
-export * from './MiniLoading';
