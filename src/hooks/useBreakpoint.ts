@@ -9,7 +9,7 @@ type At = { at: string };
 type GreaterThan = { gt: string };
 type LessThan = { lt: string };
 
-export const discriminate = (
+const discriminate = (
   props: At | GreaterThan | LessThan
 ): { mode: ModeType; breakpoint: BreakpointType } => {
   if ('at' in props) return { mode: 'at' as ModeType, breakpoint: props.at as BreakpointType };
