@@ -8,7 +8,10 @@
   height: 100%;
   width: 100%;
   transition: opacity 1000ms;
-  > svg {
+  .LoadingTriangle,
+  .LoadingDiamond,
+  .LoadingWindow,
+  .LoadingCircle {
     width: space(7);
     height: space(7);
     opacity: 1;

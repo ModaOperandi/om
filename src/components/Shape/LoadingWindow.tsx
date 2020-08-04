@@ -2,7 +2,14 @@ import React from 'react';
 import { ShapeProps } from './Shape';
 
 export const LoadingWindow: React.FC<ShapeProps> = () => (
-  <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <svg
+    className='LoadingWindow'
+    width='24'
+    height='24'
+    viewBox='0 0 24 24'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
     <path
       fillRule='evenodd'
       clipRule='evenodd'
