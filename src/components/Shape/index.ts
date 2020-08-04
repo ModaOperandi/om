@@ -4,3 +4,7 @@ export { Oval } from './Oval';
 export { Keyhole } from './Keyhole';
 export { Brancusi } from './Brancusi';
 export { Bradley } from './Bradley';
+export { LoadingCircle } from './LoadingCircle';
+export { LoadingTriangle } from './LoadingTriangle';
+export { LoadingDiamond } from './LoadingDiamond';
+export { LoadingWindow } from './LoadingWindow';
