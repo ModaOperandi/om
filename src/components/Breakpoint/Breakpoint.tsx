@@ -1,8 +1,6 @@
 import React from 'react';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
-import './Breakpoint.scss';
-
 type At = { at: string };
 type GreaterThan = { gt: string };
 type LessThan = { lt: string };
