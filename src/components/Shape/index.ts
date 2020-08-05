@@ -4,3 +4,7 @@ export { Oval } from './Oval';
 export { Keyhole } from './Keyhole';
 export { Brancusi } from './Brancusi';
 export { Bradley } from './Bradley';
+export { Circle } from './Circle';
+export { Triangle } from './Triangle';
+export { Diamond } from './Diamond';
+export { ArcWindow } from './ArcWindow';

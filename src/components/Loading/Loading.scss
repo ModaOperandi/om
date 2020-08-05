@@ -7,9 +7,24 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-
-  > svg {
+  transition: opacity 1000ms;
+  .Triangle,
+  .Diamond,
+  .ArcWindow,
+  .Circle {
     width: space(7);
     height: space(7);
+    opacity: 1;
+    animation: fade 1s linear;
+  }
+
+  @keyframes fade {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 }
