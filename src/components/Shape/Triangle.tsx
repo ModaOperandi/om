@@ -1,9 +1,9 @@
 import React from 'react';
 import { ShapeProps } from './Shape';
 
-export const LoadingTriangle: React.FC<ShapeProps> = () => (
+export const Triangle: React.FC<ShapeProps> = () => (
   <svg
-    className='LoadingTriangle'
+    className='Triangle'
     width='24'
     height='24'
     viewBox='0 0 24 24'

@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { useCursor } from 'use-cursor';
 import classNames from 'classnames';
-import { LoadingTriangle, LoadingDiamond, LoadingWindow, LoadingCircle } from '../Shape';
+import { Triangle, Diamond, ArcWindow, Circle } from '../Shape';
 import './Loading.scss';
 
 export type LoadingProps = React.HTMLAttributes<HTMLDivElement>;
 
 const FRAMES = [
-  <LoadingTriangle key='triangle' />,
-  <LoadingDiamond key='diamond' />,
-  <LoadingWindow key='window' />,
-  <LoadingCircle key='circle' />
+  <Triangle key='triangle' />,
+  <Diamond key='diamond' />,
+  <ArcWindow key='window' />,
+  <Circle key='circle' />
 ];
 
 export const Loading: React.FC<LoadingProps> = ({ className, ...rest }) => {

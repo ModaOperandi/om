@@ -8,10 +8,10 @@
   height: 100%;
   width: 100%;
   transition: opacity 1000ms;
-  .LoadingTriangle,
-  .LoadingDiamond,
-  .LoadingWindow,
-  .LoadingCircle {
+  .Triangle,
+  .Diamond,
+  .ArcWindow,
+  .Circle {
     width: space(7);
     height: space(7);
     opacity: 1;

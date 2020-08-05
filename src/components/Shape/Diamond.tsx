@@ -1,9 +1,9 @@
 import React from 'react';
 import { ShapeProps } from './Shape';
 
-export const LoadingDiamond: React.FC<ShapeProps> = () => (
+export const Diamond: React.FC<ShapeProps> = () => (
   <svg
-    className='LoadingDiamond'
+    className='Diamond'
     width='24'
     height='24'
     viewBox='0 0 24 24'
