@@ -24,11 +24,13 @@ export const Default = () => (
         { anchor: 'bottomLeft' },
         { anchor: 'bottomCenter' },
         { anchor: 'bottomRight' },
-        { open: true },
+        { open: true }
       ]}
     >
       <Popover content={Content} style={{ display: 'inline-block' }}>
-        <Text>Hover over me</Text>
+        <Text>
+          <a href='https://www.modaoperandi.com/women'>Hover on Link</a>
+        </Text>
       </Popover>
     </States>
   </div>
