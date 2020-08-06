@@ -1,12 +1,45 @@
-import React from 'react';
+import React, { forwardRef, Ref, useState, useEffect } from 'react';
 import classNames from 'classnames';
 
 import './Overlay.scss';
 
-export type OverlayProps = React.HTMLAttributes<HTMLDivElement>;
+export const UNMOUNT_DELAY_MS = 1000;
 
-export const Overlay: React.FC<OverlayProps> = ({ className, children, ...rest }) => (
-  <div className={classNames('Overlay', className)} {...rest}>
-    {children}
-  </div>
+export type OverlayProps = React.HTMLAttributes<HTMLDivElement> & {
+  show?: boolean;
+};
+
+export const Overlay = forwardRef(
+  (
+    { className, children, show = true, ...rest }: OverlayProps,
+    forwardedRef: Ref<HTMLDivElement>
+  ) => {
+    const [open, setOpen] = useState(show);
+
+    useEffect(() => {
+      if (show) {
+        setOpen(true);
+
+        return;
+      }
+
+      const timeout = setTimeout(() => setOpen(false), UNMOUNT_DELAY_MS);
+
+      return () => clearTimeout(timeout);
+    }, [show]);
+
+    if (!open) return null;
+
+    return (
+      <div
+        className={classNames('Overlay', { 'Overlay--closing': !show }, className)}
+        ref={forwardedRef}
+        {...rest}
+      >
+        {children}
+      </div>
+    );
+  }
 );
+
+Overlay.displayName = 'Overlay';

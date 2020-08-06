@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { FocusOn } from 'react-focus-on';
 import classNames from 'classnames';
+import { Overlay } from '../Overlay';
+
 import './Modal.scss';
 
 export type ModalProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -23,16 +25,14 @@ export const Modal: React.FC<ModalProps> = ({ className, children, onClose, over
     };
   }, []);
 
+  const Component = overlay ? Overlay : 'div';
+
   return createPortal(
-    <div
-      className={classNames('Modal', className, { 'Modal--overlay': overlay })}
-      ref={wrapper}
-      {...rest}
-    >
+    <Component className={classNames('Modal', className)} ref={wrapper} {...rest}>
       <FocusOn onClickOutside={onClose} onEscapeKey={onClose}>
         {children}
       </FocusOn>
-    </div>,
+    </Component>,
     el.current
   );
 };
