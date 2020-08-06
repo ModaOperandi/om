@@ -108,6 +108,7 @@
   &--anchor-bottomCenter,
   &--anchor-bottomRight {
     #{$self}__caret {
+      top: 0;
       &:after,
       &:before {
         top: -($border-width + $offset);
