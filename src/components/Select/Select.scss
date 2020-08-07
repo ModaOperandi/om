@@ -50,6 +50,7 @@
   }
 
   &__icon {
+    pointer-events: none;
     position: absolute;
     right: space(4);
     top: 50%;

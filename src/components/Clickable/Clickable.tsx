@@ -32,7 +32,7 @@ export const Clickable = React.forwardRef(
 
     if (isLink(props)) return <Link {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
     if (isAnchor(props)) return <a {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
-    if (isButton(props)) return <button {...props} ref={ref as React.Ref<HTMLButtonElement>} />;
+    if (isButton(props)) return <button {...props} ref={ref as React.Ref<HTMLButtonElement>} tabIndex={0}/>;
 
     return null;
   }
