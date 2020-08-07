@@ -1,17 +1,17 @@
 import React from 'react';
 import { States } from 'storybook-states';
 
-import { Breadcrumbs, BreadcrumbsProps } from './Breadcrumbs';
+import { Breadcrumbs, Breadcrumb, BreadcrumbsProps } from './index';
 
 export default { title: 'Components|Breadcrumbs' };
 
 export const Default = () => (
   <States<BreadcrumbsProps>>
     <Breadcrumbs>
-      <a href='#men'>Men</a>
-      <a href='#clothing'>Clothing</a>
-      <a href='#coats-jackets'>Coats &amp; Jackets</a>
-      Zippy Safari Straight-Leg Wool Jumpsuit
+      <Breadcrumb href='#men'>Men</Breadcrumb>
+      <Breadcrumb href='#clothing'>Clothing</Breadcrumb>
+      <Breadcrumb href='#coats-jackets'>Coats &amp; Jackets</Breadcrumb>
+      <Breadcrumb>Zippy Safari Straight-Leg Wool Jumpsuit</Breadcrumb>
     </Breadcrumbs>
   </States>
 );
@@ -19,10 +19,10 @@ export const Default = () => (
 export const Mobile = () => (
   <States<BreadcrumbsProps>>
     <Breadcrumbs>
-      <a href='#men'>Men</a>
-      <a href='#clothing'>Clothing</a>
-      <a href='#coats-jackets'>Coats &amp; Jackets</a>
-      Zippy Safari Straight-Leg Wool Jumpsuit
+      <Breadcrumb href='#men'>Men</Breadcrumb>
+      <Breadcrumb href='#clothing'>Clothing</Breadcrumb>
+      <Breadcrumb href='#coats-jackets'>Coats &amp; Jackets</Breadcrumb>
+      <Breadcrumb>Zippy Safari Straight-Leg Wool Jumpsuit</Breadcrumb>
     </Breadcrumbs>
   </States>
 );
