@@ -17,11 +17,10 @@ export const Default = () => {
   return (
     <>
       <Button onClick={() => setMode(Mode.Open)}>Open Modal With Overlay</Button>
-      {mode === Mode.Open && (
-        <ModalOverlay onClose={() => setMode(Mode.Resting)}>
-          <Text>Click overylay or press &lt;esc&gt; to close</Text>
-        </ModalOverlay>
-      )}
+
+      <ModalOverlay show={mode === Mode.Open} onClose={() => setMode(Mode.Resting)}>
+        <Text>Click overylay or press &lt;esc&gt; to close</Text>
+      </ModalOverlay>
     </>
   );
 };
