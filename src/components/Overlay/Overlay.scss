@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   color: color('ink');
-  animation: slow-in 1s;
+  animation: slow-in 0.5s;
 
   @keyframes slow-in {
     0% {
@@ -24,7 +24,7 @@
   }
 
   &--closing {
-    animation: slow-out 1s;
+    animation: slow-out 0.5s;
 
     @keyframes slow-out {
       0% {

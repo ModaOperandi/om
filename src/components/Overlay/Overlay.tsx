@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './Overlay.scss';
 
-export const UNMOUNT_DELAY_MS = 1000;
+export const UNMOUNT_DELAY_MS = 500;
 
 export type OverlayProps = React.HTMLAttributes<HTMLDivElement> & {
   show?: boolean;
