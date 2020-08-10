@@ -34,7 +34,11 @@ export const Modal: React.FC<ModalProps & OverlayProps> = ({
   const Component = overlay ? Overlay : 'div';
 
   return createPortal(
-    <Component className={classNames('Modal', className)} ref={wrapper} {...rest}>
+    <Component
+      className={classNames('Modal', { 'Modal--overlay': overlay }, className)}
+      ref={wrapper}
+      {...rest}
+    >
       <FocusOn onClickOutside={onClose} onEscapeKey={onClose}>
         {children}
       </FocusOn>
