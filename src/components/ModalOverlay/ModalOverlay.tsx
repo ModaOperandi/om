@@ -15,7 +15,7 @@ export const ModalOverlay: React.FC<ModalOverlayProps> = ({
   contentClassName,
   onClose,
   overlayClassName,
-  show,
+  show = true,
   ...rest
 }) => {
   const el = useRef(document.createElement('div'));
