@@ -1,4 +1,19 @@
+@import '~om';
+
 .ModalOverlay {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  padding: spacing(8, 6);
+
+  @include breakpoint(sm, $prop: max-width) {
+    padding: spacing(8, 4);
+  }
+
+  @include breakpoint(xs, $prop: max-width) {
+    padding: spacing(8, 2);
+  }
+
+  &__content {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
 }
