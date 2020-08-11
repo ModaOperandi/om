@@ -65,7 +65,7 @@
     "@storybook/addon-links": "^5.3.12",
     "@storybook/addon-viewport": "^5.3.12",
     "@storybook/addons": "^5.3.12",
-    "@storybook/react": "^5.3.12",
+    "@storybook/react": "^6.0.2",
     "@testing-library/react": "^10.0.1",
     "@testing-library/user-event": "^11.0.0",
     "@types/credit-card-type": "^9.0.0",
