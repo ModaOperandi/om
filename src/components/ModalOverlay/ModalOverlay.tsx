@@ -18,15 +18,19 @@ export const ModalOverlay: React.FC<ModalOverlayProps> = ({
   show = true,
   ...rest
 }) => {
-  const el = useRef(document.createElement('div'));
+  const ref = useRef<undefined | HTMLDivElement>();
 
   useEffect(() => {
-    const _el = el.current;
-    document.body.appendChild(_el);
+    ref.current = document.createElement('div');
+
+    document.body.appendChild(ref.current);
+
     return () => {
-      _el && _el.parentElement && _el.parentElement.removeChild(_el);
+      ref.current?.parentElement?.removeChild(ref.current);
     };
   }, []);
+
+  if (!ref.current) return null;
 
   return createPortal(
     <Overlay className={classNames('ModalOverlay', overlayClassName)} show={show} {...rest}>
@@ -34,6 +38,6 @@ export const ModalOverlay: React.FC<ModalOverlayProps> = ({
         <div className={classNames('ModalOverlay__content', contentClassName)}>{children}</div>
       </Modal>
     </Overlay>,
-    el.current
+    ref.current
   );
 };
