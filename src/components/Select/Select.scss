@@ -3,6 +3,11 @@
 .Select {
   $self: &;
 
+  //ios devices zoom in if inputs are smaller than 16px
+  @include breakpoint(sm, $prop: max-width) {
+    @include text(h6);
+  }
+
   min-height: 2.5625rem;
   position: relative;
   display: flex;
@@ -25,6 +30,11 @@
 
   &__value {
     @include text(body1);
+
+    //ios devices zoom in if inputs are smaller than 16px
+    @include breakpoint(sm, $prop: max-width) {
+      @include text(h6);
+    }
 
     display: block;
     width: 100%;
