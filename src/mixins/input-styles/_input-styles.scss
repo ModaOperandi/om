@@ -1,6 +1,11 @@
 @mixin input-styles() {
   @include text(body1);
 
+  //ios devices zoom in if inputs are smaller than 16px
+  @include breakpoint(sm, $prop: max-width) {
+    @include text(h6);
+  }
+
   appearance: none;
   line-height: 1;
   width: 100%;
