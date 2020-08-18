@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@moda/icons": "5.3.0",
-    "@moda/tokens": "5.1.2",
+    "@moda/tokens": "5.2.0",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6",
     "credit-card-type": "^9.0.0",
