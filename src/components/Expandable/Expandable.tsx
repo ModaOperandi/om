@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, ReactNode } from 'react';
 import classNames from 'classnames';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
@@ -6,9 +6,9 @@ import { Clickable } from '../Clickable';
 import './Expandable.scss';
 
 export type ExpandableProps = React.HTMLAttributes<HTMLDivElement> & {
-  name: string;
+  name: string | ReactNode;
   expanded?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
   icon?: 'chevron' | 'plus-minus';
 };
 
@@ -28,14 +28,20 @@ export const Expandable: React.FC<ExpandableProps> = ({
       className={classNames('Expandable', { 'Expandable--expanded': expanded }, className)}
       {...rest}
     >
-      <Clickable className={classNames('Expandable__name', { 'Expandable__name--plusMinus': icon === 'plus-minus' })} onClick={handleClick}>
+      <Clickable
+        className={classNames('Expandable__name', {
+          'Expandable__name--plusMinus': icon === 'plus-minus'
+        })}
+        onClick={handleClick}
+      >
         {name}
-        {icon !== 'plus-minus' &&
-          <div className="Expandable__icon">
+
+        {icon !== 'plus-minus' && (
+          <div className='Expandable__icon'>
             {icon === 'chevron' && expanded && <ChevronUpIcon />}
             {icon === 'chevron' && !expanded && <ChevronDownIcon />}
           </div>
-        }
+        )}
       </Clickable>
 
       <div className='Expandable__contents'>{children}</div>
