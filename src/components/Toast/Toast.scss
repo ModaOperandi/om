@@ -1,0 +1,18 @@
+@import '~om';
+
+.Toast {
+  color: color(snow);
+  padding: spacing(3);
+
+  &--success {
+    background-color: color(money-good);
+  }
+
+  &--warning {
+    background-color: color(burnt-orange);
+  }
+
+  &--error {
+    background-color: color(code-red);
+  }
+}
