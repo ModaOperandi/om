@@ -6,8 +6,8 @@ import * as CSS from 'csstype';
 export type StackProps = React.HTMLAttributes<HTMLDivElement> & {
   space: number;
   direction?: 'vertical' | 'horizontal';
-  alignItems?: CSS.AlignItemsProperty;
-  justifyContent?: CSS.JustifyContentProperty;
+  alignItems?: CSS.Properties['alignItems'];
+  justifyContent?: CSS.Properties['justifyContent'];
 };
 
 export const Stack: React.FC<StackProps> = ({
