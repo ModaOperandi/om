@@ -61,6 +61,7 @@
     "@babel/preset-typescript": "^7.9.0",
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
+    "@jedmao/semantic-release-npm-github-config": "^1.0.9",
     "@storybook/addon-actions": "^6.0.17",
     "@storybook/addon-links": "^6.0.17",
     "@storybook/addon-viewport": "^6.0.17",
