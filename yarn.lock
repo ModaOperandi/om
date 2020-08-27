@@ -1579,10 +1579,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@moda/icons@5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.3.0.tgz#e14806c9ecb85976d792bfdc00c7547ba122dcb5"
-  integrity sha512-sAH8iMFWJy4A9ccRfNBBm/87p9Pp8F3rnHiNEp6t1gME8jHnwZ/XbUEVfpHZmDR7b/ZnVKU6MdNRG4vrY9876Q==
+"@moda/icons@5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.4.0.tgz#c27089f07a241cc8697cc2cb5ddffaba83174bfd"
+  integrity sha512-0KMnpN0/vf3ZPIbUy9UuP29QEoorNknznzsNFuht4sz7PX2jA1E2kgqoycZwEOQ9Mv/QiYXmmCS6gcS5Xutf5A==
 
 "@moda/tokens@5.2.0":
   version "5.2.0"
