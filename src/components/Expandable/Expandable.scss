@@ -60,6 +60,10 @@
       padding-left: space(4);
       list-style: disc;
     }
+
+    a {
+      color: color(ink);
+    }
   }
 
   &--expanded {
