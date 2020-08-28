@@ -30,23 +30,22 @@
     &#{$self}--hover,
     &:hover {
       color: color(snow);
-      border-color: color(cement);
-      background-color: color(cement);
+      border-color: color(fog, 0.32);
+      background: linear-gradient(0deg, color(fog, 0.32), color(fog, 0.32)), color(ink);
     }
 
     &#{$self}--focus,
     &:focus {
-      text-decoration: underline;
       color: color(snow);
-      border-color: color(fog);
-      background-color: color(fog);
+      border-color: color(fog, 0.12);
+      background: linear-gradient(0deg, color(snow, 0.12), color(snow, 0.12)), color(ink);
     }
 
     &#{$self}--disabled,
     &:disabled {
       color: color(ink);
-      border-color: color(elephant);
-      background-color: color(elephant);
+      border-color: color(noise);
+      background-color: color(noise);
       cursor: default;
       pointer-events: none;
     }
@@ -61,22 +60,21 @@
     &:hover {
       color: color(ink);
       border-color: color(ink);
-      background-color: color(noise);
+      background-color: color(noise, 0.32);
     }
 
     &#{$self}--focus,
     &:focus {
-      text-decoration: underline;
       color: color(ink);
       border-color: color(ink);
-      background-color: color(elephant);
+      background-color: color(noise);
     }
 
     &#{$self}--disabled,
     &:disabled {
       color: color(cement);
-      border-color: color(cement);
-      background-color: color(elephant);
+      border-color: color(fog);
+      background-color: color(noise);
       cursor: default;
       pointer-events: none;
     }
