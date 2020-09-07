@@ -1310,30 +1310,30 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.3.0.tgz#e14806c9ecb85976d792bfdc00c7547ba122dcb5"
-  integrity sha512-sAH8iMFWJy4A9ccRfNBBm/87p9Pp8F3rnHiNEp6t1gME8jHnwZ/XbUEVfpHZmDR7b/ZnVKU6MdNRG4vrY9876Q==
+"@moda/icons@5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.4.0.tgz#c27089f07a241cc8697cc2cb5ddffaba83174bfd"
+  integrity sha512-0KMnpN0/vf3ZPIbUy9UuP29QEoorNknznzsNFuht4sz7PX2jA1E2kgqoycZwEOQ9Mv/QiYXmmCS6gcS5Xutf5A==
 
 "@moda/om@file:..":
-  version "0.0.0-development"
+  version "14.4.0"
   dependencies:
-    "@moda/icons" "5.3.0"
-    "@moda/tokens" "5.1.2"
+    "@moda/icons" "5.4.0"
+    "@moda/tokens" "5.3.0"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
     credit-card-type "^9.0.0"
     focus-visible "^5.0.2"
-    proportional-scale "^3.0.0"
+    proportional-scale "^4.0.0"
     react-focus-on "^3.3.0"
     react-input-mask "^2.0.4"
     use-cursor "^1.0.0"
     use-keyboard-list-navigation "^2.0.0"
 
-"@moda/tokens@5.1.2":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.1.2.tgz#1e7c6e756f22a9715ff5e71154455509957df1ff"
-  integrity sha512-C403G9TqwRDaD+KZ3hFxXCq5qRoHBY0mt6nls0HYlMalM0ymtGBE8wE+vlTF7hiiJ7T3Zhcjrh6oGgIRGVwrAg==
+"@moda/tokens@5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.3.0.tgz#e08192746133403ad72163d818e350d47e542fda"
+  integrity sha512-XctcCjfdGD3LctYDtr3AjCl97gEJwOAhJvRLRlyDiS7VY8Xr3Nkn4/QgdiDwMMVRT3Npl5UPjteMArW+EVDYyQ==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -4156,10 +4156,10 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-eventemitter3@^3.0.0:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
-  integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
+eventemitter3@^4.0.0:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
 events@^3.0.0:
   version "3.0.0"
@@ -4506,11 +4506,9 @@ focus-visible@^5.0.2:
   integrity sha512-nPer0rjtzdZ7csVIu233P2cUm/ks/4aVSI+5KUkYrYpgA7ujgC3p6J7FtFU+AIMWwnwYQOB/yeiOITxFeYIXiw==
 
 follow-redirects@^1.0.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
-  integrity sha512-m/pZQy4Gj287eNy94nivy5wchN3Kp+Q5WgUPNy5lJSZ3sgkVKSYV/ZChMAQVIgx1SqfZ2zBZtPA2YlXIWxxJOQ==
-  dependencies:
-    debug "^3.2.6"
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
+  integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -5111,11 +5109,11 @@ http-proxy-middleware@^0.19.1:
     micromatch "^3.1.10"
 
 http-proxy@^1.17.0:
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.17.0.tgz#7ad38494658f84605e2f6db4436df410f4e5be9a"
-  integrity sha512-Taqn+3nNvYRfJ3bGvKfBSRwy1v6eePlm3oc/aWVxZp57DQr5Eq3xhKJi7Z4hZpS8PC3H4qI+Yly5EmFacGuA/g==
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.18.1.tgz#401541f0534884bbf95260334e72f88ee3976549"
+  integrity sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==
   dependencies:
-    eventemitter3 "^3.0.0"
+    eventemitter3 "^4.0.0"
     follow-redirects "^1.0.0"
     requires-port "^1.0.0"
 
@@ -8521,10 +8519,10 @@ prop-types@^15.6.2, prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-proportional-scale@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/proportional-scale/-/proportional-scale-3.0.0.tgz#0dd18547b596d2bcb14479b5c48e9184c976ddd4"
-  integrity sha512-nkjqoDTsfYfmVksCDK5I0nK+0endS0Cgh1CMcN91E2Oj364m/RTFT7aVf9jUT17b9/0W/5tTL1r2Yj+3yAzTwA==
+proportional-scale@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/proportional-scale/-/proportional-scale-4.0.0.tgz#888ecdb1e5e710645601bc4edc73d619bca28ff7"
+  integrity sha512-QW0HeiudSHjBQvGnJ35W/gQYaOP09gFSf+xsYSfMYE1DQ+g26aKRN0Hlvce06WeARCUQSlLE7a+jFVMN5feB4Q==
 
 proxy-addr@~2.0.5:
   version "2.0.5"
