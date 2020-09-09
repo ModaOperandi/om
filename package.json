@@ -51,8 +51,8 @@
     "proportional-scale": "^4.0.0",
     "react-focus-on": "^3.3.0",
     "react-input-mask": "^2.0.4",
-    "use-cursor": "^1.0.0",
-    "use-keyboard-list-navigation": "^2.0.0"
+    "scroll-into-view-if-needed": "^2.2.26",
+    "use-cursor": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -68,6 +68,7 @@
     "@storybook/addons": "^6.0.17",
     "@storybook/react": "^6.0.17",
     "@testing-library/react": "^11.0.2",
+    "@testing-library/react-hooks": "^3.4.1",
     "@testing-library/user-event": "^12.1.3",
     "@types/credit-card-type": "^9.0.0",
     "@types/enzyme": "^3.10.3",

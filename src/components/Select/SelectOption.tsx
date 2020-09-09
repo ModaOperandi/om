@@ -1,5 +1,6 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef, useEffect } from 'react';
 import classNames from 'classnames';
+import scrollIntoView from 'scroll-into-view-if-needed';
 import { SelectableOption } from './Select';
 import './SelectOption.scss';
 
@@ -17,6 +18,8 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
   onClick,
   className
 }) => {
+  const ref = useRef<HTMLLIElement>(null);
+
   const handleClick = useCallback(
     event => {
       event.preventDefault();
@@ -25,8 +28,15 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
     [onClick, option]
   );
 
+  useEffect(() => {
+    if (active && ref.current) {
+      scrollIntoView(ref.current, { scrollMode: 'if-needed', block: 'nearest' });
+    }
+  }, [active, ref]);
+
   return (
     <li
+      ref={ref}
       className={classNames('SelectOption', className, {
         'SelectOption--active': active,
         'SelectOption--selected': selected,
