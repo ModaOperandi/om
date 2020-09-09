@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import classNames from 'classnames';
-import { useKeyboardListNavigation } from 'use-keyboard-list-navigation';
 import { SelectOption } from './SelectOption';
 import { SelectableOption } from './Select';
 import './SelectOptions.scss';
+import { useKeyboardListNavigation } from '../../hooks/useKeyboardListNavigation';
 import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 
 export type SelectOptionsProps = Omit<
@@ -27,9 +27,10 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   ...rest
 }) => {
   const { selected: activeOption } = useKeyboardListNavigation({
-    list: options.filter((option) => !option.disabled),
+    list: options.filter(option => !option.disabled),
+    defaultSelected: selectedOption,
     onEnter: ({ element }) => onSelect(element),
-    extractValue: (option) => option?.label.toLowerCase(),
+    extractValue: option => option?.label.toLowerCase()
   });
 
   const ref = useRef<HTMLUListElement>(null);
@@ -52,7 +53,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
       aria-activedescendant={`SelectOption--${activeOption?.value}-${idRef}`}
       {...rest}
     >
-      {options.map((option) => (
+      {options.map(option => (
         <SelectOption
           id={`SelectOption--${option.value}-${idRef}`}
           key={option.value}
