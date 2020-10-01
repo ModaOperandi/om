@@ -16,6 +16,7 @@ export const ModalOverlay: React.FC<ModalOverlayProps> = ({
   onClose,
   overlayClassName,
   show = true,
+  shards,
   ...rest
 }) => {
   const element = useMemo(
@@ -36,7 +37,11 @@ export const ModalOverlay: React.FC<ModalOverlayProps> = ({
 
   return createPortal(
     <Overlay className={classNames('ModalOverlay', overlayClassName)} show={show} {...rest}>
-      <Modal className={classNames('ModalOverlay__modal', className)} onClose={onClose}>
+      <Modal
+        className={classNames('ModalOverlay__modal', className)}
+        onClose={onClose}
+        shards={shards}
+      >
         <div className={classNames('ModalOverlay__content', contentClassName)}>{children}</div>
       </Modal>
     </Overlay>,
