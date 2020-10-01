@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.6.0](https://github.com/ModaOperandi/om/compare/v14.5.0...v14.6.0) (2020-10-01)
+
+
+### Features
+
+* **modal:** add shards to props ([758ffd3](https://github.com/ModaOperandi/om/commit/758ffd3d5f5320e7e301a60a25f7f8f751a350fb))
+
 # [14.5.0](https://github.com/ModaOperandi/om/compare/v14.4.0...v14.5.0) (2020-09-10)
 
 
