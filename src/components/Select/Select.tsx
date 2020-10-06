@@ -23,6 +23,7 @@ export type SelectProps = Omit<
   onChange?: (value: string) => void;
   options: SelectableOption[];
   value?: string | undefined;
+  error?: boolean | string;
 };
 
 enum Mode {
@@ -65,6 +66,7 @@ export const Select: React.FC<SelectProps> = ({
   value,
   onChange,
   defaultValue,
+  error,
   ...rest
 }) => {
   const initialValue = value ?? defaultValue;
@@ -136,7 +138,11 @@ export const Select: React.FC<SelectProps> = ({
   return (
     <div
       id={idRef ? `Select--${idRef}` : undefined}
-      className={classNames('Select', { 'Select--disabled': disabled }, className)}
+      className={classNames(
+        'Select',
+        { 'Select--disabled': disabled, 'Select--error': error },
+        className
+      )}
       ref={selectRef}
       {...rest}
     >
