@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { Field } from './Field';
+import { Select } from '../Select';
 
 describe('Field', () => {
   it('renders correctly', () => {
@@ -29,6 +30,24 @@ describe('Field', () => {
 
     expect(component.html()).toEqual(
       '<label class="Field"><span class="Field__label">Label</span><span class="Field__context"><input class="TextInput TextInput--error" placeholder="Placeholder" aria-label="Label" value="Hello"/><span class="Field__icon"></span></span><span class="Field__error">Error</span></label>'
+    );
+  });
+
+  it('renders with an error when children is <Select/>', () => {
+    const options = [
+      { value: 'foo', label: 'Foo' },
+      { value: 'bar', label: 'Bar' },
+      { value: 'baz', label: 'Baz', disabled: true }
+    ];
+
+    const component = shallow(
+      <Field>
+        <Select idRef='1' name='name-1' label='Sort by' options={options} />
+      </Field>
+    );
+
+    expect(component.html()).toEqual(
+      '<label class="Field"><span class="Field__context"><div id="Select--1" class="Select"><input type="hidden" id="1" name="name-1"/><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Select__value"><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button></div></span></label>'
     );
   });
 
