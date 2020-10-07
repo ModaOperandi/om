@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.6.1](https://github.com/ModaOperandi/om/compare/v14.6.0...v14.6.1) (2020-10-07)
+
+
+### Bug Fixes
+
+* **component:** fix error on dropdowns ([b24179a](https://github.com/ModaOperandi/om/commit/b24179abb5e1067b04f274f84b11cba949be1b76))
+
 # [14.6.0](https://github.com/ModaOperandi/om/compare/v14.5.0...v14.6.0) (2020-10-01)
 
 
