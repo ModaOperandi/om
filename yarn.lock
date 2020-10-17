@@ -15215,9 +15215,9 @@ use-composed-ref@^1.0.0:
     ts-essentials "^2.0.3"
 
 use-cursor@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/use-cursor/-/use-cursor-1.2.0.tgz#41f4bd0c99dc8c4b7c5b49973ca9c3c6f4bffaee"
-  integrity sha512-oljIxk/VFhTHrnrrY4nhHGMjVrQm0P7K1zsqRP3m3Oe9lNtikruMiyF98PE0tCDAD3LRPENrp7rwPDwfWyciIA==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/use-cursor/-/use-cursor-1.2.2.tgz#9f9fe356cff043fc7b3b59835245782c40526ed3"
+  integrity sha512-x6UBGPjqsjs3zIrCQFRP93hD60uzY8njRUnsBIKXB53uwZwCbHZHMQnAw8Gw9VeD0jhWxqyPicdpKSFyK21Q5w==
   dependencies:
     map-cursor-to-max "^1.0.0"
 
