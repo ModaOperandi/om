@@ -2,7 +2,7 @@ import React from 'react';
 import { States } from 'storybook-states';
 import { TextInput, TextInputProps } from './TextInput';
 
-export default { title: 'Components|TextInput' };
+export default { title: 'Components/TextInput' };
 
 export const Default = () => (
   <States<TextInputProps>

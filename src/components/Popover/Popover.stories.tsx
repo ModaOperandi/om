@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 import { Text } from '../Text';
 import { Popover, PopoverProps } from './Popover';
 
-export default { title: 'Components|Popover' };
+export default { title: 'Components/Popover' };
 
 const LOREM =
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, inventore provident distinctio delectus debitis quasi modi adipisci unde esse corrupti molestiae eveniet iste ea illo ad sit fugit officiis explicabo!';

@@ -4,7 +4,7 @@ import { Button } from '../Button';
 import { Text } from '../Text';
 import { ModalOverlay } from './ModalOverlay';
 
-export default { title: 'Components|ModalOverlay' };
+export default { title: 'Components/ModalOverlay' };
 
 enum Mode {
   Resting,

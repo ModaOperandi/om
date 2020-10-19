@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 import { space } from '@moda/tokens';
 import { Stack, StackProps } from './Stack';
 
-export default { title: 'Components|Stack' };
+export default { title: 'Components/Stack' };
 
 export const Vertical = () => (
   <States<StackProps> states={space.scale.map((_, i) => ({ space: i }))}>
@@ -45,7 +45,7 @@ export const VerticalUsingAlignItems = () => (
   </States>
 );
 
-export const HorizontalUsingustifyContent = () => (
+export const HorizontalUsingJustifyContent = () => (
   <States<StackProps>
     states={['flex-start', 'flex-end', 'space-between', 'space-around', 'space-evenly'].map(
       justifyContent => ({

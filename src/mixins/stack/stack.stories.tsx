@@ -3,7 +3,7 @@ import { space } from '@moda/tokens';
 
 import './stack.stories.scss';
 
-export default { title: 'Mixins|stack' };
+export default { title: 'Mixins/stack' };
 
 export const Default = () => (
   <div className='Story Mixins stack'>

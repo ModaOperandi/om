@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 import { Divider, NoLineDivider, TwoLineDivider } from './';
 import { DividerProps } from './Divider';
 
-export default { title: 'Components|Divider' };
+export default { title: 'Components/Divider' };
 
 export const Default = () => (
   <States<Partial<DividerProps>> states={[{}, { type: 'no-line' }, { type: 'two-line' }]}>

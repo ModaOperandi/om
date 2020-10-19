@@ -2,7 +2,7 @@ import React from 'react';
 import { States } from 'storybook-states';
 import { PromoBanner, PromoBannerProps } from './PromoBanner';
 
-export default { title: 'Components|PromoBanner' };
+export default { title: 'Components/PromoBanner' };
 
 export const Default = () => (
   <States<PromoBannerProps>

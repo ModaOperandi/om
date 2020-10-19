@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 import { Text } from '../Text';
 import { Tabs, TabsProps } from './Tabs';
 
-export default { title: 'Components|Tabs' };
+export default { title: 'Components/Tabs' };
 
 const TAB_LIST = [
   {

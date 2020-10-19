@@ -3,7 +3,7 @@ import { typography, colors } from '@moda/tokens';
 import { States } from 'storybook-states';
 import { Text, TextProps, TextTreatment, TextColor, TextFontFamily } from './Text';
 
-export default { title: 'Components|Text' };
+export default { title: 'Components/Text' };
 
 const TREATMENTS = Object.keys(typography['text-treatments']).map(treatment => ({
   treatment

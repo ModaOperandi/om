@@ -69,6 +69,10 @@
     right: space(4);
     top: 50%;
     transform: translateY(-50%);
+
+    &--shifted {
+      right: space(6);
+    }
   }
 
   &__options {

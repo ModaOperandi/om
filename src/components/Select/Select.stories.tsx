@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
 import { Select, SelectProps } from './Select';
+import { Input } from '../Field';
 
-export default { title: 'Components|Select' };
+export default { title: 'Components/Select' };
 
 const OPTIONS = [
   { value: 'featured', label: 'Featured' },
@@ -257,4 +258,10 @@ export const Long = () => (
     label='Choose country'
     options={COUNTRIES.map(country => ({ label: country, value: country }))}
   />
+);
+
+export const InsideInputComponent = () => (
+  <Input error>
+    <Select options={OPTIONS}></Select>
+  </Input>
 );

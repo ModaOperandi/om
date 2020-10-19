@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Text } from '../Text';
 import { Constrain } from './Constrain';
 
-export default { title: 'Components|Constrain' };
+export default { title: 'Components/Constrain' };
 
 const Constrained = () => {
   const ref = useRef<HTMLDivElement>(null);

@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 import { DefinitionList, DefinitionListProps } from './DefinitionList';
 import { Text } from '../Text';
 
-export default { title: 'Components|DefinitionList' };
+export default { title: 'Components/DefinitionList' };
 
 export const Default = () => (
   <States<DefinitionListProps>

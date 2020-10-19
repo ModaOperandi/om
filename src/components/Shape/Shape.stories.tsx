@@ -2,7 +2,7 @@ import React from 'react';
 import { States } from 'storybook-states';
 import * as SHAPES from '.';
 
-export default { title: 'Components|Shape' };
+export default { title: 'Components/Shape' };
 
 export const Shapes = () => (
   <>

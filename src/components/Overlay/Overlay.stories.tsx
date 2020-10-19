@@ -4,7 +4,7 @@ import { States } from 'storybook-states';
 import { Overlay } from './Overlay';
 import { Button } from '../Button';
 
-export default { title: 'Components|Overlay' };
+export default { title: 'Components/Overlay' };
 
 export const Default = () => {
   const [isOpen, setIsOpen] = useState(false);

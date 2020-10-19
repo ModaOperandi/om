@@ -5,7 +5,7 @@ import { States } from 'storybook-states';
 import { SelectableButton, SelectableButtonProps } from './SelectableButton';
 import { Stack } from '../Stack';
 
-export default { title: 'Components|SelectableButton' };
+export default { title: 'Components/SelectableButton' };
 
 export const Default = () => (
   <States<SelectableButtonProps>
