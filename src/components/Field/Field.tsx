@@ -29,7 +29,7 @@ export const Field = React.forwardRef(
                 error,
                 placeholder,
                 label,
-                shiftIconLeftwards: error && children.type.displayName === Select,
+                shiftIconLeftwards: error && children.type === Select,
                 ...rest,
                 ...children.props
               })}
