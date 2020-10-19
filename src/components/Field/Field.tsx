@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import WarningIcon from '@moda/icons/warning-16';
 import { TextInput, InputProps } from '../TextInput';
-import { SelectProps } from '../Select';
+import { Select, SelectProps } from '../Select';
 
 import './Field.scss';
 
@@ -29,7 +29,7 @@ export const Field = React.forwardRef(
                 error,
                 placeholder,
                 label,
-                shiftIconLeftwards: error && children.type.displayName === 'Select',
+                shiftIconLeftwards: error && children.type.displayName === Select,
                 ...rest,
                 ...children.props
               })}
