@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.6.2](https://github.com/ModaOperandi/om/compare/v14.6.1...v14.6.2) (2020-10-19)
+
+
+### Bug Fixes
+
+* **<select /> & <field />:** fix select's carret overlapping field's error icon ([#996](https://github.com/ModaOperandi/om/issues/996)) ([32d575b](https://github.com/ModaOperandi/om/commit/32d575b9b3d18e9869f1e922765b6359ef60657f))
+
 ## [14.6.1](https://github.com/ModaOperandi/om/compare/v14.6.0...v14.6.1) (2020-10-07)
 
 
