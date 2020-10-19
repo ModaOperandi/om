@@ -45,7 +45,7 @@ export const VerticalUsingAlignItems = () => (
   </States>
 );
 
-export const HorizontalUsingustifyContent = () => (
+export const HorizontalUsingJustifyContent = () => (
   <States<StackProps>
     states={['flex-start', 'flex-end', 'space-between', 'space-around', 'space-evenly'].map(
       justifyContent => ({
