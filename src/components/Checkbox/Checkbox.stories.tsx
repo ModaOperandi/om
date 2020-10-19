@@ -6,7 +6,7 @@ import { Checkbox, CheckboxProps } from './Checkbox';
 import { Stack } from '../Stack';
 import { RadioButton } from '../RadioButton';
 
-export default { title: 'Components|Checkbox' };
+export default { title: 'Components/Checkbox' };
 
 export const Default = () => (
   <States<CheckboxProps>
@@ -16,7 +16,7 @@ export const Default = () => (
       { defaultChecked: true },
       { children: 'Remember me' },
       { children: 'Remember me', checked: true },
-      { children: <Text color='code-red'>Important!</Text> },
+      { children: <Text color='code-red'>Important!</Text> }
     ]}
   >
     <Checkbox />

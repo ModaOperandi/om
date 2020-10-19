@@ -4,7 +4,7 @@ import { States } from 'storybook-states';
 import { Stack } from '../Stack';
 import { ColorSwatch, ColorSwatchProps, SKU_COLORS } from '.';
 
-export default { title: 'Components|ColorSwatch' };
+export default { title: 'Components/ColorSwatch' };
 
 const STATES = [
   {},

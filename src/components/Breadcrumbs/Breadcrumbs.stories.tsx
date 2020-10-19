@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 
 import { Breadcrumbs, Breadcrumb, BreadcrumbsProps } from './index';
 
-export default { title: 'Components|Breadcrumbs' };
+export default { title: 'Components/Breadcrumbs' };
 
 export const Default = () => (
   <States<BreadcrumbsProps>>

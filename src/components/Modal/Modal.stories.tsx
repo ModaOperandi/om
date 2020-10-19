@@ -4,7 +4,7 @@ import { Button } from '../Button';
 import { Text } from '../Text';
 import { Modal } from './Modal';
 
-export default { title: 'Components|Modal' };
+export default { title: 'Components/Modal' };
 
 enum Mode {
   Resting,

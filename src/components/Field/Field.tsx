@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import WarningIcon from '@moda/icons/warning-16';
 import { TextInput, InputProps } from '../TextInput';
 import { SelectProps } from '../Select';
+
 import './Field.scss';
 
 export type FieldProps = (InputProps | SelectProps) &
@@ -28,10 +29,12 @@ export const Field = React.forwardRef(
                 error,
                 placeholder,
                 label,
+                shiftIconLeftwards: error && children.type.displayName === 'Select',
                 ...rest,
                 ...children.props
               })}
-              {error && children.type.displayName !== 'Select' && (
+
+              {error && (
                 <span className='Field__icon'>
                   <WarningIcon />
                 </span>

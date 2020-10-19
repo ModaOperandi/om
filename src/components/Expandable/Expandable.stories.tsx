@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 import { Stack } from '../Stack';
 import { Expandable, ExpandableProps } from './Expandable';
 
-export default { title: 'Components|Expandable' };
+export default { title: 'Components/Expandable' };
 
 export const Default = () => (
   <States<Partial<ExpandableProps>> states={[{}, { expanded: true }]}>

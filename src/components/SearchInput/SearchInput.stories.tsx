@@ -4,7 +4,7 @@ import { States } from 'storybook-states';
 import { Text } from '../Text';
 import { SearchInput, SearchInputProps } from './SearchInput';
 
-export default { title: 'Components|SearchInput' };
+export default { title: 'Components/SearchInput' };
 
 export const Default = () => (
   <States<SearchInputProps> states={[{}, { value: 'prada' }, { autoFocus: true }]}>

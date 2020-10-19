@@ -4,7 +4,7 @@ import { States } from 'storybook-states';
 import { Clickable, ClickableProps } from './Clickable';
 import { BrowserRouter } from 'react-router-dom';
 
-export default { title: 'Components|Clickable' };
+export default { title: 'Components/Clickable' };
 
 export const Button = () => (
   <States<ClickableProps>>

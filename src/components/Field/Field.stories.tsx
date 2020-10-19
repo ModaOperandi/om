@@ -5,7 +5,7 @@ import { Textarea } from '../Textarea';
 import { Select } from '../Select';
 import { action } from '@storybook/addon-actions';
 
-export default { title: 'Components|Field' };
+export default { title: 'Components/Field' };
 
 export const Default = () => (
   <States<FieldProps>

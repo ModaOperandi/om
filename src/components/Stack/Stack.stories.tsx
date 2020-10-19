@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 import { space } from '@moda/tokens';
 import { Stack, StackProps } from './Stack';
 
-export default { title: 'Components|Stack' };
+export default { title: 'Components/Stack' };
 
 export const Vertical = () => (
   <States<StackProps> states={space.scale.map((_, i) => ({ space: i }))}>

@@ -4,7 +4,7 @@ import { States } from 'storybook-states';
 import { ControlLink, ControlLinkProps } from './ControlLink';
 import { BrowserRouter } from 'react-router-dom';
 
-export default { title: 'Components|ControlLink' };
+export default { title: 'Components/ControlLink' };
 
 const states = [
   {},

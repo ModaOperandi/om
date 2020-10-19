@@ -4,7 +4,7 @@ import { breakpoints } from '@moda/tokens';
 
 import { Breakpoint } from './Breakpoint';
 
-export default { title: 'Components|Breakpoint' };
+export default { title: 'Components/Breakpoint' };
 
 const Debug: React.FC<{
   name: string;

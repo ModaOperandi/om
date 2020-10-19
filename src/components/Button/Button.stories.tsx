@@ -7,7 +7,7 @@ import { Button, ButtonProps } from './Button';
 import { Stack } from '../Stack';
 import Heart from '@moda/icons/favorite-outline-16';
 
-export default { title: 'Components|Button' };
+export default { title: 'Components/Button' };
 
 export const Primary = () => (
   <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>

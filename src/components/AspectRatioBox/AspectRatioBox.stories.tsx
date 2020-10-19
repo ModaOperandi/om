@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 
 import { AspectRatioBox, AspectRatioBoxProps } from './AspectRatioBox';
 
-export default { title: 'Components|AspectRatioBox' };
+export default { title: 'Components/AspectRatioBox' };
 
 export const Default = () => (
   <States<Partial<AspectRatioBoxProps>>

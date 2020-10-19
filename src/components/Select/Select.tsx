@@ -7,6 +7,7 @@ import { SelectOptions } from './SelectOptions';
 import { SelectLabel } from './SelectLabel';
 import { useClickOutside } from './useClickOutside';
 import { useUpdateEffect } from '../../hooks/useUpdateEffect';
+
 import './Select.scss';
 
 export type SelectableOption = { value: string; label: string; disabled?: boolean };
@@ -24,6 +25,7 @@ export type SelectProps = Omit<
   options: SelectableOption[];
   value?: string | undefined;
   error?: boolean | string;
+  shiftIconLeftwards?: boolean;
 };
 
 enum Mode {
@@ -67,6 +69,7 @@ export const Select: React.FC<SelectProps> = ({
   onChange,
   defaultValue,
   error,
+  shiftIconLeftwards = false,
   ...rest
 }) => {
   const initialValue = value ?? defaultValue;
@@ -159,8 +162,12 @@ export const Select: React.FC<SelectProps> = ({
         type='button'
       >
         <SelectLabel idRef={idRef} label={label} hasValue={state.value !== undefined} />
+
         {(focused ?? selected)?.label}
-        <span className='Select__icon'>
+
+        <span
+          className={classNames('Select__icon', { 'Select__icon--shifted': shiftIconLeftwards })}
+        >
           {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </span>
       </Clickable>

@@ -4,7 +4,7 @@ import { States } from 'storybook-states';
 import { VerticalDivider } from './VerticalDivider';
 import { Stack } from '../Stack';
 
-export default { title: 'Components|VerticalDivider' };
+export default { title: 'Components/VerticalDivider' };
 
 export const Default = () => (
   <States>

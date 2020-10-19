@@ -5,7 +5,7 @@ import './font-smoothing.stories.scss';
 import { Stack } from '../../components/Stack';
 import { Text } from '../../components/Text';
 
-export default { title: 'Mixins|font-smoothing' };
+export default { title: 'Mixins/font-smoothing' };
 
 export const Default = () => (
   <Stack space={3}>

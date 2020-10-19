@@ -3,7 +3,7 @@ import { States } from 'storybook-states';
 
 import { Badge, BadgeProps } from './Badge';
 
-export default { title: 'Components|Badge' };
+export default { title: 'Components/Badge' };
 
 export const Themes = () => (
   <States<BadgeProps>

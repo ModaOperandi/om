@@ -4,7 +4,7 @@ import { Text } from '../Text';
 import { RadioButton, RadioButtonProps } from './RadioButton';
 import { Stack } from '../Stack';
 
-export default { title: 'Components|RadioButton' };
+export default { title: 'Components/RadioButton' };
 
 export const Default = () => (
   <States<RadioButtonProps>
