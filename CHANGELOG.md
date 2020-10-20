@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.6.3](https://github.com/ModaOperandi/om/compare/v14.6.2...v14.6.3) (2020-10-20)
+
+
+### Bug Fixes
+
+* **overlay:** overlay has unnecesary margin ([bbc2b21](https://github.com/ModaOperandi/om/commit/bbc2b210365004848a90ad26100abf216f0f7c91))
+
 ## [14.6.2](https://github.com/ModaOperandi/om/compare/v14.6.1...v14.6.2) (2020-10-19)
 
 
