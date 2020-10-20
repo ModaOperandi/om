@@ -15,6 +15,10 @@
     > * + * {
       margin-top: space($index);
     }
+
+    > .Overlay {
+      margin-top: 0;
+    }
   }
 
   @if $direction == horizontal {
@@ -27,6 +31,10 @@
 
     > * + * {
       margin-left: space($index);
+    }
+
+    > .Overlay {
+      margin-left: 0;
     }
   }
 }
