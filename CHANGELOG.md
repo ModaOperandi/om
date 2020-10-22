@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.7.0](https://github.com/ModaOperandi/om/compare/v14.6.3...v14.7.0) (2020-10-22)
+
+
+### Features
+
+* **node-sass:** upgrade node-sass ([#1001](https://github.com/ModaOperandi/om/issues/1001)) ([a624b9b](https://github.com/ModaOperandi/om/commit/a624b9b00f25d42c4f61f32051f20cc7623b3192))
+
 ## [14.6.3](https://github.com/ModaOperandi/om/compare/v14.6.2...v14.6.3) (2020-10-20)
 
 
