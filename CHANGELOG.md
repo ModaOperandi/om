@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.8.2](https://github.com/ModaOperandi/om/compare/v14.8.1...v14.8.2) (2020-10-23)
+
+
+### Bug Fixes
+
+* **radio-button:** fix tabIndex conditional ([#1010](https://github.com/ModaOperandi/om/issues/1010)) ([849e4ad](https://github.com/ModaOperandi/om/commit/849e4adb243bb7af98c2af5dc3d69ec146214980))
+
 ## [14.8.1](https://github.com/ModaOperandi/om/compare/v14.8.0...v14.8.1) (2020-10-23)
 
 
