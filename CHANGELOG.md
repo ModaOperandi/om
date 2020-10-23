@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.8.1](https://github.com/ModaOperandi/om/compare/v14.8.0...v14.8.1) (2020-10-23)
+
+
+### Bug Fixes
+
+* **radio-button:** add tabindex from props from radio-button ([#1009](https://github.com/ModaOperandi/om/issues/1009)) ([6ab4d4e](https://github.com/ModaOperandi/om/commit/6ab4d4e36d6f6161cee09c85013beb64ef0f88f1))
+
 # [14.8.0](https://github.com/ModaOperandi/om/compare/v14.7.0...v14.8.0) (2020-10-23)
 
 
