@@ -32,7 +32,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
       <input
         tabIndex={-1}
         className='RadioButton__input'
-        type='radio'
+        type='button'
         checked={checked}
         value={value}
         {...rest}
