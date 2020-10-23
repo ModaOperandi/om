@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.8.0](https://github.com/ModaOperandi/om/compare/v14.7.0...v14.8.0) (2020-10-23)
+
+
+### Features
+
+* **radiogroup:** add RadioGroup component ([#1008](https://github.com/ModaOperandi/om/issues/1008)) ([f345a2f](https://github.com/ModaOperandi/om/commit/f345a2f16fae7e1f02b8624ebd8ef3cba70a5bca))
+
 # [14.7.0](https://github.com/ModaOperandi/om/compare/v14.6.3...v14.7.0) (2020-10-22)
 
 
