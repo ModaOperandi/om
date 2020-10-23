@@ -17,7 +17,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   return (
     <label
       role='radio'
-      tabIndex={tabIndex || 0}
+      tabIndex={tabIndex != null ? tabIndex : 0}
       className={classNames('RadioButton', className, {
         'RadioButton--checked': checked
       })}
