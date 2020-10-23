@@ -22,7 +22,7 @@ import './${componentName}.scss';
 
 export type ${componentName}Props = React.HTMLAttributes<HTMLDivElement>;
 
-export const ${componentName}: React.FC<Props> = ({ className, ...rest }) => (
+export const ${componentName}: React.FC<${componentName}Props> = ({ className, ...rest }) => (
   <div className={classNames('${componentName}', className)} {...rest}>
     Hello
   </div>
@@ -35,7 +35,7 @@ import React from 'react';
 import { States } from 'storybook-states';
 import { ${componentName} } from './${componentName}';
 
-export default { title: '${componentType}|${componentName}' };
+export default { title: '${componentType} / ${componentName}' };
 
 export const Default = () => (
   <States>
