@@ -20,7 +20,7 @@ import React from 'react';
 
 import './${sassName}.stories.scss';
 
-export default { title: '${sassType}|${sassName}' };
+export default { title: '${sassType} / ${sassName}' };
 
 export const Default = () => (
   <div className='Story ${sassType} ${sassName}'>

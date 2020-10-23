@@ -15,10 +15,10 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
 }) => {
   return (
     <label
-      role='button'
+      role='radio'
       tabIndex={0}
       className={classNames('RadioButton', className, {
-        'RadioButton--checked': checked,
+        'RadioButton--checked': checked
       })}
     >
       <span
@@ -37,7 +37,11 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
         {...rest}
       />
 
-      {children && <span className='RadioButton__label'>{children}</span>}
+      {children && (
+        <span className='RadioButton__label' tabIndex={-1}>
+          {children}
+        </span>
+      )}
     </label>
   );
 };
