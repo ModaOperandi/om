@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.8.3](https://github.com/ModaOperandi/om/compare/v14.8.2...v14.8.3) (2020-10-23)
+
+
+### Bug Fixes
+
+* **radio:** fix tests ([#1012](https://github.com/ModaOperandi/om/issues/1012)) ([8f53f14](https://github.com/ModaOperandi/om/commit/8f53f14ae4d16a640b75ca8f495737912c0d6ead))
+* **radio-button:** fix radio-button double 'radio' role ([#1011](https://github.com/ModaOperandi/om/issues/1011)) ([55323f2](https://github.com/ModaOperandi/om/commit/55323f2fdfc66f3a78bb790ab45aa22bacb02722))
+
 ## [14.8.2](https://github.com/ModaOperandi/om/compare/v14.8.1...v14.8.2) (2020-10-23)
 
 
