@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.8.5](https://github.com/ModaOperandi/om/compare/v14.8.4...v14.8.5) (2020-10-26)
+
+
+### Bug Fixes
+
+* **overlay:** animation ([0f05503](https://github.com/ModaOperandi/om/commit/0f05503db8da2dd45196448b175af8d7dc6a7056))
+
 ## [14.8.4](https://github.com/ModaOperandi/om/compare/v14.8.3...v14.8.4) (2020-10-26)
 
 
