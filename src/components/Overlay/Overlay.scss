@@ -24,7 +24,7 @@
   }
 
   &--closing {
-    animation: slow-out 0.5s;
+    animation: slow-out 0.5s forwards;
 
     @keyframes slow-out {
       0% {
