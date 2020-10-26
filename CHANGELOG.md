@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.10.0](https://github.com/ModaOperandi/om/compare/v14.9.0...v14.10.0) (2020-10-26)
+
+
+### Features
+
+* **radio-button:** forwarded onKeyPress to input element ([#1027](https://github.com/ModaOperandi/om/issues/1027)) ([b31f898](https://github.com/ModaOperandi/om/commit/b31f89836a2b96011856f5e976eb0050af1c4f83))
+
 # [14.9.0](https://github.com/ModaOperandi/om/compare/v14.8.5...v14.9.0) (2020-10-26)
 
 
