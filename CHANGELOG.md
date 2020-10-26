@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.8.4](https://github.com/ModaOperandi/om/compare/v14.8.3...v14.8.4) (2020-10-26)
+
+
+### Bug Fixes
+
+* **radio-button:** fix type hidden disabling onChange ([#1022](https://github.com/ModaOperandi/om/issues/1022)) ([f2558a3](https://github.com/ModaOperandi/om/commit/f2558a3d137cd743000cf00596d8fb253a67919c))
+
 ## [14.8.3](https://github.com/ModaOperandi/om/compare/v14.8.2...v14.8.3) (2020-10-23)
 
 
