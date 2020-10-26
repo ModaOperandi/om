@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.9.0](https://github.com/ModaOperandi/om/compare/v14.8.5...v14.9.0) (2020-10-26)
+
+
+### Bug Fixes
+
+* **build:** fix the build ([#1026](https://github.com/ModaOperandi/om/issues/1026)) ([c6551ce](https://github.com/ModaOperandi/om/commit/c6551ce3bdc15a4edf898f93dc2bffb03d4b4626))
+* **radio-button:** fix roles ([#1024](https://github.com/ModaOperandi/om/issues/1024)) ([13610e7](https://github.com/ModaOperandi/om/commit/13610e7719a38dc2bce835af6361ae4b0da5db94))
+
+
+### Features
+
+* **radio-group:** remove radio-group as it's not used, tested or properly implemented ([#1025](https://github.com/ModaOperandi/om/issues/1025)) ([f081942](https://github.com/ModaOperandi/om/commit/f0819425df177e87cb7b9701c19fb0fc0b7121e3))
+
 ## [14.8.5](https://github.com/ModaOperandi/om/compare/v14.8.4...v14.8.5) (2020-10-26)
 
 
