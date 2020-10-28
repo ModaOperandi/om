@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.11.1](https://github.com/ModaOperandi/om/compare/v14.11.0...v14.11.1) (2020-10-28)
+
+
+### Bug Fixes
+
+* **badge:** add badgetheme as export ([#1032](https://github.com/ModaOperandi/om/issues/1032)) ([01a153b](https://github.com/ModaOperandi/om/commit/01a153b2b0433b74a1a6af62447502fd5a2cdcb0))
+
 # [14.11.0](https://github.com/ModaOperandi/om/compare/v14.10.0...v14.11.0) (2020-10-28)
 
 
