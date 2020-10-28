@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.11.0](https://github.com/ModaOperandi/om/compare/v14.10.0...v14.11.0) (2020-10-28)
+
+
+### Features
+
+* **badge:** add fall-25 theme ([#1031](https://github.com/ModaOperandi/om/issues/1031)) ([9a56d84](https://github.com/ModaOperandi/om/commit/9a56d849d8fc82a8529b098b08631251218affb7))
+
 # [14.10.0](https://github.com/ModaOperandi/om/compare/v14.9.0...v14.10.0) (2020-10-26)
 
 
