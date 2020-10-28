@@ -4,10 +4,10 @@ import { Clickable } from '../Clickable';
 
 import './Badge.scss';
 
-type Theme = 'bestseller' | 'trending' | 'fall-essential' | 'fall-25';
+export type BadgeTheme = 'bestseller' | 'trending' | 'fall-essential' | 'fall-25';
 
 export type BadgeProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  theme?: Theme;
+  theme?: BadgeTheme;
 };
 
 export const Badge: React.FC<BadgeProps> = ({ className, theme, children, ...rest }) => (
