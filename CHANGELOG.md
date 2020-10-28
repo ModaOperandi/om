@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.12.0](https://github.com/ModaOperandi/om/compare/v14.11.1...v14.12.0) (2020-10-28)
+
+
+### Features
+
+* **badge:** use dark fuchsia ([d7aa72d](https://github.com/ModaOperandi/om/commit/d7aa72dff7cea55bc4f9169901f6e85a56e41e48))
+
 ## [14.11.1](https://github.com/ModaOperandi/om/compare/v14.11.0...v14.11.1) (2020-10-28)
 
 
