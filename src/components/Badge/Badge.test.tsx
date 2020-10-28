@@ -5,7 +5,7 @@ import { Badge } from './Badge';
 
 describe('Badge', () => {
   it('supports preeet themes', () => {
-    const component = shallow(<Badge theme='fall-essential' />);
+    const component = shallow(<Badge theme='fall-essential'>Fall Essential</Badge>);
     expect(component.text()).toEqual('Fall Essential');
   });
 

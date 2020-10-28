@@ -32,4 +32,11 @@
     border-color: transparent;
     color: color(snow);
   }
+
+  &--fall-25 {
+    border-color: color('fuchsia');
+    color: color('fuchsia');
+    font-weight: 700;
+    text-transform: none;
+  }
 }
