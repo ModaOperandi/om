@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.13.0](https://github.com/ModaOperandi/om/compare/v14.12.0...v14.13.0) (2020-10-28)
+
+
+### Features
+
+* **badge:** removed clickable ([e450262](https://github.com/ModaOperandi/om/commit/e450262228dbb8c60d26eacd91680cc3d5b3bb5f))
+
 # [14.12.0](https://github.com/ModaOperandi/om/compare/v14.11.1...v14.12.0) (2020-10-28)
 
 
