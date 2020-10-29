@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.13.1](https://github.com/ModaOperandi/om/compare/v14.13.0...v14.13.1) (2020-10-29)
+
+
+### Bug Fixes
+
+* **badge:** make badge a span and not a link ([#1040](https://github.com/ModaOperandi/om/issues/1040)) ([4eb8ccd](https://github.com/ModaOperandi/om/commit/4eb8ccd0e373eee0dec6bcc26ecc1d4640112f51))
+
 # [14.13.0](https://github.com/ModaOperandi/om/compare/v14.12.0...v14.13.0) (2020-10-28)
 
 
