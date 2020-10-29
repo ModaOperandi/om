@@ -10,7 +10,7 @@ export type BadgeProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 export const Badge: React.FC<BadgeProps> = ({ className, theme, children, ...rest }) => (
-  <a className={classNames('Badge', theme && `Badge--${theme}`, className)} {...rest}>
+  <span className={classNames('Badge', theme && `Badge--${theme}`, className)} {...rest}>
     {children}
-  </a>
+  </span>
 );
