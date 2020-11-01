@@ -6809,9 +6809,9 @@ extglob@^2.0.4:
     to-regex "^3.0.1"
 
 extract-css-chunks-webpack-plugin@^4.6.0:
-  version "4.7.5"
-  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.7.5.tgz#d85ebf0aaf3366f942502eced275711d72bd4ba9"
-  integrity sha512-7XlPj/OW+vpIdMcm1H/mo5hgJubMKXlWF5Pgq9F/db39b19A+XlRWppyAZHNaJChC8kJKQl5n8PbfwouIl9AJQ==
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.8.0.tgz#4a9cf9888a07abf4a86e9305f784cf12d46425c5"
+  integrity sha512-dt0W0oouL0xjS51xkJQGc7ezNOl/ax3y8x/3EqYvoiGotYyTTFskt257r1yV3gExm4wqs1q95tOJ5vyQwhi2MA==
   dependencies:
     loader-utils "^2.0.0"
     normalize-url "1.9.1"
