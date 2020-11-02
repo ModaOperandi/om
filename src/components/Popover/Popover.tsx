@@ -20,7 +20,7 @@ export const Popover: React.FC<PopoverProps> = ({
   ...rest
 }) => {
   const [isOpen, setOpen] = useState(open);
-  const timeout = useRef<NodeJS.Timeout | null>(null);
+  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = useCallback(() => {
     if (!open) {
