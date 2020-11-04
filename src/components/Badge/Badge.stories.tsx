@@ -20,7 +20,11 @@ export const Themes = () => (
     </States>
 
     <States>
-      <Badge theme='fall-25'>25% off with Code FALL-25</Badge>
+      <Badge theme='dark-fuchsia'>25% off with Code FALL-25</Badge>
+    </States>
+
+    <States>
+      <Badge theme='dark-fuchsia'>30% off with Code TREAT30</Badge>
     </States>
   </>
 );
