@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.15.0](https://github.com/ModaOperandi/om/compare/v14.14.0...v14.15.0) (2020-11-06)
+
+
+### Features
+
+* **checkbox:** disabled checkbox style looked the sama as the enabled one ([dd912d0](https://github.com/ModaOperandi/om/commit/dd912d0c8fde1012bcf0419545c08782734a7e9f))
+
 # [14.14.0](https://github.com/ModaOperandi/om/compare/v14.13.1...v14.14.0) (2020-11-04)
 
 
