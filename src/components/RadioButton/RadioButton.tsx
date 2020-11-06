@@ -11,6 +11,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   children,
   value,
   tabIndex,
+  disabled,
   ...rest
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -20,14 +21,17 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
       tabIndex={tabIndex ?? 0}
       onKeyPress={({ key }) => (key === 'Enter' || key === ' ') && inputRef.current?.click()}
       className={classNames('RadioButton', className, {
-        'RadioButton--checked': checked
+        'RadioButton--checked': checked,
+        'RadioButton--disabled': disabled
       })}
     >
       <span
         tabIndex={-1}
-        className={`RadioButton__indicator RadioButton__indicator--${
-          checked ? 'checked' : 'unchecked'
-        }`}
+        className={classNames('RadioButton__indicator', {
+          'RadioButton__indicator--checked': checked,
+          'RadioButton__indicator--unchecked': !checked,
+          'RadioButton__indicator--disabled': disabled
+        })}
       />
       <input
         ref={inputRef}
@@ -37,6 +41,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
         role='radio'
         checked={checked}
         value={value}
+        disabled={disabled}
         {...rest}
       />
       {children && (

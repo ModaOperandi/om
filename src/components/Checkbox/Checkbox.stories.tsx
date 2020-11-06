@@ -16,6 +16,8 @@ export const Default = () => (
       { defaultChecked: true },
       { children: 'Remember me' },
       { children: 'Remember me', checked: true },
+      { children: 'Disabled', disabled: true },
+      { children: 'Disabled', checked: true, disabled: true },
       { children: <Text color='code-red'>Important!</Text> }
     ]}
   >
