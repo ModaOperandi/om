@@ -33,6 +33,14 @@
         background-color: color(ink);
       }
     }
+
+    &--disabled {
+      color: color(elephant);
+      pointer-events: none;
+      &::after {
+        background-color: color(elephant);
+      }
+    }
   }
 
   &__input {

@@ -13,6 +13,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   children,
   value,
   onChange,
+  disabled,
   ...rest
 }) => {
   const [isChecked, setIsChecked] = useState(checked ?? defaultChecked ?? false);
@@ -35,13 +36,16 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       tabIndex={0}
       className={classNames('Checkbox', className, {
         'Checkbox--checked': isChecked,
+        'Checkbox--disabled': disabled
       })}
     >
       <span
         tabIndex={-1}
-        className={`Checkbox__indicator Checkbox__indicator--${
-          isChecked ? 'checked' : 'unchecked'
-        }`}
+        className={classNames('Checkbox__indicator', {
+          'Checkbox__indicator--checked': isChecked,
+          'Checkbox__indicator--unchecked': !isChecked,
+          'Checkbox__indicator--disabled': disabled
+        })}
       />
 
       <input
@@ -51,6 +55,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         checked={isChecked}
         value={value}
         onChange={handleChange}
+        disabled={disabled}
         {...rest}
       />
 

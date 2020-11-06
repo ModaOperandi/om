@@ -36,6 +36,15 @@
         background-color: color(snow);
       }
     }
+
+    &--disabled {
+      color: color(elephant);
+      pointer-events: none;
+      background-color: color(snow);
+      &::after {
+        background-color: color(elephant);
+      }
+    }
   }
 
   &__input {

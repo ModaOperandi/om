@@ -12,7 +12,9 @@ export const Default = () => (
       {},
       { checked: true },
       { children: 'With label' },
-      { children: 'With label', checked: true }
+      { children: 'With label', checked: true },
+      { children: 'Disabled', disabled: true },
+      { children: 'Disabled', checked: true, disabled: true }
     ]}
   >
     <RadioButton />
