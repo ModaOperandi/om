@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.15.1](https://github.com/ModaOperandi/om/compare/v14.15.0...v14.15.1) (2020-11-18)
+
+
+### Bug Fixes
+
+* release upgraded dependencies ([1223483](https://github.com/ModaOperandi/om/commit/12234834578198ecae379d4150613f2e6f41b3a4))
+
 # [14.15.0](https://github.com/ModaOperandi/om/compare/v14.14.0...v14.15.0) (2020-11-06)
 
 
