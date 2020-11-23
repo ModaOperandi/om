@@ -1911,16 +1911,16 @@
     ts-dedent "^2.0.0"
 
 "@storybook/addon-viewport@^6.0.26":
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.1.2.tgz#61d7f1e8597f177c5d68a4a46bce94ed7d2df464"
-  integrity sha512-da2zrACzkrMtsUpn9hXKgH5FqJZZLCkxeZVGh9juBg3OOmOE6mPEF3WLtZiYVcYCPeoobJNScsnC1o+x97CGtw==
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.1.3.tgz#8c1fd98d097c8abdb36aae1dca601269530906c5"
+  integrity sha512-VqScNlkqNmWyceQ7LppWRhSHOHSW35ncstc66y85hPgfK587gKeDxt3tsmXzNuShIURIkXJb1YqPwSlm/jQf3w==
   dependencies:
-    "@storybook/addons" "6.1.2"
-    "@storybook/api" "6.1.2"
-    "@storybook/client-logger" "6.1.2"
-    "@storybook/components" "6.1.2"
-    "@storybook/core-events" "6.1.2"
-    "@storybook/theming" "6.1.2"
+    "@storybook/addons" "6.1.3"
+    "@storybook/api" "6.1.3"
+    "@storybook/client-logger" "6.1.3"
+    "@storybook/components" "6.1.3"
+    "@storybook/core-events" "6.1.3"
+    "@storybook/theming" "6.1.3"
     core-js "^3.0.1"
     global "^4.3.2"
     memoizerific "^1.11.3"
@@ -2087,6 +2087,32 @@
     "@storybook/client-logger" "6.1.2"
     "@storybook/csf" "0.0.1"
     "@storybook/theming" "6.1.2"
+    "@types/overlayscrollbars" "^1.9.0"
+    "@types/react-color" "^3.0.1"
+    "@types/react-syntax-highlighter" "11.0.4"
+    core-js "^3.0.1"
+    fast-deep-equal "^3.1.1"
+    global "^4.3.2"
+    lodash "^4.17.15"
+    markdown-to-jsx "^6.11.4"
+    memoizerific "^1.11.3"
+    overlayscrollbars "^1.10.2"
+    polished "^3.4.4"
+    react-color "^2.17.0"
+    react-popper-tooltip "^3.1.0"
+    react-syntax-highlighter "^13.5.0"
+    react-textarea-autosize "^8.1.1"
+    ts-dedent "^2.0.0"
+
+"@storybook/components@6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.1.3.tgz#6c1aab3bdd01ad0659087550231aa568252ccb51"
+  integrity sha512-QWDgvSAZ3mS4w+LcYY0hM7c9dN2eow1oE3UeH1WZw+MAV3l3UkiyQWdd3uVavskR+ofA/R2yOrB2L2hfSAJ3Yw==
+  dependencies:
+    "@popperjs/core" "^2.4.4"
+    "@storybook/client-logger" "6.1.3"
+    "@storybook/csf" "0.0.1"
+    "@storybook/theming" "6.1.3"
     "@types/overlayscrollbars" "^1.9.0"
     "@types/react-color" "^3.0.1"
     "@types/react-syntax-highlighter" "11.0.4"
