@@ -1851,16 +1851,16 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@storybook/addon-actions@^6.0.26":
-  version "6.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.1.7.tgz#03267735d8948f3c7c648d449f8459499e4d9d00"
-  integrity sha512-D70xLvpVoehA8RZZsZz3yqwZ+Af/lRNB0qdiDQmoKO0TGDHBcT71DuJFusp7Ytac9XgitNK1RYz1YGTc18yfEw==
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.1.8.tgz#b1a74710daaac8846df539590ff1152d7a18cdb8"
+  integrity sha512-G2dhFdJ3xzhmduI3UJDwsJ0hg565Axm7Yux8zzPjqk+o61PPVUtvwdOalYA2XPSn5LN0S9McYBn4uq4SqaxgMw==
   dependencies:
-    "@storybook/addons" "6.1.7"
-    "@storybook/api" "6.1.7"
-    "@storybook/client-api" "6.1.7"
-    "@storybook/components" "6.1.7"
-    "@storybook/core-events" "6.1.7"
-    "@storybook/theming" "6.1.7"
+    "@storybook/addons" "6.1.8"
+    "@storybook/api" "6.1.8"
+    "@storybook/client-api" "6.1.8"
+    "@storybook/components" "6.1.8"
+    "@storybook/core-events" "6.1.8"
+    "@storybook/theming" "6.1.8"
     core-js "^3.0.1"
     fast-deep-equal "^3.1.1"
     global "^4.3.2"
@@ -2001,6 +2001,19 @@
     qs "^6.6.0"
     telejson "^5.0.2"
 
+"@storybook/channel-postmessage@6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-6.1.8.tgz#2f327bdb800c188e4f51e3ba38baf339ed94bca0"
+  integrity sha512-hFFgPItrru9eE5z4kqtaMGdNLa5EMkp0fRBaWVxRjwL8D0eDHyi8XpAGoacg10Z0XE2GnneTdvimrkKDPUkx8Q==
+  dependencies:
+    "@storybook/channels" "6.1.8"
+    "@storybook/client-logger" "6.1.8"
+    "@storybook/core-events" "6.1.8"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    qs "^6.6.0"
+    telejson "^5.0.2"
+
 "@storybook/channels@6.1.7":
   version "6.1.7"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-6.1.7.tgz#bd94717f58047426710823ed299f6d1f1ccfb153"
@@ -2029,6 +2042,30 @@
     "@storybook/channels" "6.1.7"
     "@storybook/client-logger" "6.1.7"
     "@storybook/core-events" "6.1.7"
+    "@storybook/csf" "0.0.1"
+    "@types/qs" "^6.9.0"
+    "@types/webpack-env" "^1.15.3"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    lodash "^4.17.15"
+    memoizerific "^1.11.3"
+    qs "^6.6.0"
+    regenerator-runtime "^0.13.7"
+    stable "^0.1.8"
+    store2 "^2.7.1"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/client-api@6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@storybook/client-api/-/client-api-6.1.8.tgz#15f958cefa3fc7e9e137f8adb6382449e70601e7"
+  integrity sha512-7Y3rGNsz32Q8HZSHPn3nBsB9y4NyZk2KPAXhKN9Z7K+ZN3ouKn0e4SDnYvrWbdRTRqq7Z/VLdYWoHRbnRtmKFw==
+  dependencies:
+    "@storybook/addons" "6.1.8"
+    "@storybook/channel-postmessage" "6.1.8"
+    "@storybook/channels" "6.1.8"
+    "@storybook/client-logger" "6.1.8"
+    "@storybook/core-events" "6.1.8"
     "@storybook/csf" "0.0.1"
     "@types/qs" "^6.9.0"
     "@types/webpack-env" "^1.15.3"
