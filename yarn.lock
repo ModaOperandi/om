@@ -1874,15 +1874,15 @@
     uuid "^8.0.0"
 
 "@storybook/addon-links@^6.0.26":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.1.8.tgz#5fecab85a82810a40472171368cb6fddfe9373be"
-  integrity sha512-8QoyEsYqsVrf70kNyKg7cOPyzGttkYNIVJtvB+SpYAbIboNyhNy63cngyd1I72IwMoCs5CaHMciM1cAkezdOOw==
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.1.9.tgz#fcd254a7685a09868c27a7162f4d0671eebf9f4b"
+  integrity sha512-z1ih0lyVr8RMlw0oxXfu7OWjHhyFWasZMivuJ6Q/XGAPS8T/Ohfct9mnNYFYeAtVeUUHI1IUavrOPHzcJnDkkg==
   dependencies:
-    "@storybook/addons" "6.1.8"
-    "@storybook/client-logger" "6.1.8"
-    "@storybook/core-events" "6.1.8"
+    "@storybook/addons" "6.1.9"
+    "@storybook/client-logger" "6.1.9"
+    "@storybook/core-events" "6.1.9"
     "@storybook/csf" "0.0.1"
-    "@storybook/router" "6.1.8"
+    "@storybook/router" "6.1.9"
     "@types/qs" "^6.9.0"
     core-js "^3.0.1"
     global "^4.3.2"
@@ -1923,7 +1923,7 @@
     global "^4.3.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@^6.0.26":
+"@storybook/addons@6.1.9", "@storybook/addons@^6.0.26":
   version "6.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.1.9.tgz#78f3cb27b7d934f091f311f89b6ca312d34f12b8"
   integrity sha512-NRxdlGLmmSoVwlirVRgKC8xmW9cFkG+Sp5GEd4XkJDaaIg2vKR3RuFU9GuvIOVMxOhhERqhQ07bnDaAMKbFzGw==
