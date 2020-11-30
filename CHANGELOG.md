@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.17.0](https://github.com/ModaOperandi/om/compare/v14.16.0...v14.17.0) (2020-11-30)
+
+
+### Features
+
+* upgrade deps and lint on ci ([adcb501](https://github.com/ModaOperandi/om/commit/adcb5010778f98acfde23b8d2d4d483ba45b44a3))
+
 # [14.16.0](https://github.com/ModaOperandi/om/compare/v14.15.1...v14.16.0) (2020-11-18)
 
 
