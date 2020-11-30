@@ -38,7 +38,7 @@ export const Basic = () => (
   </States>
 );
 
-export const withCallback = () => {
+export const WithCallback = () => {
   const [tabName, setTabName] = useState('Tabname will be updated on click');
   const handleTabClick = (tabName: string) => {
     setTabName(tabName);
