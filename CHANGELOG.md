@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.18.0](https://github.com/ModaOperandi/om/compare/v14.17.0...v14.18.0) (2021-02-02)
+
+
+### Features
+
+* **breadcrumb:** adds the possibility of assigning className to <Breadcrumb /> component ([#1300](https://github.com/ModaOperandi/om/issues/1300)) ([6ec7e1c](https://github.com/ModaOperandi/om/commit/6ec7e1ce92e324edbbf4c8ef76909d61796a6583))
+
 # [14.17.0](https://github.com/ModaOperandi/om/compare/v14.16.0...v14.17.0) (2020-11-30)
 
 
