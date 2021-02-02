@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import { ControlLink, ControlLinkProps } from '../../ControlLink';
 
@@ -9,9 +10,14 @@ export type BreadcrumbProps = ControlLinkProps & {
   href?: string;
 };
 
-export const Breadcrumb: React.FC<BreadcrumbProps> = ({ children, position, ...rest }) => (
+export const Breadcrumb: React.FC<BreadcrumbProps> = ({
+  children,
+  position,
+  className,
+  ...rest
+}) => (
   <li
-    className='Breadcrumb'
+    className={classNames('Breadcrumb', className)}
     itemProp='itemListElement'
     itemScope
     itemType='http://schema.org/ListItem'
