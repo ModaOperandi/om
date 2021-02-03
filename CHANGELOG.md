@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.18.1](https://github.com/ModaOperandi/om/compare/v14.18.0...v14.18.1) (2021-02-03)
+
+
+### Bug Fixes
+
+* **select:** label when focusing an item ([4eb81bc](https://github.com/ModaOperandi/om/commit/4eb81bc8e9fc2b0258a8d468ad7f937a3c8087fb))
+
 # [14.18.0](https://github.com/ModaOperandi/om/compare/v14.17.0...v14.18.0) (2021-02-02)
 
 
