@@ -128,12 +128,12 @@ export const Select: React.FC<SelectProps> = ({
 
   useClickOutside(selectRef, handleClickOutside);
 
-  const selected = useMemo(() => options.find(option => state.value === option.value)!, [
+  const selected = useMemo(() => options.find(option => state.value === option.value), [
     options,
     state.value
   ]);
 
-  const focused = useMemo(() => options.find(option => state.focused === option.value)!, [
+  const focused = useMemo(() => options.find(option => state.focused === option.value), [
     options,
     state.focused
   ]);
@@ -161,7 +161,7 @@ export const Select: React.FC<SelectProps> = ({
         aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
         type='button'
       >
-        <SelectLabel idRef={idRef} label={label} hasValue={state.value !== undefined} />
+        <SelectLabel idRef={idRef} label={label} hasValue={focused != null || selected != null} />
 
         {(focused ?? selected)?.label}
 
