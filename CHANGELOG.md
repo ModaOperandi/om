@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.19.0](https://github.com/ModaOperandi/om/compare/v14.18.1...v14.19.0) (2021-02-05)
+
+
+### Features
+
+* **expandable comp:** adding virtual prop to expandable component ([9d058da](https://github.com/ModaOperandi/om/commit/9d058daf4062449f4b133aa46b0241fd48d3fb1c))
+
 ## [14.18.1](https://github.com/ModaOperandi/om/compare/v14.18.0...v14.18.1) (2021-02-03)
 
 
