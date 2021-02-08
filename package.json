@@ -102,7 +102,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.1.2",
-    "sass-loader": "^10.0.0",
+    "sass-loader": "^11.0.0",
     "semantic-release": "^17.0.1",
     "storybook-states": "^1.2.0",
     "style-loader": "^2.0.0",
