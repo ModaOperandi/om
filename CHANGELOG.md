@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.20.1](https://github.com/ModaOperandi/om/compare/v14.20.0...v14.20.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* **select:** fix select component accessibility ([b6a8f57](https://github.com/ModaOperandi/om/commit/b6a8f5763a9992512a7370993e5381bd997e4a43))
+
 # [14.20.0](https://github.com/ModaOperandi/om/compare/v14.19.0...v14.20.0) (2021-02-11)
 
 
