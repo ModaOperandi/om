@@ -146,14 +146,6 @@ export const Select: React.FC<SelectProps> = ({
 
   return (
     <>
-      {allowAutoFill && (
-        <input
-          className='Select__hidden-field'
-          name={name}
-          onChange={({ target }) => handleAutofill(target.value)}
-          value={value}
-        />
-      )}
       <div
         id={idRef ? `Select--${idRef}` : undefined}
         className={classNames(
@@ -200,6 +192,15 @@ export const Select: React.FC<SelectProps> = ({
           />
         )}
       </div>
+      {allowAutoFill && (
+        <input
+          className='Select__hidden-field'
+          name={name}
+          onChange={({ target }) => handleAutofill(target.value)}
+          value={value}
+          aria-hidden='true'
+        />
+      )}
     </>
   );
 };
