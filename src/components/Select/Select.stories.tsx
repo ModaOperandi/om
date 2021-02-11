@@ -260,6 +260,19 @@ export const Long = () => (
   />
 );
 
+export const AutoFill = () => (
+  <>
+    <Input label='Address*' name='addressLine1' />
+    <Input label='City' name='city' />
+    <Input label='Choose country' name='country'>
+      <Select
+        options={COUNTRIES.map(country => ({ label: country, value: country }))}
+        allowAutoFill
+      />
+    </Input>
+  </>
+);
+
 export const InsideInputComponent = () => (
   <Input error>
     <Select options={OPTIONS}></Select>

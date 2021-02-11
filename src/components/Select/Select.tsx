@@ -25,6 +25,7 @@ export type SelectProps = Omit<
   options: SelectableOption[];
   value?: string | undefined;
   error?: boolean | string;
+  allowAutoFill?: boolean;
   shiftIconLeftwards?: boolean;
 };
 
@@ -69,6 +70,7 @@ export const Select: React.FC<SelectProps> = ({
   onChange,
   defaultValue,
   error,
+  allowAutoFill = false,
   shiftIconLeftwards = false,
   ...rest
 }) => {
@@ -126,6 +128,10 @@ export const Select: React.FC<SelectProps> = ({
 
   const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
 
+  const handleAutofill = useCallback(value => {
+    value && dispatch({ type: 'SELECT', payload: { value } });
+  }, []);
+
   useClickOutside(selectRef, handleClickOutside);
 
   const selected = useMemo(() => options.find(option => state.value === option.value), [
@@ -139,49 +145,61 @@ export const Select: React.FC<SelectProps> = ({
   ]);
 
   return (
-    <div
-      id={idRef ? `Select--${idRef}` : undefined}
-      className={classNames(
-        'Select',
-        { 'Select--disabled': disabled, 'Select--error': error },
-        className
-      )}
-      ref={selectRef}
-      {...rest}
-    >
-      {name && <input id={idRef} name={name} type='hidden' value={state.value} />}
-
-      <Clickable
-        id={`Select__value--${idRef}`}
-        className='Select__value'
-        disabled={disabled}
-        onClick={handleToggle}
-        aria-haspopup='listbox'
-        aria-expanded={state.mode === Mode.Open}
-        aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
-        type='button'
-      >
-        <SelectLabel idRef={idRef} label={label} hasValue={focused != null || selected != null} />
-
-        {(focused ?? selected)?.label}
-
-        <span
-          className={classNames('Select__icon', { 'Select__icon--shifted': shiftIconLeftwards })}
-        >
-          {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
-        </span>
-      </Clickable>
-
-      {state.mode === Mode.Open && (
-        <SelectOptions
-          idRef={idRef}
-          className='Select__options'
-          options={options}
-          onSelect={handleSelect}
-          onFocus={handleFocus}
-          selectedOption={selected}
+    <>
+      {allowAutoFill && (
+        <input
+          className='Select__hidden-field'
+          name={name}
+          onChange={({ target }) => handleAutofill(target.value)}
+          value={value}
         />
       )}
-    </div>
+      <div
+        id={idRef ? `Select--${idRef}` : undefined}
+        className={classNames(
+          'Select',
+          { 'Select--disabled': disabled, 'Select--error': error },
+          className
+        )}
+        ref={selectRef}
+        {...rest}
+      >
+        {!allowAutoFill && name && (
+          <input id={idRef} name={name} type='hidden' value={state.value} />
+        )}
+
+        <Clickable
+          id={`Select__value--${idRef}`}
+          className='Select__value'
+          disabled={disabled}
+          onClick={handleToggle}
+          aria-haspopup='listbox'
+          aria-expanded={state.mode === Mode.Open}
+          aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
+          type='button'
+        >
+          <SelectLabel idRef={idRef} label={label} hasValue={focused != null || selected != null} />
+
+          {(focused ?? selected)?.label}
+
+          <span
+            className={classNames('Select__icon', { 'Select__icon--shifted': shiftIconLeftwards })}
+          >
+            {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
+          </span>
+        </Clickable>
+
+        {state.mode === Mode.Open && (
+          <SelectOptions
+            idRef={idRef}
+            className='Select__options'
+            options={options}
+            onSelect={handleSelect}
+            onFocus={handleFocus}
+            selectedOption={selected}
+          />
+        )}
+      </div>
+    </>
   );
 };
