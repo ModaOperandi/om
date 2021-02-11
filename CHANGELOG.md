@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.20.0](https://github.com/ModaOperandi/om/compare/v14.19.0...v14.20.0) (2021-02-11)
+
+
+### Features
+
+* **select component:** adding autofill feature to select component ([8b01a0b](https://github.com/ModaOperandi/om/commit/8b01a0b10ef12ee50a4dcb7d6923f66bade8a9b4))
+
 # [14.19.0](https://github.com/ModaOperandi/om/compare/v14.18.1...v14.19.0) (2021-02-05)
 
 
