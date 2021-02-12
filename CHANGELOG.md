@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.20.2](https://github.com/ModaOperandi/om/compare/v14.20.1...v14.20.2) (2021-02-12)
+
+
+### Bug Fixes
+
+* active tab ([f13773a](https://github.com/ModaOperandi/om/commit/f13773a5648b883ae0f1dbeb0971090b1d45b583))
+* storybook test ([c36b67d](https://github.com/ModaOperandi/om/commit/c36b67d139343b780b2a8028f09fe9777347abdb))
+
 ## [14.20.1](https://github.com/ModaOperandi/om/compare/v14.20.0...v14.20.1) (2021-02-11)
 
 
