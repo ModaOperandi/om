@@ -49,7 +49,7 @@ export const WithCallback = () => {
       <>
         <Text treatment='h5'>Selected Tab:</Text>
         <Text> {tabName} </Text>
-        <Tabs tabs={TAB_LIST} onTabClicked={handleTabClick} />
+        <Tabs tabs={TAB_LIST} onTabClicked={handleTabClick} activeTab="tab2"/>
       </>
     </States>
   );
