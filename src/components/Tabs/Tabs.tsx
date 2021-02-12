@@ -6,10 +6,11 @@ import './Tabs.scss';
 export type TabsProps = React.HTMLAttributes<HTMLDivElement> & {
   tabs: Tab[];
   onTabClicked?: (tabName: string) => void;
+  activeTab?: string;
 };
 
-export const Tabs: React.FC<TabsProps> = ({ tabs, onTabClicked, className, ...rest }) => {
-  const [activePanel, setActivePanel] = useState(tabs[0].name);
+export const Tabs: React.FC<TabsProps> = ({ tabs, onTabClicked, activeTab, className, ...rest }) => {
+  const [activePanel, setActivePanel] = useState(activeTab || tabs[0].name);
   const handleTabClick = (tabName: string) => {
     setActivePanel(tabName);
     if (onTabClicked) onTabClicked(tabName);
