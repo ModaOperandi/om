@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.21.0](https://github.com/ModaOperandi/om/compare/v14.20.2...v14.21.0) (2021-02-16)
+
+
+### Features
+
+* use rollup to make the package tree-shakeable ([0a46312](https://github.com/ModaOperandi/om/commit/0a463129cbd93bc63d483170a1a4597233d8e957))
+
 ## [14.20.2](https://github.com/ModaOperandi/om/compare/v14.20.1...v14.20.2) (2021-02-12)
 
 
