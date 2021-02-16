@@ -1,22 +1,32 @@
+const path = require('path');
 const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-webpack-plugin');
-const baseConfig = require('../webpack.config');
 
-module.exports = ({ config }) => {
-  config.resolve.extensions.push(...baseConfig.resolve.extensions);
-
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    ...baseConfig.resolve.alias
-  };
-
-  config.module.rules.push(...baseConfig.module.rules);
-
-  config.plugins.push(
-    ...[
-      // Webpack doesn't export type definitions so any types we choose to export
-      // which are actually built using `tsc` can be ignored in this webpack configuration
-      new IgnoreNotFoundExportPlugin()
+module.exports = ({ config }) => ({
+  ...config,
+  resolve: {
+    ...config.resolve,
+    extensions: [...config.resolve.extensions, '.tsx', '.ts', '.jsx', '.js', '.scss'],
+    alias: {
+      ...config.resolve.alias,
+      om: path.join(__dirname, '../src/index.scss')
+    }
+  },
+  module: {
+    ...config.module,
+    rules: [
+      ...config.module.rules,
+      {
+        test: /\.(js|jsx|ts|tsx)?$/,
+        loader: 'babel-loader',
+        exclude: [/node_modules/]
+      },
+      {
+        test: /\.scss$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+      }
     ]
-  );
-  return config;
-};
+  },
+  // Webpack doesn't export type definitions so any types we choose to export
+  // which are actually built using `tsc` can be ignored in this webpack configuration
+  plugins: [...config.plugins, new IgnoreNotFoundExportPlugin()]
+});
