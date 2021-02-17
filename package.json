@@ -1,6 +1,6 @@
 {
   "name": "@moda/om",
-  "version": "14.21.0",
+  "version": "14.21.1",
   "description": "Moda Operandi design system",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
