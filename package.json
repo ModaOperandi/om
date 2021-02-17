@@ -65,6 +65,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@jedmao/semantic-release-npm-github-config": "^1.0.9",
+    "@moda/rollup-plugin-postcss": "^4.0.1",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
