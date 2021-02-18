@@ -28,7 +28,7 @@
     "lint": "eslint src --ext .tsx,.ts --fix",
     "format": "prettier --write '**/*'",
     "predeploy:documentation": "NODE_ENV=production yarn build && cd documentation && yarn install && yarn build",
-    "prepublishOnly": "yarn clean && yarn build",
+    "prepublishOnly": "yarn clean && yarn build && pinst --disable",
     "scaffold:component": "node scripts/scaffold/react Components",
     "scaffold:mixin": "node scripts/scaffold/sass Mixins",
     "scaffold:function": "node scripts/scaffold/sass Functions",
@@ -37,7 +37,9 @@
     "storybook": "start-storybook -p 6006",
     "test": "jest -w 1",
     "types": "tsc -p tsconfig.json --emitDeclarationOnly",
-    "unlink-all": "yalc remove --all && yarn --check-files"
+    "unlink-all": "yalc remove --all && yarn --check-files",
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable"
   },
   "peerDependencies": {
     "react": ">=17.0.1",
@@ -97,12 +99,14 @@
     "eslint": "^7.12.1",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "husky": "^4.0.0",
+    "husky": "^5.0.9",
     "identity-obj-proxy": "^3.0.0",
     "ignore-not-found-export-webpack-plugin": "^1.0.1",
     "jest": "^26.0.1",
+    "lint-staged": "^10.5.4",
     "node-sass": "^5.0.0",
     "node-sass-package-importer": "^5.3.2",
+    "pinst": "^2.1.4",
     "postcss": "^8.1.10",
     "postcss-loader": "^4.2.0",
     "prettier": "^2.0.1",
@@ -125,11 +129,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "publishConfig": {
