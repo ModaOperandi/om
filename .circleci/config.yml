@@ -42,10 +42,12 @@ workflows:
   version: 2
   pull_request:
     jobs:
-      - test
+      - test:
+          context: devops-dev
   master:
     jobs:
       - build:
+          context: devops-dev
           filters:
             branches:
               only:
