@@ -1508,10 +1508,10 @@
     safe-identifier "^0.4.2"
     style-inject "^0.3.0"
 
-"@moda/tokens@5.3.1":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.3.1.tgz#8e56b9e61d42099599061cfd3ef75a9d01b4c92f"
-  integrity sha512-6HPUQdWHCY0IAOGw75ugoc++09YzKnmpK+VV5GnSRzSUoWnpTyPe01XXXiKLZ1YoEU++aYnx1bbhH1FMAtBwbA==
+"@moda/tokens@5.3.2":
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.3.2.tgz#504935267db3e3e990cf3543f6a25db586610d8b"
+  integrity sha512-nivkK5wBs93uj2Lj5e7mLl5/IZpfKPiuAizdiShtC7O7HNIKhGTQO9BoQNYDGiX16mMuwd/7mXfpdttv7lBF5g==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
