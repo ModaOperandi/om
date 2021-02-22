@@ -47,7 +47,7 @@
     "react-router-dom": "^5.1.2"
   },
   "dependencies": {
-    "@moda/icons": "5.5.0",
+    "@moda/icons": "5.5.2",
     "@moda/tokens": "5.3.1",
     "@types/classnames": "^2.2.9",
     "classnames": "^2.2.6",
