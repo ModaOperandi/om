@@ -10,17 +10,13 @@
   // Separators
   &::after {
     display: block;
-    content: '\2022';
+    content: ' ';
     position: absolute;
     top: 50%;
     right: space(1);
     transform: translateY(-50%) rotate(25deg);
-
-    @include breakpoint('sm') {
-      border-right: 1px solid color(fog);
-      content: ' ';
-      height: 75%;
-    }
+    border-right: 1px solid color(fog);
+    height: 75%;
   }
 
   &:last-child {
