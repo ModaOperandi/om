@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.22.0](https://github.com/ModaOperandi/om/compare/v14.21.2...v14.22.0) (2021-02-24)
+
+
+### Features
+
+* **breadcrumb:** same link divider on mobile as on desktop ([e03f29b](https://github.com/ModaOperandi/om/commit/e03f29be9d630719c64afd90aa793beffbf49a08))
+
 ## [14.21.2](https://github.com/ModaOperandi/om/compare/v14.21.1...v14.21.2) (2021-02-22)
 
 
