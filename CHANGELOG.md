@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.23.0](https://github.com/ModaOperandi/om/compare/v14.22.0...v14.23.0) (2021-03-02)
+
+
+### Features
+
+* **breakpoint:** add BreakpointProvider ([fdf4e72](https://github.com/ModaOperandi/om/commit/fdf4e72423a77f42292c9376bf62ad9ff0102fac))
+
 # [14.22.0](https://github.com/ModaOperandi/om/compare/v14.21.2...v14.22.0) (2021-02-24)
 
 
