@@ -9,9 +9,7 @@ describe('generateMediaQuery', () => {
     });
 
     it('returns the media query isolating the xs breakpoint (bottom edge)', () => {
-      expect(generateMediaQuery({ mode: 'at', breakpoint: 'xs' })).toEqual(
-        '(min-width: 0) and (max-width: 25rem)'
-      );
+      expect(generateMediaQuery({ mode: 'at', breakpoint: 'xs' })).toEqual('(max-width: 25rem)');
     });
 
     it('returns the media query isolating the xs breakpoint (top edge)', () => {

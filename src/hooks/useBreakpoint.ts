@@ -1,9 +1,12 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useContext } from 'react';
 import {
   generateMediaQuery,
+  getMediaQueryBounds,
+  MediaQueryBounds,
   Mode as ModeType,
   Breakpoint as BreakpointType
 } from '../components/Breakpoint/generateMediaQuery';
+import { BreakpointContext } from '../components/Breakpoint/BreakpointProvider';
 
 type At = { at: string };
 type GreaterThan = { gt: string };
@@ -17,10 +20,21 @@ export const discriminate = (
   return { mode: 'gt' as ModeType, breakpoint: props.gt as BreakpointType };
 };
 
+const isBetweenBounds = ({ min = 0, max = Infinity }: MediaQueryBounds, width: number) =>
+  min <= width && width <= max;
+
 export const useBreakpoint = (props: At | GreaterThan | LessThan) => {
   const { mode, breakpoint } = discriminate(props);
+  const { defaultWidth } = useContext(BreakpointContext);
   const mediaQuery = generateMediaQuery({ mode, breakpoint });
-  const [matches, setMatches] = useState(true);
+
+  const [matches, setMatches] = useState(
+    typeof defaultWidth === 'number'
+      ? isBetweenBounds(getMediaQueryBounds({ mode, breakpoint }), defaultWidth)
+      : defaultWidth === 'auto' && typeof window !== 'undefined'
+      ? window.matchMedia(mediaQuery).matches
+      : true
+  );
 
   const handleChange = useCallback(
     ({ matches }: MediaQueryListEvent): void => setMatches(matches),
