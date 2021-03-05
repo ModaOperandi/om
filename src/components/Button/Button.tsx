@@ -20,18 +20,20 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   className,
   ...rest
-}) => {
-  const cn = classNames(
-    'Button',
-    {
-      'Button--chip': chip,
-      'Button--secondary': secondary,
-      'Button--hover': hover,
-      'Button--focus': focus,
-      'Button--disabled': disabled
-    },
-    className
-  );
-
-  return <Clickable className={cn} styleless {...rest} />;
-};
+}) => (
+  <Clickable
+    className={classNames(
+      'Button',
+      {
+        'Button--chip': chip,
+        'Button--secondary': secondary,
+        'Button--hover': hover,
+        'Button--focus': focus,
+        'Button--disabled': disabled
+      },
+      className
+    )}
+    styleless
+    {...rest}
+  />
+);
