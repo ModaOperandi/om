@@ -1515,10 +1515,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@moda/icons@5.7.1":
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.7.1.tgz#ae63955f5a39c88e411f83876ac11dec5305bc49"
-  integrity sha512-LHlW0T0w/Q3lUquWqaRH8ZaPAErB4ZJSGQaV4FvYJ6vhjmrsdA6sknlDRyFW7lXj91eQtWeFk6iG7njKbka3Gw==
+"@moda/icons@5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.7.2.tgz#63c619272dcb3c66a240f16d952fa81831825e02"
+  integrity sha512-ykRT6t3GycFHOGp0KC9wadqX4z39U+VH/4HhyVNw3Wp4Wxmj9IPiNnXyMsxTPEODS2NSeymFDi17O3u52RqwHg==
 
 "@moda/rollup-plugin-postcss@^4.0.1":
   version "4.0.1"
