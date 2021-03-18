@@ -78,7 +78,7 @@
     "@storybook/react": "^6.0.26",
     "@testing-library/react": "^11.0.2",
     "@testing-library/react-hooks": "^5.0.0",
-    "@testing-library/user-event": "^12.1.3",
+    "@testing-library/user-event": "^13.0.1",
     "@types/cheerio": "^0.22.22",
     "@types/credit-card-type": "^9.0.0",
     "@types/enzyme": "^3.10.3",
