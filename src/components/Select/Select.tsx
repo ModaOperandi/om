@@ -167,7 +167,7 @@ export const Select: React.FC<SelectProps> = ({
           onClick={handleToggle}
           aria-haspopup='listbox'
           aria-expanded={state.mode === Mode.Open}
-          aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
+          aria-label={`Select__label--${idRef} Select__value--${idRef}`}
           type='button'
         >
           <SelectLabel idRef={idRef} label={label} hasValue={focused != null || selected != null} />
@@ -199,6 +199,7 @@ export const Select: React.FC<SelectProps> = ({
           onChange={({ target }) => handleAutofill(target.value)}
           value={value}
           aria-hidden='true'
+          tabIndex={-1}
         />
       )}
     </>
