@@ -167,8 +167,9 @@ export const Select: React.FC<SelectProps> = ({
           onClick={handleToggle}
           aria-haspopup='listbox'
           aria-expanded={state.mode === Mode.Open}
-          aria-label={`Select__label--${idRef} Select__value--${idRef}`}
+          aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
           type='button'
+          title='Select'
         >
           <SelectLabel idRef={idRef} label={label} hasValue={focused != null || selected != null} />
 

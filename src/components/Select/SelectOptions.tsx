@@ -49,7 +49,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
       tabIndex={-1}
       role='listbox'
       ref={ref}
-      aria-label={`Select__label--${idRef}`}
+      aria-labelledby={`Select__label--${idRef}`}
       aria-activedescendant={`SelectOption--${activeOption?.value}-${idRef}`}
       {...rest}
     >
