@@ -1797,6 +1797,11 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.6.0.tgz#f022195afdfc942e088ee2101285a1d31c7d727f"
   integrity sha512-cPqjjzuFWNK3BSKLm0abspP0sp/IGOli4p5I5fKFAzdS8fvjdOwDCfZqAaIiXd9lPkOWi3SUUfZof3hEb7J/uw==
 
+"@popperjs/core@^2.6.0":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.1.tgz#7f554e7368c9ab679a11f4a042ca17149d70cf12"
+  integrity sha512-DvJbbn3dUgMxDnJLH+RZQPnXak1h4ZVYQ7CWiFWjQwBFkVajT4rfw2PdpHLTSTwxrYfnoEXkuBiwkDm6tPMQeA==
+
 "@reach/router@^1.3.3", "@reach/router@^1.3.4":
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.3.4.tgz#d2574b19370a70c80480ed91f3da840136d10f8c"
@@ -2079,18 +2084,18 @@
     ts-dedent "^2.0.0"
 
 "@storybook/addon-viewport@^6.0.26":
-  version "6.1.21"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.1.21.tgz#893090cca12f55abb4d8acade5f04e58e6317b1f"
-  integrity sha512-FrQk0BXCI4HdbBn9+8b+Cp2HvsweZkgW/joKfcF2vVLoasUBB4bl+9uU3HV/3a08glgjPl24caDMPgoRKS90WQ==
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.2.0.tgz#bac30da6f8fdf00bd3e12a0f7f132fe08175753f"
+  integrity sha512-aG0QsAxyn6xJO2v+FnhRHjogymJ6hTrAMXQ+3f/YkXZNzl8TtkHhyHIuYj2zkDOAnaV5m+eTy46uhvOrIISvVg==
   dependencies:
-    "@storybook/addons" "6.1.21"
-    "@storybook/api" "6.1.21"
-    "@storybook/client-logger" "6.1.21"
-    "@storybook/components" "6.1.21"
-    "@storybook/core-events" "6.1.21"
-    "@storybook/theming" "6.1.21"
-    core-js "^3.0.1"
-    global "^4.3.2"
+    "@storybook/addons" "6.2.0"
+    "@storybook/api" "6.2.0"
+    "@storybook/client-logger" "6.2.0"
+    "@storybook/components" "6.2.0"
+    "@storybook/core-events" "6.2.0"
+    "@storybook/theming" "6.2.0"
+    core-js "^3.8.2"
+    global "^4.4.0"
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
@@ -2110,7 +2115,7 @@
     global "^4.3.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@^6.0.26":
+"@storybook/addons@6.2.0", "@storybook/addons@^6.0.26":
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.2.0.tgz#175cc7d7c6671f202f86cd59f9b53e1f2aea71c1"
   integrity sha512-BB/GufdLX9NzswQxOJWq68UFs+zXzAp6fjMCJKrkmsR6O3IfkqM0vGqrbwitbHejbCNARgBJjOQVlw/DPtl9Xw==
@@ -2273,6 +2278,36 @@
     react-textarea-autosize "^8.1.1"
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
+
+"@storybook/components@6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.2.0.tgz#9e08d1e513e7a5bf4d5ef86f07caa9d1590980d2"
+  integrity sha512-pGUsgLy7KPBUkgKb4ydX2KtzA7Ij7TDBgDcwPKvDFB2u5GVxSb1NHXs38VKaOLa8cvOxDL6txxQmm50ontzU6g==
+  dependencies:
+    "@popperjs/core" "^2.6.0"
+    "@storybook/client-logger" "6.2.0"
+    "@storybook/csf" "0.0.1"
+    "@storybook/theming" "6.2.0"
+    "@types/color-convert" "^2.0.0"
+    "@types/overlayscrollbars" "^1.12.0"
+    "@types/react-syntax-highlighter" "11.0.5"
+    color-convert "^2.0.1"
+    core-js "^3.8.2"
+    fast-deep-equal "^3.1.3"
+    global "^4.4.0"
+    lodash "^4.17.20"
+    markdown-to-jsx "^7.1.0"
+    memoizerific "^1.11.3"
+    overlayscrollbars "^1.13.1"
+    polished "^4.0.5"
+    prop-types "^15.7.2"
+    react-colorful "^5.0.1"
+    react-popper-tooltip "^3.1.1"
+    react-syntax-highlighter "^13.5.3"
+    react-textarea-autosize "^8.3.0"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
 
 "@storybook/core-events@6.1.21":
   version "6.1.21"
@@ -2654,6 +2689,18 @@
   resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.11.tgz#2521cc86f69d15c5b90664e4829d84566052c1cf"
   integrity sha512-2koNhpWm3DgWRp5tpkiJ8JGc1xTn2q0l+jUNUE7oMKXUf5NpI9AIdC4kbjGNFBdHtcxBD18LAksoudAVhFKCjw==
 
+"@types/color-convert@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-2.0.0.tgz#8f5ee6b9e863dcbee5703f5a517ffb13d3ea4e22"
+  integrity sha512-m7GG7IKKGuJUXvkZ1qqG3ChccdIM/qBBo913z+Xft0nKCX4hAU/IxKwZBU4cpRZ7GS5kV4vOblUkILtSShCPXQ==
+  dependencies:
+    "@types/color-name" "*"
+
+"@types/color-name@*":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
+  integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+
 "@types/credit-card-type@^9.0.0":
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/@types/credit-card-type/-/credit-card-type-9.0.0.tgz#dcf6b0a59441a8800e0bda222c113a7da636bdf7"
@@ -2816,7 +2863,7 @@
   resolved "https://registry.yarnpkg.com/@types/npmlog/-/npmlog-4.1.2.tgz#d070fe6a6b78755d1092a3dc492d34c3d8f871c4"
   integrity sha512-4QQmOF5KlwfxJ5IGXFIudkeLCdMABz03RcUXu+LCb24zmln8QW6aDjuGl4d4XPVLf2j+FnjelHTP7dvceAFbhA==
 
-"@types/overlayscrollbars@^1.9.0":
+"@types/overlayscrollbars@^1.12.0", "@types/overlayscrollbars@^1.9.0":
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/@types/overlayscrollbars/-/overlayscrollbars-1.12.0.tgz#98456caceca8ad73bd5bb572632a585074e70764"
   integrity sha512-h/pScHNKi4mb+TrJGDon8Yb06ujFG0mSg12wIO0sWMUF3dQIe2ExRRdNRviaNt9IjxIiOfnRr7FsQAdHwK4sMg==
@@ -2896,6 +2943,13 @@
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-11.0.4.tgz#d86d17697db62f98046874f62fdb3e53a0bbc4cd"
   integrity sha512-9GfTo3a0PHwQeTVoqs0g5bS28KkSY48pp5659wA+Dp4MqceDEa8EHBqrllJvvtyusszyJhViUEap0FDvlk/9Zg==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-syntax-highlighter@11.0.5":
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-11.0.5.tgz#0d546261b4021e1f9d85b50401c0a42acb106087"
+  integrity sha512-VIOi9i2Oj5XsmWWoB72p3KlZoEbdRAcechJa8Ztebw7bDl2YmR+odxIqhtJGp1q2EozHs02US+gzxJ9nuf56qg==
   dependencies:
     "@types/react" "*"
 
@@ -10770,6 +10824,11 @@ markdown-to-jsx@^6.11.4:
     prop-types "^15.6.2"
     unquote "^1.1.0"
 
+markdown-to-jsx@^7.1.0:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-7.1.2.tgz#19d3da4cd8864045cdd13a0d179147fbd6a088d4"
+  integrity sha512-O8DMCl32V34RrD+ZHxcAPc2+kYytuDIoQYjY36RVdsLK7uHjgNVvFec4yv0X6LgB4YEZgSvK5QtFi5YVqEpoMA==
+
 marked-terminal@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/marked-terminal/-/marked-terminal-4.1.1.tgz#34a6f063cd6cfe26bffaf5bac3724e24242168a9"
@@ -12044,7 +12103,7 @@ osenv@0, osenv@^0.1.4, osenv@^0.1.5:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-overlayscrollbars@^1.10.2:
+overlayscrollbars@^1.10.2, overlayscrollbars@^1.13.1:
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/overlayscrollbars/-/overlayscrollbars-1.13.1.tgz#0b840a88737f43a946b9d87875a2f9e421d0338a"
   integrity sha512-gIQfzgGgu1wy80EB4/6DaJGHMEGmizq27xHIESrzXq0Y/J0Ay1P3DWk6tuVmEPIZH15zaBlxeEJOqdJKmowHCQ==
@@ -13438,6 +13497,11 @@ react-color@^2.17.0:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
+react-colorful@^5.0.1:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.1.0.tgz#45c8044d80bc0e7ee08dc78c760e6694f3745ca2"
+  integrity sha512-ZXKcQbSuuHaN5tOHORI+G9/tXsGxk/6qlAbfETfZILwwWwngyJiyYRhUJjI+Esk71BhhQRdj0v7cFHDnD95jtQ==
+
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"
@@ -13703,7 +13767,7 @@ react-style-singleton@^2.1.0, react-style-singleton@^2.1.1:
     invariant "^2.2.4"
     tslib "^1.0.0"
 
-react-syntax-highlighter@^13.5.0:
+react-syntax-highlighter@^13.5.0, react-syntax-highlighter@^13.5.3:
   version "13.5.3"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-13.5.3.tgz#9712850f883a3e19eb858cf93fad7bb357eea9c6"
   integrity sha512-crPaF+QGPeHNIblxxCdf2Lg936NAHKhNhuMzRL3F9ct6aYXL3NcZtCL0Rms9+qVo6Y1EQLdXGypBNSbPL/r+qg==
@@ -13728,6 +13792,15 @@ react-textarea-autosize@^8.1.1:
   version "8.3.1"
   resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-8.3.1.tgz#b942a934cc660ecfc645717d1fb84344b69dcb15"
   integrity sha512-Vk02C3RWKLjx1wSwcVuPwfTuyGIemBB2MjDi01OnBYxKWSJFA/O7IOzr9FrO8AuRlkupk4X6Kjew2mYyEDXi0A==
+  dependencies:
+    "@babel/runtime" "^7.10.2"
+    use-composed-ref "^1.0.0"
+    use-latest "^1.0.0"
+
+react-textarea-autosize@^8.3.0:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-8.3.2.tgz#4f9374d357b0a6f6469956726722549124a1b2db"
+  integrity sha512-JrMWVgQSaExQByP3ggI1eA8zF4mF0+ddVuX7acUeK2V7bmrpjVOY72vmLz2IXFJSAXoY3D80nEzrn0GWajWK3Q==
   dependencies:
     "@babel/runtime" "^7.10.2"
     use-composed-ref "^1.0.0"
