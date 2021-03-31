@@ -1310,16 +1310,16 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.5.0.tgz#871d29afb62384c6b6bd343053a92fd58f72c686"
-  integrity sha512-aIC044BKX4r9pDibpi2NvON/4Y0m+SmQxnzG1diyrIvFSad93hU9J0hnirDfv9KUfkV6SWltqHFfERO81PqJWA==
+"@moda/icons@5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.7.2.tgz#63c619272dcb3c66a240f16d952fa81831825e02"
+  integrity sha512-ykRT6t3GycFHOGp0KC9wadqX4z39U+VH/4HhyVNw3Wp4Wxmj9IPiNnXyMsxTPEODS2NSeymFDi17O3u52RqwHg==
 
 "@moda/om@file:..":
-  version "14.17.0"
+  version "14.23.1"
   dependencies:
-    "@moda/icons" "5.5.0"
-    "@moda/tokens" "5.3.1"
+    "@moda/icons" "5.7.2"
+    "@moda/tokens" "5.3.2"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
     credit-card-type "^9.0.0"
@@ -1330,10 +1330,10 @@
     scroll-into-view-if-needed "^2.2.26"
     use-cursor "^1.0.0"
 
-"@moda/tokens@5.3.1":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.3.1.tgz#8e56b9e61d42099599061cfd3ef75a9d01b4c92f"
-  integrity sha512-6HPUQdWHCY0IAOGw75ugoc++09YzKnmpK+VV5GnSRzSUoWnpTyPe01XXXiKLZ1YoEU++aYnx1bbhH1FMAtBwbA==
+"@moda/tokens@5.3.2":
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.3.2.tgz#504935267db3e3e990cf3543f6a25db586610d8b"
+  integrity sha512-nivkK5wBs93uj2Lj5e7mLl5/IZpfKPiuAizdiShtC7O7HNIKhGTQO9BoQNYDGiX16mMuwd/7mXfpdttv7lBF5g==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -11079,9 +11079,9 @@ xtend@^4.0.0, xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
