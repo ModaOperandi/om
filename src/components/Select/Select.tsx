@@ -169,6 +169,7 @@ export const Select: React.FC<SelectProps> = ({
           aria-expanded={state.mode === Mode.Open}
           aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
           type='button'
+          title='Select'
         >
           <SelectLabel idRef={idRef} label={label} hasValue={focused != null || selected != null} />
 
@@ -199,6 +200,7 @@ export const Select: React.FC<SelectProps> = ({
           onChange={({ target }) => handleAutofill(target.value)}
           value={value}
           aria-hidden='true'
+          tabIndex={-1}
         />
       )}
     </>

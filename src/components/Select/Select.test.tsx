@@ -17,7 +17,7 @@ describe('Select', () => {
       <Select idRef='1' name='name-1' label='Sort by' options={options} />
     );
     expect(container.innerHTML).toEqual(
-      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value=""><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Select__value"><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button></div>'
+      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value=""><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" title="Select" class="Clickable Select__value"><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button></div>'
     );
   });
 
@@ -28,7 +28,7 @@ describe('Select', () => {
     const button = container.querySelector('#Select__value--1')!;
     userEvent.click(button);
     expect(container.innerHTML).toEqual(
-      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value=""><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Select__value"><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button><ul class="SelectOptions Select__options" tabindex="-1" role="listbox" aria-labelledby="Select__label--1" aria-activedescendant="SelectOption--foo-1"><li class="SelectOption SelectOption--active" aria-label="Foo" aria-selected="false" role="option">Foo</li><li class="SelectOption" aria-label="Bar" aria-selected="false" role="option">Bar</li><li class="SelectOption SelectOption--disabled" aria-label="Baz" aria-selected="false" role="option">Baz</li></ul></div>'
+      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value=""><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="Select__label--1 Select__value--1" type="button" title="Select" class="Clickable Select__value"><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button><ul class="SelectOptions Select__options" tabindex="-1" role="listbox" aria-labelledby="Select__label--1" aria-activedescendant="SelectOption--foo-1"><li class="SelectOption SelectOption--active" aria-label="Foo" aria-selected="false" role="option">Foo</li><li class="SelectOption" aria-label="Bar" aria-selected="false" role="option">Bar</li><li class="SelectOption SelectOption--disabled" aria-label="Baz" aria-selected="false" role="option">Baz</li></ul></div>'
     );
   });
 
@@ -46,7 +46,7 @@ describe('Select', () => {
     const button = container.querySelector('#Select__value--1')!;
     userEvent.click(button);
     expect(container.innerHTML).toEqual(
-      '<div id="Select--1" class="Select Select--disabled"><input id="1" name="name-1" type="hidden" value=""><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Clickable--disabled Select__value" disabled=""><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button></div>'
+      '<div id="Select--1" class="Select Select--disabled"><input id="1" name="name-1" type="hidden" value=""><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" title="Select" class="Clickable Clickable--disabled Select__value" disabled=""><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button></div>'
     );
   });
 
@@ -100,7 +100,7 @@ describe('Select', () => {
     userEvent.click(option);
     await wait(0);
     expect(container.innerHTML).toEqual(
-      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value="bar"><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Select__value"><label id="Select__label--1">Sort by: </label>Bar<span class="Select__icon"></span></button></div>'
+      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value="bar"><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" title="Select" class="Clickable Select__value"><label id="Select__label--1">Sort by: </label>Bar<span class="Select__icon"></span></button></div>'
     );
   });
 
@@ -112,7 +112,7 @@ describe('Select', () => {
     userEvent.click(option);
     await wait(0);
     expect(container.innerHTML).toEqual(
-      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value="bar"><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Select__value">Bar<span class="Select__icon"></span></button></div>'
+      '<div id="Select--1" class="Select"><input id="1" name="name-1" type="hidden" value="bar"><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" title="Select" class="Clickable Select__value">Bar<span class="Select__icon"></span></button></div>'
     );
   });
 });

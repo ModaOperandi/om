@@ -47,7 +47,7 @@ describe('Field', () => {
     );
 
     expect(component.html()).toEqual(
-      '<label class="Field"><span class="Field__context"><div id="Select--1" class="Select"><input type="hidden" id="1" name="name-1"/><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" class="Clickable Select__value"><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button></div></span></label>'
+      '<label class="Field"><span class="Field__context"><div id="Select--1" class="Select"><input type="hidden" id="1" name="name-1"/><button id="Select__value--1" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="Select__label--1 Select__value--1" type="button" title="Select" class="Clickable Select__value"><label id="Select__label--1">Sort by</label><span class="Select__icon"></span></button></div></span></label>'
     );
   });
 
