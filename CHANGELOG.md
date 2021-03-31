@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.24.0](https://github.com/ModaOperandi/om/compare/v14.23.1...v14.24.0) (2021-03-31)
+
+
+### Features
+
+* **select:** adds title and fixes test ([dcedfd2](https://github.com/ModaOperandi/om/commit/dcedfd25ee6e1ab294ab51cfd765af1e4befb021))
+* **select:** test fix ([cb93557](https://github.com/ModaOperandi/om/commit/cb9355755feb486b78d3e09f25803af292be8d7d))
+
 ## [14.23.1](https://github.com/ModaOperandi/om/compare/v14.23.0...v14.23.1) (2021-03-05)
 
 
