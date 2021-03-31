@@ -1,11 +1,7 @@
 import 'focus-visible';
-import { configure, addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { breakpoints } from '@moda/tokens';
-
 import { globalStyles } from './decorators/globalStyles';
-
-addDecorator(globalStyles);
 
 const viewports = Object.entries(breakpoints).reduce(
   (memo, [key, width]) => ({
@@ -14,21 +10,28 @@ const viewports = Object.entries(breakpoints).reduce(
       name: `breakpoint('${key}')`,
       styles: {
         width,
-        height: `90vh`,
-      },
-    },
+        height: `90vh`
+      }
+    }
   }),
   {}
 );
 
-addParameters({
+export const decorators = [globalStyles];
+
+export const parameters = {
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/
+    }
+  },
   viewport: {
     viewports: {
       ...viewports,
-      ...INITIAL_VIEWPORTS,
+      ...INITIAL_VIEWPORTS
     },
-    defaultViewport: 'reset',
-  },
-});
-
-configure(require.context('../src', true, /\.stories\.tsx$/), module);
+    defaultViewport: 'reset'
+  }
+};
