@@ -6,8 +6,10 @@ export const tokens = {
   colors,
   typography,
   space,
-  breakpoints,
+  breakpoints
 };
+
+export { FocusOn } from 'react-focus-on';
 
 export * from './components';
 export * from './hooks';
