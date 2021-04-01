@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.25.0](https://github.com/ModaOperandi/om/compare/v14.24.0...v14.25.0) (2021-04-01)
+
+
+### Features
+
+* **focuson:** export FocusOn ([#1539](https://github.com/ModaOperandi/om/issues/1539)) ([3807dbc](https://github.com/ModaOperandi/om/commit/3807dbc9c03ac40c68164cc0132956ea79dbc5f6))
+
 # [14.24.0](https://github.com/ModaOperandi/om/compare/v14.23.1...v14.24.0) (2021-03-31)
 
 
