@@ -2349,7 +2349,7 @@
     "@storybook/components" "6.2.1"
     core-js "^3.8.2"
 
-"@storybook/addon-viewport@6.2.1", "@storybook/addon-viewport@^6.0.26":
+"@storybook/addon-viewport@6.2.1":
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.2.1.tgz#89a5fa43316e5a17341866b84556d321f15d0b1f"
   integrity sha512-mdwMRBraYMCdamkBwzyReaOWD9CwHjQNJ4T3h3kLOMgK8BiKHJxNkXbVCuW7A1GemHK5Mfdu7Uf19quXKHf7+g==
@@ -2360,6 +2360,23 @@
     "@storybook/components" "6.2.1"
     "@storybook/core-events" "6.2.1"
     "@storybook/theming" "6.2.1"
+    core-js "^3.8.2"
+    global "^4.4.0"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.13.7"
+
+"@storybook/addon-viewport@^6.0.26":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.2.2.tgz#bfd0b6af105021d9f522c9d9c496af22011a183a"
+  integrity sha512-1VBhbYa35jal+PBbqvhsUsdV1qxsUQl8/f0VClbj7f1DFmaVhIGD45Z/AiXYqw8RnabYufyTBe0DtBujT6QEDA==
+  dependencies:
+    "@storybook/addons" "6.2.2"
+    "@storybook/api" "6.2.2"
+    "@storybook/client-logger" "6.2.2"
+    "@storybook/components" "6.2.2"
+    "@storybook/core-events" "6.2.2"
+    "@storybook/theming" "6.2.2"
     core-js "^3.8.2"
     global "^4.4.0"
     memoizerific "^1.11.3"
@@ -2670,6 +2687,36 @@
     "@storybook/client-logger" "6.2.1"
     "@storybook/csf" "0.0.1"
     "@storybook/theming" "6.2.1"
+    "@types/color-convert" "^2.0.0"
+    "@types/overlayscrollbars" "^1.12.0"
+    "@types/react-syntax-highlighter" "11.0.5"
+    color-convert "^2.0.1"
+    core-js "^3.8.2"
+    fast-deep-equal "^3.1.3"
+    global "^4.4.0"
+    lodash "^4.17.20"
+    markdown-to-jsx "^7.1.0"
+    memoizerific "^1.11.3"
+    overlayscrollbars "^1.13.1"
+    polished "^4.0.5"
+    prop-types "^15.7.2"
+    react-colorful "^5.0.1"
+    react-popper-tooltip "^3.1.1"
+    react-syntax-highlighter "^13.5.3"
+    react-textarea-autosize "^8.3.0"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/components@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.2.2.tgz#e17a3723146e1f30d35ac6f9da7e70451a88c9c9"
+  integrity sha512-KfYKVHDRGUmQGA4+vSqy4Qc3imCTrGcZsXRgAMBtiFtXqtSruA6ZTFkqEjV2ab+9hksv06vpAHjxosMStFkX3g==
+  dependencies:
+    "@popperjs/core" "^2.6.0"
+    "@storybook/client-logger" "6.2.2"
+    "@storybook/csf" "0.0.1"
+    "@storybook/theming" "6.2.2"
     "@types/color-convert" "^2.0.0"
     "@types/overlayscrollbars" "^1.12.0"
     "@types/react-syntax-highlighter" "11.0.5"
