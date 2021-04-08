@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.26.0](https://github.com/ModaOperandi/om/compare/v14.25.0...v14.26.0) (2021-04-08)
+
+
+### Features
+
+* **constrain:** exceed constrain ([b1216b5](https://github.com/ModaOperandi/om/commit/b1216b504011094a253f3dee5bce9288e250c375))
+
 # [14.25.0](https://github.com/ModaOperandi/om/compare/v14.24.0...v14.25.0) (2021-04-01)
 
 
