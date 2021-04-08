@@ -1,0 +1,15 @@
+@import '~om';
+
+.ExceedConstrain {
+  @include breakpoint(md, $prop: max-width) {
+    margin: 0 -#{space(6)};
+  }
+
+  @include breakpoint(sm, $prop: max-width) {
+    margin: 0 -#{space(4)};
+  }
+
+  @include breakpoint(xs, $prop: max-width) {
+    margin: 0 -#{space(2)};
+  }
+}
