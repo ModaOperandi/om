@@ -2364,7 +2364,7 @@
     "@storybook/components" "6.2.8"
     core-js "^3.8.2"
 
-"@storybook/addon-viewport@6.2.8", "@storybook/addon-viewport@^6.0.26":
+"@storybook/addon-viewport@6.2.8":
   version "6.2.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.2.8.tgz#65e6d028c757d18a3bb889e23bb80985d59b685b"
   integrity sha512-SQvVQ59yGIH1BoBSZNssVeaHAUxCiORDzXzOLK7B6AjKx2hiIgP7+qQlqs2IzWvzdGzTOAZw3JP8+DiOnN1ehg==
@@ -2375,6 +2375,23 @@
     "@storybook/components" "6.2.8"
     "@storybook/core-events" "6.2.8"
     "@storybook/theming" "6.2.8"
+    core-js "^3.8.2"
+    global "^4.4.0"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.13.7"
+
+"@storybook/addon-viewport@^6.0.26":
+  version "6.2.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.2.9.tgz#e380de567cea6c24c4e933efa009e80428d5b49e"
+  integrity sha512-IK2mu5njmfcAT967SJtBOY2B6NPMikySZga9QuaLdSpQxPd3vXKNMVG1CjnduMLeDaAoUlvlJISeEPbYGuE+1A==
+  dependencies:
+    "@storybook/addons" "6.2.9"
+    "@storybook/api" "6.2.9"
+    "@storybook/client-logger" "6.2.9"
+    "@storybook/components" "6.2.9"
+    "@storybook/core-events" "6.2.9"
+    "@storybook/theming" "6.2.9"
     core-js "^3.8.2"
     global "^4.4.0"
     memoizerific "^1.11.3"
