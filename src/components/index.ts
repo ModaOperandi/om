@@ -15,6 +15,7 @@ export * from './TextInput';
 export * from './Textarea';
 export * from './Divider';
 export * from './Loading';
+export * from './LoadingBalls';
 export * from './PromoBanner';
 export * from './Popover';
 export * from './Modal';
