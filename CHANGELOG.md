@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.28.0](https://github.com/ModaOperandi/om/compare/v14.27.0...v14.28.0) (2021-05-11)
+
+
+### Features
+
+* **pdp:** add datatestids to the exandable component ([#1682](https://github.com/ModaOperandi/om/issues/1682)) ([640598d](https://github.com/ModaOperandi/om/commit/640598de9bec534e5f6c99fc63b597a7eae17eb5))
+
 # [14.27.0](https://github.com/ModaOperandi/om/compare/v14.26.0...v14.27.0) (2021-05-10)
 
 
