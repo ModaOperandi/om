@@ -36,6 +36,7 @@ export const Expandable: React.FC<ExpandableProps> = ({
           'Expandable__name--plusMinus': icon === 'plus-minus'
         })}
         onClick={handleClick}
+        data-testid={String(name)?.toLowerCase().replace(' ', '_')}
       >
         {name}
 
