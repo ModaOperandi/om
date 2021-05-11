@@ -10,7 +10,6 @@ type AnchorElProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 export type ClickableProps = {
   disabled?: boolean;
   styleless?: boolean;
-  dataTestId?: string;
 } & (ButtonElProps | AnchorElProps | LinkProps);
 
 const isLink = (props: ButtonElProps | AnchorElProps | LinkProps): props is LinkProps =>
@@ -22,7 +21,7 @@ const isButton = (props: ButtonElProps | AnchorElProps | LinkProps): props is Bu
 
 export const Clickable = React.forwardRef(
   (
-    { className, styleless = false, disabled, dataTestId, ...rest }: ClickableProps,
+    { className, styleless = false, disabled, ...rest }: ClickableProps,
     ref: React.Ref<HTMLButtonElement | HTMLAnchorElement>
   ) => {
     const props = {
@@ -31,14 +30,9 @@ export const Clickable = React.forwardRef(
       disabled
     };
 
-    if (isLink(props))
-      return <Link {...props} ref={ref as React.Ref<HTMLAnchorElement>} data-testid={dataTestId} />;
-    if (isAnchor(props))
-      return <a {...props} ref={ref as React.Ref<HTMLAnchorElement>} data-testid={dataTestId} />;
-    if (isButton(props))
-      return (
-        <button {...props} ref={ref as React.Ref<HTMLButtonElement>} data-testid={dataTestId} />
-      );
+    if (isLink(props)) return <Link {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
+    if (isAnchor(props)) return <a {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
+    if (isButton(props)) return <button {...props} ref={ref as React.Ref<HTMLButtonElement>} />;
 
     return null;
   }
