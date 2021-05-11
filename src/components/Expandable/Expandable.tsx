@@ -11,15 +11,17 @@ export type ExpandableProps = React.HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
   icon?: 'chevron' | 'plus-minus';
   virtual?: boolean;
+  'data-testid'?: string;
 };
 
 export const Expandable: React.FC<ExpandableProps> = ({
   name,
-  expanded: __expanded__ = false,
   children,
   className,
-  icon = 'plus-minus',
   virtual = false,
+  icon = 'plus-minus',
+  'data-testid': dataTestId,
+  expanded: __expanded__ = false,
   ...rest
 }) => {
   const [expanded, setExpanded] = useState(__expanded__);
@@ -36,6 +38,7 @@ export const Expandable: React.FC<ExpandableProps> = ({
           'Expandable__name--plusMinus': icon === 'plus-minus'
         })}
         onClick={handleClick}
+        data-testid={dataTestId}
       >
         {name}
 
