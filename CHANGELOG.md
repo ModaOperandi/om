@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.27.0](https://github.com/ModaOperandi/om/compare/v14.26.0...v14.27.0) (2021-05-10)
+
+
+### Features
+
+* **loadingballs:** add LoadingBalls ([#1675](https://github.com/ModaOperandi/om/issues/1675)) ([6e82454](https://github.com/ModaOperandi/om/commit/6e824546987b399b80953972deb3895ffb66c764))
+
 # [14.26.0](https://github.com/ModaOperandi/om/compare/v14.25.0...v14.26.0) (2021-04-08)
 
 
