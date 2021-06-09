@@ -35,9 +35,9 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   }, [onClear]);
 
   const handleChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      onChange && onChange(event);
-      setValue(event.currentTarget.value);
+    (value: string) => {
+      onChange?.(value);
+      setValue(value);
     },
     [onChange, setValue]
   );
