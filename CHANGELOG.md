@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/ModaOperandi/om/compare/v14.28.0...v15.0.0) (2021-06-09)
+
+
+### Bug Fixes
+
+* **input:** onChange type ([#1742](https://github.com/ModaOperandi/om/issues/1742)) ([e384b58](https://github.com/ModaOperandi/om/commit/e384b5896b9906c405ae825e42abb9cacb9a505e))
+
+
+### BREAKING CHANGES
+
+* **input:** The argument of onChange is the new value instead of the change event in Input and
+Textarea
+
 # [14.28.0](https://github.com/ModaOperandi/om/compare/v14.27.0...v14.28.0) (2021-05-11)
 
 
