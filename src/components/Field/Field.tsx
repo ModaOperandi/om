@@ -7,7 +7,7 @@ import { Select, SelectProps } from '../Select';
 import './Field.scss';
 
 export type FieldProps = (InputProps | SelectProps) &
-  React.InputHTMLAttributes<HTMLInputElement> & {
+  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> & {
     children?: JSX.Element;
   };
 

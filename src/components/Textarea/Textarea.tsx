@@ -3,11 +3,12 @@ import classNames from 'classnames';
 import { InputProps } from '../TextInput';
 import './Textarea.scss';
 
-export type TextareaProps = InputProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+export type TextareaProps = InputProps &
+  Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>;
 
 export const Textarea = React.forwardRef(
   (
-    { className, disabled, error, focus, placeholder, label, ...rest }: TextareaProps,
+    { className, disabled, error, focus, placeholder, label, onChange, ...rest }: TextareaProps,
     ref: React.Ref<HTMLTextAreaElement>
   ) => {
     return (
@@ -21,6 +22,7 @@ export const Textarea = React.forwardRef(
         placeholder={placeholder}
         aria-label={label || placeholder}
         ref={ref}
+        onChange={event => onChange?.(event.target.value)}
         {...rest}
       />
     );
