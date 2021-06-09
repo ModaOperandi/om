@@ -1310,15 +1310,15 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@5.11.0":
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.11.0.tgz#311c9ac7b16ac00264eae63ef7902dec5506c545"
-  integrity sha512-Pd2D9AfCMxT32/kxLGlPyTPNDRMsWMsBxPjf7E6Ysx0HmKjMnMf6qqEr9RrhDe3a0GyZ0+bZRiv0YmRZRHxeDA==
+"@moda/icons@5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.12.0.tgz#f1298bb40e833c604269074f8e5dde9eda065450"
+  integrity sha512-AGYnm9ttrPvxYB5cm963OLl3FoC3iYpfJDgf03/Vl2LwRJmqNFRgFdZFw1VrHB+uuOOhEpHf4PWwK7OcsnP9kg==
 
 "@moda/om@file:..":
   version "14.28.0"
   dependencies:
-    "@moda/icons" "5.11.0"
+    "@moda/icons" "5.12.0"
     "@moda/tokens" "5.4.4"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
@@ -6714,9 +6714,9 @@ meow@^3.7.0:
     trim-newlines "^1.0.0"
 
 merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
+  integrity sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==
   dependencies:
     arr-union "^3.1.0"
     clone-deep "^0.2.4"
@@ -11052,9 +11052,9 @@ write@1.0.3:
     mkdirp "^0.5.1"
 
 ws@^5.2.0:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-5.2.2.tgz#dffef14866b8e8dc9133582514d1befaf96e980f"
-  integrity sha512-jaHFD6PFv6UgoIVda6qZllptQsMlDEJkTQcybzzXDYM1XO9Y8em691FGMPmM46WGyLU4z9KMgQN+qrux/nhlHA==
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-5.2.3.tgz#05541053414921bc29c63bee14b8b0dd50b07b3d"
+  integrity sha512-jZArVERrMsKUatIdnLzqvcfydI85dvd/Fp1u/VOpfdDWQ4c9qWXe+VIeAbQ5FrDwciAkr+lzofXLz3Kuf26AOA==
   dependencies:
     async-limiter "~1.0.0"
 
