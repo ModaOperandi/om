@@ -62,11 +62,11 @@ export const SelectChildren = () => {
     <States<FieldProps>
       states={[
         {},
-        { idRef: '2', value: 'high' },
-        { idRef: '3', label: 'Sort — ' },
-        { disabled: true, idRef: '4', label: 'Sort' },
-        { idRef: '5', label: '' },
-        { idRef: '1', label: '', error: 'Error' }
+        { value: 'high' },
+        { label: 'Sort — ' },
+        { disabled: true, label: 'Sort' },
+        { label: '' },
+        { label: '', error: 'Error' }
       ]}
     >
       <Field>

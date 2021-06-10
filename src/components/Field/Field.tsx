@@ -1,15 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
 import WarningIcon from '@moda/icons/warning-16';
-import { TextInput, InputProps } from '../TextInput';
-import { Select, SelectProps } from '../Select';
+import { TextInput, TextInputProps } from '../TextInput';
+import { Select } from '../Select';
 
 import './Field.scss';
 
-export type FieldProps = (InputProps | SelectProps) &
-  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> & {
-    children?: JSX.Element;
-  };
+export type FieldProps = TextInputProps & {
+  children?: JSX.Element;
+};
 
 export const Field = React.forwardRef(
   (

@@ -8,6 +8,7 @@ export type InputProps = {
   focus?: boolean;
   label?: string;
   onChange?: (value: string) => void;
+  onChangeEvent?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export type TextInputProps = InputProps &
@@ -15,7 +16,17 @@ export type TextInputProps = InputProps &
 
 export const TextInput = React.forwardRef(
   (
-    { className, disabled, error, focus, placeholder, label, onChange, ...rest }: TextInputProps,
+    {
+      className,
+      disabled,
+      error,
+      focus,
+      placeholder,
+      label,
+      onChange,
+      onChangeEvent,
+      ...rest
+    }: TextInputProps,
     ref: React.Ref<HTMLInputElement>
   ) => {
     return (
@@ -29,7 +40,10 @@ export const TextInput = React.forwardRef(
         placeholder={placeholder}
         aria-label={label || placeholder}
         ref={ref}
-        onChange={event => onChange?.(event.target.value)}
+        onChange={event => {
+          onChange?.(event.target.value);
+          onChangeEvent?.(event);
+        }}
         {...rest}
       />
     );

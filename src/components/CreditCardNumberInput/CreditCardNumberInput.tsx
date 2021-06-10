@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import InputMask, { Props as InputMaskProps } from 'react-input-mask';
 import creditCardType from 'credit-card-type';
-import { Field, FieldProps } from '../Field';
+import { FieldProps } from '../Field';
+import {
+  CreditCardNumberInputField,
+  CreditCardNumberInputFieldProps
+} from './CreditCardNumberInputField';
 
 export type CreditCardNumberInputProps = Omit<
   InputMaskProps & FieldProps,
@@ -52,7 +56,7 @@ export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
   const handleChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       setValue(event.target.value);
-      onChange?.(event);
+      onChange?.(event.target.value);
     },
     [setValue, onChange]
   );
@@ -70,7 +74,9 @@ export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
       onFocus={onFocus}
       onBlur={onBlur}
     >
-      {(inputProps: FieldProps) => <Field {...rest} {...inputProps} />}
+      {(inputProps: CreditCardNumberInputFieldProps) => (
+        <CreditCardNumberInputField {...rest} {...inputProps} />
+      )}
     </InputMask>
   );
 };
