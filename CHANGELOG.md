@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.1](https://github.com/ModaOperandi/om/compare/v15.0.0...v15.0.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **input:** credit card number input types ([cba0991](https://github.com/ModaOperandi/om/commit/cba09915be8a1c381cacc569d0fd17b5b790aed6))
+
 # [15.0.0](https://github.com/ModaOperandi/om/compare/v14.28.0...v15.0.0) (2021-06-09)
 
 
