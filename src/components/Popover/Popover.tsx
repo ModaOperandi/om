@@ -18,7 +18,7 @@ export const Popover: React.FC<PopoverProps> = ({
   content,
   open = false,
   anchor = 'topLeft',
-  zIndex = 1,
+  zIndex,
   ...rest
 }) => {
   const [isOpen, setOpen] = useState(open);
@@ -49,7 +49,10 @@ export const Popover: React.FC<PopoverProps> = ({
       <span className='Popover__trigger'>
         {isOpen && (
           <>
-            <div className='Popover__caret' style={{ zIndex: zIndex + 1 }} />
+            <div
+              className='Popover__caret'
+              style={{ zIndex: zIndex != null ? zIndex + 1 : undefined }}
+            />
             <div className='Popover__content' style={{ zIndex }}>
               {content}
             </div>
