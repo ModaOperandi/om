@@ -7,6 +7,7 @@ export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
   children: JSX.Element;
   open?: boolean;
   anchor?: 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight';
+  zIndex?: number;
 };
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
@@ -17,6 +18,7 @@ export const Popover: React.FC<PopoverProps> = ({
   content,
   open = false,
   anchor = 'topLeft',
+  zIndex,
   ...rest
 }) => {
   const [isOpen, setOpen] = useState(open);
@@ -47,8 +49,13 @@ export const Popover: React.FC<PopoverProps> = ({
       <span className='Popover__trigger'>
         {isOpen && (
           <>
-            <div className='Popover__caret' />
-            <div className='Popover__content'>{content}</div>
+            <div
+              className='Popover__caret'
+              style={{ zIndex: zIndex != null ? zIndex + 1 : undefined }}
+            />
+            <div className='Popover__content' style={{ zIndex }}>
+              {content}
+            </div>
           </>
         )}
         {children}
