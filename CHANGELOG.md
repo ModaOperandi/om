@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.1.0](https://github.com/ModaOperandi/om/compare/v15.0.1...v15.1.0) (2021-06-15)
+
+
+### Features
+
+* **popover:** make zIndex configurable ([#1761](https://github.com/ModaOperandi/om/issues/1761)) ([5ba6cfc](https://github.com/ModaOperandi/om/commit/5ba6cfc49279be5cadb65ca9fe1a1231d3650c20))
+
 ## [15.0.1](https://github.com/ModaOperandi/om/compare/v15.0.0...v15.0.1) (2021-06-10)
 
 
