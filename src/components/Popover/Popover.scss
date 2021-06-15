@@ -12,7 +12,6 @@
     position: absolute;
     background-color: color(snow);
     border: $border-width solid color(elephant);
-    z-index: 1;
 
     // Fills space of offset so hover works without issue
     &:before {
@@ -131,7 +130,6 @@
   &__caret {
     width: 100%;
     position: absolute;
-    z-index: 2;
 
     &:after,
     &:before {
