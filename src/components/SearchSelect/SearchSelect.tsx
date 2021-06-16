@@ -30,10 +30,10 @@ export const SearchSelect: React.FC<Props> = ({
       return options;
     }
 
-    return options.filter(o =>
+    return options.filter(option =>
       ignoreCasing
-        ? o.label.toLowerCase().includes(searchValue.toLowerCase())
-        : o.label.includes(searchValue)
+        ? option.label.toLowerCase().includes(searchValue.toLowerCase())
+        : option.label.includes(searchValue)
     );
   }, [options, ignoreCasing, searchValue]);
 
