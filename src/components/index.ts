@@ -33,3 +33,4 @@ export * from './ControlLink';
 export * from './Tag';
 export * from './VerticalDivider';
 export * from './Toast';
+export * from './SearchSelect';
