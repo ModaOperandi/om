@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.4.0](https://github.com/ModaOperandi/om/compare/v15.3.0...v15.4.0) (2021-06-17)
+
+
+### Features
+
+* **paginator:** export the paginator ([#1768](https://github.com/ModaOperandi/om/issues/1768)) ([6c65519](https://github.com/ModaOperandi/om/commit/6c65519a529dc967313fbed4c95b47dd44ea3ca4))
+
 # [15.3.0](https://github.com/ModaOperandi/om/compare/v15.2.0...v15.3.0) (2021-06-17)
 
 
