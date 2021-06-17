@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.2.0](https://github.com/ModaOperandi/om/compare/v15.1.0...v15.2.0) (2021-06-17)
+
+
+### Features
+
+* **<select />:** adds the ability to render select options on top of it ([#1766](https://github.com/ModaOperandi/om/issues/1766)) ([baffab0](https://github.com/ModaOperandi/om/commit/baffab0b4c5a630bb67cee1c79f13163693259dd))
+
 # [15.1.0](https://github.com/ModaOperandi/om/compare/v15.0.1...v15.1.0) (2021-06-15)
 
 
