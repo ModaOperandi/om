@@ -27,7 +27,7 @@ export type SelectProps = Omit<
   error?: boolean | string;
   allowAutoFill?: boolean;
   shiftIconLeftwards?: boolean;
-  optionsOpening?: 'down' | 'up';
+  dropDirection?: 'down' | 'up';
 };
 
 enum Mode {
@@ -73,7 +73,7 @@ export const Select: React.FC<SelectProps> = ({
   error,
   allowAutoFill = false,
   shiftIconLeftwards = false,
-  optionsOpening = 'down',
+  dropDirection = 'down',
   ...rest
 }) => {
   const initialValue = value ?? defaultValue;
@@ -188,8 +188,8 @@ export const Select: React.FC<SelectProps> = ({
           <SelectOptions
             idRef={idRef}
             className={classNames('Select__options', {
-              'Select__options--up': optionsOpening === 'up',
-              'Select__options--down': optionsOpening === 'down'
+              'Select__options--up': dropDirection === 'up',
+              'Select__options--down': dropDirection === 'down'
             })}
             options={options}
             onSelect={handleSelect}
