@@ -76,12 +76,23 @@
   }
 
   &__options {
+    display: flex;
     position: absolute;
-    top: 100%;
     left: 0;
     right: 0;
     z-index: 1;
-    margin-top: space(1);
+
+    &--up {
+      flex-direction: column-reverse;
+      bottom: 100%;
+      margin-bottom: space(1);
+    }
+
+    &--down {
+      flex-direction: column;
+      margin-top: space(1);
+      top: 100%;
+    }
   }
 
   // we hide the field this way because with display:none or visibility:hidden Chrome does not allow click event to be fired from hidden HTML elements
