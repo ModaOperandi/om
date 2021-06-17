@@ -1,0 +1,58 @@
+@import '~om';
+
+.Paginator {
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    @include text(body1);
+
+    border: none;
+    height: space(6);
+    width: space(6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: space(1);
+    margin-left: space(1);
+    background-color: transparent;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: color(noise);
+    }
+
+    &--next,
+    &--previous {
+      width: fit-content;
+    }
+
+    &--currentPage {
+      background-color: color(noise);
+    }
+  }
+
+  &__next-chevron {
+    margin-left: space(2);
+  }
+
+  &__previous-chevron {
+    margin-right: space(2);
+  }
+
+  &__button--ellipsis {
+    cursor: auto;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
