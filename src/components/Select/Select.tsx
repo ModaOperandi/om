@@ -27,6 +27,7 @@ export type SelectProps = Omit<
   error?: boolean | string;
   allowAutoFill?: boolean;
   shiftIconLeftwards?: boolean;
+  dropDirection?: 'down' | 'up';
 };
 
 enum Mode {
@@ -72,6 +73,7 @@ export const Select: React.FC<SelectProps> = ({
   error,
   allowAutoFill = false,
   shiftIconLeftwards = false,
+  dropDirection = 'down',
   ...rest
 }) => {
   const initialValue = value ?? defaultValue;
@@ -134,15 +136,15 @@ export const Select: React.FC<SelectProps> = ({
 
   useClickOutside(selectRef, handleClickOutside);
 
-  const selected = useMemo(() => options.find(option => state.value === option.value), [
-    options,
-    state.value
-  ]);
+  const selected = useMemo(
+    () => options.find(option => state.value === option.value),
+    [options, state.value]
+  );
 
-  const focused = useMemo(() => options.find(option => state.focused === option.value), [
-    options,
-    state.focused
-  ]);
+  const focused = useMemo(
+    () => options.find(option => state.focused === option.value),
+    [options, state.focused]
+  );
 
   return (
     <>
@@ -185,7 +187,10 @@ export const Select: React.FC<SelectProps> = ({
         {state.mode === Mode.Open && (
           <SelectOptions
             idRef={idRef}
-            className='Select__options'
+            className={classNames('Select__options', {
+              'Select__options--up': dropDirection === 'up',
+              'Select__options--down': dropDirection === 'down'
+            })}
             options={options}
             onSelect={handleSelect}
             onFocus={handleFocus}
@@ -193,6 +198,7 @@ export const Select: React.FC<SelectProps> = ({
           />
         )}
       </div>
+
       {allowAutoFill && (
         <input
           className='Select__hidden-field'
