@@ -1,0 +1,66 @@
+@import '~om';
+
+.MultiSelect {
+  $self: &;
+
+  min-height: 2.5625rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  &__search {
+    @include input-styles();
+    display: flex;
+
+    &--error {
+      border: 1px solid color(code-red);
+    }
+  }
+
+  &__selected-items {
+    display: flex;
+    gap: 0.3rem;
+    max-width: 80%;
+    overflow: scroll;
+  }
+
+  &__selected-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.6rem;
+    padding: 0.2rem;
+  }
+
+  &__selected-value {
+    cursor: default;
+  }
+
+  &__exit {
+    margin-left: 3px;
+    cursor: pointer;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    flex: auto;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__icon {
+    pointer-events: none;
+    position: absolute;
+    right: space(4);
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--shifted {
+      right: space(6);
+    }
+  }
+}

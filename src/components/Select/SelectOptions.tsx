@@ -11,6 +11,7 @@ export type SelectOptionsProps = Omit<
   'onSelect' | 'onFocus'
 > & {
   idRef: string;
+  autoFocus?: boolean;
   options: SelectableOption[];
   selectedOption: SelectableOption | undefined;
   onFocus?(option: SelectableOption): void;
@@ -19,6 +20,7 @@ export type SelectOptionsProps = Omit<
 
 export const SelectOptions: React.FC<SelectOptionsProps> = ({
   idRef,
+  autoFocus = true,
   options,
   selectedOption,
   onSelect,
@@ -36,8 +38,10 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   const ref = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    ref.current && ref.current.focus();
-  }, []);
+    if (autoFocus) {
+      ref.current && ref.current.focus();
+    }
+  }, [autoFocus]);
 
   useUpdateEffect(() => {
     onFocus && activeOption && onFocus(activeOption);

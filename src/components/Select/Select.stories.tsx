@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
 import { Select, SelectProps } from './Select';
+import { MultiSelect } from './MultiSelect';
 import { Input } from '../Field';
+import { useCallback } from 'react';
 
 export default { title: 'Components/Select' };
 
@@ -279,3 +281,26 @@ export const InsideInputComponent = () => (
     <Select options={OPTIONS}></Select>
   </Input>
 );
+
+export const MultiSelectComponent = () => {
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
+
+  const handleRemoveItem = useCallback(
+    item => setSelectedItems(selectedItems.filter(selectedItem => selectedItem != item)),
+    [selectedItems]
+  );
+
+  const handleAddItem = useCallback(
+    (item: string) => setSelectedItems([...selectedItems, item]),
+    [selectedItems]
+  );
+
+  return (
+    <MultiSelect
+      onRemoveSelectedItem={handleRemoveItem}
+      onChange={handleAddItem}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
+      selectedValues={selectedItems}
+    />
+  );
+};
