@@ -291,16 +291,41 @@ export const MultiSelectComponent = () => {
   );
 
   const handleAddItem = useCallback(
-    (item: string) => setSelectedItems([...selectedItems, item]),
-    [selectedItems]
+    (items: string[]) => setSelectedItems(items),
+    [setSelectedItems]
   );
 
   return (
     <MultiSelect
       onRemoveSelectedItem={handleRemoveItem}
       onChange={handleAddItem}
+      value={selectedItems}
       options={COUNTRIES.map(country => ({ label: country, value: country }))}
-      selectedValues={selectedItems}
+    />
+  );
+};
+
+export const MultiSelectWithDefaultsComponent = () => {
+  const [selectedItems, setSelectedItems] = useState<string[]>(['Canada', 'Albania', 'Greece']);
+
+  const handleRemoveItem = useCallback(
+    item => setSelectedItems(selectedItems.filter(selectedItem => selectedItem != item)),
+    [selectedItems]
+  );
+
+  const handleAddItem = useCallback(
+    (items: string[]) => setSelectedItems(items),
+    [setSelectedItems]
+  );
+
+  return (
+    <MultiSelect
+      onRemoveSelectedItem={handleRemoveItem}
+      onChange={handleAddItem}
+      value={selectedItems}
+      placeholder='United States'
+      defaultValue={['Canada', 'Albania', 'Greece']}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
     />
   );
 };

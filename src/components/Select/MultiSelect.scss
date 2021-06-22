@@ -18,18 +18,17 @@
   }
 
   &__selected-items {
-    display: flex;
-    gap: 0.3rem;
+    @include stack(1, $direction: horizontal);
     max-width: 80%;
-    overflow: scroll;
+    overflow: auto;
   }
 
   &__selected-item {
     display: flex;
     align-items: center;
-    border: 1px solid black;
-    border-radius: 0.6rem;
-    padding: 0.2rem;
+    border: 1px solid color('ink');
+    border-radius: space(2);
+    padding: space(1);
   }
 
   &__selected-value {
@@ -37,7 +36,7 @@
   }
 
   &__exit {
-    margin-left: 3px;
+    margin-left: space(1);
     cursor: pointer;
   }
 

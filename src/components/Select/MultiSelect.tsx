@@ -1,23 +1,23 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import classNames from 'classnames';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
-import classNames from 'classnames';
+import ExitIcon from '@moda/icons/exit-16';
 import { SelectableOption } from '.';
 import { SelectOptions } from './SelectOptions';
 import { useSelect } from './useSelect';
-import ExitIcon from '@moda/icons/exit-16';
 import './MultiSelect.scss';
 
 type Props = Omit<React.HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'value' | 'onChange'> & {
-  defaultValue?: string | undefined;
+  defaultValue?: string[] | undefined;
   disabled?: boolean;
   idRef?: string;
   name?: string;
-  onChange?: (value: string) => void;
+  placeholder?: string;
+  onChange?: (value: string[]) => void;
   onRemoveSelectedItem: (value: string) => void;
   options: SelectableOption[];
-  value?: string | undefined;
-  selectedValues: string[];
+  value?: string[] | undefined;
   error?: boolean | string;
   shiftIconLeftwards?: boolean;
   ignoreCasing?: boolean;
@@ -31,7 +31,7 @@ export const MultiSelect: React.FC<Props> = ({
   name,
   disabled,
   value,
-  selectedValues,
+  placeholder,
   onRemoveSelectedItem,
   onChange,
   defaultValue,
@@ -48,9 +48,9 @@ export const MultiSelect: React.FC<Props> = ({
     (option: SelectableOption) => {
       dispatch({ type: 'SELECT', payload: { value: option.value } });
       setFilteredValue('');
-      onChange && onChange(option.value);
+      onChange && onChange(value ? [...value, option.value] : [option.value]);
     },
-    [dispatch, onChange]
+    [dispatch, onChange, value]
   );
 
   const handleFocus = useCallback(
@@ -74,11 +74,6 @@ export const MultiSelect: React.FC<Props> = ({
     [Mode.Resting, handleToggle, state.mode]
   );
 
-  const selected = useMemo(
-    () => options.find(option => state.value === option.value),
-    [options, state.value]
-  );
-
   const filteredOptions = useMemo(() => {
     if (!filteredValue.length) {
       return options;
@@ -88,9 +83,9 @@ export const MultiSelect: React.FC<Props> = ({
       option =>
         (ignoreCasing
           ? option.label.toLowerCase().includes(filteredValue.toLowerCase())
-          : option.label.includes(filteredValue)) && !selectedValues.includes(option.label)
+          : option.label.includes(filteredValue)) && !value?.includes(option.label)
     );
-  }, [filteredValue, options, ignoreCasing, selectedValues]);
+  }, [filteredValue, options, ignoreCasing, value]);
 
   return (
     <div
@@ -105,7 +100,7 @@ export const MultiSelect: React.FC<Props> = ({
     >
       <div className='MultiSelect__search'>
         <div className='MultiSelect__selected-items'>
-          {(selectedValues || []).map((value, index) => (
+          {(value || []).map((value, index) => (
             <span className={`MultiSelect__selected-item`} key={index}>
               <span className='MultiSelect__selected-value'>{value}</span>
               <ExitIcon
@@ -120,6 +115,7 @@ export const MultiSelect: React.FC<Props> = ({
           className='MultiSelect__input'
           value={filteredValue}
           name={name}
+          placeholder={placeholder}
           onChange={handleChange}
         />
         <span
@@ -141,7 +137,6 @@ export const MultiSelect: React.FC<Props> = ({
           options={filteredOptions}
           onSelect={handleSelect}
           onFocus={handleFocus}
-          selectedOption={selected}
           autoFocus={false}
         />
       )}

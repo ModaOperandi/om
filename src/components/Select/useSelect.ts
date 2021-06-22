@@ -8,7 +8,7 @@ enum Mode {
 }
 
 type State = {
-  value: string | undefined;
+  value: string | string[] | undefined;
   focused: string | undefined;
   mode: Mode;
 };
@@ -16,7 +16,7 @@ type State = {
 type Action =
   | { type: 'OPEN' }
   | { type: 'CLOSE' }
-  | { type: 'SELECT'; payload: { value: string } }
+  | { type: 'SELECT'; payload: { value: string | string[] } }
   | { type: 'FOCUS'; payload: { value: string } };
 
 const reducer = (state: State, action: Action) => {
@@ -26,15 +26,20 @@ const reducer = (state: State, action: Action) => {
     case 'CLOSE':
       return { ...state, mode: Mode.Resting };
     case 'SELECT':
-      return { ...state, value: action.payload.value, focused: undefined, mode: Mode.Resting };
+      return {
+        ...state,
+        value: action.payload.value,
+        focused: undefined,
+        mode: Mode.Resting
+      };
     case 'FOCUS':
       return { ...state, focused: action.payload.value };
   }
 };
 
 interface UseSelectProps {
-  value: string | undefined;
-  defaultValue: string | undefined;
+  value: string | string[] | undefined;
+  defaultValue: string | string[] | undefined;
 }
 
 export const useSelect = ({ value, defaultValue }: UseSelectProps) => {
@@ -44,7 +49,7 @@ export const useSelect = ({ value, defaultValue }: UseSelectProps) => {
 
   const [state, dispatch] = useReducer(reducer, {
     value: initialValue,
-    focused: initialValue,
+    focused: typeof initialValue == 'object' ? initialValue?.[0] : initialValue,
     mode: Mode.Resting
   });
 

@@ -13,7 +13,7 @@ export type SelectOptionsProps = Omit<
   idRef: string;
   autoFocus?: boolean;
   options: SelectableOption[];
-  selectedOption: SelectableOption | undefined;
+  selectedOption?: SelectableOption | undefined;
   onFocus?(option: SelectableOption): void;
   onSelect(option: SelectableOption): void;
 };
