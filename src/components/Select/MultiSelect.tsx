@@ -15,7 +15,6 @@ type Props = Omit<React.HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'value'
   name?: string;
   placeholder?: string;
   onChange?: (value: string[]) => void;
-  onRemoveSelectedItem: (value: string) => void;
   options: SelectableOption[];
   value?: string[] | undefined;
   error?: boolean | string;
@@ -32,7 +31,6 @@ export const MultiSelect: React.FC<Props> = ({
   disabled,
   value,
   placeholder,
-  onRemoveSelectedItem,
   onChange,
   defaultValue,
   error,
@@ -42,15 +40,20 @@ export const MultiSelect: React.FC<Props> = ({
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
-  const [filteredValue, setFilteredValue] = useState('');
+  const [searchPhrase, setSearchPhrase] = useState('');
+
+  const stateValueArray = useMemo(
+    () => (typeof state.value == 'object' ? state.value : []),
+    [state]
+  );
 
   const handleSelect = useCallback(
     (option: SelectableOption) => {
       dispatch({ type: 'SELECT', payload: { value: option.value } });
-      setFilteredValue('');
-      onChange && onChange(value ? [...value, option.value] : [option.value]);
+      setSearchPhrase('');
+      onChange && onChange(stateValueArray ? [...stateValueArray, option.value] : [option.value]);
     },
-    [dispatch, onChange, value]
+    [dispatch, onChange, stateValueArray]
   );
 
   const handleFocus = useCallback(
@@ -69,23 +72,23 @@ export const MultiSelect: React.FC<Props> = ({
         handleToggle();
       }
 
-      setFilteredValue(event.target?.value);
+      setSearchPhrase(event.target?.value);
     },
     [Mode.Resting, handleToggle, state.mode]
   );
 
   const filteredOptions = useMemo(() => {
-    if (!filteredValue.length) {
+    if (!searchPhrase.length) {
       return options;
     }
 
     return options.filter(
       option =>
         (ignoreCasing
-          ? option.label.toLowerCase().includes(filteredValue.toLowerCase())
-          : option.label.includes(filteredValue)) && !value?.includes(option.label)
+          ? option.label.toLowerCase().includes(searchPhrase.toLowerCase())
+          : option.label.includes(searchPhrase)) && !state.value?.includes(option.label)
     );
-  }, [filteredValue, options, ignoreCasing, value]);
+  }, [searchPhrase, options, ignoreCasing, state]);
 
   return (
     <div
@@ -100,20 +103,22 @@ export const MultiSelect: React.FC<Props> = ({
     >
       <div className='MultiSelect__search'>
         <div className='MultiSelect__selected-items'>
-          {(value || []).map((value, index) => (
-            <span className={`MultiSelect__selected-item`} key={index}>
-              <span className='MultiSelect__selected-value'>{value}</span>
+          {stateValueArray.map((currentValue, index) => (
+            <span className='MultiSelect__selected-item' key={index}>
+              <span className='MultiSelect__selected-value'>{currentValue}</span>
               <ExitIcon
                 style={{ width: '8px', height: '8px', position: 'relative' }}
                 className='MultiSelect__exit'
-                onClick={() => onRemoveSelectedItem(value)}
+                onClick={() =>
+                  onChange && onChange((stateValueArray || []).filter(v => currentValue != v))
+                }
               />
             </span>
           ))}
         </div>
         <input
           className='MultiSelect__input'
-          value={filteredValue}
+          value={searchPhrase}
           name={name}
           placeholder={placeholder}
           onChange={handleChange}

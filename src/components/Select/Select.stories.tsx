@@ -285,20 +285,14 @@ export const InsideInputComponent = () => (
 export const MultiSelectComponent = () => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
-  const handleRemoveItem = useCallback(
-    item => setSelectedItems(selectedItems.filter(selectedItem => selectedItem != item)),
-    [selectedItems]
-  );
-
-  const handleAddItem = useCallback(
+  const handleSetItems = useCallback(
     (items: string[]) => setSelectedItems(items),
     [setSelectedItems]
   );
 
   return (
     <MultiSelect
-      onRemoveSelectedItem={handleRemoveItem}
-      onChange={handleAddItem}
+      onChange={handleSetItems}
       value={selectedItems}
       options={COUNTRIES.map(country => ({ label: country, value: country }))}
     />
@@ -308,20 +302,14 @@ export const MultiSelectComponent = () => {
 export const MultiSelectWithDefaultsComponent = () => {
   const [selectedItems, setSelectedItems] = useState<string[]>(['Canada', 'Albania', 'Greece']);
 
-  const handleRemoveItem = useCallback(
-    item => setSelectedItems(selectedItems.filter(selectedItem => selectedItem != item)),
-    [selectedItems]
-  );
-
-  const handleAddItem = useCallback(
+  const handleSetItems = useCallback(
     (items: string[]) => setSelectedItems(items),
     [setSelectedItems]
   );
 
   return (
     <MultiSelect
-      onRemoveSelectedItem={handleRemoveItem}
-      onChange={handleAddItem}
+      onChange={handleSetItems}
       value={selectedItems}
       placeholder='United States'
       defaultValue={['Canada', 'Albania', 'Greece']}
