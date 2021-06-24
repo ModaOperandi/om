@@ -45,7 +45,10 @@ export const MultiSelect: React.FC<Props> = ({
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
   const [searchPhrase, setSearchPhrase] = useState('');
 
-  const stateValueArray = useMemo(() => (Array.isArray(state.value) ? state.value : []), [state]);
+  const stateValueArray = useMemo(
+    () => (Array.isArray(state.value) ? state.value : []),
+    [state.value]
+  );
 
   const handleSelect = useCallback(
     (option: SelectableOption) => {
@@ -56,7 +59,7 @@ export const MultiSelect: React.FC<Props> = ({
   );
 
   const handleRemove = useCallback(
-    (item, _) => {
+    item => {
       dispatch({
         type: 'SELECT',
         payload: { value: stateValueArray.filter(currItem => currItem != item) }
