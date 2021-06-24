@@ -317,3 +317,24 @@ export const MultiSelectWithDefaultsComponent = () => {
     />
   );
 };
+
+export const MultiSelectUncontrolledComponent = () => {
+  return (
+    <MultiSelect
+      placeholder='United States'
+      defaultValue={['Canada', 'Albania', 'Greece']}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
+    />
+  );
+};
+
+export const MultiSelectUncontrolledSearchComponent = () => {
+  return (
+    <MultiSelect
+      searchable={true}
+      placeholder='United States'
+      defaultValue={['Canada', 'Albania', 'Greece']}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
+    />
+  );
+};

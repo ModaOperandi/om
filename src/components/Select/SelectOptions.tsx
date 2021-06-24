@@ -31,7 +31,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   const { selected: activeOption } = useKeyboardListNavigation({
     list: options.filter(option => !option.disabled),
     defaultSelected: selectedOption,
-    onEnter: ({ element }) => onSelect(element),
+    onEnter: ({ element }) => element && onSelect(element),
     extractValue: option => option?.label.toLowerCase()
   });
 
