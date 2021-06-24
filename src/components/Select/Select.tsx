@@ -1,12 +1,11 @@
-import React, { useCallback, useMemo, useReducer, useEffect, useRef } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import classNames from 'classnames';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
 import { Clickable } from '../Clickable';
 import { SelectOptions } from './SelectOptions';
 import { SelectLabel } from './SelectLabel';
-import { useClickOutside } from './useClickOutside';
-import { useUpdateEffect } from '../../hooks/useUpdateEffect';
+import { useSelect } from './useSelect';
 
 import './Select.scss';
 
@@ -30,36 +29,6 @@ export type SelectProps = Omit<
   dropDirection?: 'down' | 'up';
 };
 
-enum Mode {
-  Resting,
-  Open
-}
-
-type State = {
-  value: string | undefined;
-  focused: string | undefined;
-  mode: Mode;
-};
-
-type Action =
-  | { type: 'OPEN' }
-  | { type: 'CLOSE' }
-  | { type: 'SELECT'; payload: { value: string } }
-  | { type: 'FOCUS'; payload: { value: string } };
-
-const reducer = (state: State, action: Action) => {
-  switch (action.type) {
-    case 'OPEN':
-      return { ...state, mode: Mode.Open };
-    case 'CLOSE':
-      return { ...state, mode: Mode.Resting };
-    case 'SELECT':
-      return { ...state, value: action.payload.value, focused: undefined, mode: Mode.Resting };
-    case 'FOCUS':
-      return { ...state, focused: action.payload.value };
-  }
-};
-
 export const Select: React.FC<SelectProps> = ({
   idRef = '',
   className,
@@ -76,65 +45,32 @@ export const Select: React.FC<SelectProps> = ({
   dropDirection = 'down',
   ...rest
 }) => {
-  const initialValue = value ?? defaultValue;
-
-  const [state, dispatch] = useReducer(reducer, {
-    value: initialValue,
-    focused: initialValue,
-    mode: Mode.Resting
-  });
-
-  const selectRef = useRef<HTMLDivElement>(null);
+  const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
 
   const handleSelect = useCallback(
     (option: SelectableOption) => {
       dispatch({ type: 'SELECT', payload: { value: option.value } });
       onChange && onChange(option.value);
     },
-    [onChange]
+    [dispatch, onChange]
   );
 
   const handleFocus = useCallback(
     (option: SelectableOption) => dispatch({ type: 'FOCUS', payload: { value: option.value } }),
-    []
+    [dispatch]
   );
 
   const handleToggle = useCallback(
     () => dispatch({ type: state.mode === Mode.Resting ? 'OPEN' : 'CLOSE' }),
-    [state.mode]
+    [Mode, dispatch, state]
   );
 
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    switch (event.key) {
-      case 'Escape': {
-        event.preventDefault();
-        return dispatch({ type: 'CLOSE' });
-      }
-      default:
-        break;
-    }
-  }, []);
-
-  useEffect(() => {
-    const el = selectRef.current;
-    if (!el) return;
-    el.addEventListener('keydown', handleKeyDown);
-    return () => {
-      el.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  useUpdateEffect(() => {
-    value && dispatch({ type: 'SELECT', payload: { value } });
-  }, [value]);
-
-  const handleClickOutside = useCallback(() => dispatch({ type: 'CLOSE' }), []);
-
-  const handleAutofill = useCallback(value => {
-    value && dispatch({ type: 'SELECT', payload: { value } });
-  }, []);
-
-  useClickOutside(selectRef, handleClickOutside);
+  const handleAutofill = useCallback(
+    value => {
+      value && dispatch({ type: 'SELECT', payload: { value } });
+    },
+    [dispatch]
+  );
 
   const selected = useMemo(
     () => options.find(option => state.value === option.value),

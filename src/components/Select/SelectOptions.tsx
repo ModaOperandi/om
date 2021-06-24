@@ -11,14 +11,16 @@ export type SelectOptionsProps = Omit<
   'onSelect' | 'onFocus'
 > & {
   idRef: string;
+  autoFocus?: boolean;
   options: SelectableOption[];
-  selectedOption: SelectableOption | undefined;
+  selectedOption?: SelectableOption | undefined;
   onFocus?(option: SelectableOption): void;
   onSelect(option: SelectableOption): void;
 };
 
 export const SelectOptions: React.FC<SelectOptionsProps> = ({
   idRef,
+  autoFocus = true,
   options,
   selectedOption,
   onSelect,
@@ -29,15 +31,17 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   const { selected: activeOption } = useKeyboardListNavigation({
     list: options.filter(option => !option.disabled),
     defaultSelected: selectedOption,
-    onEnter: ({ element }) => onSelect(element),
+    onEnter: ({ element }) => element && onSelect(element),
     extractValue: option => option?.label.toLowerCase()
   });
 
   const ref = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    ref.current && ref.current.focus();
-  }, []);
+    if (autoFocus) {
+      ref.current && ref.current.focus();
+    }
+  }, [autoFocus]);
 
   useUpdateEffect(() => {
     onFocus && activeOption && onFocus(activeOption);

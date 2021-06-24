@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
 import { Select, SelectProps } from './Select';
+import { MultiSelect } from './MultiSelect';
 import { Input } from '../Field';
+import { useCallback } from 'react';
 
 export default { title: 'Components/Select' };
 
@@ -279,3 +281,60 @@ export const InsideInputComponent = () => (
     <Select options={OPTIONS}></Select>
   </Input>
 );
+
+export const MultiSelectComponent = () => {
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
+
+  const handleSetItems = useCallback(
+    (items: string[]) => setSelectedItems(items),
+    [setSelectedItems]
+  );
+
+  return (
+    <MultiSelect
+      onChange={handleSetItems}
+      value={selectedItems}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
+    />
+  );
+};
+
+export const MultiSelectWithDefaultsComponent = () => {
+  const [selectedItems, setSelectedItems] = useState<string[]>(['Canada', 'Albania', 'Greece']);
+
+  const handleSetItems = useCallback(
+    (items: string[]) => setSelectedItems(items),
+    [setSelectedItems]
+  );
+
+  return (
+    <MultiSelect
+      onChange={handleSetItems}
+      value={selectedItems}
+      placeholder='United States'
+      defaultValue={['Canada', 'Albania', 'Greece']}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
+    />
+  );
+};
+
+export const MultiSelectUncontrolledComponent = () => {
+  return (
+    <MultiSelect
+      placeholder='United States'
+      defaultValue={['Canada', 'Albania', 'Greece']}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
+    />
+  );
+};
+
+export const MultiSelectUncontrolledSearchComponent = () => {
+  return (
+    <MultiSelect
+      searchable={true}
+      placeholder='United States'
+      defaultValue={['Canada', 'Albania', 'Greece']}
+      options={COUNTRIES.map(country => ({ label: country, value: country }))}
+    />
+  );
+};
