@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.5.0](https://github.com/ModaOperandi/om/compare/v15.4.0...v15.5.0) (2021-06-24)
+
+
+### Bug Fixes
+
+* address comments ([7b2ddba](https://github.com/ModaOperandi/om/commit/7b2ddbabba39312d950e2d8728402c3804592645))
+* address comments ([7713a0a](https://github.com/ModaOperandi/om/commit/7713a0a69b16aa35358ff2d2308fe367abf57f95))
+* address comments ([b7867a1](https://github.com/ModaOperandi/om/commit/b7867a1360aa1e95a3527480c8f3584476fdf6af))
+
+
+### Features
+
+* add multi select to om select package ([92aa47b](https://github.com/ModaOperandi/om/commit/92aa47b4612acdd766e499f99cbfcc3db290bdec))
+* address comments, add searchable prop ([7c75ca3](https://github.com/ModaOperandi/om/commit/7c75ca32d756de858b1336c6635b48d286727558))
+
 # [15.4.0](https://github.com/ModaOperandi/om/compare/v15.3.0...v15.4.0) (2021-06-17)
 
 
