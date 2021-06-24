@@ -1310,15 +1310,15 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@5.12.0":
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.12.0.tgz#f1298bb40e833c604269074f8e5dde9eda065450"
-  integrity sha512-AGYnm9ttrPvxYB5cm963OLl3FoC3iYpfJDgf03/Vl2LwRJmqNFRgFdZFw1VrHB+uuOOhEpHf4PWwK7OcsnP9kg==
+"@moda/icons@5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.13.0.tgz#ba01dc353c2f92e21240f2cad4807dcdad549e8e"
+  integrity sha512-m9Buh03xTrJyJ5sbOIr1LT4IrISiWHlVqu8ML2+KjTRbihqeJoIH4synYT+jNIu7Pn/CKXk0J4ExG68p6AKn0g==
 
 "@moda/om@file:..":
-  version "15.0.1"
+  version "15.4.0"
   dependencies:
-    "@moda/icons" "5.12.0"
+    "@moda/icons" "5.13.0"
     "@moda/tokens" "5.4.4"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
@@ -2919,15 +2919,7 @@ color-name@^1.0.0:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-color-string@^1.5.2:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.5.3.tgz#c9bbc5f01b58b5492f3d6857459cb6590ce204cc"
-  integrity sha512-dC2C5qeWoYkxki5UAXapdjqO672AM4vZuPGRQfO8b5HKuKGBbKWpITyDYN7TOFKvRW7kOgAn3746clDBMDJyQw==
-  dependencies:
-    color-name "^1.0.0"
-    simple-swizzle "^0.2.2"
-
-color-string@^1.5.5:
+color-string@^1.5.2, color-string@^1.5.5:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.5.5.tgz#65474a8f0e7439625f3d27a6a19d89fc45223014"
   integrity sha512-jgIoum0OfQfq9Whcfc2z/VhCNcmQjWbey6qBX0vqt7YICflUmBCh9E9CiQD5GSJ+Uehixm3NUwHVhqUAWRivZg==
