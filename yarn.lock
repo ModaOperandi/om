@@ -1712,10 +1712,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@moda/icons@5.12.0":
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.12.0.tgz#f1298bb40e833c604269074f8e5dde9eda065450"
-  integrity sha512-AGYnm9ttrPvxYB5cm963OLl3FoC3iYpfJDgf03/Vl2LwRJmqNFRgFdZFw1VrHB+uuOOhEpHf4PWwK7OcsnP9kg==
+"@moda/icons@5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.13.0.tgz#ba01dc353c2f92e21240f2cad4807dcdad549e8e"
+  integrity sha512-m9Buh03xTrJyJ5sbOIr1LT4IrISiWHlVqu8ML2+KjTRbihqeJoIH4synYT+jNIu7Pn/CKXk0J4ExG68p6AKn0g==
 
 "@moda/rollup-plugin-postcss@^4.0.1":
   version "4.0.1"
