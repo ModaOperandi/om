@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { render, wait } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { ModalOverlay } from './ModalOverlay';
@@ -33,10 +33,10 @@ describe('ModalOverlay', () => {
 
     // Should show after clicking button
     userEvent.click(getByTestId('button'));
-    await wait(() => expect(queryByText('Modal Content')).not.toBeNull());
+    await waitFor(() => expect(queryByText('Modal Content')).not.toBeNull());
 
     // Should hide after clicking wrapper
     userEvent.click(getByTestId('modal'));
-    await wait(() => expect(queryByText('Modal Content')).toBeNull());
+    await waitFor(() => expect(queryByText('Modal Content')).toBeNull());
   });
 });
