@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.6.0](https://github.com/ModaOperandi/om/compare/v15.5.0...v15.6.0) (2021-06-29)
+
+
+### Features
+
+* **Select:** improvements ([#1799](https://github.com/ModaOperandi/om/issues/1799)) ([6e1cdcd](https://github.com/ModaOperandi/om/commit/6e1cdcd3f1c934bdb0fbb23d4fa55686b1a182bd))
+
 # [15.5.0](https://github.com/ModaOperandi/om/compare/v15.4.0...v15.5.0) (2021-06-24)
 
 
