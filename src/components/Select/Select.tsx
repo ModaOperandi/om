@@ -15,34 +15,36 @@ export type SelectProps = Omit<
   React.HTMLAttributes<HTMLDivElement>,
   'defaultValue' | 'value' | 'onChange'
 > & {
+  allowAutoFill?: boolean;
   defaultValue?: string | undefined;
   disabled?: boolean;
+  dropDirection?: 'down' | 'up';
+  error?: boolean | string;
   idRef?: string;
   label?: string;
   name?: string;
   onChange?: (value: string) => void;
   options: SelectableOption[];
-  value?: string | undefined;
-  error?: boolean | string;
-  allowAutoFill?: boolean;
+  searchable?: boolean;
   shiftIconLeftwards?: boolean;
-  dropDirection?: 'down' | 'up';
+  value?: string | undefined;
 };
 
 export const Select: React.FC<SelectProps> = ({
-  idRef = '',
+  allowAutoFill = false,
   className,
-  options,
+  defaultValue,
+  disabled,
+  dropDirection = 'down',
+  error,
+  idRef = '',
   label = '',
   name,
-  disabled,
-  value,
   onChange,
-  defaultValue,
-  error,
-  allowAutoFill = false,
+  options,
+  searchable,
   shiftIconLeftwards = false,
-  dropDirection = 'down',
+  value,
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
@@ -127,6 +129,7 @@ export const Select: React.FC<SelectProps> = ({
               'Select__options--up': dropDirection === 'up',
               'Select__options--down': dropDirection === 'down'
             })}
+            searchable={searchable}
             options={options}
             onSelect={handleSelect}
             onFocus={handleFocus}
