@@ -1,14 +1,24 @@
 @import '~om';
 
 .SelectOptions {
-  @include overflow-scroll();
-
   background-color: color(snow);
   border: 1px solid color(elephant);
-  max-height: space(12);
 
   &:focus {
     outline: 0;
     border-color: color(cement);
+  }
+
+  &__search {
+    margin: space(2);
+  }
+
+  &__none {
+    padding: spacing(2, 3);
+  }
+
+  &__list {
+    @include overflow-scroll();
+    max-height: space(12);
   }
 }

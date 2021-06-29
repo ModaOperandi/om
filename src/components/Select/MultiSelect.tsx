@@ -1,5 +1,6 @@
-import React, { useCallback, useMemo, useState, useEffect } from 'react';
+import React, { useCallback, useMemo, useEffect } from 'react';
 import classNames from 'classnames';
+import { uniq } from 'ramda';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
 import ExitIcon from '@moda/icons/exit-16';
@@ -12,60 +13,52 @@ import { Clickable } from '../Clickable';
 type Props = Omit<React.HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'value' | 'onChange'> & {
   defaultValue?: string[] | undefined;
   disabled?: boolean;
+  dropDirection?: 'down' | 'up';
+  error?: boolean | string;
   idRef?: string;
   name?: string;
-  placeholder?: string;
   onChange?: (value: string[]) => void;
   options: SelectableOption[];
-  value?: string[] | undefined;
-  error?: boolean | string;
-  shiftIconLeftwards?: boolean;
+  placeholder?: string;
   searchable?: boolean;
-  ignoreCasing?: boolean;
-  dropDirection?: 'down' | 'up';
+  shiftIconLeftwards?: boolean;
+  value?: string[] | undefined;
 };
 
 export const MultiSelect: React.FC<Props> = ({
-  idRef = '',
   className,
-  options,
-  name,
-  disabled,
-  value,
-  searchable = false,
-  placeholder,
-  onChange,
   defaultValue,
-  error,
-  shiftIconLeftwards = false,
-  ignoreCasing = false,
+  disabled,
   dropDirection = 'down',
+  error,
+  idRef = '',
+  onChange,
+  options,
+  searchable,
+  shiftIconLeftwards,
+  value,
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
-  const [searchPhrase, setSearchPhrase] = useState('');
 
-  const stateValueArray = useMemo(
-    () => (Array.isArray(state.value) ? state.value : []),
-    [state.value]
-  );
+  const values = useMemo(() => (Array.isArray(state.value) ? state.value : []), [state.value]);
 
   const handleSelect = useCallback(
     (option: SelectableOption) => {
-      dispatch({ type: 'SELECT', payload: { value: [...stateValueArray, option.value] } });
-      setSearchPhrase('');
+      console.log(option);
+      dispatch({ type: 'SELECT', payload: { value: uniq([...values, option.value]) } });
     },
-    [dispatch, stateValueArray]
+    [dispatch, values]
   );
 
   const handleRemove = useCallback(
-    item => {
+    (item: string) => {
       dispatch({
         type: 'SELECT',
-        payload: { value: stateValueArray.filter(currItem => currItem != item) }
+        payload: { value: values.filter(currItem => currItem != item) }
       });
     },
-    [dispatch, stateValueArray]
+    [dispatch, values]
   );
 
   const handleFocus = useCallback(
@@ -78,33 +71,9 @@ export const MultiSelect: React.FC<Props> = ({
     [Mode, dispatch, state]
   );
 
-  const handleChange = useCallback(
-    event => {
-      if (state.mode == Mode.Resting) {
-        handleToggle();
-      }
-
-      setSearchPhrase(event.target?.value);
-    },
-    [Mode.Resting, handleToggle, state.mode]
-  );
-
-  const filteredOptions = useMemo(() => {
-    if (searchable && !searchPhrase.length) {
-      return options;
-    }
-
-    return options.filter(
-      option =>
-        (ignoreCasing
-          ? option.label.toLowerCase().includes(searchPhrase.toLowerCase())
-          : option.label.includes(searchPhrase)) && !stateValueArray.includes(option.label)
-    );
-  }, [searchable, searchPhrase, stateValueArray, options, ignoreCasing]);
-
   useEffect(() => {
-    onChange && onChange(stateValueArray);
-  }, [onChange, stateValueArray]);
+    onChange && onChange(values);
+  }, [onChange, values]);
 
   return (
     <div
@@ -117,33 +86,21 @@ export const MultiSelect: React.FC<Props> = ({
       ref={selectRef}
       {...rest}
     >
-      <Clickable
-        className='MultiSelect__search'
-        onClick={() => {
-          !searchable && state.mode == Mode.Resting && handleToggle();
-        }}
-      >
+      <Clickable className='MultiSelect__search' disabled={disabled} onClick={handleToggle}>
         <div className='MultiSelect__selected-items'>
-          {stateValueArray.map((currentValue, index) => (
+          {values.map((value, index) => (
             <span className='MultiSelect__selected-item' key={index}>
-              <span className='MultiSelect__selected-value'>{currentValue}</span>
+              <span className='MultiSelect__selected-value'>
+                {options.find(option => option.value === value)?.label || value}
+              </span>
               <ExitIcon
                 style={{ width: '8px', height: '8px', position: 'relative' }}
                 className='MultiSelect__exit'
-                onClick={handleRemove.bind(null, currentValue)}
+                onClick={() => handleRemove(value)}
               />
             </span>
           ))}
         </div>
-        {searchable && (
-          <input
-            className='MultiSelect__input'
-            value={searchPhrase}
-            name={name}
-            placeholder={placeholder}
-            onChange={handleChange}
-          />
-        )}
         <span
           className={classNames('MultiSelect__icon', {
             'MultiSelect__icon--shifted': shiftIconLeftwards
@@ -160,7 +117,8 @@ export const MultiSelect: React.FC<Props> = ({
             'Select__options--up': dropDirection === 'up',
             'Select__options--down': dropDirection === 'down'
           })}
-          options={filteredOptions}
+          searchable={searchable}
+          options={options}
           onSelect={handleSelect}
           onFocus={handleFocus}
           autoFocus={false}
