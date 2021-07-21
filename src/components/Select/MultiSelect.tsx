@@ -45,7 +45,6 @@ export const MultiSelect: React.FC<Props> = ({
 
   const handleSelect = useCallback(
     (option: SelectableOption) => {
-      console.log(option);
       dispatch({ type: 'SELECT', payload: { value: uniq([...values, option.value]) } });
     },
     [dispatch, values]
