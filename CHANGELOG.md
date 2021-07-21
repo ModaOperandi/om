@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.6.1](https://github.com/ModaOperandi/om/compare/v15.6.0...v15.6.1) (2021-07-21)
+
+
+### Bug Fixes
+
+* **MultiSelect:** remove console.log ([41ae6eb](https://github.com/ModaOperandi/om/commit/41ae6eb3ec20e94a27afeebbe7d7177440b27c26))
+
 # [15.6.0](https://github.com/ModaOperandi/om/compare/v15.5.0...v15.6.0) (2021-06-29)
 
 
