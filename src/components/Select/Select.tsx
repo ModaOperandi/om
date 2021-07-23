@@ -16,6 +16,7 @@ export type SelectProps = Omit<
   'defaultValue' | 'value' | 'onChange'
 > & {
   allowAutoFill?: boolean;
+  autoSelect?: boolean;
   defaultValue?: string | undefined;
   disabled?: boolean;
   dropDirection?: 'down' | 'up';
@@ -32,6 +33,7 @@ export type SelectProps = Omit<
 
 export const Select: React.FC<SelectProps> = ({
   allowAutoFill = false,
+  autoSelect = true,
   className,
   defaultValue,
   disabled,
@@ -51,10 +53,13 @@ export const Select: React.FC<SelectProps> = ({
 
   const handleSelect = useCallback(
     (option: SelectableOption) => {
-      dispatch({ type: 'SELECT', payload: { value: option.value } });
-      onChange && onChange(option.value);
+      dispatch({
+        type: 'SELECT',
+        payload: { value: autoSelect ? option.value : value ?? option.value }
+      });
+      onChange?.(option.value);
     },
-    [dispatch, onChange]
+    [autoSelect, value, dispatch, onChange]
   );
 
   const handleFocus = useCallback(
