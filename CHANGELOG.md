@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.7.0](https://github.com/ModaOperandi/om/compare/v15.6.1...v15.7.0) (2021-07-23)
+
+
+### Features
+
+* **Select:** autoSelect ([#1887](https://github.com/ModaOperandi/om/issues/1887)) ([1b69b78](https://github.com/ModaOperandi/om/commit/1b69b7887389cb7ea99b5abd6b71987b59891bb0))
+
 ## [15.6.1](https://github.com/ModaOperandi/om/compare/v15.6.0...v15.6.1) (2021-07-21)
 
 
