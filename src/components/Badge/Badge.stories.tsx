@@ -8,15 +8,15 @@ export default { title: 'Components/Badge' };
 export const Themes = () => (
   <>
     <States>
-      <Badge theme='bestseller'>BESTSELLER</Badge>
+      <Badge theme='forest-green'>BESTSELLER</Badge>
     </States>
 
     <States>
-      <Badge theme='trending'>TRENDING</Badge>
+      <Badge theme='klein-blue'>TRENDING</Badge>
     </States>
 
     <States>
-      <Badge theme='fall-essential'>Fall Essential</Badge>
+      <Badge theme='brick'>Fall Essential</Badge>
     </States>
 
     <States>
