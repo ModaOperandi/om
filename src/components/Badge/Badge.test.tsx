@@ -10,8 +10,10 @@ describe('Badge', () => {
   });
 
   it('supports custom themes and children', () => {
-    const component = shallow(<Badge theme='trending'>Custom Text - 2</Badge>);
-    expect(component.html()).toEqual('<span class="Badge Badge--trending">Custom Text - 2</span>');
+    const component = shallow(<Badge theme='klein-blue'>Custom Text - 2</Badge>);
+    expect(component.html()).toEqual(
+      '<span class="Badge Badge--klein-blue">Custom Text - 2</span>'
+    );
   });
 
   it('allows for arbitrary children', () => {
