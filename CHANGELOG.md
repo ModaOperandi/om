@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.7.1](https://github.com/ModaOperandi/om/compare/v15.7.0...v15.7.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* **badge:** fix the way we set the badge colors ([#1970](https://github.com/ModaOperandi/om/issues/1970)) ([9060ef0](https://github.com/ModaOperandi/om/commit/9060ef0444c7bdc3d2c5b888425ecff9e257be89))
+
 # [15.7.0](https://github.com/ModaOperandi/om/compare/v15.6.1...v15.7.0) (2021-07-23)
 
 
