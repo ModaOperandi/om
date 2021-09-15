@@ -34,3 +34,4 @@ export * from './Textarea';
 export * from './TextInput';
 export * from './Toast';
 export * from './VerticalDivider';
+export * from './PasswordInput';
