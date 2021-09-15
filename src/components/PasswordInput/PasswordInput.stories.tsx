@@ -6,6 +6,6 @@ export default { title: 'Components/PasswordInput' };
 
 export const Default = () => (
   <States<Partial<PasswordInputProps>> states={[{}, { error: 'Password cannot be empty.' }]}>
-    <PasswordInput id='signInPassword' dataTestId='signInPassword' placeholder='Password' />
+    <PasswordInput id='signInPassword' placeholder='Password' />
   </States>
 );

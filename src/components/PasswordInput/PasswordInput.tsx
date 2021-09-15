@@ -9,14 +9,7 @@ export type PasswordInputProps = {
   dataTestId?: string;
 } & FieldProps;
 
-export const PasswordInput: React.FC<PasswordInputProps> = ({
-  error,
-  focus,
-  dataTestId,
-  id,
-  placeholder,
-  ...rest
-}) => {
+export const PasswordInput: React.FC<PasswordInputProps> = ({ ...rest }) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -24,16 +17,7 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
 
   return (
     <div className='PasswordInput'>
-      <Input
-        name='password'
-        placeholder={placeholder}
-        type={passwordShown ? 'text' : 'password'}
-        error={error}
-        focus={focus}
-        id={id}
-        data-testid={dataTestId}
-        {...rest}
-      />
+      <Input type={passwordShown ? 'text' : 'password'} {...rest} />
       <Clickable
         className='PasswordInput__password-action'
         onClick={togglePasswordVisiblity}
