@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.8.0](https://github.com/ModaOperandi/om/compare/v15.7.1...v15.8.0) (2021-09-15)
+
+
+### Features
+
+* **input:** add ...rest ([9945754](https://github.com/ModaOperandi/om/commit/99457548aa43fbe40eb953bebac76e0ba1a6a6f4))
+* **input:** new password input component ([eaea22f](https://github.com/ModaOperandi/om/commit/eaea22f5c8ce4af79c8450bc66f20e375a5e94b7))
+* **input:** prop updates ([1bf337c](https://github.com/ModaOperandi/om/commit/1bf337c6328fbed707f764d2e4c5171813e40e53))
+* **input:** removed data test id as prop ([1ca517d](https://github.com/ModaOperandi/om/commit/1ca517d3a913d22012ec15b8d6a3116498eabd17))
+
 ## [15.7.1](https://github.com/ModaOperandi/om/compare/v15.7.0...v15.7.1) (2021-09-03)
 
 
