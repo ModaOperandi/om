@@ -5,9 +5,7 @@ import { Text } from '../Text';
 
 import './PasswordInput.scss';
 
-export type PasswordInputProps = {
-  dataTestId?: string;
-} & FieldProps;
+export type PasswordInputProps = FieldProps;
 
 export const PasswordInput: React.FC<PasswordInputProps> = ({ ...rest }) => {
   const [passwordShown, setPasswordShown] = useState(false);
