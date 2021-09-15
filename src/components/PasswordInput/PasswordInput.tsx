@@ -14,7 +14,8 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
   focus,
   dataTestId,
   id,
-  placeholder
+  placeholder,
+  ...rest
 }) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
@@ -31,6 +32,7 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
         focus={focus}
         id={id}
         data-testid={dataTestId}
+        {...rest}
       />
       <Clickable
         className='PasswordInput__password-action'
