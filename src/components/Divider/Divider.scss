@@ -20,14 +20,9 @@
   &__text {
     width: auto;
     padding: 0 space(4);
-    @include text(h5, serif);
   }
 
   &--two-line {
-    #{$self}__text {
-      @include text(eyebrow);
-    }
-
     &:before,
     &:after {
       $space-between-lines: 0.175rem;
