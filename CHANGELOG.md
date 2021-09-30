@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.9.0](https://github.com/ModaOperandi/om/compare/v15.8.0...v15.9.0) (2021-09-30)
+
+
+### Features
+
+* **divider:** allow specifying text treatment ([#2028](https://github.com/ModaOperandi/om/issues/2028)) ([3ce91ca](https://github.com/ModaOperandi/om/commit/3ce91ca5a201c779ca6cc061fd7be0939c4f2fe0))
+
 # [15.8.0](https://github.com/ModaOperandi/om/compare/v15.7.1...v15.8.0) (2021-09-15)
 
 
