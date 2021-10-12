@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.10.0](https://github.com/ModaOperandi/om/compare/v15.9.0...v15.10.0) (2021-10-12)
+
+
+### Features
+
+* **password-input:** forwarded the input ref ([#2069](https://github.com/ModaOperandi/om/issues/2069)) ([a015c01](https://github.com/ModaOperandi/om/commit/a015c0164c26ff5d243b7735f2a142b80a87dcb6))
+
 # [15.9.0](https://github.com/ModaOperandi/om/compare/v15.8.0...v15.9.0) (2021-09-30)
 
 
