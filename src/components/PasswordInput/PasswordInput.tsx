@@ -16,7 +16,12 @@ export const PasswordInput = forwardRef(
 
     return (
       <div className='PasswordInput'>
-        <Input type={passwordShown ? 'text' : 'password'} {...rest} ref={ref} />
+        <Input
+          className='PasswordInput__editor'
+          ref={ref}
+          type={passwordShown ? 'text' : 'password'}
+          {...rest}
+        />
 
         <Clickable
           className='PasswordInput__password-action'
