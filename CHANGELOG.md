@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.10.2](https://github.com/ModaOperandi/om/compare/v15.10.1...v15.10.2) (2021-10-26)
+
+
+### Bug Fixes
+
+* **password-input:** adds padding to avoid overlapping hide/show badge ([#2113](https://github.com/ModaOperandi/om/issues/2113)) ([fc0319d](https://github.com/ModaOperandi/om/commit/fc0319d4045de13feb628bc9d70d7142670f2c8a))
+
 ## [15.10.1](https://github.com/ModaOperandi/om/compare/v15.10.0...v15.10.1) (2021-10-19)
 
 
