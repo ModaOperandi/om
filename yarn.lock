@@ -1685,7 +1685,7 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@moda/icons@5.14.0":
+"@moda/icons@^5.14.0":
   version "5.14.0"
   resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.14.0.tgz#0a43e237e7387bda70b9faee5408089dcb172ca4"
   integrity sha512-5gVNMsQtsUe6pAwYhWvKI0AJn1+TcHRhS7oo9Jbfns63fz3zB1ZhMYVLX60r5Yg8NrExfiXW2EietvV6SS5wqw==
@@ -1709,10 +1709,10 @@
     safe-identifier "^0.4.2"
     style-inject "^0.3.0"
 
-"@moda/tokens@5.4.4":
-  version "5.4.4"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.4.4.tgz#814af35b64f52bc962c70c1987b88c86d584a45a"
-  integrity sha512-99UG8gHYM6Ol5qaZPvHJeGMSQ590mQe4ZZnDBIc5hYbZBtRPHYyzQeEgVqn40N7hT2fDEZ0qzMZzc7exEUfAuA==
+"@moda/tokens@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.5.1.tgz#8917409135820b060fb4a72b02bb40ad0f15d150"
+  integrity sha512-VCGjHAse3VGTSEUUpTgdxcCINuPqk2AM8uBJuwPumkFwAMxK21voO2nL6FkLpR/nPimOcPlURpBhrr7PAuuBXg==
   dependencies:
     color-string "^1.5.5"
 
@@ -6612,7 +6612,7 @@ cz-conventional-changelog@3.2.0:
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
-cz-conventional-changelog@3.3.0:
+cz-conventional-changelog@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/cz-conventional-changelog/-/cz-conventional-changelog-3.3.0.tgz#9246947c90404149b3fe2cf7ee91acad3b7d22d2"
   integrity sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==
