@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.10.3](https://github.com/ModaOperandi/om/compare/v15.10.2...v15.10.3) (2021-10-27)
+
+
+### Bug Fixes
+
+* upgrade deps ([4c65a4f](https://github.com/ModaOperandi/om/commit/4c65a4f56ae8ab3f716330c54095bef7149a23af))
+
 ## [15.10.2](https://github.com/ModaOperandi/om/compare/v15.10.1...v15.10.2) (2021-10-26)
 
 
