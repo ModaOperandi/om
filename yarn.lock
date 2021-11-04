@@ -7564,9 +7564,9 @@ escodegen@^2.0.0:
     source-map "~0.6.1"
 
 eslint-plugin-react-hooks@^4.2.1-alpha-02f411578-20211019:
-  version "4.2.1-alpha-67222f044-20210915"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.1-alpha-67222f044-20210915.tgz#dcfd2a9b03ad583d3601bd0d889f9bd5bf054fe7"
-  integrity sha512-CnLVUl/nGWMusieJzjQitqbmCPlssHx8Vcr6n31ZPRNvd5WHVmDb/Wk0aMg+fKX+Moxrn2CWMxPRkRHmQdLkig==
+  version "4.2.1-alpha-255221c86-20211103"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.1-alpha-255221c86-20211103.tgz#71adfa2e6a59b7b442c51b9b25c333e87c7926ef"
+  integrity sha512-JXeOF4+EFxIpu9EhXmXgIt9QqgoK/xCe7Z2a2hfWNj7DR/Q2yEXzsNZIT/i+AuuJcIiBy/Glg87RWhZ7SomSUQ==
 
 eslint-plugin-react@^7.18.3:
   version "7.26.1"
