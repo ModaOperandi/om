@@ -103,7 +103,7 @@
     "enzyme": "^3.10.0",
     "eslint": "^8.0.1",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^4.2.1-alpha-02f411578-20211019",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "ignore-not-found-export-webpack-plugin": "^1.0.1",
