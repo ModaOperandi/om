@@ -3631,9 +3631,9 @@
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
 "@types/ramda@^0.27.40":
-  version "0.27.56"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.56.tgz#f7290f48865ea1c231d0ace268f83118e8d24e6c"
-  integrity sha512-fMloxwXvaL/nsLpYAkDKdoo4U8d6Gm2MSLz6Csv38Pst19MSCVs4tLf0HjsXETkBMj/wZmFZ0kUwoq0kluvi8w==
+  version "0.27.57"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.57.tgz#3bc709938ae414cc4e8a95a8535122752bbdad53"
+  integrity sha512-n3V1BQ6QJ49gnF3iR+e8JVPdTi8936/8BSpUhVVgdeA5G+lJTyStMVaGJdLEatZ01+dbW59DikVvVDLRsKxkEA==
   dependencies:
     ts-toolbelt "^6.15.1"
 
@@ -15779,9 +15779,9 @@ rollup-pluginutils@^2.3.3, rollup-pluginutils@^2.8.2:
     estree-walker "^0.6.1"
 
 rollup@^2.38.5:
-  version "2.60.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.60.1.tgz#4b34cd247f09b421f10a3c9286eda2ecf9972079"
-  integrity sha512-akwfnpjY0rXEDSn1UTVfKXJhPsEBu+imi1gqBA1ZkHGydUnkV/fWCC90P7rDaLEW8KTwBcS1G3N4893Ndz+jwg==
+  version "2.60.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.60.2.tgz#3f45ace36a9b10b4297181831ea0719922513463"
+  integrity sha512-1Bgjpq61sPjgoZzuiDSGvbI1tD91giZABgjCQBKM5aYLnzjq52GoDuWVwT/cm/MCxCMPU8gqQvkj8doQ5C8Oqw==
   optionalDependencies:
     fsevents "~2.3.2"
 
