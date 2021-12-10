@@ -9,13 +9,19 @@ export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
   anchor?: 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight';
   zIndex?: number;
   autoPreview?: boolean;
+<<<<<<< HEAD
   smoothTransitioning?: boolean;
+=======
+>>>>>>> e92fc5ee85dae3676c3a754b83ff4c9d46a8802c
 };
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
 
 enum Mode {
+<<<<<<< HEAD
   Opening = 'opening',
+=======
+>>>>>>> e92fc5ee85dae3676c3a754b83ff4c9d46a8802c
   Open = 'open',
   Closing = 'closing',
   AutoOpening = 'autoOpening',
@@ -31,6 +37,7 @@ export const Popover: React.FC<PopoverProps> = ({
   anchor = 'topLeft',
   zIndex,
   autoPreview = false,
+<<<<<<< HEAD
   smoothTransitioning = false,
   ...rest
 }) => {
@@ -40,6 +47,12 @@ export const Popover: React.FC<PopoverProps> = ({
     }
 
     if (open && !smoothTransitioning) {
+=======
+  ...rest
+}) => {
+  const [mode, setMode] = useState(() => {
+    if (open) {
+>>>>>>> e92fc5ee85dae3676c3a754b83ff4c9d46a8802c
       return Mode.Open;
     }
 

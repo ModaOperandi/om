@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.11.0](https://github.com/ModaOperandi/om/compare/v15.10.3...v15.11.0) (2021-12-10)
+
+
+### Features
+
+* **popover:** adds popover smooth animation ([#2256](https://github.com/ModaOperandi/om/issues/2256)) ([ad7562f](https://github.com/ModaOperandi/om/commit/ad7562f3256ba04b7b80a761c044ac17656f6588))
+
 ## [15.10.3](https://github.com/ModaOperandi/om/compare/v15.10.2...v15.10.3) (2021-10-27)
 
 
