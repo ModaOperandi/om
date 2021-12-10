@@ -9,11 +9,13 @@ export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
   anchor?: 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight';
   zIndex?: number;
   autoPreview?: boolean;
+  smoothTransitioning?: boolean;
 };
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
 
 enum Mode {
+  Opening = 'opening',
   Open = 'open',
   Closing = 'closing',
   AutoOpening = 'autoOpening',
@@ -29,10 +31,15 @@ export const Popover: React.FC<PopoverProps> = ({
   anchor = 'topLeft',
   zIndex,
   autoPreview = false,
+  smoothTransitioning = false,
   ...rest
 }) => {
   const [mode, setMode] = useState(() => {
-    if (open) {
+    if (open && smoothTransitioning) {
+      return Mode.Opening;
+    }
+
+    if (open && !smoothTransitioning) {
       return Mode.Open;
     }
 
@@ -48,15 +55,18 @@ export const Popover: React.FC<PopoverProps> = ({
   const handleMouseEnter = useCallback(() => {
     if (!open) {
       timeout.current && clearTimeout(timeout.current);
-      setMode(Mode.Open);
+      setMode(smoothTransitioning ? Mode.Opening : Mode.Open);
     }
-  }, [open]);
+  }, [open, smoothTransitioning]);
 
   const handleMouseLeave = useCallback(() => {
-    if (!open) {
-      timeout.current = setTimeout(() => setMode(Mode.Closing), POPOVER_MOUSEOUT_DELAY_MS);
-    }
-  }, [open]);
+    if (open) return;
+
+    timeout.current = setTimeout(
+      () => setMode(smoothTransitioning ? Mode.Closing : Mode.Closed),
+      POPOVER_MOUSEOUT_DELAY_MS
+    );
+  }, [open, smoothTransitioning]);
 
   useEffect(() => {
     if (mode !== Mode.Closing) return;
@@ -75,14 +85,26 @@ export const Popover: React.FC<PopoverProps> = ({
   }, [mode]);
 
   useEffect(() => {
-    if (mode !== Mode.AutoOpen) return;
+    if (mode !== Mode.Opening) return;
 
-    const stayingTimeout = setTimeout(() => setMode(Mode.Closing), 5000);
+    const openingTimeout = setTimeout(() => setMode(Mode.Open), 750);
 
-    return () => clearTimeout(stayingTimeout);
+    return () => clearTimeout(openingTimeout);
   }, [mode]);
 
-  const isOpen = mode === Mode.AutoOpen || mode === Mode.Open || mode === Mode.Closing;
+  useEffect(() => {
+    if (mode !== Mode.AutoOpen) return;
+
+    const stayingTimeout = setTimeout(
+      () => setMode(smoothTransitioning ? Mode.Closing : Mode.Closed),
+      5000
+    );
+
+    return () => clearTimeout(stayingTimeout);
+  }, [mode, smoothTransitioning]);
+
+  const isOpen =
+    mode === Mode.AutoOpen || mode === Mode.Opening || mode === Mode.Open || mode === Mode.Closing;
 
   return (
     <div
@@ -95,6 +117,7 @@ export const Popover: React.FC<PopoverProps> = ({
         {isOpen && (
           <div
             className={classNames('Popover__box', {
+              'Popover__box--opening': mode === Mode.Opening,
               'Popover__box--closing': mode === Mode.Closing
             })}
           >
