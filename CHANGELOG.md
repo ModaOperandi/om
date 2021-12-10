@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.11.1](https://github.com/ModaOperandi/om/compare/v15.11.0...v15.11.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* **popover:** clears out props, makes smooth transitioning optional ([#2259](https://github.com/ModaOperandi/om/issues/2259)) ([9880664](https://github.com/ModaOperandi/om/commit/988066478a0f226d54db5b374dc54e1840fd9aee))
+
 # [15.11.0](https://github.com/ModaOperandi/om/compare/v15.10.3...v15.11.0) (2021-12-10)
 
 
