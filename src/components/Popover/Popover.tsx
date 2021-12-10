@@ -8,9 +8,18 @@ export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
   open?: boolean;
   anchor?: 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight';
   zIndex?: number;
+  autoPreview?: boolean;
 };
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
+
+enum Mode {
+  Open = 'open',
+  Closing = 'closing',
+  AutoOpening = 'autoOpening',
+  AutoOpen = 'autoOpen',
+  Closed = 'closed'
+}
 
 export const Popover: React.FC<PopoverProps> = ({
   className,
@@ -19,25 +28,61 @@ export const Popover: React.FC<PopoverProps> = ({
   open = false,
   anchor = 'topLeft',
   zIndex,
+  autoPreview = false,
   ...rest
 }) => {
-  const [isOpen, setOpen] = useState(open);
+  const [mode, setMode] = useState(() => {
+    if (open) {
+      return Mode.Open;
+    }
+
+    if (autoPreview) {
+      return Mode.AutoOpening;
+    }
+
+    return Mode.Closed;
+  });
+
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = useCallback(() => {
     if (!open) {
       timeout.current && clearTimeout(timeout.current);
-      setOpen(true);
+      setMode(Mode.Open);
     }
   }, [open]);
 
   const handleMouseLeave = useCallback(() => {
     if (!open) {
-      timeout.current = setTimeout(() => setOpen(false), POPOVER_MOUSEOUT_DELAY_MS);
+      timeout.current = setTimeout(() => setMode(Mode.Closing), POPOVER_MOUSEOUT_DELAY_MS);
     }
   }, [open]);
 
-  useEffect(() => setOpen(open), [open]);
+  useEffect(() => {
+    if (mode !== Mode.Closing) return;
+
+    const closingTimeout = setTimeout(() => setMode(Mode.Closed), 750);
+
+    return () => clearTimeout(closingTimeout);
+  }, [mode]);
+
+  useEffect(() => {
+    if (mode !== Mode.AutoOpening) return;
+
+    const openingTimeout = setTimeout(() => setMode(Mode.AutoOpen), 1000);
+
+    return () => clearTimeout(openingTimeout);
+  }, [mode]);
+
+  useEffect(() => {
+    if (mode !== Mode.AutoOpen) return;
+
+    const stayingTimeout = setTimeout(() => setMode(Mode.Closing), 5000);
+
+    return () => clearTimeout(stayingTimeout);
+  }, [mode]);
+
+  const isOpen = mode === Mode.AutoOpen || mode === Mode.Open || mode === Mode.Closing;
 
   return (
     <div
@@ -48,16 +93,22 @@ export const Popover: React.FC<PopoverProps> = ({
     >
       <span className='Popover__trigger'>
         {isOpen && (
-          <>
+          <div
+            className={classNames('Popover__box', {
+              'Popover__box--closing': mode === Mode.Closing
+            })}
+          >
             <div
               className='Popover__caret'
               style={{ zIndex: zIndex != null ? zIndex + 1 : undefined }}
             />
+
             <div className='Popover__content' style={{ zIndex }}>
               {content}
             </div>
-          </>
+          </div>
         )}
+
         {children}
       </span>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { States } from 'storybook-states';
+import { ControlLink } from '..';
 import { Text } from '../Text';
 import { Popover, PopoverProps } from './Popover';
 
@@ -19,6 +20,7 @@ export const Default = () => (
     <States<Partial<PopoverProps>>
       states={[
         {},
+        { autoPreview: true },
         { anchor: 'topCenter' },
         { anchor: 'topRight' },
         { anchor: 'bottomLeft' },
@@ -29,7 +31,7 @@ export const Default = () => (
     >
       <Popover content={Content} style={{ display: 'inline-block' }}>
         <Text>
-          <a href='https://www.modaoperandi.com/women'>Hover on Link</a>
+          <ControlLink href='https://www.modaoperandi.com/women'>Hover on Link</ControlLink>
         </Text>
       </Popover>
     </States>

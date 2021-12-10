@@ -25,6 +25,30 @@
     }
   }
 
+  &__box {
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    animation: fade-in 0.75s;
+  }
+
+  &__box--closing {
+    @keyframes fade-out {
+      to {
+        opacity: 0;
+      }
+    }
+
+    animation: fade-out 1s;
+  }
+
   &--anchor-topLeft {
     #{$self}__content {
       top: 100%;
