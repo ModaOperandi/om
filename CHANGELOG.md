@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.11.2](https://github.com/ModaOperandi/om/compare/v15.11.1...v15.11.2) (2021-12-10)
+
+
+### Bug Fixes
+
+* **popover smooth transitioning:** fixes problem with auto triggering ([#2260](https://github.com/ModaOperandi/om/issues/2260)) ([4700f11](https://github.com/ModaOperandi/om/commit/4700f11641478123d6220f8bef7d4a0ce81daf45))
+
 ## [15.11.1](https://github.com/ModaOperandi/om/compare/v15.11.0...v15.11.1) (2021-12-10)
 
 
