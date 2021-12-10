@@ -72,7 +72,7 @@ export const Popover: React.FC<PopoverProps> = ({
     const openingTimeout = setTimeout(() => setMode(Mode.AutoOpen), 1000);
 
     return () => clearTimeout(openingTimeout);
-  });
+  }, [mode]);
 
   useEffect(() => {
     if (mode !== Mode.AutoOpen) return;
