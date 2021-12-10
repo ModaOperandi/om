@@ -103,6 +103,16 @@ export const Popover: React.FC<PopoverProps> = ({
     return () => clearTimeout(stayingTimeout);
   }, [mode, smoothTransitioning]);
 
+  useEffect(() => {
+    if (!open) return;
+
+    if (smoothTransitioning) {
+      setMode(Mode.Opening);
+    }
+
+    setMode(Mode.Open);
+  }, [mode, open]);
+
   const isOpen =
     mode === Mode.AutoOpen || mode === Mode.Opening || mode === Mode.Open || mode === Mode.Closing;
 
