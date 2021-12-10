@@ -21,8 +21,10 @@ export const Default = () => (
       states={[
         {},
         { autoPreview: true },
+        { smoothTransitioning: true },
         { anchor: 'topCenter' },
         { anchor: 'topRight' },
+        { autoPreview: true, smoothTransitioning: true },
         { anchor: 'bottomLeft' },
         { anchor: 'bottomCenter' },
         { anchor: 'bottomRight' },
