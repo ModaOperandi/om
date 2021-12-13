@@ -119,7 +119,7 @@ export const Popover: React.FC<PopoverProps> = ({
     if (!open && !smoothTransitioning) {
       setMode(Mode.Closed);
     }
-  }, [mode, open, smoothTransitioning]);
+  }, [open, smoothTransitioning]);
 
   const isOpen =
     mode === Mode.AutoOpen || mode === Mode.Opening || mode === Mode.Open || mode === Mode.Closing;
