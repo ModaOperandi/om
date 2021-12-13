@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.11.3](https://github.com/ModaOperandi/om/compare/v15.11.2...v15.11.3) (2021-12-13)
+
+
+### Bug Fixes
+
+* **popover:** fixes open & !open logic ([#2265](https://github.com/ModaOperandi/om/issues/2265)) ([21e5bc9](https://github.com/ModaOperandi/om/commit/21e5bc995297ca3eeaaf4c4e0361ddb4860bd7b7))
+
 ## [15.11.2](https://github.com/ModaOperandi/om/compare/v15.11.1...v15.11.2) (2021-12-10)
 
 
