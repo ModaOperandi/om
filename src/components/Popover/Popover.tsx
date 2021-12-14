@@ -27,7 +27,7 @@ export const Popover: React.FC<PopoverProps> = ({
   className,
   children,
   content,
-  open = false,
+  open,
   anchor = 'topLeft',
   zIndex,
   autoPreview = false,
@@ -52,21 +52,30 @@ export const Popover: React.FC<PopoverProps> = ({
 
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  const handleOpen = useCallback(() => {
+    if (smoothTransitioning) setMode(Mode.Opening);
+
+    if (!smoothTransitioning) setMode(Mode.Open);
+  }, [smoothTransitioning]);
+
+  const handleClose = useCallback(() => {
+    if (smoothTransitioning) setMode(Mode.Closing);
+
+    if (!smoothTransitioning) setMode(Mode.Closed);
+  }, [smoothTransitioning]);
+
   const handleMouseEnter = useCallback(() => {
     if (!open) {
       timeout.current && clearTimeout(timeout.current);
-      setMode(smoothTransitioning ? Mode.Opening : Mode.Open);
+      handleOpen();
     }
-  }, [open, smoothTransitioning]);
+  }, [handleOpen, open]);
 
   const handleMouseLeave = useCallback(() => {
     if (open) return;
 
-    timeout.current = setTimeout(
-      () => setMode(smoothTransitioning ? Mode.Closing : Mode.Closed),
-      POPOVER_MOUSEOUT_DELAY_MS
-    );
-  }, [open, smoothTransitioning]);
+    timeout.current = setTimeout(handleClose, POPOVER_MOUSEOUT_DELAY_MS);
+  }, [handleClose, open]);
 
   useEffect(() => {
     if (mode !== Mode.Closing) return;
@@ -95,31 +104,16 @@ export const Popover: React.FC<PopoverProps> = ({
   useEffect(() => {
     if (mode !== Mode.AutoOpen) return;
 
-    const stayingTimeout = setTimeout(
-      () => setMode(smoothTransitioning ? Mode.Closing : Mode.Closed),
-      5000
-    );
+    const stayingTimeout = setTimeout(handleClose, 5000);
 
     return () => clearTimeout(stayingTimeout);
-  }, [mode, smoothTransitioning]);
+  }, [handleClose, mode, smoothTransitioning]);
 
   useEffect(() => {
-    if (open && smoothTransitioning) {
-      setMode(Mode.Opening);
-    }
+    if (open === undefined) return;
 
-    if (open && !smoothTransitioning) {
-      setMode(Mode.Open);
-    }
-
-    if (!open && smoothTransitioning) {
-      setMode(Mode.Closing);
-    }
-
-    if (!open && !smoothTransitioning) {
-      setMode(Mode.Closed);
-    }
-  }, [open, smoothTransitioning]);
+    open ? handleOpen() : handleClose();
+  }, [handleClose, handleOpen, open]);
 
   const isOpen =
     mode === Mode.AutoOpen || mode === Mode.Opening || mode === Mode.Open || mode === Mode.Closing;
