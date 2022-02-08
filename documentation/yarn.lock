@@ -1310,16 +1310,16 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@5.13.0":
-  version "5.13.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.13.0.tgz#ba01dc353c2f92e21240f2cad4807dcdad549e8e"
-  integrity sha512-m9Buh03xTrJyJ5sbOIr1LT4IrISiWHlVqu8ML2+KjTRbihqeJoIH4synYT+jNIu7Pn/CKXk0J4ExG68p6AKn0g==
+"@moda/icons@^5.14.0":
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.15.0.tgz#800e4a0b11ea7dd108a1bf2f22d188b84e7a2018"
+  integrity sha512-PSwlOs4CLqWfc7Dvan+8QdRB9hlkJ4lWIytfn5YR2blOkFfH1pdVmihvF2m7uKdaEkBL5Ceduq3MBHEEojcUQQ==
 
 "@moda/om@file:..":
-  version "15.8.0"
+  version "15.11.4"
   dependencies:
-    "@moda/icons" "5.13.0"
-    "@moda/tokens" "5.4.4"
+    "@moda/icons" "^5.14.0"
+    "@moda/tokens" "^5.5.1"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
     credit-card-type "^9.0.0"
@@ -1330,10 +1330,10 @@
     scroll-into-view-if-needed "^2.2.26"
     use-cursor "^1.0.0"
 
-"@moda/tokens@5.4.4":
-  version "5.4.4"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.4.4.tgz#814af35b64f52bc962c70c1987b88c86d584a45a"
-  integrity sha512-99UG8gHYM6Ol5qaZPvHJeGMSQ590mQe4ZZnDBIc5hYbZBtRPHYyzQeEgVqn40N7hT2fDEZ0qzMZzc7exEUfAuA==
+"@moda/tokens@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.5.1.tgz#8917409135820b060fb4a72b02bb40ad0f15d150"
+  integrity sha512-VCGjHAse3VGTSEUUpTgdxcCINuPqk2AM8uBJuwPumkFwAMxK21voO2nL6FkLpR/nPimOcPlURpBhrr7PAuuBXg==
   dependencies:
     color-string "^1.5.5"
 
@@ -4509,9 +4509,9 @@ focus-visible@^5.0.2:
   integrity sha512-nPer0rjtzdZ7csVIu233P2cUm/ks/4aVSI+5KUkYrYpgA7ujgC3p6J7FtFU+AIMWwnwYQOB/yeiOITxFeYIXiw==
 
 follow-redirects@^1.0.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
-  integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
+  version "1.14.7"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
+  integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
 
 for-in@^0.1.3:
   version "0.1.8"
