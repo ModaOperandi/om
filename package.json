@@ -87,7 +87,7 @@
     "@types/credit-card-type": "^9.0.0",
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^27.0.0",
-    "@types/ramda": "^0.27.40",
+    "@types/ramda": "^0.28.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.10",
     "@types/react-input-mask": "^2.0.5",
