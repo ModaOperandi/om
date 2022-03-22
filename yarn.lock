@@ -3723,9 +3723,9 @@
     "@types/react" "*"
 
 "@types/react-dom@*", "@types/react-dom@>=16.9.0", "@types/react-dom@^17.0.10":
-  version "17.0.13"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.13.tgz#a3323b974ee4280070982b3112351bb1952a7809"
-  integrity sha512-wEP+B8hzvy6ORDv1QBhcQia4j6ea4SFIBttHYpXKPFZRviBvknq0FRh3VrIxeXUmsPkwuXVZrVGG7KUVONmXCQ==
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.14.tgz#c8f917156b652ddf807711f5becbd2ab018dea9f"
+  integrity sha512-H03xwEP1oXmSfl3iobtmQ/2dHF5aBHr8aUMwyGZya6OW45G+xtdzmq6HkncefiBt5JU8DVyaWl/nWZbjZCnzAQ==
   dependencies:
     "@types/react" "*"
 
@@ -14579,9 +14579,9 @@ prepend-http@^1.0.1:
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
 prettier@^2.0.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
-  integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.0.tgz#12f8f504c4d8ddb76475f441337542fa799207d4"
+  integrity sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==
 
 prettier@~2.2.1:
   version "2.2.1"
