@@ -1310,16 +1310,16 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@5.13.0":
-  version "5.13.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.13.0.tgz#ba01dc353c2f92e21240f2cad4807dcdad549e8e"
-  integrity sha512-m9Buh03xTrJyJ5sbOIr1LT4IrISiWHlVqu8ML2+KjTRbihqeJoIH4synYT+jNIu7Pn/CKXk0J4ExG68p6AKn0g==
+"@moda/icons@^5.14.0":
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.15.0.tgz#800e4a0b11ea7dd108a1bf2f22d188b84e7a2018"
+  integrity sha512-PSwlOs4CLqWfc7Dvan+8QdRB9hlkJ4lWIytfn5YR2blOkFfH1pdVmihvF2m7uKdaEkBL5Ceduq3MBHEEojcUQQ==
 
 "@moda/om@file:..":
-  version "15.8.0"
+  version "15.11.4"
   dependencies:
-    "@moda/icons" "5.13.0"
-    "@moda/tokens" "5.4.4"
+    "@moda/icons" "^5.14.0"
+    "@moda/tokens" "^5.5.1"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
     credit-card-type "^9.0.0"
@@ -1330,10 +1330,10 @@
     scroll-into-view-if-needed "^2.2.26"
     use-cursor "^1.0.0"
 
-"@moda/tokens@5.4.4":
-  version "5.4.4"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.4.4.tgz#814af35b64f52bc962c70c1987b88c86d584a45a"
-  integrity sha512-99UG8gHYM6Ol5qaZPvHJeGMSQ590mQe4ZZnDBIc5hYbZBtRPHYyzQeEgVqn40N7hT2fDEZ0qzMZzc7exEUfAuA==
+"@moda/tokens@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.5.1.tgz#8917409135820b060fb4a72b02bb40ad0f15d150"
+  integrity sha512-VCGjHAse3VGTSEUUpTgdxcCINuPqk2AM8uBJuwPumkFwAMxK21voO2nL6FkLpR/nPimOcPlURpBhrr7PAuuBXg==
   dependencies:
     color-string "^1.5.5"
 
@@ -10500,9 +10500,9 @@ url-loader@2.1.0:
     schema-utils "^2.0.0"
 
 url-parse@^1.4.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.3.tgz#71c1303d38fb6639ade183c2992c8cc0686df862"
-  integrity sha512-IIORyIQD9rvj0A4CLWsHkBBJuNqWpFQe224b6j9t/ABmquIS0qDU2pY6kl6AuOrL5OkCXHMCFNe1jBcuAggjvQ==
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
