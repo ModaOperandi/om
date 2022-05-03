@@ -11,7 +11,7 @@ describe('Modal', () => {
     expect(component.text()).toEqual('Hello');
   });
 
-  it('should only close when the modal wrapper is clicked', () => {
+  it('should only close when the modal wrapper is clicked', async () => {
     const onClose = jest.fn();
     const onClickButton = jest.fn();
     const { getByTestId } = render(
@@ -24,11 +24,11 @@ describe('Modal', () => {
     const modal = getByTestId('modal');
     const button = getByTestId('button');
 
-    userEvent.click(button);
+    await userEvent.click(button);
     expect(onClose).toBeCalledTimes(0);
     expect(onClickButton).toBeCalledTimes(1);
 
-    userEvent.click(modal);
+    await userEvent.click(modal);
     expect(onClose).toBeCalledTimes(1);
     expect(onClickButton).toBeCalledTimes(1);
   });

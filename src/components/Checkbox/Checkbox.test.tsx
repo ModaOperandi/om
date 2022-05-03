@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import { Checkbox } from './Checkbox';
 
 describe('Checkbox', () => {
-  it('works correctly with checked attribute (controlled)', () => {
+  it('works correctly with checked attribute (controlled)', async () => {
     const handleChange = jest.fn();
     const { getByRole, getByTestId, rerender } = render(
       <Checkbox data-testid='checkbox' checked onChange={handleChange} />
@@ -13,7 +13,7 @@ describe('Checkbox', () => {
 
     expect((getByRole('checkbox') as HTMLInputElement).checked).toBe(true);
 
-    userEvent.click(getByTestId('checkbox'));
+    await userEvent.click(getByTestId('checkbox'));
 
     expect(handleChange).toBeCalled();
     expect((getByRole('checkbox') as HTMLInputElement).checked).toBe(true);
@@ -23,7 +23,7 @@ describe('Checkbox', () => {
     expect((getByRole('checkbox') as HTMLInputElement).checked).toBe(false);
   });
 
-  it('works correctly with defaultChecked attribute (uncontrolled)', () => {
+  it('works correctly with defaultChecked attribute (uncontrolled)', async () => {
     const handleChange = jest.fn();
     const { getByRole, getByTestId } = render(
       <Checkbox data-testid='checkbox' defaultChecked={false} onChange={handleChange} />
@@ -31,7 +31,7 @@ describe('Checkbox', () => {
 
     expect((getByRole('checkbox') as HTMLInputElement).checked).toBe(false);
 
-    userEvent.click(getByTestId('checkbox'));
+    await userEvent.click(getByTestId('checkbox'));
 
     expect(handleChange).toBeCalled();
     expect((getByRole('checkbox') as HTMLInputElement).checked).toBe(true);
