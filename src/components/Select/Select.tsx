@@ -73,7 +73,7 @@ export const Select: React.FC<SelectProps> = ({
   );
 
   const handleAutofill = useCallback(
-    value => {
+    (value: string) => {
       value && dispatch({ type: 'SELECT', payload: { value } });
     },
     [dispatch]
