@@ -7,7 +7,7 @@ type At = { at: string };
 type GreaterThan = { gt: string };
 type LessThan = { lt: string };
 
-export type BreakpointProps = At | GreaterThan | LessThan;
+export type BreakpointProps = (At | GreaterThan | LessThan) & { children?: React.ReactNode };
 
 export const Breakpoint: React.FC<BreakpointProps> = ({ children, ...rest }) => {
   const { mode, breakpoint } = discriminate(rest);

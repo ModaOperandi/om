@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { fireEvent } from '@testing-library/react';
 import { useKeyboardListNavigation } from './useKeyboardListNavigation';
 import { useRef } from 'react';

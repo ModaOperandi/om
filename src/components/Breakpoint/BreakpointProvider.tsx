@@ -11,6 +11,7 @@ export type BreakpointProviderProps = {
    *           this is useful for SSR (with some kind of device detection) and hydration on client-side
    */
   defaultWidth?: 'auto' | number;
+  children?: React.ReactNode;
 };
 
 export const BreakpointContext = createContext<BreakpointProviderProps>({});

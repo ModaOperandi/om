@@ -5,5 +5,5 @@ module.exports = {
   },
   preset: 'ts-jest',
   setupFiles: ['<rootDir>/enzyme.config.js'],
-  testEnvironment: 'jsdom'
+  testEnvironment: '<rootDir>/test-environment.js'
 };

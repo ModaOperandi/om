@@ -21,7 +21,7 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
   const ref = useRef<HTMLLIElement>(null);
 
   const handleClick = useCallback(
-    event => {
+    (event: React.MouseEvent<HTMLLIElement>) => {
       event.preventDefault();
       !option.disabled && onClick(option);
     },

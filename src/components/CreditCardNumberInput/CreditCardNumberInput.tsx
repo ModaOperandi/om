@@ -61,6 +61,11 @@ export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
     [setValue, onChange]
   );
 
+  // TODO: get rid of the any, the types of react-input-mask are incorrect here, it should expect a function as a child, but it expects a ReactNode
+  const renderInputField: any = (inputProps: CreditCardNumberInputFieldProps) => (
+    <CreditCardNumberInputField {...rest} {...inputProps} />
+  );
+
   return (
     <InputMask
       mask={mask}
@@ -74,9 +79,7 @@ export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
       onFocus={onFocus}
       onBlur={onBlur}
     >
-      {(inputProps: CreditCardNumberInputFieldProps) => (
-        <CreditCardNumberInputField {...rest} {...inputProps} />
-      )}
+      {renderInputField}
     </InputMask>
   );
 };
