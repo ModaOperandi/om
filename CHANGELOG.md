@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/ModaOperandi/om/compare/v15.11.4...v16.0.0) (2022-05-12)
+
+
+### Features
+
+* **dependencies:** upgrade to React 18 ([#2602](https://github.com/ModaOperandi/om/issues/2602)) ([bf413bf](https://github.com/ModaOperandi/om/commit/bf413bfccb02e980dfd7ccd19c49afa764427753))
+
+
+### BREAKING CHANGES
+
+* **dependencies:** this package has react >= 18.1.0 and react-dom >= 18.1.0 as peer dependencies now
+
 ## [15.11.4](https://github.com/ModaOperandi/om/compare/v15.11.3...v15.11.4) (2021-12-14)
 
 
