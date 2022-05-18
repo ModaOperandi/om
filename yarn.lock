@@ -2345,7 +2345,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@6.5.0-beta.8", "@storybook/addon-actions@^6.5.0-beta.1":
+"@storybook/addon-actions@6.5.0-beta.8":
   version "6.5.0-beta.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.5.0-beta.8.tgz#396fa16f9ffbc3377ec481b01136fd5cf12f7867"
   integrity sha512-P0vjGa7p355/eiSPBlmi/WjeSRX77xWbBQdiVitd905aiJtYo9Bm2of2ocCaHRKqwqhUySMx0aPOIhBstQ+lkw==
@@ -2357,6 +2357,31 @@
     "@storybook/core-events" "6.5.0-beta.8"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     "@storybook/theming" "6.5.0-beta.8"
+    core-js "^3.8.2"
+    fast-deep-equal "^3.1.3"
+    global "^4.4.0"
+    lodash "^4.17.21"
+    polished "^4.2.2"
+    prop-types "^15.7.2"
+    react-inspector "^5.1.0"
+    regenerator-runtime "^0.13.7"
+    telejson "^6.0.8"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+    uuid-browser "^3.1.0"
+
+"@storybook/addon-actions@^6.5.0-beta.1":
+  version "6.5.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.5.0-rc.0.tgz#b79160f87a66b8858753b4f9345056e87ee46303"
+  integrity sha512-OaO2AFrYP/kJ8V9k6YDMFdPO95gBM7WtImyPyJItnyAvX0gEdEjgooKE8YDQfC+qeMNxkLYrfbzwkvNP352j1w==
+  dependencies:
+    "@storybook/addons" "6.5.0-rc.0"
+    "@storybook/api" "6.5.0-rc.0"
+    "@storybook/client-logger" "6.5.0-rc.0"
+    "@storybook/components" "6.5.0-rc.0"
+    "@storybook/core-events" "6.5.0-rc.0"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    "@storybook/theming" "6.5.0-rc.0"
     core-js "^3.8.2"
     fast-deep-equal "^3.1.3"
     global "^4.4.0"
