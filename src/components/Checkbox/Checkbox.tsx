@@ -1,9 +1,21 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import classNames from 'classnames';
+import CheckmarkIcon from '@moda/icons/checkmark-16';
+import CircleIcon from '@moda/icons/circle-12';
+
 import './Checkbox.scss';
+
+const CHECKED_ITEM_PROPS = {
+  className: 'Checkbox__check-mark',
+  height: '85%',
+  width: '85%'
+};
+
+export type ShowCheckedUsing = 'checkmark' | 'circle';
 
 export type CheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
   children?: JSX.Element | string;
+  showCheckedUsing?: ShowCheckedUsing;
 };
 
 export const Checkbox: React.FC<CheckboxProps> = ({
@@ -14,6 +26,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   value,
   onChange,
   disabled,
+  showCheckedUsing = 'checkmark',
   ...rest
 }) => {
   const [isChecked, setIsChecked] = useState(checked ?? defaultChecked ?? false);
@@ -35,18 +48,23 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       role='button'
       tabIndex={0}
       className={classNames('Checkbox', className, {
-        'Checkbox--checked': isChecked,
         'Checkbox--disabled': disabled
       })}
     >
       <span
         tabIndex={-1}
         className={classNames('Checkbox__indicator', {
-          'Checkbox__indicator--checked': isChecked,
-          'Checkbox__indicator--unchecked': !isChecked,
           'Checkbox__indicator--disabled': disabled
         })}
-      />
+      >
+        {isChecked && (
+          <>
+            {showCheckedUsing === 'checkmark' && <CheckmarkIcon {...CHECKED_ITEM_PROPS} />}
+
+            {showCheckedUsing === 'circle' && <CircleIcon {...CHECKED_ITEM_PROPS} />}
+          </>
+        )}
+      </span>
 
       <input
         tabIndex={-1}

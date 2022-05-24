@@ -20,20 +20,6 @@
     flex-shrink: 0;
     border: 1px solid;
 
-    &--checked {
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: $checkbox-check-offset;
-        right: $checkbox-check-offset;
-        bottom: $checkbox-check-offset;
-        left: $checkbox-check-offset;
-        border-radius: 50%;
-        background-color: color(ink);
-      }
-    }
-
     &--disabled {
       color: color(elephant);
       pointer-events: none;
@@ -41,6 +27,10 @@
         background-color: color(elephant);
       }
     }
+  }
+
+  &__check-mark {
+    margin: 7.5%;
   }
 
   &__input {
