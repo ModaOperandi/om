@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.1.0](https://github.com/ModaOperandi/om/compare/v16.0.0...v16.1.0) (2022-05-24)
+
+
+### Features
+
+* **checkbox:** swaps the mark from defaulting a bullet to a check mark icon ([#2650](https://github.com/ModaOperandi/om/issues/2650)) ([d8e42c3](https://github.com/ModaOperandi/om/commit/d8e42c31eff9095acd6d2ef5a01939d74835de35))
+
 # [16.0.0](https://github.com/ModaOperandi/om/compare/v15.11.4...v16.0.0) (2022-05-12)
 
 
