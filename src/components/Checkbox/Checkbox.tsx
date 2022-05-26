@@ -15,7 +15,7 @@ export type ShowCheckedUsing = 'checkmark' | 'circle';
 
 export type CheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
   children?: JSX.Element | string;
-  showCheckedUsing?: ShowCheckedUsing;
+  checkIcon?: ShowCheckedUsing;
 };
 
 export const Checkbox: React.FC<CheckboxProps> = ({
@@ -26,7 +26,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   value,
   onChange,
   disabled,
-  showCheckedUsing = 'checkmark',
+  checkIcon = 'checkmark',
   ...rest
 }) => {
   const [isChecked, setIsChecked] = useState(checked ?? defaultChecked ?? false);
@@ -59,9 +59,9 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       >
         {isChecked && (
           <>
-            {showCheckedUsing === 'checkmark' && <CheckmarkIcon {...CHECKED_ITEM_PROPS} />}
+            {checkIcon === 'checkmark' && <CheckmarkIcon {...CHECKED_ITEM_PROPS} />}
 
-            {showCheckedUsing === 'circle' && <CircleIcon {...CHECKED_ITEM_PROPS} />}
+            {checkIcon === 'circle' && <CircleIcon {...CHECKED_ITEM_PROPS} />}
           </>
         )}
       </span>
