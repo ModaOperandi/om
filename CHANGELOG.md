@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.1.1](https://github.com/ModaOperandi/om/compare/v16.1.0...v16.1.1) (2022-05-26)
+
+
+### Bug Fixes
+
+* **checkbox:** renames prop to `checkIcon` instead of `showCheckUsing` ([c2bb15e](https://github.com/ModaOperandi/om/commit/c2bb15e9da1bd8b427a1c9ccfa48e7d231cb5046))
+
 # [16.1.0](https://github.com/ModaOperandi/om/compare/v16.0.0...v16.1.0) (2022-05-24)
 
 
