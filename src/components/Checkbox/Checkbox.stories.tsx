@@ -18,8 +18,8 @@ export const Default = () => (
       { children: 'Remember me', checked: true },
       { children: 'Disabled', disabled: true },
       { children: 'Disabled', checked: true, disabled: true },
-      { children: 'Filtering/Circle', showCheckedUsing: 'circle' },
-      { children: 'Disabled', showCheckedUsing: 'circle', checked: true, disabled: true },
+      { children: 'Filtering/Circle', checkIcon: 'circle' },
+      { children: 'Disabled', checkIcon: 'circle', checked: true, disabled: true },
       { children: <Text color='code-red'>Important!</Text> }
     ]}
   >
