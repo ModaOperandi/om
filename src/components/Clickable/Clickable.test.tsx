@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Clickable } from './Clickable';
 
 describe('Clickable', () => {
   it('renders correctly', () => {
-    const component = shallow(<Clickable>Hello</Clickable>);
-    expect(component.text()).toEqual('Hello');
+    render(<Clickable>Hello</Clickable>);
+    expect(screen.getByRole('button', { name: 'Hello' })).toBeVisible();
   });
 });

@@ -1,5 +1,4 @@
-import { renderHook, act } from '@testing-library/react';
-import { fireEvent } from '@testing-library/react';
+import { renderHook, fireEvent } from '@testing-library/react';
 import { useKeyboardListNavigation } from './useKeyboardListNavigation';
 import { useRef } from 'react';
 
@@ -32,9 +31,7 @@ describe('useKeyboardListNavigation', () => {
     expect(result.current.index).toBe(0);
     expect(result.current.selected).toBe('first');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'ArrowDown' });
-    });
+    fireEvent.keyDown(window, { key: 'ArrowDown' });
 
     expect(result.current.cursor).toBe(1);
     expect(result.current.index).toBe(1);
@@ -48,10 +45,8 @@ describe('useKeyboardListNavigation', () => {
     expect(result.current.index).toBe(0);
     expect(result.current.selected).toBe('first');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'ArrowDown' });
-      fireEvent.keyDown(window, { key: 'ArrowDown' });
-    });
+    fireEvent.keyDown(window, { key: 'ArrowDown' });
+    fireEvent.keyDown(window, { key: 'ArrowDown' });
 
     expect(result.current.cursor).toBe(2);
     expect(result.current.index).toBe(2);
@@ -65,9 +60,7 @@ describe('useKeyboardListNavigation', () => {
     expect(result.current.index).toBe(0);
     expect(result.current.selected).toBe('first');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'ArrowUp' });
-    });
+    fireEvent.keyDown(window, { key: 'ArrowUp' });
 
     expect(result.current.cursor).toBe(-1);
     expect(result.current.index).toBe(3);
@@ -81,26 +74,20 @@ describe('useKeyboardListNavigation', () => {
     expect(result.current.index).toBe(0);
     expect(result.current.selected).toBe('first');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'End' });
-    });
+    fireEvent.keyDown(window, { key: 'End' });
 
     expect(result.current.cursor).toBe(3);
     expect(result.current.index).toBe(3);
     expect(result.current.selected).toBe('fourth');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'ArrowUp' });
-      fireEvent.keyDown(window, { key: 'ArrowUp' });
-    });
+    fireEvent.keyDown(window, { key: 'ArrowUp' });
+    fireEvent.keyDown(window, { key: 'ArrowUp' });
 
     expect(result.current.cursor).toBe(1);
     expect(result.current.index).toBe(1);
     expect(result.current.selected).toBe('second');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'End' });
-    });
+    fireEvent.keyDown(window, { key: 'End' });
 
     expect(result.current.cursor).toBe(3);
     expect(result.current.index).toBe(3);
@@ -120,26 +107,20 @@ describe('useKeyboardListNavigation', () => {
     expect(result.current.index).toBe(-1);
     expect(result.current.selected).toBeUndefined();
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'Home' });
-    });
+    fireEvent.keyDown(window, { key: 'Home' });
 
     expect(result.current.cursor).toBe(0);
     expect(result.current.index).toBe(0);
     expect(result.current.selected).toBe('first');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'ArrowUp' });
-      fireEvent.keyDown(window, { key: 'ArrowUp' });
-    });
+    fireEvent.keyDown(window, { key: 'ArrowUp' });
+    fireEvent.keyDown(window, { key: 'ArrowUp' });
 
     expect(result.current.cursor).toBe(-2);
     expect(result.current.index).toBe(2);
     expect(result.current.selected).toBe('third');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'Home' });
-    });
+    fireEvent.keyDown(window, { key: 'Home' });
 
     expect(result.current.cursor).toBe(0);
     expect(result.current.index).toBe(0);
@@ -158,9 +139,7 @@ describe('useKeyboardListNavigation', () => {
     expect(result.current.index).toBe(0);
     expect(result.current.selected).toBe('first');
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 't' });
-    });
+    fireEvent.keyDown(window, { key: 't' });
 
     expect(result.current.cursor).toBe(2);
     expect(result.current.index).toBe(2);
@@ -171,9 +150,7 @@ describe('useKeyboardListNavigation', () => {
     const onEnter = jest.fn();
     renderHook(() => useKeyboardListNavigation({ list, onEnter }));
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'Enter' });
-    });
+    fireEvent.keyDown(window, { key: 'Enter' });
 
     expect(onEnter).toBeCalledTimes(1);
     expect(onEnter).toHaveBeenCalledWith({
@@ -183,14 +160,10 @@ describe('useKeyboardListNavigation', () => {
       state: { cursor: 0, interactive: false, length: 4 }
     });
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'ArrowDown' });
-      fireEvent.keyDown(window, { key: 'ArrowDown' });
-    });
+    fireEvent.keyDown(window, { key: 'ArrowDown' });
+    fireEvent.keyDown(window, { key: 'ArrowDown' });
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'Enter' });
-    });
+    fireEvent.keyDown(window, { key: 'Enter' });
 
     expect(onEnter).toBeCalledTimes(2);
     expect(onEnter).toHaveBeenLastCalledWith({
@@ -210,15 +183,11 @@ describe('useKeyboardListNavigation', () => {
 
     expect(result.current.cursor).toBe(0);
 
-    act(() => {
-      fireEvent.keyDown(window, { key: 'ArrowDown' });
-    });
+    fireEvent.keyDown(window, { key: 'ArrowDown' });
 
     expect(result.current.cursor).toBe(0);
 
-    act(() => {
-      fireEvent.keyDown(div, { key: 'ArrowDown' });
-    });
+    fireEvent.keyDown(div, { key: 'ArrowDown' });
 
     expect(result.current.cursor).toBe(1);
   });
@@ -237,9 +206,7 @@ describe('useKeyboardListNavigation', () => {
       expect(result.current.index).toBe(-1);
       expect(result.current.selected).toBeUndefined();
 
-      act(() => {
-        fireEvent.keyDown(window, { key: 'ArrowDown' });
-      });
+      fireEvent.keyDown(window, { key: 'ArrowDown' });
 
       expect(result.current.cursor).toBe(0);
       expect(result.current.index).toBe(0);
@@ -250,19 +217,13 @@ describe('useKeyboardListNavigation', () => {
       const onEnter = jest.fn();
       renderHook(() => useKeyboardListNavigation({ list, onEnter, waitForInteractive: true }));
 
-      act(() => {
-        fireEvent.keyDown(window, { key: 'Enter' });
-      });
+      fireEvent.keyDown(window, { key: 'Enter' });
 
       expect(onEnter).toBeCalledTimes(0);
 
-      act(() => {
-        fireEvent.keyDown(window, { key: 'ArrowDown' });
-      });
+      fireEvent.keyDown(window, { key: 'ArrowDown' });
 
-      act(() => {
-        fireEvent.keyDown(window, { key: 'Enter' });
-      });
+      fireEvent.keyDown(window, { key: 'Enter' });
 
       expect(onEnter).toBeCalledTimes(1);
     });

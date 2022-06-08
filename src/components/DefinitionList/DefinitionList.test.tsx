@@ -1,11 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { DefinitionList } from './DefinitionList';
 
 describe('DefinitionList', () => {
   it('renders correctly', () => {
-    const component = shallow(<DefinitionList term='Foo'>Bar</DefinitionList>);
-    expect(component.text()).toEqual('FooBar');
+    render(<DefinitionList term='Foo'>Bar</DefinitionList>);
+    expect(screen.getByText('Foo')).toBeVisible();
+    expect(screen.getByText('Bar')).toBeVisible();
   });
 });

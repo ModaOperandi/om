@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { ModalOverlay } from './ModalOverlay';
@@ -20,23 +20,23 @@ const ModalComponent: React.FC = () => {
 
 describe('ModalOverlay', () => {
   it('renders correctly', () => {
-    const { queryByText } = render(<ModalOverlay onClose={() => {}}>Hello</ModalOverlay>);
+    render(<ModalOverlay onClose={() => {}}>Hello</ModalOverlay>);
 
-    expect(queryByText('Hello')).not.toBeNull();
+    expect(screen.getByText('Hello')).toBeInTheDocument();
   });
 
   it('should open and close the modal', async () => {
-    const { getByTestId, queryByText } = render(<ModalComponent />);
+    render(<ModalComponent />);
 
     // Should not show by default
-    expect(queryByText('Modal Content')).toBeNull();
+    expect(screen.queryByText('Modal Content')).not.toBeInTheDocument();
 
     // Should show after clicking button
-    userEvent.click(getByTestId('button'));
-    await waitFor(() => expect(queryByText('Modal Content')).not.toBeNull());
+    userEvent.click(screen.getByTestId('button'));
+    await screen.findByText('Modal Content');
 
     // Should hide after clicking wrapper
-    userEvent.click(getByTestId('modal'));
-    await waitFor(() => expect(queryByText('Modal Content')).toBeNull());
+    userEvent.click(screen.getByTestId('modal'));
+    await waitFor(() => expect(screen.queryByText('Modal Content')).not.toBeInTheDocument());
   });
 });
