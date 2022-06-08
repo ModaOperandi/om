@@ -1310,15 +1310,15 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@^5.14.0":
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.15.0.tgz#800e4a0b11ea7dd108a1bf2f22d188b84e7a2018"
-  integrity sha512-PSwlOs4CLqWfc7Dvan+8QdRB9hlkJ4lWIytfn5YR2blOkFfH1pdVmihvF2m7uKdaEkBL5Ceduq3MBHEEojcUQQ==
+"@moda/icons@^5.18.0":
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.18.0.tgz#ca74210254fc9fd34fc1b01849968d2b3b93a34d"
+  integrity sha512-iPc864jCvogtS0w2sXyL1+Jl9ddXdq52Wgr1astG9LFIBPkvPzS+moZhjoI9xKnyKqAbhKOHuoA9v8uw9IYRCQ==
 
 "@moda/om@file:..":
-  version "15.11.4"
+  version "16.1.1"
   dependencies:
-    "@moda/icons" "^5.14.0"
+    "@moda/icons" "^5.18.0"
     "@moda/tokens" "^5.5.1"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
@@ -4207,9 +4207,9 @@ events@^3.0.0:
   integrity sha512-Dc381HFWJzEOhQ+d8pkNon++bk9h6cdAoAj4iE6Q4y6xgTzySWXlKn05/TVNpjnfRqi/X0EpJEJohPjNI3zpVA==
 
 eventsource@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.0.7.tgz#8fbc72c93fcd34088090bc0a4e64f4b5cee6d8d0"
-  integrity sha512-4Ln17+vVT0k8aWq+t/bF5arcS3EpT9gYtW66EPacdj/mAFevznsnyoHLPy2BA8gbIQeIHoPsvwmfBftfcG//BQ==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.1.1.tgz#4544a35a57d7120fba4fa4c86cb4023b2c09df2f"
+  integrity sha512-qV5ZC0h7jYIAOhArFJgSfdyz6rALJyb270714o7ZtNnw2WSJ+eexhKtE0O8LYPRsHZHf2osHKZBxGPvm3kPkCA==
   dependencies:
     original "^1.0.0"
 
@@ -9303,7 +9303,7 @@ require-main-filename@^2.0.0:
 requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
-  integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+  integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
