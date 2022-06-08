@@ -1,27 +1,25 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { ControlLink } from './ControlLink';
 
 describe('ControlLink', () => {
   it('renders correctly', () => {
-    const component = shallow(<ControlLink> click me! </ControlLink>);
-    expect(component.html()).toEqual(
-      '<button class="Clickable ControlLink ControlLink--underlined"> click me! </button>'
-    );
+    render(<ControlLink> click me! </ControlLink>);
+    expect(screen.getByRole('button', { name: 'click me!' })).toBeVisible();
+    expect(screen.getByRole('button', { name: 'click me!' })).toBeEnabled();
   });
 
   it('renders correctly while disabled', () => {
-    const component = shallow(<ControlLink disabled> do not click me! </ControlLink>);
-    expect(component.html()).toEqual(
-      '<button class="Clickable Clickable--disabled ControlLink ControlLink--underlined ControlLink--disabled" disabled=""> do not click me! </button>'
-    );
+    render(<ControlLink disabled> do not click me! </ControlLink>);
+    expect(screen.getByRole('button', { name: 'do not click me!' })).toBeDisabled();
   });
 
   it('renders correctly while underlined', () => {
-    const component = shallow(<ControlLink underlined> click me! </ControlLink>);
-    expect(component.html()).toEqual(
-      '<button class="Clickable ControlLink ControlLink--underlined"> click me! </button>'
+    render(<ControlLink underlined> click me! </ControlLink>);
+    expect(screen.getByRole('button', { name: 'click me!' })).toBeVisible();
+    expect(screen.getByRole('button', { name: 'click me!' })).toHaveClass(
+      'ControlLink--underlined'
     );
   });
 });

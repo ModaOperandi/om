@@ -1,13 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { TextInput } from './TextInput';
 
 describe('TextInput', () => {
   it('renders correctly', () => {
-    const component = shallow(<TextInput placeholder='Hello' />);
-    expect(component.html()).toEqual(
-      '<input class="TextInput" placeholder="Hello" aria-label="Hello"/>'
-    );
+    render(<TextInput placeholder='Hello' />);
+    expect(screen.getByRole('textbox')).toHaveValue('');
+    expect(screen.getByRole('textbox')).toHaveAttribute('placeholder', 'Hello');
   });
 });

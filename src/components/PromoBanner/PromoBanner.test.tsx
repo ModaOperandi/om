@@ -1,15 +1,15 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { PromoBanner } from './PromoBanner';
 
 describe('PromoBanner', () => {
   it('renders correctly', () => {
-    const component = mount(
+    render(
       <PromoBanner>
         <span>Hello</span>
       </PromoBanner>
     );
-    expect(component.text()).toEqual('Hello');
+    expect(screen.getByText('Hello')).toBeVisible();
   });
 });

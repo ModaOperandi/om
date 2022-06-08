@@ -7,7 +7,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/eslint-recommended'
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react'
   ],
   globals: {
     Atomics: 'readonly',
@@ -21,7 +23,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'jest-dom', 'testing-library'],
   rules: {
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',

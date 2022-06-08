@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Tabs } from './Tabs';
 
@@ -18,10 +18,9 @@ describe('Tabs', () => {
   ];
 
   it('renders correctly with first tab displayed', () => {
-    const component = render(<Tabs tabs={testList} />);
+    render(<Tabs tabs={testList} />);
 
-    expect(component.html()).toEqual(
-      '<div class="TabList"><button class="Clickable Tab Tab--active">Tab 1</button><button class="Clickable Tab ">Tab 2</button></div><div class="TabPanels"><div class="TabPanel"><div class="test">I am a panel</div></div></div>'
-    );
+    expect(screen.getByRole('button', { name: 'Tab 1' })).toBeVisible();
+    expect(screen.getByRole('button', { name: 'Tab 2' })).toBeVisible();
   });
 });

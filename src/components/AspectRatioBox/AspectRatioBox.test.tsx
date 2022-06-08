@@ -1,15 +1,15 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { AspectRatioBox } from './AspectRatioBox';
 
 describe('AspectRatioBox', () => {
   it('renders correctly', () => {
-    const component = shallow(
+    render(
       <AspectRatioBox maxHeight={100} maxWidth={100}>
         Hello
       </AspectRatioBox>
     );
-    expect(component.text()).toEqual('Hello');
+    expect(screen.getByText('Hello')).toBeVisible();
   });
 });

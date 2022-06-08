@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Overlay } from './Overlay';
 
 describe('Overlay', () => {
   it('renders correctly', () => {
     const text = 'test-Text';
-    const component = shallow(<Overlay>{text}</Overlay>);
-    expect(component.text()).toEqual(text);
+    render(<Overlay>{text}</Overlay>);
+    expect(screen.getByText(text)).toBeVisible();
   });
 });

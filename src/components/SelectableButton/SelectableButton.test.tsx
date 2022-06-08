@@ -1,11 +1,11 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { SelectableButton } from './SelectableButton';
 
 describe('SelectableButton', () => {
   it('renders correctly', () => {
-    const component = mount(<SelectableButton>Click me</SelectableButton>);
-    expect(component.text()).toEqual('Click me');
+    render(<SelectableButton>Click me</SelectableButton>);
+    expect(screen.getByText('Click me')).toBeVisible();
   });
 });

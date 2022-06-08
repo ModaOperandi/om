@@ -8,7 +8,7 @@ describe('Tag', () => {
     const onRemove = jest.fn();
     render(<Tag onRemove={onRemove}>Hello</Tag>);
 
-    expect(screen.getByText('Hello')).toBeTruthy();
+    expect(screen.getByText('Hello')).toBeInTheDocument();
 
     await userEvent.click(screen.getByRole('button'));
     expect(onRemove).toBeCalled();

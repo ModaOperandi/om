@@ -4,6 +4,6 @@ module.exports = {
     '@moda/icons': '<rootDir>/src/__mocks__/Icon.tsx'
   },
   preset: 'ts-jest',
-  setupFiles: ['<rootDir>/enzyme.config.js'],
-  testEnvironment: '<rootDir>/test-environment.js'
+  setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
+  testEnvironment: 'jsdom'
 };

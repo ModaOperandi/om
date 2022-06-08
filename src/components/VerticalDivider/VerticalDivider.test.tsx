@@ -1,20 +1,19 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { VerticalDivider } from './VerticalDivider';
 
 describe('VerticalDivider', () => {
   it('renders correctly', () => {
-    const component = shallow(<VerticalDivider />);
+    render(<VerticalDivider aria-label='Divider' />);
 
-    expect(component.html()).toContain('<div class="VerticalDivider"></div>');
+    expect(screen.getByLabelText('Divider')).toBeVisible();
   });
 
   it('renders correctly - double', () => {
-    const component = shallow(<VerticalDivider double />);
+    render(<VerticalDivider aria-label='Divider' double />);
 
-    expect(component.html()).toContain(
-      '<div class="VerticalDivider VerticalDivider--double"></div>'
-    );
+    expect(screen.getByLabelText('Divider')).toBeVisible();
+    expect(screen.getByLabelText('Divider')).toHaveClass('VerticalDivider--double');
   });
 });

@@ -1,13 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { SearchInput } from './SearchInput';
 
 describe('SearchInput', () => {
-  it('clears the input when the button is clicked', () => {
-    const component = mount(<SearchInput value='Hello' />);
-    expect(component.find('input').getElement().props.value).toEqual('Hello');
-    component.find('button').simulate('click');
-    expect(component.find('input').getElement().props.value).not.toEqual('Hello');
+  it('clears the input when the button is clicked', async () => {
+    render(<SearchInput value='Hello' />);
+
+    expect(screen.getByRole('textbox')).toHaveValue('Hello');
+
+    await userEvent.click(screen.getByRole('button'));
+
+    expect(screen.getByRole('textbox')).toHaveValue('');
   });
 });

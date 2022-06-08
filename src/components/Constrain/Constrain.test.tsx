@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Constrain } from './Constrain';
 
 describe('Constrain', () => {
-  xit('renders correctly', () => {
-    const component = shallow(<Constrain>Hello</Constrain>);
-    expect(component.text()).toContain('Hello');
+  it('renders correctly', () => {
+    render(<Constrain>Hello</Constrain>);
+    expect(screen.getByText('Hello')).toBeVisible();
   });
 });
