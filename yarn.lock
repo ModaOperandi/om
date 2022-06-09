@@ -2576,7 +2576,7 @@
     core-js "^3.8.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addon-viewport@6.5.7", "@storybook/addon-viewport@^6.5.6":
+"@storybook/addon-viewport@6.5.7":
   version "6.5.7"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.5.7.tgz#65d07cfad02c3c58048a76f4db7c79db9a01320a"
   integrity sha512-8VmSTGKY3+9kZ09THC7546OaFbjLu5kEAGU5ZFSZaNlsJwRg7bC3bScKbnyX5EhihgZ3W8oJt/eMAIqXKHxA8g==
@@ -2587,6 +2587,23 @@
     "@storybook/components" "6.5.7"
     "@storybook/core-events" "6.5.7"
     "@storybook/theming" "6.5.7"
+    core-js "^3.8.2"
+    global "^4.4.0"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.13.7"
+
+"@storybook/addon-viewport@^6.5.6":
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.5.8.tgz#3184a6ef12582af6f2361af27f404dffee0b32ae"
+  integrity sha512-MTpZWkBWNPH55iNHK4tBNKTdew5xKfoNvOj0pZn1rYDHlylMTlq7aoccwRjjK2jZeHHNnb1rm6ZkQDjmYu0Tcw==
+  dependencies:
+    "@storybook/addons" "6.5.8"
+    "@storybook/api" "6.5.8"
+    "@storybook/client-logger" "6.5.8"
+    "@storybook/components" "6.5.8"
+    "@storybook/core-events" "6.5.8"
+    "@storybook/theming" "6.5.8"
     core-js "^3.8.2"
     global "^4.4.0"
     memoizerific "^1.11.3"
@@ -2610,7 +2627,7 @@
     global "^4.4.0"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@^6.5.6":
+"@storybook/addons@6.5.8", "@storybook/addons@^6.5.6":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.5.8.tgz#c529a2989830a09d26308277a3e356228479053d"
   integrity sha512-L3LmbsYP9tDHHvpr/yv8YuEkzym7SXp/jZ0km31tpG3EuZmgGu7MXPrZ2ymEw4PkAhQzztgRr23VTfKobGUojA==
@@ -2862,6 +2879,21 @@
     "@storybook/client-logger" "6.5.7"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     "@storybook/theming" "6.5.7"
+    "@types/react-syntax-highlighter" "11.0.5"
+    core-js "^3.8.2"
+    qs "^6.10.0"
+    react-syntax-highlighter "^15.4.5"
+    regenerator-runtime "^0.13.7"
+    util-deprecate "^1.0.2"
+
+"@storybook/components@6.5.8":
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.5.8.tgz#eb18cfcc4e88b7f4081b20b8a81b92d7ae9eaeac"
+  integrity sha512-YE+LZ1/GXoqertxodsf+L9ehcohbICRAxgE/iNqc7MZfk95SD3XRSUbxhCpGe8QTIZJpzs1tK4LFZ3Fg5w/+Lg==
+  dependencies:
+    "@storybook/client-logger" "6.5.8"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    "@storybook/theming" "6.5.8"
     "@types/react-syntax-highlighter" "11.0.5"
     core-js "^3.8.2"
     qs "^6.10.0"
