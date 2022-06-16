@@ -44,6 +44,7 @@ export const Select: React.FC<SelectProps> = ({
   name,
   onChange,
   options,
+  placeholder,
   searchable,
   shiftIconLeftwards = false,
   value,
@@ -116,7 +117,11 @@ export const Select: React.FC<SelectProps> = ({
           type='button'
           title='Select'
         >
-          <SelectLabel idRef={idRef} label={label} hasValue={focused != null || selected != null} />
+          <SelectLabel
+            idRef={idRef}
+            label={label || (selected === undefined ? placeholder : undefined)}
+            hasValue={focused != null || selected != null}
+          />
 
           {(focused ?? selected)?.label}
 
