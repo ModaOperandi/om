@@ -1310,15 +1310,15 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@moda/icons@^5.14.0":
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.15.0.tgz#800e4a0b11ea7dd108a1bf2f22d188b84e7a2018"
-  integrity sha512-PSwlOs4CLqWfc7Dvan+8QdRB9hlkJ4lWIytfn5YR2blOkFfH1pdVmihvF2m7uKdaEkBL5Ceduq3MBHEEojcUQQ==
+"@moda/icons@^5.18.0":
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.18.0.tgz#ca74210254fc9fd34fc1b01849968d2b3b93a34d"
+  integrity sha512-iPc864jCvogtS0w2sXyL1+Jl9ddXdq52Wgr1astG9LFIBPkvPzS+moZhjoI9xKnyKqAbhKOHuoA9v8uw9IYRCQ==
 
 "@moda/om@file:..":
-  version "15.11.4"
+  version "16.2.0"
   dependencies:
-    "@moda/icons" "^5.14.0"
+    "@moda/icons" "^5.18.0"
     "@moda/tokens" "^5.5.1"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
@@ -4207,11 +4207,9 @@ events@^3.0.0:
   integrity sha512-Dc381HFWJzEOhQ+d8pkNon++bk9h6cdAoAj4iE6Q4y6xgTzySWXlKn05/TVNpjnfRqi/X0EpJEJohPjNI3zpVA==
 
 eventsource@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.0.7.tgz#8fbc72c93fcd34088090bc0a4e64f4b5cee6d8d0"
-  integrity sha512-4Ln17+vVT0k8aWq+t/bF5arcS3EpT9gYtW66EPacdj/mAFevznsnyoHLPy2BA8gbIQeIHoPsvwmfBftfcG//BQ==
-  dependencies:
-    original "^1.0.0"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.1.2.tgz#bc75ae1c60209e7cb1541231980460343eaea7c2"
+  integrity sha512-xAH3zWhgO2/3KIniEKYPr8plNSzlGINOUqYj0m0u7AB81iRw8b/3E73W6AuU+6klLbaSFmZnaETQ2lXPfAydrA==
 
 evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
   version "1.0.3"
@@ -7518,13 +7516,6 @@ optionator@^0.8.1, optionator@^0.8.2:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
     wordwrap "~1.0.0"
-
-original@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/original/-/original-1.0.2.tgz#e442a61cffe1c5fd20a65f3261c26663b303f25f"
-  integrity sha512-hyBVl6iqqUOJ8FqRe+l/gS8H+kKYjrEndd5Pm1MfBtsEKA038HkkdbAl/72EAXGyonD/PFsvmVG+EvcIpliMBg==
-  dependencies:
-    url-parse "^1.4.3"
 
 os-browserify@^0.3.0:
   version "0.3.0"
