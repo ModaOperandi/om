@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.2.0](https://github.com/ModaOperandi/om/compare/v16.1.1...v16.2.0) (2022-06-17)
+
+
+### Features
+
+* **select:** adds placeholder as prop and places it within its label ([#2749](https://github.com/ModaOperandi/om/issues/2749)) ([689c869](https://github.com/ModaOperandi/om/commit/689c869ca1846b7c2ae0a941567cb1f35a065b70))
+
 ## [16.1.1](https://github.com/ModaOperandi/om/compare/v16.1.0...v16.1.1) (2022-05-26)
 
 
