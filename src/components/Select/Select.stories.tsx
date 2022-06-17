@@ -34,7 +34,8 @@ export const Default = () => (
       { disabled: true, idRef: '4', label: 'Sort' },
       { idRef: '5', label: '' },
       { idRef: '5', label: '', error: 'Error' },
-      { idRef: '6', label: '', dropDirection: 'up' }
+      { idRef: '6', label: '', dropDirection: 'up' },
+      { idRef: '7', label: undefined, placeholder: 'Placeholder' }
     ]}
   >
     <Select label='Sort by' options={OPTIONS} onChange={action('onChange')} />
