@@ -2,8 +2,8 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 
 import { States } from 'storybook-states';
-import { SelectableButton, SelectableButtonProps } from './SelectableButton';
 import { Stack } from '../Stack';
+import { SelectableButton, SelectableButtonProps } from './SelectableButton';
 
 export default { title: 'Components/SelectableButton' };
 

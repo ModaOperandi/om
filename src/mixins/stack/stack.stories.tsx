@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 import React from 'react';
 import { space } from '@moda/tokens';
 
@@ -7,9 +8,7 @@ export default { title: 'Mixins/stack' };
 
 export const Default = () => (
   <div className='Story Mixins stack'>
-    <p>
-      Defaults to {`$space: 4`} === {space.scale[4]}
-    </p>
+    <p>Defaults to $space: 4 === {space.scale[4]}</p>
 
     <span>Notice the different element tags</span>
 
@@ -19,7 +18,7 @@ export const Default = () => (
 
 export const Horizontal = () => (
   <div className='Story Mixins stack stack--horizontal'>
-    <p>Accepts {`$direction: horizontal`}</p>
+    <p>Accepts $direction: horizontal</p>
 
     <span>Notice the different element tags</span>
 

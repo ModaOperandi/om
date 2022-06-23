@@ -4,11 +4,11 @@ import { uniq } from 'ramda';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
 import ExitIcon from '@moda/icons/exit-16';
-import { SelectableOption } from '.';
+import { Clickable } from '../Clickable';
 import { SelectOptions } from './SelectOptions';
 import { useSelect } from './useSelect';
+import { SelectableOption } from '.';
 import './MultiSelect.scss';
-import { Clickable } from '../Clickable';
 
 type Props = Omit<React.HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'value' | 'onChange'> & {
   defaultValue?: string[] | undefined;

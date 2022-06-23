@@ -15,6 +15,7 @@ export interface MediaQueryBounds {
 
 const breakpointKeys = Object.keys(breakpoints);
 
+// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 const ONE_PIXEL = 1 / 16;
 
 export const getMediaQueryBounds = ({ mode, breakpoint }: GenerateMediaQuery): MediaQueryBounds => {
@@ -24,20 +25,20 @@ export const getMediaQueryBounds = ({ mode, breakpoint }: GenerateMediaQuery): M
       const prevWidth =
         prevIndex === -1
           ? 0
-          : parseInt(breakpoints[breakpointKeys[prevIndex] as Breakpoint]) + ONE_PIXEL;
+          : parseInt(breakpoints[breakpointKeys[prevIndex] as Breakpoint], 10) + ONE_PIXEL;
 
       return {
         min: prevWidth,
-        max: parseInt(breakpoints[breakpoint])
+        max: parseInt(breakpoints[breakpoint], 10)
       };
     }
     case 'gt':
       return {
-        min: parseInt(breakpoints[breakpoint]) + ONE_PIXEL
+        min: parseInt(breakpoints[breakpoint], 10) + ONE_PIXEL
       };
     case 'lt':
       return {
-        max: parseInt(breakpoints[breakpoint])
+        max: parseInt(breakpoints[breakpoint], 10)
       };
   }
 };

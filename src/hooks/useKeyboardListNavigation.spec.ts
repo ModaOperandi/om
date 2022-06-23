@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 import { renderHook, fireEvent } from '@testing-library/react';
-import { useKeyboardListNavigation } from './useKeyboardListNavigation';
 import { useRef } from 'react';
+import { useKeyboardListNavigation } from './useKeyboardListNavigation';
 
 describe('useKeyboardListNavigation', () => {
   const list = ['first', 'second', 'third', 'fourth'];

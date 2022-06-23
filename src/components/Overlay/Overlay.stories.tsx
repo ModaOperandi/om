@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import { States } from 'storybook-states';
-import { Overlay } from './Overlay';
 import { Button } from '../Button';
+import { Overlay } from './Overlay';
 
 export default { title: 'Components/Overlay' };
 

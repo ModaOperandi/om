@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo } from 'react';
-import { Modal, ModalProps } from '../Modal';
-import { OverlayProps, Overlay } from '../Overlay';
 import classNames from 'classnames';
 import { createPortal } from 'react-dom';
+import { Modal, ModalProps } from '../Modal';
+import { OverlayProps, Overlay } from '../Overlay';
 
 import './ModalOverlay.scss';
 

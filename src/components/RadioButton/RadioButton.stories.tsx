@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { States } from 'storybook-states';
 import { Text } from '../Text';
-import { RadioButton, RadioButtonProps } from './RadioButton';
 import { Stack } from '../Stack';
+import { RadioButton, RadioButtonProps } from './RadioButton';
 
 export default { title: 'Components/RadioButton' };
 

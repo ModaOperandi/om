@@ -11,9 +11,10 @@ const FRAMES = [Triangle, Diamond, ArcWindow, Circle];
 
 export const Loading: React.FC<LoadingProps> = ({ className, ...rest }) => {
   const { index, handleNext } = useCursor({ max: FRAMES.length });
+  const ONE_SECOND_INTERVAL = 1000;
 
   useEffect(() => {
-    const interval = setInterval(handleNext, 1000);
+    const interval = setInterval(handleNext, ONE_SECOND_INTERVAL);
     return () => clearInterval(interval);
   }, [handleNext]);
 

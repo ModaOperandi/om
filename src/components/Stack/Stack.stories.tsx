@@ -6,7 +6,7 @@ import { Stack, StackProps } from './Stack';
 export default { title: 'Components/Stack' };
 
 export const Vertical = () => (
-  <States<StackProps> states={space.scale.map((_, i) => ({ space: i }))}>
+  <States<StackProps> states={space.scale.map((_, index) => ({ space: index }))}>
     <Stack space={0}>
       <div style={{ backgroundColor: 'yellow' }}>One</div>
       <div style={{ backgroundColor: 'yellow' }}>Two</div>
@@ -17,8 +17,8 @@ export const Vertical = () => (
 
 export const Horizontal = () => (
   <States<StackProps>
-    states={space.scale.map((_, i) => ({
-      space: i,
+    states={space.scale.map((_, index) => ({
+      space: index,
       direction: 'horizontal'
     }))}
   >

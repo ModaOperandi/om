@@ -56,6 +56,7 @@ export type UseKeyboardListNavigationProps<T> = {
     index: number;
   }): void;
   extractValue?(item: T): string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ref?: React.MutableRefObject<any>;
 };
 

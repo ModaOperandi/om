@@ -1,4 +1,5 @@
 export type RenderProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (props: any): JSX.Element;
 };
 

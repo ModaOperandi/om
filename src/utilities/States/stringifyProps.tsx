@@ -4,6 +4,7 @@ const truncate = (string: string, maxLength = 25) => {
   return `${string.substring(0, maxLength)}${ellipsis ? '...' : ''}`;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const stringifyProps = (props: any) => {
   const stringifiedProps = Object.entries(props || {}).reduce((memo: string, [key, value]) => {
     if (key === 'children') return `${memo} children={...}`;

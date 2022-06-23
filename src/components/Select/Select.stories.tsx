@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
+import { useCallback } from 'react';
+import { Input } from '../Field';
 import { Select, SelectProps } from './Select';
 import { MultiSelect } from './MultiSelect';
-import { Input } from '../Field';
-import { useCallback } from 'react';
 
 export default { title: 'Components/Select' };
 
@@ -47,11 +47,12 @@ export const ChangingValue = () => {
 
   const values = OPTIONS.map(({ value }) => value);
   const value = values[cursor % values.length];
+  const HALF_SECOND_INTERVAL = 500;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCursor(prevCursor => prevCursor + 1);
-    }, 500);
+    }, HALF_SECOND_INTERVAL);
     return () => clearInterval(interval);
   }, []);
 
@@ -279,7 +280,7 @@ export const AutoFill = () => (
 
 export const InsideInputComponent = () => (
   <Input error>
-    <Select options={OPTIONS}></Select>
+    <Select options={OPTIONS} />
   </Input>
 );
 
@@ -332,7 +333,7 @@ export const MultiSelectUncontrolledComponent = () => {
 export const MultiSelectUncontrolledSearchComponent = () => {
   return (
     <MultiSelect
-      searchable={true}
+      searchable
       placeholder='United States'
       defaultValue={['Canada', 'Albania', 'Greece']}
       options={COUNTRIES.map(country => ({ label: country, value: country }))}

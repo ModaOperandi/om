@@ -1,7 +1,7 @@
 import React from 'react';
 import { States } from 'storybook-states';
-import { Divider, NoLineDivider, TwoLineDivider } from './';
 import { DividerProps } from './Divider';
+import { Divider, NoLineDivider, TwoLineDivider } from './';
 
 export default { title: 'Components/Divider' };
 

@@ -62,6 +62,7 @@ export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
   );
 
   // TODO: get rid of the any, the types of react-input-mask are incorrect here, it should expect a function as a child, but it expects a ReactNode
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const renderInputField: any = (inputProps: CreditCardNumberInputFieldProps) => (
     <CreditCardNumberInputField {...rest} {...inputProps} />
   );

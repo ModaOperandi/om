@@ -1,12 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Clickable } from '../Clickable';
 import ExitIcon from '@moda/icons/exit-16';
+import { Clickable } from '../Clickable';
 import './Tag.scss';
 
-export type TagProps = { disabled?: boolean; onRemove?: () => void } & React.HTMLAttributes<
-  HTMLDivElement
->;
+export type TagProps = {
+  disabled?: boolean;
+  onRemove?: () => void;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 export const Tag: React.FC<TagProps> = ({ className, disabled, onRemove, children, ...rest }) => (
   <div className={classNames('Tag', className, { 'Tag--disabled': disabled })} {...rest}>

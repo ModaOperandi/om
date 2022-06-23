@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
+import ExitIcon from '@moda/icons/exit-16';
 import { Clickable } from '../Clickable';
 import { Text } from '../Text';
 import { Stack, StackProps } from '../Stack';
-import ExitIcon from '@moda/icons/exit-16';
 import './Toast.scss';
 
 export type ToastProps = {

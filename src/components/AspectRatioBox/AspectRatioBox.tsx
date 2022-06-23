@@ -34,7 +34,7 @@ export const AspectRatioBox = React.forwardRef(
       width: aspectWidth,
       height: aspectHeight,
       maxWidth,
-      maxHeight,
+      maxHeight
     });
 
     return (
@@ -43,7 +43,7 @@ export const AspectRatioBox = React.forwardRef(
         className={classNames(
           'AspectRatioBox',
           {
-            'AspectRatioBox--outlined': outlined,
+            'AspectRatioBox--outlined': outlined
           },
           className
         )}

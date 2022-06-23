@@ -9,7 +9,13 @@ export type TabsProps = React.HTMLAttributes<HTMLDivElement> & {
   activeTab?: string;
 };
 
-export const Tabs: React.FC<TabsProps> = ({ tabs, onTabClicked, activeTab, className, ...rest }) => {
+export const Tabs: React.FC<TabsProps> = ({
+  tabs,
+  onTabClicked,
+  activeTab,
+  className,
+  ...rest
+}) => {
   const [activePanel, setActivePanel] = useState(activeTab || tabs[0].name);
   const handleTabClick = (tabName: string) => {
     setActivePanel(tabName);

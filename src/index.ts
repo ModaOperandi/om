@@ -2,6 +2,8 @@ import 'focus-visible';
 
 import { colors, typography, space, breakpoints } from '@moda/tokens';
 
+import { States } from './utilities';
+
 export const tokens = {
   colors,
   typography,
@@ -13,7 +15,5 @@ export { FocusOn } from 'react-focus-on';
 
 export * from './components';
 export * from './hooks';
-
-import { States } from './utilities';
 
 export const Utilities = { States };

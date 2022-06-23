@@ -4,6 +4,7 @@ import { StatesProps } from './StatesProps';
 import './State.scss';
 
 interface Props {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props: any;
   children: JSX.Element | RenderProps;
 }
