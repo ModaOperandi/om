@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShapeProps } from './Shape';
 
-export const Window: React.FC<ShapeProps> = (props) => (
+export const Window: React.FC<ShapeProps> = props => (
   <svg
     style={{ fill: 'currentcolor' }}
     xmlns='http://www.w3.org/2000/svg'

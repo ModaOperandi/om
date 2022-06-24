@@ -3,9 +3,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
 
-import { Button, ButtonProps } from './Button';
-import { Stack } from '../Stack';
 import Heart from '@moda/icons/favorite-outline-16';
+import { Stack } from '../Stack';
+import { Button, ButtonProps } from './Button';
 
 export default { title: 'Components/Button' };
 

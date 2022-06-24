@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { Field } from './Field';
 import { Select } from '../Select';
+import { Field } from './Field';
 
 describe('Field', () => {
   it('renders correctly', () => {

@@ -21,6 +21,7 @@ export const Expandable: React.FC<ExpandableProps> = ({
   virtual = false,
   icon = 'plus-minus',
   'data-testid': dataTestId,
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   expanded: __expanded__ = false,
   ...rest
 }) => {

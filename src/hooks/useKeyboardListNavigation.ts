@@ -56,6 +56,7 @@ export type UseKeyboardListNavigationProps<T> = {
     index: number;
   }): void;
   extractValue?(item: T): string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ref?: React.MutableRefObject<any>;
 };
 
@@ -138,6 +139,7 @@ export const useKeyboardListNavigation = <T>({
     };
   }, [handleKeyDown, ref, idleTimeout]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => dispatch({ type: 'RESET', payload: { defaultCursor } }), [list.length]);
 
   const interactiveIndex = waitForInteractive && !state.interactive ? -1 : index;

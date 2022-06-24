@@ -5,3 +5,4 @@ yalc.lock
 node_modules/
 dist/
 storybook-static/
+.npmrc

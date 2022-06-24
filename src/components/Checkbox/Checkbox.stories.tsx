@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { States } from 'storybook-states';
 
 import { Text } from '../Text';
-import { Checkbox, CheckboxProps } from './Checkbox';
 import { Stack } from '../Stack';
 import { RadioButton } from '../RadioButton';
+import { Checkbox, CheckboxProps } from './Checkbox';
 
 export default { title: 'Components/Checkbox' };
 

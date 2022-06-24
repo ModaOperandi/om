@@ -1,7 +1,7 @@
 import React from 'react';
 import { States } from 'storybook-states';
-import { DefinitionList, DefinitionListProps } from './DefinitionList';
 import { Text } from '../Text';
+import { DefinitionList, DefinitionListProps } from './DefinitionList';
 
 export default { title: 'Components/DefinitionList' };
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
-import { Clickable, ClickableProps } from './Clickable';
 import { BrowserRouter } from 'react-router-dom';
+import { Clickable, ClickableProps } from './Clickable';
 
 export default { title: 'Components/Clickable' };
 
@@ -16,7 +16,7 @@ export const Button = () => (
 
 export const Anchor = () => (
   <States<ClickableProps>>
-    <Clickable href={'#'}>Useful to extend in place of &lt;a/&gt;. Click me.</Clickable>
+    <Clickable href='#'>Useful to extend in place of &lt;a/&gt;. Click me.</Clickable>
   </States>
 );
 

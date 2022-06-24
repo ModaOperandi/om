@@ -1,9 +1,9 @@
 import React from 'react';
 import { States } from 'storybook-states';
-import { Field, FieldProps } from './Field';
+import { action } from '@storybook/addon-actions';
 import { Textarea } from '../Textarea';
 import { Select } from '../Select';
-import { action } from '@storybook/addon-actions';
+import { Field, FieldProps } from './Field';
 
 export default { title: 'Components/Field' };
 

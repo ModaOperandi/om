@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { States } from 'storybook-states';
-import { VerticalDivider } from './VerticalDivider';
 import { Stack } from '../Stack';
+import { VerticalDivider } from './VerticalDivider';
 
 export default { title: 'Components/VerticalDivider' };
 

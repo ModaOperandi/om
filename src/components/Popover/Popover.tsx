@@ -13,6 +13,9 @@ export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
 };
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
+const THREE_QUARTER_SECOND_DELAY = 750;
+const ONE_SECOND_DELAY = 1000;
+const FIVE_SECOND_DELAY = 5000;
 
 enum Mode {
   Opening = 'opening',
@@ -80,7 +83,7 @@ export const Popover: React.FC<PopoverProps> = ({
   useEffect(() => {
     if (mode !== Mode.Closing) return;
 
-    const closingTimeout = setTimeout(() => setMode(Mode.Closed), 750);
+    const closingTimeout = setTimeout(() => setMode(Mode.Closed), THREE_QUARTER_SECOND_DELAY);
 
     return () => clearTimeout(closingTimeout);
   }, [mode]);
@@ -88,7 +91,7 @@ export const Popover: React.FC<PopoverProps> = ({
   useEffect(() => {
     if (mode !== Mode.AutoOpening) return;
 
-    const openingTimeout = setTimeout(() => setMode(Mode.AutoOpen), 1000);
+    const openingTimeout = setTimeout(() => setMode(Mode.AutoOpen), ONE_SECOND_DELAY);
 
     return () => clearTimeout(openingTimeout);
   }, [mode]);
@@ -96,7 +99,7 @@ export const Popover: React.FC<PopoverProps> = ({
   useEffect(() => {
     if (mode !== Mode.Opening) return;
 
-    const openingTimeout = setTimeout(() => setMode(Mode.Open), 750);
+    const openingTimeout = setTimeout(() => setMode(Mode.Open), THREE_QUARTER_SECOND_DELAY);
 
     return () => clearTimeout(openingTimeout);
   }, [mode]);
@@ -104,7 +107,7 @@ export const Popover: React.FC<PopoverProps> = ({
   useEffect(() => {
     if (mode !== Mode.AutoOpen) return;
 
-    const stayingTimeout = setTimeout(handleClose, 5000);
+    const stayingTimeout = setTimeout(handleClose, FIVE_SECOND_DELAY);
 
     return () => clearTimeout(stayingTimeout);
   }, [handleClose, mode, smoothTransitioning]);
