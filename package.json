@@ -4,7 +4,7 @@
   "description": "Moda Operandi design system",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "sass": "src/index.scss",
   "style": "dist/styles.css",
   "repository": "git@github.com:ModaOperandi/om.git",
