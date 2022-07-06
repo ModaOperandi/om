@@ -19,6 +19,7 @@ export type SelectOptionsProps = Omit<
   selectedOption?: SelectableOption | undefined;
   onFocus?(option: SelectableOption): void;
   onSelect(option: SelectableOption): void;
+  dataTestId?: string;
 };
 
 export const SelectOptions: React.FC<SelectOptionsProps> = ({
@@ -30,6 +31,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   onSelect,
   onFocus,
   className,
+  dataTestId,
   ...rest
 }) => {
   const [searchPhrase, setSearchPhrase] = useState('');
@@ -82,6 +84,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
             id={`SelectOption--${option.value}-${idRef}`}
             key={option.value}
             option={option}
+            dataTestId={dataTestId}
             active={activeOption?.value === option.value}
             selected={selectedOption?.value === option.value}
             onClick={onSelect}
