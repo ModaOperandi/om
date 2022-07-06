@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.3.0](https://github.com/ModaOperandi/om/compare/v16.2.1...v16.3.0) (2022-07-06)
+
+
+### Features
+
+* **select:** adds data-test-id to Select component ([#2790](https://github.com/ModaOperandi/om/issues/2790)) ([2ba14ed](https://github.com/ModaOperandi/om/commit/2ba14ed15c7d588bf735fbb4202e09495d58e341))
+
 ## [16.2.1](https://github.com/ModaOperandi/om/compare/v16.2.0...v16.2.1) (2022-07-01)
 
 
