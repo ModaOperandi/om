@@ -29,6 +29,7 @@ export type SelectProps = Omit<
   searchable?: boolean;
   shiftIconLeftwards?: boolean;
   value?: string | undefined;
+  dataTestId?: string;
 };
 
 export const Select: React.FC<SelectProps> = ({
@@ -48,6 +49,7 @@ export const Select: React.FC<SelectProps> = ({
   searchable,
   shiftIconLeftwards = false,
   value,
+  dataTestId,
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
@@ -111,6 +113,7 @@ export const Select: React.FC<SelectProps> = ({
           className='Select__value'
           disabled={disabled}
           onClick={handleToggle}
+          data-test-id={dataTestId}
           aria-haspopup='listbox'
           aria-expanded={state.mode === Mode.Open}
           aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
@@ -139,6 +142,7 @@ export const Select: React.FC<SelectProps> = ({
               'Select__options--up': dropDirection === 'up',
               'Select__options--down': dropDirection === 'down'
             })}
+            dataTestId={dataTestId}
             searchable={searchable}
             options={options}
             onSelect={handleSelect}

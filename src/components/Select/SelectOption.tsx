@@ -9,6 +9,7 @@ export type SelectOptionProps = Omit<React.HTMLAttributes<HTMLLIElement>, 'onCli
   selected: boolean;
   option: SelectableOption;
   onClick: (option: SelectableOption) => void;
+  dataTestId?: string;
 };
 
 export const SelectOption: React.FC<SelectOptionProps> = ({
@@ -16,7 +17,8 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
   selected,
   option,
   onClick,
-  className
+  className,
+  dataTestId
 }) => {
   const ref = useRef<HTMLLIElement>(null);
 
@@ -43,6 +45,7 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
         'SelectOption--disabled': option.disabled
       })}
       onClick={handleClick}
+      data-test-id={dataTestId ? `${dataTestId}--${option.label.replace(' ', '-')}` : undefined}
       aria-label={option.label}
       aria-selected={selected}
       role='option'
