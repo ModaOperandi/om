@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/ModaOperandi/om/compare/v16.3.0...v17.0.0) (2022-08-17)
+
+
+### Features
+
+* **expandable:** allow it to be controlled ([#2848](https://github.com/ModaOperandi/om/issues/2848)) ([d7128b6](https://github.com/ModaOperandi/om/commit/d7128b60276da6f155acd4cb5abb910648a3a904))
+
+
+### BREAKING CHANGES
+
+* **expandable:** 'expanded' will now control the component completely
+
 # [16.3.0](https://github.com/ModaOperandi/om/compare/v16.2.1...v16.3.0) (2022-07-06)
 
 
