@@ -1,4 +1,4 @@
-import React, { useCallback, useState, ReactNode } from 'react';
+import React, { useEffect, useCallback, useState, ReactNode } from 'react';
 import classNames from 'classnames';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
@@ -7,6 +7,7 @@ import './Expandable.scss';
 
 export type ExpandableProps = React.HTMLAttributes<HTMLDivElement> & {
   name: string | ReactNode;
+  defaultExpanded?: boolean;
   expanded?: boolean;
   children: ReactNode;
   icon?: 'chevron' | 'plus-minus';
@@ -21,11 +22,16 @@ export const Expandable: React.FC<ExpandableProps> = ({
   virtual = false,
   icon = 'plus-minus',
   'data-testid': dataTestId,
+  defaultExpanded = false,
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  expanded: __expanded__ = false,
+  expanded: __expanded__,
   ...rest
 }) => {
-  const [expanded, setExpanded] = useState(__expanded__);
+  const [expanded, setExpanded] = useState(defaultExpanded);
+
+  useEffect(() => {
+    if (__expanded__ != null && __expanded__ !== expanded) setExpanded(__expanded__);
+  }, [expanded, __expanded__]);
 
   const handleClick = useCallback(() => setExpanded(expanded => !expanded), []);
 
