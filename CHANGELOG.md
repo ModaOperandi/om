@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.1.0](https://github.com/ModaOperandi/om/compare/v17.0.0...v17.1.0) (2022-08-17)
+
+
+### Features
+
+* **expandable:** onToggle ([4a63534](https://github.com/ModaOperandi/om/commit/4a635341fab096716b343fbac498f804dc5eed4c))
+
 # [17.0.0](https://github.com/ModaOperandi/om/compare/v16.3.0...v17.0.0) (2022-08-17)
 
 
