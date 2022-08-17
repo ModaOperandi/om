@@ -13,6 +13,7 @@ export type ExpandableProps = React.HTMLAttributes<HTMLDivElement> & {
   icon?: 'chevron' | 'plus-minus';
   virtual?: boolean;
   'data-testid'?: string;
+  onToggle?: () => void;
 };
 
 export const Expandable: React.FC<ExpandableProps> = ({
@@ -25,6 +26,7 @@ export const Expandable: React.FC<ExpandableProps> = ({
   defaultExpanded = false,
   // eslint-disable-next-line @typescript-eslint/naming-convention
   expanded: __expanded__,
+  onToggle,
   ...rest
 }) => {
   const [expanded, setExpanded] = useState(defaultExpanded);
@@ -33,7 +35,10 @@ export const Expandable: React.FC<ExpandableProps> = ({
     if (__expanded__ != null && __expanded__ !== expanded) setExpanded(__expanded__);
   }, [expanded, __expanded__]);
 
-  const handleClick = useCallback(() => setExpanded(expanded => !expanded), []);
+  const handleClick = useCallback(() => {
+    setExpanded(expanded => !expanded);
+    onToggle?.();
+  }, [onToggle]);
 
   return (
     <div
