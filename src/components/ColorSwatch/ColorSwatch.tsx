@@ -52,10 +52,16 @@ export const ColorSwatch: React.FC<ColorSwatchProps> = ({
     [color, title, onMouseEnter]
   );
 
-  const backgroundColor = SKU_COLORS[color as SkuColor];
+  const backgroundColor = SKU_COLORS[color as SkuColor] ?? color;
+
+  const isWhite =
+    !backgroundUrl &&
+    (!backgroundColor.startsWith('#') ||
+      backgroundColor.toLowerCase() === '#fff' ||
+      backgroundColor.toLowerCase() === '#ffffff');
 
   const styles: React.CSSProperties = {
-    backgroundColor: backgroundColor ?? color,
+    backgroundColor,
     ...(backgroundUrl
       ? {
           backgroundImage: `url(${backgroundUrl})`,
@@ -69,7 +75,7 @@ export const ColorSwatch: React.FC<ColorSwatchProps> = ({
       className={classNames(
         `ColorSwatch`,
         {
-          'ColorSwatch--light': !backgroundColor || backgroundColor === '#fff',
+          'ColorSwatch--light': isWhite,
           'ColorSwatch--small': size === 'small',
           'ColorSwatch--hover': hover,
           'ColorSwatch--focus': focus,
