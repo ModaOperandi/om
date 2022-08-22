@@ -18,8 +18,8 @@ export type ColorSwatchProps = Omit<
   selected?: boolean;
   soldOut?: boolean;
   onSale?: boolean;
-  onClick?(color: string): void;
-  onMouseEnter?(color: string): void;
+  onClick?(color: string, title?: string): void;
+  onMouseEnter?(color: string, title?: string): void;
 };
 
 export const ColorSwatch: React.FC<ColorSwatchProps> = ({
@@ -35,20 +35,21 @@ export const ColorSwatch: React.FC<ColorSwatchProps> = ({
   onClick,
   onMouseEnter,
   disabled,
+  title,
   ...rest
 }) => {
   const handleClick = useCallback(
     (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      onClick && onClick(color);
+      onClick && onClick(color, title);
     },
-    [color, onClick]
+    [color, title, onClick]
   );
 
   const handleMouseEnter = useCallback(
     (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      onMouseEnter && onMouseEnter(color);
+      onMouseEnter && onMouseEnter(color, title);
     },
-    [color, onMouseEnter]
+    [color, title, onMouseEnter]
   );
 
   const backgroundColor = SKU_COLORS[color as SkuColor];
@@ -81,6 +82,7 @@ export const ColorSwatch: React.FC<ColorSwatchProps> = ({
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       disabled={disabled}
+      title={title}
       {...rest}
     >
       <div className='ColorSwatch__chip' style={styles} />
