@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.2.1](https://github.com/ModaOperandi/om/compare/v17.2.0...v17.2.1) (2022-08-22)
+
+
+### Bug Fixes
+
+* **colorswatch:** show black dot only on white bg ([046877d](https://github.com/ModaOperandi/om/commit/046877d0e7d33de624b23848f6c8436cb9637853))
+
 # [17.2.0](https://github.com/ModaOperandi/om/compare/v17.1.0...v17.2.0) (2022-08-22)
 
 
