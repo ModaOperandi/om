@@ -13,6 +13,7 @@ export const SKU_COLORS = {
   'rose gold': '#b76e79',
   'royal blue': '#0049ff',
   animal: undefined,
+  berry: '#8f1e47',
   black: '#000',
   blue: '#3755a4',
   bronze: '#cd7f2e',
@@ -43,7 +44,9 @@ export const SKU_COLORS = {
   silver: '#c0c0c0',
   stripe: undefined,
   tan: '#baa094',
+  taupe: '#483c32',
   turquoise: '#1e83a8',
+  universal: undefined,
   white: '#fff',
   yellow: '#ffca44'
 };
