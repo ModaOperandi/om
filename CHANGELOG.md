@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.3.0](https://github.com/ModaOperandi/om/compare/v17.2.1...v17.3.0) (2022-08-23)
+
+
+### Features
+
+* **colorswatch:** add new colors ([#2854](https://github.com/ModaOperandi/om/issues/2854)) ([a087080](https://github.com/ModaOperandi/om/commit/a0870807d284aab16815673720dca147a895fa09))
+
 ## [17.2.1](https://github.com/ModaOperandi/om/compare/v17.2.0...v17.2.1) (2022-08-22)
 
 
