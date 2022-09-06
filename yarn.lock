@@ -1986,9 +1986,9 @@
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
 "@moda/icons@^5.18.0":
-  version "5.18.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.18.0.tgz#ca74210254fc9fd34fc1b01849968d2b3b93a34d"
-  integrity sha512-iPc864jCvogtS0w2sXyL1+Jl9ddXdq52Wgr1astG9LFIBPkvPzS+moZhjoI9xKnyKqAbhKOHuoA9v8uw9IYRCQ==
+  version "5.18.1"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.18.1.tgz#fb2388eb5e2e067e9effa1dc12922091b5e811e8"
+  integrity sha512-fWtC7aIBW5xfKFGEKTcRsBwRqvN0SsW3B5TmdW4P3gIwx+obkDwXL1Fes14C3kMfKneewZm5Cg0Qqjh2Mp0Plg==
 
 "@moda/rollup-plugin-postcss@^4.0.1":
   version "4.0.1"
