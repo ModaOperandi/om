@@ -14,6 +14,8 @@ export type ExpandableProps = React.HTMLAttributes<HTMLDivElement> & {
   virtual?: boolean;
   'data-testid'?: string;
   onToggle?: () => void;
+  background?: 'light' | 'dark';
+  border?: boolean;
 };
 
 export const Expandable: React.FC<ExpandableProps> = ({
@@ -27,6 +29,8 @@ export const Expandable: React.FC<ExpandableProps> = ({
   // eslint-disable-next-line @typescript-eslint/naming-convention
   expanded: __expanded__,
   onToggle,
+  background = 'light',
+  border = true,
   ...rest
 }) => {
   const [expanded, setExpanded] = useState(defaultExpanded);
@@ -42,16 +46,19 @@ export const Expandable: React.FC<ExpandableProps> = ({
 
   return (
     <div
-      className={classNames('Expandable', { 'Expandable--expanded': expanded }, className)}
+      className={classNames(
+        'Expandable',
+        `Expandable--${background}-background`,
+        {
+          'Expandable--expanded': expanded,
+          'Expandable--with-border': border,
+          'Expandable--plus-minus': icon === 'plus-minus'
+        },
+        className
+      )}
       {...rest}
     >
-      <Clickable
-        className={classNames('Expandable__name', {
-          'Expandable__name--plusMinus': icon === 'plus-minus'
-        })}
-        onClick={handleClick}
-        data-testid={dataTestId}
-      >
+      <Clickable className='Expandable__name' onClick={handleClick} data-testid={dataTestId}>
         {name}
 
         {icon !== 'plus-minus' && (

@@ -5,7 +5,6 @@
 
   display: flex;
   flex-direction: column;
-  border-top: 1px solid color(noise);
 
   &__name {
     @include text(body1);
@@ -17,26 +16,6 @@
     user-select: none;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  &__name--plusMinus {
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      height: 1px;
-      width: space(4);
-      background-color: color(ink);
-    }
-
-    &::before {
-      transform: translateY(-50%) rotate(90deg);
-      transition: transform 200ms;
-    }
   }
 
   &__icon {
@@ -66,6 +45,28 @@
     }
   }
 
+  &--plus-minus {
+    #{$self}__name {
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        height: 1px;
+        width: space(4);
+        background-color: color(ink);
+      }
+
+      &::before {
+        transform: translateY(-50%) rotate(90deg);
+        transition: transform 200ms;
+      }
+    }
+  }
+
   &--expanded {
     #{$self}__name {
       &::before {
@@ -75,6 +76,26 @@
 
     #{$self}__contents {
       display: block;
+    }
+  }
+
+  &--with-border {
+    border-top: 1px solid color(noise);
+  }
+
+  &--dark-background {
+    border-color: color(cement);
+    color: color(snow);
+
+    #{$self}__name {
+      &::before,
+      &::after {
+        background-color: color(snow);
+      }
+    }
+
+    #{$self}__contents {
+      color: color(snow);
     }
   }
 }

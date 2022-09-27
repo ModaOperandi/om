@@ -42,6 +42,18 @@ export const ChevronIcon = () => (
   </States>
 );
 
+export const DarkBackground = () => (
+  <div style={{ backgroundColor: 'black', padding: '20px' }}>
+    <Expandable name='Editor’s Note' background='dark'>
+      Mark Cross’ ‘Cole’ duffle bag is crafted from textured grain leather with ample space for your
+      long-haul travels. It opens to reveal red twill lining and ample compartments for your
+      essentials. It has polished silver-tone palladium hardware and is stamped with the label’s
+      signature foil logo along the front. Adjust the removable shoulder strap for easy navigation
+      through busy airport terminals.
+    </Expandable>
+  </div>
+);
+
 export const Stacked = () => (
   <States>
     <Stack space={0}>
