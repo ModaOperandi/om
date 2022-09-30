@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.5.0](https://github.com/ModaOperandi/om/compare/v17.4.0...v17.5.0) (2022-09-30)
+
+
+### Features
+
+* **checkbox:** adds data-test-id by dataTestId prop ([#2942](https://github.com/ModaOperandi/om/issues/2942)) ([ff1aa3e](https://github.com/ModaOperandi/om/commit/ff1aa3eb5c54c21b2fd45b5ebea07598ce0ab9aa))
+
 # [17.4.0](https://github.com/ModaOperandi/om/compare/v17.3.0...v17.4.0) (2022-09-27)
 
 
