@@ -52,6 +52,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       className={classNames('Checkbox', className, {
         'Checkbox--disabled': disabled
       })}
+      data-test-id={`${dataTestId}--label`}
     >
       <span
         tabIndex={-1}
@@ -76,7 +77,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         value={value}
         onChange={handleChange}
         disabled={disabled}
-        data-test-id={dataTestId}
+        data-test-id={`${dataTestId}--input`}
         {...rest}
       />
 
