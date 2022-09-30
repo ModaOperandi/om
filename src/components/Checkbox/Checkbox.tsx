@@ -16,6 +16,7 @@ export type ShowCheckedUsing = 'checkmark' | 'circle';
 export type CheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
   children?: JSX.Element | string;
   checkIcon?: ShowCheckedUsing;
+  dataTestId?: string;
 };
 
 export const Checkbox: React.FC<CheckboxProps> = ({
@@ -27,6 +28,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   onChange,
   disabled,
   checkIcon = 'checkmark',
+  dataTestId,
   ...rest
 }) => {
   const [isChecked, setIsChecked] = useState(checked ?? defaultChecked ?? false);
@@ -50,6 +52,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       className={classNames('Checkbox', className, {
         'Checkbox--disabled': disabled
       })}
+      data-test-id={`${dataTestId}--label`}
     >
       <span
         tabIndex={-1}
@@ -74,6 +77,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         value={value}
         onChange={handleChange}
         disabled={disabled}
+        data-test-id={`${dataTestId}--input`}
         {...rest}
       />
 
