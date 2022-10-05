@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.6.0](https://github.com/ModaOperandi/om/compare/v17.5.0...v17.6.0) (2022-10-05)
+
+
+### Features
+
+* **badge:** adds noise theme ([#2950](https://github.com/ModaOperandi/om/issues/2950)) ([2cd1536](https://github.com/ModaOperandi/om/commit/2cd1536beaa548fec8001056fcb8c6ae4553fc1b))
+
 # [17.5.0](https://github.com/ModaOperandi/om/compare/v17.4.0...v17.5.0) (2022-09-30)
 
 
