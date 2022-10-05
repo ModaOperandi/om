@@ -39,4 +39,14 @@
     font-weight: 700;
     text-transform: none;
   }
+
+  &--noise {
+    @include text(body1);
+
+    background-color: color(noise);
+    border-color: transparent;
+    color: color(ink);
+    text-transform: none;
+    line-height: 1.4;
+  }
 }
