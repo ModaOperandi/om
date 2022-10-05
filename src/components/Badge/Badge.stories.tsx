@@ -20,6 +20,10 @@ export const Themes = () => (
     </States>
 
     <States>
+      <Badge theme='noise'>Runs small we recommend sizing up one size.</Badge>
+    </States>
+
+    <States>
       <Badge theme='dark-fuchsia'>25% off with Code FALL-25</Badge>
     </States>
 

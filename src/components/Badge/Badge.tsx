@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './Badge.scss';
 
-export type BadgeTheme = 'forest-green' | 'klein-blue' | 'brick' | 'dark-fuchsia';
+export type BadgeTheme = 'forest-green' | 'klein-blue' | 'brick' | 'dark-fuchsia' | 'noise';
 
 export type BadgeProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   theme?: BadgeTheme;
