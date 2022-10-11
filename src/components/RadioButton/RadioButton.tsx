@@ -19,7 +19,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   return (
     <label
       tabIndex={tabIndex ?? 0}
-      onKeyPress={({ key }) => (key === 'Enter' || key === ' ') && inputRef.current?.click()}
+      onKeyDown={({ key }) => (key === 'Enter' || key === ' ') && inputRef.current?.click()}
       className={classNames('RadioButton', className, {
         'RadioButton--checked': checked,
         'RadioButton--disabled': disabled

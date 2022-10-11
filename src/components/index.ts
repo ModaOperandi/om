@@ -35,3 +35,4 @@ export * from './TextInput';
 export * from './Toast';
 export * from './VerticalDivider';
 export * from './PasswordInput';
+export * from './SlidingPane';
