@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import RulerIcon from '@moda/icons/ruler-24';
 import { Badge } from '../Badge';
 import { Clickable } from '../Clickable';
 import { Text } from '../Text';
 import { Stack } from '../Stack';
 import { SlidingPane } from './SlidingPane';
-import RulerIcon from '@moda/icons/ruler-24';
 
 export default { title: 'Components/SlidingPane' };
 

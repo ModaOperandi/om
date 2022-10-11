@@ -7,11 +7,10 @@ import { Text } from '../Text';
 import './SlidingPane.scss';
 import { Stack } from '../Stack';
 
-export type SlidingPaneProps = React.InputHTMLAttributes<HTMLDivElement> & {
+export type SlidingPaneProps = React.HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
   title: string;
   visible: boolean;
-  className?: string;
   onClose: () => void;
 };
 
@@ -33,18 +32,18 @@ export const SlidingPane: React.FC<SlidingPaneProps> = ({
       >
         <Stack
           space={0}
-          justifyContent="center"
-          direction="horizontal"
-          className="SlidingPane__top"
+          justifyContent='center'
+          direction='horizontal'
+          className='SlidingPane__top'
         >
-          <Text treatment="h5" family="serif">
+          <Text treatment='h5' family='serif'>
             {title}
           </Text>
-          <Clickable className="SlidingPane__close" onClick={onClose}>
+          <Clickable className='SlidingPane__close' onClick={onClose}>
             <ExitIcon />
           </Clickable>
         </Stack>
-        <div className="SlidingPane__content">{children}</div>
+        <div className='SlidingPane__content'>{children}</div>
       </div>
 
       <div
