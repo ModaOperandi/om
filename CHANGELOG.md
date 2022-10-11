@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.7.0](https://github.com/ModaOperandi/om/compare/v17.6.0...v17.7.0) (2022-10-11)
+
+
+### Features
+
+* **sliding pane:** fixes ([651786d](https://github.com/ModaOperandi/om/commit/651786d91e10fd42031d2da0ae7d20be34b6de2b))
+* **sliding-pane:** adds sliding pane for mobile ([1a1a7c3](https://github.com/ModaOperandi/om/commit/1a1a7c3288d73f002611210f045cacd01b89c6c2))
+
 # [17.6.0](https://github.com/ModaOperandi/om/compare/v17.5.0...v17.6.0) (2022-10-05)
 
 
