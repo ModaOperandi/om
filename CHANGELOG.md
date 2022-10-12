@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.8.0](https://github.com/ModaOperandi/om/compare/v17.7.0...v17.8.0) (2022-10-12)
+
+
+### Features
+
+* **SlidingPane:** lock focus ([#2965](https://github.com/ModaOperandi/om/issues/2965)) ([ffb5ab7](https://github.com/ModaOperandi/om/commit/ffb5ab77a5dcb105693efb9a338b56c41bba86a4))
+
 # [17.7.0](https://github.com/ModaOperandi/om/compare/v17.6.0...v17.7.0) (2022-10-11)
 
 
