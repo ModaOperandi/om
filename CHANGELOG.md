@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.9.1](https://github.com/ModaOperandi/om/compare/v17.9.0...v17.9.1) (2022-10-13)
+
+
+### Bug Fixes
+
+* **slidingpane:** remove z-index ([21e65c4](https://github.com/ModaOperandi/om/commit/21e65c4f3d8db6a9ece7ad61e5a07e3049dd4600))
+
 # [17.9.0](https://github.com/ModaOperandi/om/compare/v17.8.0...v17.9.0) (2022-10-13)
 
 
