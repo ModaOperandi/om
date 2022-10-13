@@ -8,6 +8,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:prettier/recommended',
+    'prettier',
     'plugin:jest-dom/recommended',
     'plugin:testing-library/react'
   ],
@@ -52,7 +54,6 @@ module.exports = {
     'import/no-self-import': 'error',
     'import/first': 'error',
     'import/newline-after-import': 'error',
-    'jsx-quotes': ['error', 'prefer-double'],
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/naming-convention': [
       'error',
