@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.9.0](https://github.com/ModaOperandi/om/compare/v17.8.0...v17.9.0) (2022-10-13)
+
+
+### Features
+
+* **breakpoint:** allow passing in html attributes ([#2968](https://github.com/ModaOperandi/om/issues/2968)) ([9282ed4](https://github.com/ModaOperandi/om/commit/9282ed45eaa9b3e79a8eace839a4b92a3e59da56))
+
 # [17.8.0](https://github.com/ModaOperandi/om/compare/v17.7.0...v17.8.0) (2022-10-12)
 
 
