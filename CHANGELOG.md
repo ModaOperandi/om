@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.10.0](https://github.com/ModaOperandi/om/compare/v17.9.1...v17.10.0) (2022-10-14)
+
+
+### Features
+
+* **modal:** make autoFocus optional ([#2970](https://github.com/ModaOperandi/om/issues/2970)) ([ec884b0](https://github.com/ModaOperandi/om/commit/ec884b0bcbe5c4fec3610c47f9afc397fe6d5c82))
+
 ## [17.9.1](https://github.com/ModaOperandi/om/compare/v17.9.0...v17.9.1) (2022-10-13)
 
 
