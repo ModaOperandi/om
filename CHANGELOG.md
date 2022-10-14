@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.11.0](https://github.com/ModaOperandi/om/compare/v17.10.0...v17.11.0) (2022-10-14)
+
+
+### Features
+
+* **modaloverlay:** add autoFocus ([3f41d25](https://github.com/ModaOperandi/om/commit/3f41d2546e3ddde4b4c2e7786fcaf53eed12da78))
+
 # [17.10.0](https://github.com/ModaOperandi/om/compare/v17.9.1...v17.10.0) (2022-10-14)
 
 
