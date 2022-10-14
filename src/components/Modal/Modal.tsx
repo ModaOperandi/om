@@ -7,11 +7,19 @@ import './Modal.scss';
 export type ModalProps = React.HTMLAttributes<HTMLDivElement> & {
   onClose(): void;
   shards?: ComponentProps<typeof FocusOn>['shards'];
+  autoFocus?: boolean;
 };
 
-export const Modal: React.FC<ModalProps> = ({ className, children, onClose, shards, ...rest }) => (
+export const Modal: React.FC<ModalProps> = ({
+  className,
+  children,
+  onClose,
+  shards,
+  autoFocus,
+  ...rest
+}) => (
   <div className={classNames('Modal', className)} {...rest}>
-    <FocusOn shards={shards} onClickOutside={onClose} onEscapeKey={onClose}>
+    <FocusOn autoFocus={autoFocus} shards={shards} onClickOutside={onClose} onEscapeKey={onClose}>
       {children}
     </FocusOn>
   </div>
