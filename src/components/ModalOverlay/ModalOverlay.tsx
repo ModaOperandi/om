@@ -17,6 +17,7 @@ export const ModalOverlay: React.FC<ModalOverlayProps> = ({
   overlayClassName,
   show = true,
   shards,
+  autoFocus,
   ...rest
 }) => {
   const element = useMemo(
@@ -41,6 +42,7 @@ export const ModalOverlay: React.FC<ModalOverlayProps> = ({
         className={classNames('ModalOverlay__modal', className)}
         onClose={onClose}
         shards={shards}
+        autoFocus={autoFocus}
       >
         <div className={classNames('ModalOverlay__content', contentClassName)}>{children}</div>
       </Modal>
