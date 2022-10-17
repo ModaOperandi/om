@@ -1917,9 +1917,9 @@
     style-inject "^0.3.0"
 
 "@moda/tokens@^5.5.1":
-  version "5.5.4"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.5.4.tgz#ef9b34a7d1fd5b54f755b3f832b4ac16ef968feb"
-  integrity sha512-7YsFw4vFdpJRRQBAVKjFOR977a6GzFy34pjgm3QabTltozNLg0RnD42HKdJMIAjHpx0214/B4wHVPO25gMiMzg==
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.6.0.tgz#ea66e7b999a260cc00617d04bf9ff488e0c4124d"
+  integrity sha512-A1NDs8O2UXRHIOol6AETGHdkX+70G43Ihv15/cx7sWSebyzctLQ0OdFTFWtNbVi5PgYlvpkvEXNusVcLlaHRyw==
   dependencies:
     color-string "^1.5.5"
 
