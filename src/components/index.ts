@@ -26,6 +26,7 @@ export * from './RadioButton';
 export * from './SearchInput';
 export * from './Select';
 export * from './SelectableButton';
+export * from './Shape';
 export * from './Stack';
 export * from './Tag';
 export * from './Tabs';
