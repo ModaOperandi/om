@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.12.0](https://github.com/ModaOperandi/om/compare/v17.11.0...v17.12.0) (2022-11-09)
+
+
+### Features
+
+* **shapes:** exports the components ([#3037](https://github.com/ModaOperandi/om/issues/3037)) ([0689b0b](https://github.com/ModaOperandi/om/commit/0689b0b0ff9995a949f2a51fdefa302f4c3a64c7))
+
 # [17.11.0](https://github.com/ModaOperandi/om/compare/v17.10.0...v17.11.0) (2022-10-14)
 
 
