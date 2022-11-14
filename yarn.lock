@@ -1897,9 +1897,9 @@
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
 "@moda/icons@^5.18.0":
-  version "5.19.1"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.19.1.tgz#ac9f25c236a61de291b0d2f47a720aa770ec146b"
-  integrity sha512-NzSTG7r9DBE/e7EY0bxRmfZjL9x21v9hd2vBnJaD4trm7BEgsG9Og7ksxUspFahzDdoQlQmBZJ0dma388teTuA==
+  version "5.19.2"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.19.2.tgz#42fda7580cb76d28d3dfc11566e6448760b8a292"
+  integrity sha512-0DnPB0TOOKYkeQXeB8FhEhAVlf45SEDvgDHV1GdFPWdSzs4k0uNbtSbrEuHnOr+okLZSvjo4T4KmQM79pa7N8w==
 
 "@moda/rollup-plugin-postcss@^4.0.1":
   version "4.0.1"
