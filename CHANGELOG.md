@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.13.0](https://github.com/ModaOperandi/om/compare/v17.12.0...v17.13.0) (2022-11-14)
+
+
+### Features
+
+* **button:** adds tertiary and elevated ([#3050](https://github.com/ModaOperandi/om/issues/3050)) ([6f1030d](https://github.com/ModaOperandi/om/commit/6f1030d5768aaf80ecbdf2866e90b3e993656f4d))
+
 # [17.12.0](https://github.com/ModaOperandi/om/compare/v17.11.0...v17.12.0) (2022-11-09)
 
 
