@@ -39,6 +39,22 @@ export const SecondaryChip = () => (
   </States>
 );
 
+export const Tertiary = () => (
+  <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button tertiary onClick={action('clicked')}>
+      Add to Cart
+    </Button>
+  </States>
+);
+
+export const TertiaryElevated = () => (
+  <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button tertiary elevated onClick={action('clicked')}>
+      Add to Cart
+    </Button>
+  </States>
+);
+
 export const PrimaryWithHref = () => (
   <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
     <Button href='#href' onClick={action('clicked')}>
