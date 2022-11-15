@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.14.1](https://github.com/ModaOperandi/om/compare/v17.14.0...v17.14.1) (2022-11-15)
+
+
+### Bug Fixes
+
+* **loading-shapes:** exports the component ([#3056](https://github.com/ModaOperandi/om/issues/3056)) ([d9e9289](https://github.com/ModaOperandi/om/commit/d9e928950e39c18f2cb6a09f8c7d7e82b98b94b3))
+
 # [17.14.0](https://github.com/ModaOperandi/om/compare/v17.13.0...v17.14.0) (2022-11-15)
 
 
