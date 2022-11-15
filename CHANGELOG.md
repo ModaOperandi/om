@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.14.0](https://github.com/ModaOperandi/om/compare/v17.13.0...v17.14.0) (2022-11-15)
+
+
+### Features
+
+* **loading-shapes:** adds the component, imported from discovery and its stories ([#3055](https://github.com/ModaOperandi/om/issues/3055)) ([c242985](https://github.com/ModaOperandi/om/commit/c242985806107cc78e550f030cf0975301067c17))
+
 # [17.13.0](https://github.com/ModaOperandi/om/compare/v17.12.0...v17.13.0) (2022-11-14)
 
 
