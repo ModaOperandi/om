@@ -80,6 +80,44 @@
     }
   }
 
+  &--tertiary {
+    @include text(body1);
+
+    padding: spacing(2, 3);
+    color: color(ink);
+    border-color: color(elephant);
+    background-color: color(snow);
+    text-transform: none;
+    line-height: 1.4;
+
+    &#{$self}--hover,
+    &:hover {
+      color: color(ink);
+      border-color: color(elephant);
+      background-color: color(noise, 0.32);
+    }
+
+    &#{$self}--focus,
+    &:focus {
+      color: color(ink);
+      border-color: color(elephant);
+      background-color: color(noise);
+    }
+
+    &#{$self}--disabled,
+    &:disabled {
+      color: color(cement);
+      border-color: color(fog);
+      background-color: color(noise);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &--elevated {
+    box-shadow: 0px 1px 4px color(coal, 0.09);
+  }
+
   &--chip {
     border-radius: 2rem;
   }

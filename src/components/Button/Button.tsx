@@ -6,6 +6,8 @@ import './Button.scss';
 
 export type ButtonProps = {
   secondary?: boolean;
+  tertiary?: boolean;
+  elevated?: boolean;
   chip?: boolean;
   focus?: boolean;
   hover?: boolean;
@@ -14,6 +16,8 @@ export type ButtonProps = {
 
 export const Button: React.FC<ButtonProps> = ({
   secondary,
+  tertiary,
+  elevated,
   chip,
   hover,
   focus,
@@ -27,6 +31,8 @@ export const Button: React.FC<ButtonProps> = ({
       {
         'Button--chip': chip,
         'Button--secondary': secondary,
+        'Button--tertiary': tertiary,
+        'Button--elevated': elevated,
         'Button--hover': hover,
         'Button--focus': focus,
         'Button--disabled': disabled
