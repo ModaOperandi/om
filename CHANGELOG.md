@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.14.2](https://github.com/ModaOperandi/om/compare/v17.14.1...v17.14.2) (2022-11-17)
+
+
+### Bug Fixes
+
+* **loading-shapes:** increases ms for transitioning ([#3060](https://github.com/ModaOperandi/om/issues/3060)) ([a93fc62](https://github.com/ModaOperandi/om/commit/a93fc62153920a9c7f0abd6e2a70adf9f2d2c3d0))
+
 ## [17.14.1](https://github.com/ModaOperandi/om/compare/v17.14.0...v17.14.1) (2022-11-15)
 
 
