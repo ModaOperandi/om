@@ -132,7 +132,7 @@
     "react-router-dom": "^5.1.2",
     "rollup": "^3.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-scss": "^4.0.0",
     "sass-loader": "^13.0.0",
     "semantic-release": "^19.0.2",
     "storybook-states": "^1.2.0",
