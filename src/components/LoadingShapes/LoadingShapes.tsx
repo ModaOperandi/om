@@ -6,7 +6,7 @@ import { Stack } from '../Stack';
 
 import './LoadingShapes.scss';
 
-const INTERVAL = 100;
+const INTERVAL_MS = 250;
 
 export const LoadingShapes = () => {
   const items = [Triangle, Diamond, ArcWindow, Circle];
@@ -15,7 +15,7 @@ export const LoadingShapes = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, INTERVAL);
+    }, INTERVAL_MS);
 
     return () => clearInterval(interval);
   }, [handleNext]);
