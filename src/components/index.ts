@@ -16,6 +16,7 @@ export * from './Divider';
 export * from './Label';
 export * from './Loading';
 export * from './LoadingBalls';
+export * from './LoadingShapes';
 export * from './Modal';
 export * from './ModalOverlay';
 export * from './Overlay';
