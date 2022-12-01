@@ -14,4 +14,18 @@ describe('SearchInput', () => {
 
     expect(screen.getByRole('textbox')).toHaveValue('');
   });
+
+  it('calls onChange when typing', async () => {
+    const onChange = jest.fn();
+
+    render(<SearchInput value='' onChange={onChange} />);
+
+    await userEvent.type(screen.getByRole('textbox'), 'Greetings');
+
+    expect(onChange).toHaveBeenCalledWith('Greetings');
+
+    await userEvent.click(screen.getByRole('button'));
+
+    expect(onChange).toHaveBeenCalledWith('');
+  });
 });

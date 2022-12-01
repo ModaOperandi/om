@@ -9,7 +9,6 @@ import './SearchInput.scss';
 export type SearchInputProps = TextInputProps & {
   value?: string;
   onClear?(): void;
-  onChangeValue?(value: string): void;
 };
 
 const DEFAULT_INPUT_VALUE = '';
@@ -17,7 +16,6 @@ const DEFAULT_INPUT_VALUE = '';
 export const SearchInput: React.FC<SearchInputProps> = ({
   className,
   onChange,
-  onChangeValue,
   onClear,
   value = DEFAULT_INPUT_VALUE,
   ...rest
@@ -26,13 +24,12 @@ export const SearchInput: React.FC<SearchInputProps> = ({
 
   const [controlledValue, setValue] = useState(value);
 
-  const handleClick = useCallback(() => {
+  const handleClear = useCallback(() => {
     setValue(DEFAULT_INPUT_VALUE);
-    onClear && onClear();
-    if (ref.current) {
-      ref.current.focus();
-    }
-  }, [onClear]);
+    onChange?.(DEFAULT_INPUT_VALUE);
+    onClear?.();
+    ref.current?.focus();
+  }, [onClear, onChange]);
 
   const handleChange = useCallback(
     (value: string) => {
@@ -43,10 +40,6 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   );
 
   useEffect(() => setValue(value), [value]);
-
-  useEffect(() => {
-    onChangeValue && onChangeValue(controlledValue);
-  }, [controlledValue, onChangeValue]);
 
   return (
     <div className={classNames('SearchInput', className)}>
@@ -63,7 +56,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
       />
 
       {controlledValue && (
-        <Clickable className='SearchInput__clear' onClick={handleClick} type='reset'>
+        <Clickable className='SearchInput__clear' onClick={handleClear} type='reset'>
           <ExitIcon />
         </Clickable>
       )}
