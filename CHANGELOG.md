@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/ModaOperandi/om/compare/v17.14.2...v18.0.0) (2022-12-01)
+
+
+### Bug Fixes
+
+* **searchinput:** clean up props ([#3080](https://github.com/ModaOperandi/om/issues/3080)) ([3f3f645](https://github.com/ModaOperandi/om/commit/3f3f6451b258ff7563f1e9852c15920239566815))
+
+
+### BREAKING CHANGES
+
+* **searchinput:** removed 'onChangeValue'
+
 ## [17.14.2](https://github.com/ModaOperandi/om/compare/v17.14.1...v17.14.2) (2022-11-17)
 
 
