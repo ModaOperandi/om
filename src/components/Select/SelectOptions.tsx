@@ -12,7 +12,7 @@ export type SelectOptionsProps = Omit<
   React.HTMLAttributes<HTMLUListElement>,
   'onSelect' | 'onFocus'
 > & {
-  idRef: string;
+  idRef?: string;
   searchable?: boolean;
   autoFocus?: boolean;
   options: SelectableOption[];
@@ -75,13 +75,13 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
         tabIndex={-1}
         role='listbox'
         ref={ref}
-        aria-labelledby={`Select__label--${idRef}`}
-        aria-activedescendant={`SelectOption--${activeOption?.value}-${idRef}`}
+        aria-labelledby={`Select__label${idRef ? `--${idRef}` : ''}`}
+        aria-activedescendant={`SelectOption--${activeOption?.value}${idRef ? `-${idRef}` : ''}`}
         {...rest}
       >
         {options.map(option => (
           <SelectOption
-            id={`SelectOption--${option.value}-${idRef}`}
+            id={`SelectOption--${option.value}${idRef ? `-${idRef}` : ''}`}
             key={option.value}
             option={option}
             dataTestId={dataTestId}

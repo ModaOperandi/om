@@ -29,6 +29,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   disabled,
   checkIcon = 'checkmark',
   dataTestId,
+  id,
   ...rest
 }) => {
   const [isChecked, setIsChecked] = useState(checked ?? defaultChecked ?? false);
@@ -47,12 +48,12 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 
   return (
     <label
-      role='button'
+      htmlFor={id}
       tabIndex={0}
       className={classNames('Checkbox', className, {
         'Checkbox--disabled': disabled
       })}
-      data-test-id={`${dataTestId}--label`}
+      data-test-id={dataTestId && `${dataTestId}--label`}
     >
       <span
         tabIndex={-1}
@@ -70,6 +71,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       </span>
 
       <input
+        id={id}
         tabIndex={-1}
         className='Checkbox__input'
         type='checkbox'
@@ -77,7 +79,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         value={value}
         onChange={handleChange}
         disabled={disabled}
-        data-test-id={`${dataTestId}--input`}
+        data-test-id={dataTestId && `${dataTestId}--input`}
         {...rest}
       />
 

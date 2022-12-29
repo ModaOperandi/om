@@ -47,7 +47,7 @@ export const SlidingPane: React.FC<SlidingPaneProps> = ({
             <Text treatment='h5' family='serif'>
               {title}
             </Text>
-            <Clickable className='SlidingPane__close' onClick={onClose}>
+            <Clickable className='SlidingPane__close' aria-label='Close' onClick={onClose}>
               <ExitIcon />
             </Clickable>
           </Stack>

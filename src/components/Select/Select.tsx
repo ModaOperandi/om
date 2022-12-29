@@ -40,7 +40,7 @@ export const Select: React.FC<SelectProps> = ({
   disabled,
   dropDirection = 'down',
   error,
-  idRef = '',
+  idRef,
   label = '',
   name,
   onChange,
@@ -95,7 +95,7 @@ export const Select: React.FC<SelectProps> = ({
   return (
     <>
       <div
-        id={idRef ? `Select--${idRef}` : undefined}
+        id={idRef && `Select--${idRef}`}
         className={classNames(
           'Select',
           { 'Select--disabled': disabled, 'Select--error': error },
@@ -109,7 +109,7 @@ export const Select: React.FC<SelectProps> = ({
         )}
 
         <Clickable
-          id={`Select__value--${idRef}`}
+          id={idRef && `Select__value--${idRef}`}
           className='Select__value'
           disabled={disabled}
           onClick={handleToggle}
