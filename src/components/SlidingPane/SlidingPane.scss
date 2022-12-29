@@ -2,6 +2,7 @@
 
 .SlidingPane {
   position: fixed;
+  visibility: hidden;
   width: 100%;
   bottom: -100vh;
   left: 0;
@@ -11,6 +12,7 @@
   margin-left: 0;
 
   &--active {
+    visibility: visible;
     bottom: 0;
   }
 
