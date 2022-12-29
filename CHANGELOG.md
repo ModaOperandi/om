@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.1.0](https://github.com/ModaOperandi/om/compare/v18.0.0...v18.1.0) (2022-12-29)
+
+
+### Features
+
+* accessibility improvements ([#3148](https://github.com/ModaOperandi/om/issues/3148)) ([7aecb1d](https://github.com/ModaOperandi/om/commit/7aecb1ddd9f6923b28bb5c99427ad884acb78fd2))
+
 # [18.0.0](https://github.com/ModaOperandi/om/compare/v17.14.2...v18.0.0) (2022-12-01)
 
 
