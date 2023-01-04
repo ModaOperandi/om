@@ -11,7 +11,7 @@
   width: 100%;
   padding: spacing(3, 4);
   border: 1px solid color(elephant);
-  background-color: color(snow);
+  background-color: color('snow');
   border-radius: 0;
 
   &::placeholder {

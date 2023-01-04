@@ -1,7 +1,7 @@
 @import '~om';
 
 .Toast {
-  color: color(snow);
+  color: color('snow');
   padding: spacing(3);
 
   &--success {

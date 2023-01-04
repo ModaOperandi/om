@@ -33,7 +33,7 @@
     height: 33%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: color(snow);
+    background-color: color('snow');
     z-index: 1;
   }
 
@@ -108,8 +108,8 @@
       content: '';
       display: block;
       position: absolute;
-      top: -($on-sale-dot-size / 2);
-      right: -($on-sale-dot-size / 2);
+      top: calc(-1 * $on-sale-dot-size / 2);
+      right: calc(-1 * $on-sale-dot-size / 2);
       width: $on-sale-dot-size;
       height: $on-sale-dot-size;
       border-radius: 50%;
