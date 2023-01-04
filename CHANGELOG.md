@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.2.0](https://github.com/ModaOperandi/om/compare/v18.1.0...v18.2.0) (2023-01-04)
+
+
+### Features
+
+* move from node-sass to sass ([#3159](https://github.com/ModaOperandi/om/issues/3159)) ([fc30fb4](https://github.com/ModaOperandi/om/commit/fc30fb4a3efa80d34f0c43ee043a6fad9169296d))
+
 # [18.1.0](https://github.com/ModaOperandi/om/compare/v18.0.0...v18.1.0) (2022-12-29)
 
 
