@@ -1,7 +1,8 @@
+@use 'sass:math';
 @import '~om';
 
 .Breakpoint {
-  $onePixel: 1/16;
+  $onePixel: math.div(1, 16);
   $keys: map-keys($breakpoints);
 
   display: none;

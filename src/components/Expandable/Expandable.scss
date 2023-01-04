@@ -85,17 +85,17 @@
 
   &--dark-background {
     border-color: color(cement);
-    color: color(snow);
+    color: color('snow');
 
     #{$self}__name {
       &::before,
       &::after {
-        background-color: color(snow);
+        background-color: color('snow');
       }
     }
 
     #{$self}__contents {
-      color: color(snow);
+      color: color('snow');
     }
   }
 }

@@ -22,23 +22,23 @@
 
   &,
   &--primary {
-    color: color(snow);
+    color: color('snow');
     border-color: color(ink);
     background-color: color(ink);
     @include font-smoothing(subpixel);
 
     &#{$self}--hover,
     &:hover {
-      color: color(snow);
+      color: color('snow');
       border-color: color(fog, 0.32);
       background: linear-gradient(0deg, color(fog, 0.32), color(fog, 0.32)), color(ink);
     }
 
     &#{$self}--focus,
     &:focus {
-      color: color(snow);
+      color: color('snow');
       border-color: color(fog, 0.12);
-      background: linear-gradient(0deg, color(snow, 0.12), color(snow, 0.12)), color(ink);
+      background: linear-gradient(0deg, color('snow', 0.12), color('snow', 0.12)), color(ink);
     }
 
     &#{$self}--disabled,
@@ -54,7 +54,7 @@
   &--secondary {
     color: color(ink);
     border-color: color(ink);
-    background-color: color(snow);
+    background-color: color('snow');
 
     &#{$self}--hover,
     &:hover {
@@ -86,7 +86,7 @@
     padding: spacing(2, 3);
     color: color(ink);
     border-color: color(elephant);
-    background-color: color(snow);
+    background-color: color('snow');
     text-transform: none;
     line-height: 1.4;
 

@@ -1,7 +1,7 @@
 @import '~om';
 
 .SelectOptions {
-  background-color: color(snow);
+  background-color: color('snow');
   border: 1px solid color(elephant);
 
   &:focus {
