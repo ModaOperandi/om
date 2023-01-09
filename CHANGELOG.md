@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.3.0](https://github.com/ModaOperandi/om/compare/v18.2.0...v18.3.0) (2023-01-09)
+
+
+### Features
+
+* **AspectRatioBox:** make maxWidth and maxHeight optional ([#3168](https://github.com/ModaOperandi/om/issues/3168)) ([4b35e54](https://github.com/ModaOperandi/om/commit/4b35e5410bb90250adb4bb795b894d127f81061c))
+
 # [18.2.0](https://github.com/ModaOperandi/om/compare/v18.1.0...v18.2.0) (2023-01-04)
 
 
