@@ -2467,7 +2467,7 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@storybook/addon-actions@7.0.3", "@storybook/addon-actions@^7.0.2":
+"@storybook/addon-actions@7.0.3":
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.0.3.tgz#7e3b411390d86d06a71b95a7bffcc2c2a336f1b2"
   integrity sha512-u0dNilYi5+nt2LyfVgNgIweUKVCuz7dNjRpBMdcxQnHyvq5s5KMSkRXqF9em4Gf5X4Z7YGgrLFOqFDt4Gv/+Jg==
@@ -2480,6 +2480,28 @@
     "@storybook/preview-api" "7.0.3"
     "@storybook/theming" "7.0.3"
     "@storybook/types" "7.0.3"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    polished "^4.2.2"
+    prop-types "^15.7.2"
+    react-inspector "^6.0.0"
+    telejson "^7.0.3"
+    ts-dedent "^2.0.0"
+    uuid-browser "^3.1.0"
+
+"@storybook/addon-actions@^7.0.2":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.0.4.tgz#9131fb8811661fa47ead11604a67301b13de3b97"
+  integrity sha512-fYnYYU2QW1FWJbKchhH4fFHM9V2CFGqYNQ+T65+fBGrR6vtE/+yPqozCOHcmeZ6f5i6xeHuQfKiFInDNZC4AzA==
+  dependencies:
+    "@storybook/client-logger" "7.0.4"
+    "@storybook/components" "7.0.4"
+    "@storybook/core-events" "7.0.4"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.0.4"
+    "@storybook/preview-api" "7.0.4"
+    "@storybook/theming" "7.0.4"
+    "@storybook/types" "7.0.4"
     dequal "^2.0.2"
     lodash "^4.17.21"
     polished "^4.2.2"
@@ -2958,6 +2980,20 @@
     "@storybook/global" "^5.0.0"
     "@storybook/theming" "7.0.3"
     "@storybook/types" "7.0.3"
+    memoizerific "^1.11.3"
+    use-resize-observer "^9.1.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/components@7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.0.4.tgz#e1f43eba78f321018a58b6e1004f1071f76f9d5e"
+  integrity sha512-yBw+1NkGlaHo6U7crIlz8g5LFqXugmnS1t4xsxEUQO6b5BdQuQPggwjlkEkHoLW3sg04Sacgb7CvfDWInieuug==
+  dependencies:
+    "@storybook/client-logger" "7.0.4"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/theming" "7.0.4"
+    "@storybook/types" "7.0.4"
     memoizerific "^1.11.3"
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
