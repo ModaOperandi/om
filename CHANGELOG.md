@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.3.1](https://github.com/ModaOperandi/om/compare/v18.3.0...v18.3.1) (2023-04-17)
+
+
+### Bug Fixes
+
+* edit popover content prop ([185097f](https://github.com/ModaOperandi/om/commit/185097f21d2033e0351bcfe8312053ff1f570e9a))
+
 # [18.3.0](https://github.com/ModaOperandi/om/compare/v18.2.0...v18.3.0) (2023-01-09)
 
 
