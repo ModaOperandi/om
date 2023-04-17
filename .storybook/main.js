@@ -1,12 +1,13 @@
 const path = require('path');
 const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-webpack-plugin');
-
 module.exports = {
-  core: {
-    builder: 'webpack5'
-  },
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-postcss'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-postcss',
+    '@storybook/addon-mdx-gfm'
+  ],
   webpackFinal: config => ({
     ...config,
     resolve: {
@@ -27,5 +28,12 @@ module.exports = {
       ]
     },
     plugins: [...config.plugins, new IgnoreNotFoundExportPlugin()]
-  })
+  }),
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {}
+  },
+  docs: {
+    autodocs: true
+  }
 };
