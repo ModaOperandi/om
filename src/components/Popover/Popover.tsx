@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef, ReactNode } from 'react';
 import classNames from 'classnames';
 import './Popover.scss';
 
-export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
-  content: JSX.Element;
+export type PopoverProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'content'> & {
+  content: ReactNode;
   children: JSX.Element;
   open?: boolean;
   anchor?: 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight';
