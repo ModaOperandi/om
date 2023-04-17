@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.3.2](https://github.com/ModaOperandi/om/compare/v18.3.1...v18.3.2) (2023-04-17)
+
+
+### Bug Fixes
+
+* **storybook:** use automigrate to fix storybook build ([ec67966](https://github.com/ModaOperandi/om/commit/ec67966be5b688d9bde3dc4d19fd0fafb5a4ec5d))
+
 ## [18.3.1](https://github.com/ModaOperandi/om/compare/v18.3.0...v18.3.1) (2023-04-17)
 
 
