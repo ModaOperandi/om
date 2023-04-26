@@ -2662,9 +2662,9 @@
     style-loader "^1.3.0"
 
 "@storybook/addon-styling@^1.0.1":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-styling/-/addon-styling-1.0.2.tgz#71ea3e0b6678733f6830c7cd191332b42c7dc708"
-  integrity sha512-Y9NwwK7u1MPOZsbNVUDX9yY42Hz31v4dHqiOCJ5FIdD64wTCo6eW5phyrNtrphIwiAD7AjYiGx8xE/YwpOmANQ==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-styling/-/addon-styling-1.0.3.tgz#aaf31d4a7b8ba1d89590ace5b138b4fe472eaecb"
+  integrity sha512-FGgAWJema61VjIrH08+MYjDJEDlbVnVkufVq3TTCwr7RUJho4XHabRwDWghZE/IfkdWd4T06YNPUOML8q/BNsw==
   dependencies:
     "@storybook/api" "^7.0.2"
     "@storybook/components" "^7.0.2"
@@ -2716,21 +2716,13 @@
     "@storybook/preview-api" "7.0.7"
     "@storybook/types" "7.0.7"
 
-"@storybook/api@7.0.7":
+"@storybook/api@7.0.7", "@storybook/api@^7.0.2":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-7.0.7.tgz#ae2c3f435b025f0aac86da1033ad3f0cbceb6ef4"
   integrity sha512-0++LcK6PX1Z2HsI9fyZyqvmeFrB5NDMcsbmIvJfA2NfK92UW8y7t6Ft2fq/2jUCJcWT8Jp3xpatUvYb28irfwg==
   dependencies:
     "@storybook/client-logger" "7.0.7"
     "@storybook/manager-api" "7.0.7"
-
-"@storybook/api@^7.0.2":
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/@storybook/api/-/api-7.0.6.tgz#bb9130c725bd0d3787a1e9a42cad98729a736658"
-  integrity sha512-YQ5hiJYaVAfSifVUUs50ubc3nutRIqo04Mn4vzx0Nc5j44MsP2k0r0tZfeq+TAfMIGyHlIWHTWXMOHNRJkkhNg==
-  dependencies:
-    "@storybook/client-logger" "7.0.6"
-    "@storybook/manager-api" "7.0.6"
 
 "@storybook/blocks@7.0.7":
   version "7.0.7"
@@ -2960,7 +2952,7 @@
     prettier "^2.8.0"
     recast "^0.23.1"
 
-"@storybook/components@7.0.7":
+"@storybook/components@7.0.7", "@storybook/components@^7.0.2":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.0.7.tgz#3b4829e8287e81a6850417c40f6f28e6ea5580bc"
   integrity sha512-6PLs9LMkBuhH/w4bSJ72tYgICMbOOIHuoB/fQdVlzhsdnXL2fM/v4RVW2N7v+Oz3lYXp/JtV8V9Ub8h6eDQKXg==
@@ -2970,20 +2962,6 @@
     "@storybook/global" "^5.0.0"
     "@storybook/theming" "7.0.7"
     "@storybook/types" "7.0.7"
-    memoizerific "^1.11.3"
-    use-resize-observer "^9.1.0"
-    util-deprecate "^1.0.2"
-
-"@storybook/components@^7.0.2":
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.0.6.tgz#b4b3042042dd0d5a77910c78a5b131016f01d316"
-  integrity sha512-SiHkSgYR8CcAGrWLof85FImcPIb+ApRW6K3LVcyinctJzOQCWLgh0poKUQ5och3CjSxQbM1G4S1ZXrAfZdU9Cg==
-  dependencies:
-    "@storybook/client-logger" "7.0.6"
-    "@storybook/csf" "^0.1.0"
-    "@storybook/global" "^5.0.0"
-    "@storybook/theming" "7.0.6"
-    "@storybook/types" "7.0.6"
     memoizerific "^1.11.3"
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
@@ -3021,12 +2999,12 @@
     resolve-from "^5.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/core-events@7.0.6", "@storybook/core-events@^7.0.2":
+"@storybook/core-events@7.0.6":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.6.tgz#f3b4876cb9003a6bbdbd9602d017e2b37ec86f78"
   integrity sha512-kGrtjlYtjd4iTVk+Phb4CymZaVkB+MGscKAgcO8gfgJ/Q/gq8HQLVZSIzeoCDcDSHOGlBzbg2WVtdHIHhCKlOQ==
 
-"@storybook/core-events@7.0.7":
+"@storybook/core-events@7.0.7", "@storybook/core-events@^7.0.2":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.7.tgz#9acb6425d0a2a3d25becc21980c2c678c6c5548e"
   integrity sha512-XNsR2RgaL2vBwuqsu+KA1DzGmB1UFfrAhpxhmyWTKDCniwtTLlaXgfKbqwcrOrPu/o1YswgIup/9UHepRHaf4A==
@@ -3386,7 +3364,7 @@
     nanoid "^3.3.1"
     read-pkg-up "^7.0.1"
 
-"@storybook/theming@7.0.6", "@storybook/theming@^7.0.2":
+"@storybook/theming@7.0.6":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.6.tgz#b42c1840c12a1c0198c704ce746992223ffa4e8b"
   integrity sha512-EVN3cA9Z2odkPdUgKNTJTEa5i1H2EJzGDAh/b3GLDQgIPOBD6/ynQIB+e2TmJUFflIyRTuDZJrhcf33U6J9Pww==
@@ -3396,7 +3374,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.0.7":
+"@storybook/theming@7.0.7", "@storybook/theming@^7.0.2":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.7.tgz#263c162825e3c0ff4eb53e204e586077e596037e"
   integrity sha512-InTZe+Sgco1NsxgiG+cyUKWQe3GsjlIyU/o5qDdtOTXcZ64HzyBuAZlAequSddqfDeMDqxRFPc2w1J28MAUHxA==
