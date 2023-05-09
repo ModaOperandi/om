@@ -33,6 +33,18 @@
     }
   }
 
+  &--footer {
+    &:before,
+    &:after {
+      content: '';
+      flex: 1;
+      border: none;
+      background-color: color(fog);
+      height: 0.5px;
+      width: 50%;
+    }
+  }
+
   &--no-line {
     &:before,
     &:after {
