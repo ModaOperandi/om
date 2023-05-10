@@ -3022,6 +3022,14 @@
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
 
+"@storybook/core-client@7.0.10":
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/core-client/-/core-client-7.0.10.tgz#dc00959418c52f1a10590f83260f386bff5d6c86"
+  integrity sha512-sN/TKB7QHWP6josdjyNtoqDXihROPtgvzo5+akfW6+S7hhfsQ4BJd09nkBqEX9E7z81blmFFDUOU3a8bQbPdKQ==
+  dependencies:
+    "@storybook/client-logger" "7.0.10"
+    "@storybook/preview-api" "7.0.10"
+
 "@storybook/core-client@7.0.9":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/core-client/-/core-client-7.0.9.tgz#a28ab73ee8490280213492d1b8f18727405315f8"
@@ -3446,7 +3454,7 @@
     "@storybook/react" "7.0.9"
     "@types/node" "^16.0.0"
 
-"@storybook/react@7.0.9", "@storybook/react@^7.0.2":
+"@storybook/react@7.0.9":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.9.tgz#aa6fc37db38c2f835c643c284f18ffea488ed91a"
   integrity sha512-wYrtyk6qVqgqODgBh/vWO31SrjzFER0NfnrZy6FvwR4AAHhM0u2qMs8ZXCJFXFIgwjkgGwpD9/EwjRuYHUqDTQ==
@@ -3458,6 +3466,33 @@
     "@storybook/preview-api" "7.0.9"
     "@storybook/react-dom-shim" "7.0.9"
     "@storybook/types" "7.0.9"
+    "@types/escodegen" "^0.0.6"
+    "@types/estree" "^0.0.51"
+    "@types/node" "^16.0.0"
+    acorn "^7.4.1"
+    acorn-jsx "^5.3.1"
+    acorn-walk "^7.2.0"
+    escodegen "^2.0.0"
+    html-tags "^3.1.0"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
+    react-element-to-jsx-string "^15.0.0"
+    ts-dedent "^2.0.0"
+    type-fest "^2.19.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/react@^7.0.2":
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.10.tgz#f4aa447c31748c66bae9a0fed303b5f4a78f9d0c"
+  integrity sha512-/DDUGFz0bk5c/HCfSr7fL74rQc+3s317TDDKY6ZrgUzdIkze4D/TlAbWV78XV/ceeFNi1fLAUzGjFzuDwmVkJw==
+  dependencies:
+    "@storybook/client-logger" "7.0.10"
+    "@storybook/core-client" "7.0.10"
+    "@storybook/docs-tools" "7.0.10"
+    "@storybook/global" "^5.0.0"
+    "@storybook/preview-api" "7.0.10"
+    "@storybook/react-dom-shim" "7.0.10"
+    "@storybook/types" "7.0.10"
     "@types/escodegen" "^0.0.6"
     "@types/estree" "^0.0.51"
     "@types/node" "^16.0.0"
