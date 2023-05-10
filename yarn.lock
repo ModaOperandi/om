@@ -2720,7 +2720,7 @@
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
 
-"@storybook/addons@7.0.9", "@storybook/addons@^7.0.2":
+"@storybook/addons@7.0.9":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.0.9.tgz#fc9b1397cb39e2a78b15677b3723b996ac67b208"
   integrity sha512-WxjURCJW2sNktYWgANqi/pzmRWTfFyB66mCTZNnhwagmbRkR7ifevUUqTX2cm5dgWSEoqYhVk91MQuEpBE3NoQ==
@@ -2728,6 +2728,15 @@
     "@storybook/manager-api" "7.0.9"
     "@storybook/preview-api" "7.0.9"
     "@storybook/types" "7.0.9"
+
+"@storybook/addons@^7.0.2":
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.0.10.tgz#4a2958a992e97ec38ce3a501e637a740b1e4f145"
+  integrity sha512-RRtozbB0JovZdLgTgC03kOjNh/5sAN77VHZFC5aK/Y9Hz2A0C6V4w/SqTt0382skSllcGMcrHjB1k06BlxlZ8A==
+  dependencies:
+    "@storybook/manager-api" "7.0.10"
+    "@storybook/preview-api" "7.0.10"
+    "@storybook/types" "7.0.10"
 
 "@storybook/api@7.0.9":
   version "7.0.9"
@@ -3544,7 +3553,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/types@7.0.10":
+"@storybook/types@7.0.10", "@storybook/types@^7.0.2":
   version "7.0.10"
   resolved "https://registry.yarnpkg.com/@storybook/types/-/types-7.0.10.tgz#04bf81374fc6c519693b61546ddd8dd4d47fda97"
   integrity sha512-mFktvN8PjjDFJSjck4spikmjtr0AwfOhcEtIf4UCmUD5JHgGppkQmvO6483nGcprSFcWOvD2uYGs8Wp32wG/MQ==
@@ -3564,7 +3573,7 @@
     "@types/express" "^4.7.0"
     file-system-cache "^2.0.0"
 
-"@storybook/types@7.0.9", "@storybook/types@^7.0.2":
+"@storybook/types@7.0.9":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/types/-/types-7.0.9.tgz#745c74ab88ed911dd75246de3ec3f84e71844f76"
   integrity sha512-6aKrrsX3wgPMg9Nu3AK1GYmCZQiHqHv7l24ywNxZPv0T63rcpS86kWK4qVAywoaXGFc9GtRT+dz1rK8Fx50J9Q==
