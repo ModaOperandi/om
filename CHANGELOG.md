@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.4.0](https://github.com/ModaOperandi/om/compare/v18.3.2...v18.4.0) (2023-05-12)
+
+
+### Features
+
+* **version:** release tokens version ([dd9202f](https://github.com/ModaOperandi/om/commit/dd9202f5d61c82ee096f4306ae03fb3463f799c5))
+
 ## [18.3.2](https://github.com/ModaOperandi/om/compare/v18.3.1...v18.3.2) (2023-04-17)
 
 
