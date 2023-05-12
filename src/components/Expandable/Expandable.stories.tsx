@@ -93,7 +93,7 @@ export const Stacked = () => (
         consequat. Morbi et volutpat nulla, a vehicula nisl. Nullam tincidunt ac neque ornare
         mattis. Donec eget dapibus enim. Aliquam ut tortor pretium dui pretium tincidunt. Donec quis
         lacus maximus, dignissim arcu nec, lacinia arcu. Sed placerat leo velit. Ut vehicula sodales
-        egestas. Nunc sed dapibus tortor.
+        egestas. Nunc sed dapibus tortor!
       </Expandable>
     </Stack>
   </States>
