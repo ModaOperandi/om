@@ -71,7 +71,7 @@
     "@jedmao/semantic-release-npm-github-config": "^1.0.9",
     "@moda/rollup-plugin-postcss": "^4.0.1",
     "@rollup/plugin-babel": "^6.0.0",
-    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@storybook/addon-actions": "^7.0.2",
     "@storybook/addon-essentials": "^7.0.2",
