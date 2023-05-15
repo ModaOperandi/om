@@ -2049,10 +2049,10 @@
   integrity sha512-O8LJrDtlbBc0cz7bY1LYB5KUw7NBNfrkF/TMu6KG5b0tRAcYbD/wYlIXe6IhWTEpdMISKt+bEiZb5uUsr8YTxQ==
 
 "@moda/om@file:..":
-  version "18.3.2"
+  version "18.4.0"
   dependencies:
     "@moda/icons" "^5.18.0"
-    "@moda/tokens" "^5.7.0"
+    "@moda/tokens" "^5.8.0"
     "@storybook/addon-styling" "^1.0.1"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
@@ -2065,10 +2065,10 @@
     storybook "^7.0.5"
     use-cursor "^1.0.0"
 
-"@moda/tokens@^5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.7.0.tgz#5681a2ca40dd289b69089c4f9fa54e0ebd3e7356"
-  integrity sha512-+XbHQ7+lmo8CDlALC+FHubo/zD65yiTDybeBN5tUp8ikUVkSjQ6bfLn82KLQmXg6xiA7RiQJaD6jSqTtJSPFcQ==
+"@moda/tokens@^5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@moda/tokens/-/tokens-5.8.0.tgz#edc6d1fedf11aec2c31cc0acb54e4dccea80cdaa"
+  integrity sha512-DJDZop2i6pNOX3QB21NLBOEKStX5ABaWWRaj8MDMuLUe2ED3I2FWmN5f3k56WkMZTm7Yp6bqMzH40kvMZ0SrXg==
   dependencies:
     color-string "^1.5.5"
 
@@ -2909,10 +2909,10 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@20.1.3":
-  version "20.1.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.1.3.tgz#bc8e7cd8065a5fc355a3a191a68db8019c58bc00"
-  integrity sha512-NP2yfZpgmf2eDRPmgGq+fjGjSwFgYbihA8/gK+ey23qT9RkxsgNTZvGOEpXgzIGqesTYkElELLgtKoMQTys5vA==
+"@types/node@*", "@types/node@20.1.4":
+  version "20.1.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.1.4.tgz#83f148d2d1f5fe6add4c53358ba00d97fc4cdb71"
+  integrity sha512-At4pvmIOki8yuwLtd7BNHl3CiWNbtclUbNtScGx4OHfBd4/oWoJC8KRCIxXwkdndzhxOsPXihrsOoydxBjlE9Q==
 
 "@types/node@^16.0.0":
   version "16.18.23"
