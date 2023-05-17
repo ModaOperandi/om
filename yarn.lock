@@ -1796,9 +1796,9 @@
     "@types/react" ">=16"
 
 "@moda/icons@^5.18.0":
-  version "5.20.0"
-  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.20.0.tgz#6e9379d46f4dd753a7f8a2d397f6656019fadba6"
-  integrity sha512-lwtRlECbkmp6yUURkt4oFZ/Mwmx341oBSD3wuxOVW++cOBSRPM+NCCz1+kedWZ/74tbG4DD5LXHUt3/QsGzytw==
+  version "5.21.0"
+  resolved "https://registry.yarnpkg.com/@moda/icons/-/icons-5.21.0.tgz#59d5878708365c27410184b79bad66c7a12fe1ed"
+  integrity sha512-/+LszCO1nvCqu5Jr+w00m/UTVmCrhh0OFDDUytLs9Tc5NJ4HYdrRsEUvdPh3yRctHysIk6/X8Dl7SwNZf4n0Ig==
 
 "@moda/rollup-plugin-postcss@^4.0.1":
   version "4.0.1"
