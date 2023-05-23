@@ -2500,7 +2500,7 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@storybook/addon-actions@7.0.12", "@storybook/addon-actions@^7.0.2":
+"@storybook/addon-actions@7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.0.12.tgz#61634c40073718cf02967f073df4595afd363521"
   integrity sha512-f07Mc3qwcG9heGsuUUTIJbWF2nw/Ite3mvyIZY2VbgwhMUMVHj4knY4fh/LojwcUmmmc7CNZu3sJN/wIqpaHCQ==
@@ -2513,6 +2513,28 @@
     "@storybook/preview-api" "7.0.12"
     "@storybook/theming" "7.0.12"
     "@storybook/types" "7.0.12"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    polished "^4.2.2"
+    prop-types "^15.7.2"
+    react-inspector "^6.0.0"
+    telejson "^7.0.3"
+    ts-dedent "^2.0.0"
+    uuid "^9.0.0"
+
+"@storybook/addon-actions@^7.0.2":
+  version "7.0.13"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.0.13.tgz#18dcf4d8410ddb5e087a9a092c2ff5b172c38e09"
+  integrity sha512-mS1e/6iRbszjxGNaClPXTeQ36R03AwUtprp5IOyaSfE/hjvUqLdAX3BIYU/1YwcILl3hJ9vIeqNg+IlqRNHcfg==
+  dependencies:
+    "@storybook/client-logger" "7.0.13"
+    "@storybook/components" "7.0.13"
+    "@storybook/core-events" "7.0.13"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.0.13"
+    "@storybook/preview-api" "7.0.13"
+    "@storybook/theming" "7.0.13"
+    "@storybook/types" "7.0.13"
     dequal "^2.0.2"
     lodash "^4.17.21"
     polished "^4.2.2"
@@ -2994,7 +3016,7 @@
     prettier "^2.8.0"
     recast "^0.23.1"
 
-"@storybook/components@7.0.12", "@storybook/components@^7.0.2":
+"@storybook/components@7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.0.12.tgz#fe363ffd09e8643ff3e640e9208bbf02853c7c4c"
   integrity sha512-6TxByzYS4+LxwZRioGpP6Zh9If5ctjQs5OnR2UmQvP6HDjmMWYTntoHKIbDwAL9C6MrnQYpPOGCPkqrtODQ4/w==
@@ -3004,6 +3026,20 @@
     "@storybook/global" "^5.0.0"
     "@storybook/theming" "7.0.12"
     "@storybook/types" "7.0.12"
+    memoizerific "^1.11.3"
+    use-resize-observer "^9.1.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/components@7.0.13", "@storybook/components@^7.0.2":
+  version "7.0.13"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.0.13.tgz#01f4e24069814fb59957e8b3ebd6773722a847f9"
+  integrity sha512-QIY0F0/rjiuL6EKcnodtKmTuW93TDoZJALKpixF4sbdTfc1JpBLSCYE20UvYztqF2OGUI4I3EQFVgLkVIeS11w==
+  dependencies:
+    "@storybook/client-logger" "7.0.13"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/theming" "7.0.13"
+    "@storybook/types" "7.0.13"
     memoizerific "^1.11.3"
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
@@ -3079,12 +3115,12 @@
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.10.tgz#56d0a433cb7044d691a148d2b4c8e6005beb7755"
   integrity sha512-OyBqhxVQOdI78Vgv6nKwXOdIVNChyfktpdxQZP1rz9MpO6MrqMaGAUL7k8xQMQAVx0VY+dAMYZB3bnyN2IC8FA==
 
-"@storybook/core-events@7.0.12", "@storybook/core-events@^7.0.2":
+"@storybook/core-events@7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.12.tgz#928409c27cca2855189834726c268b7c59996994"
   integrity sha512-VTmb/zjbz3o1bg+bATzLigVXMVDC/S1FP8CqIrz4mkiys52139FGzMandL2Y2AecPZPGss7ZRdfma28HKVYTRg==
 
-"@storybook/core-events@7.0.13":
+"@storybook/core-events@7.0.13", "@storybook/core-events@^7.0.2":
   version "7.0.13"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.13.tgz#f4097c6dcdb51d8f352d1d18499c0282e19ebff5"
   integrity sha512-V5kjFn+nEZDv8tzz4OORnSonmKUkkbHoSmzU1LaE6dBPR1yafx/+u7HoiTKoLLvIZ4YvYZ4QvUjcC73dyae0TQ==
@@ -3539,7 +3575,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.0.12", "@storybook/theming@^7.0.2":
+"@storybook/theming@7.0.12":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.12.tgz#5583639b391e7bbb710a74bc59c94b8bbc455d88"
   integrity sha512-frBkvH7LF8j23ODaywLK4m4LLscw49oKblkZ+30QZkBAzRf2o3a/QSZW2V1zfBo7ygcXiUJ5bIjh7Y17mMJqbQ==
@@ -3549,7 +3585,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.0.13":
+"@storybook/theming@7.0.13", "@storybook/theming@^7.0.2":
   version "7.0.13"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.13.tgz#20bc10f23bd22ee6036e7c9c2f47eb1f437a925e"
   integrity sha512-m4gdvmwWUCRPxqY4BVyRd74pS704f0DS5HpNw3sSdBCgAaMIZX70LYwwxvVWhBR5zjBHABf1t+A93lfm+zS1MQ==
