@@ -3099,7 +3099,7 @@
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
 
-"@storybook/addons@7.0.17", "@storybook/addons@^7.0.2":
+"@storybook/addons@7.0.17":
   version "7.0.17"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.0.17.tgz#f01813bd771bffe5aca484738a8061df36e82fe5"
   integrity sha512-mDWVkv17se+eM8OsEvpAodvsLRx1BeGGZMbFTNx1INMZKiGkaepzX7ma+fkBy0cDn3FkIh4TlKL8gzUl5jeQ8A==
@@ -3107,6 +3107,15 @@
     "@storybook/manager-api" "7.0.17"
     "@storybook/preview-api" "7.0.17"
     "@storybook/types" "7.0.17"
+
+"@storybook/addons@^7.0.2":
+  version "7.0.18"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.0.18.tgz#38dbbdb5281ce16ad0996bfc8a9e0bc5e7514460"
+  integrity sha512-+j9ItxWoVzarbllaV4WRaJpDM3P2aC5O6F3cPn4YkG/unb6HOs11WLAqFbzZnLYZNAFvWS8PYEAtqs1BxG66YQ==
+  dependencies:
+    "@storybook/manager-api" "7.0.18"
+    "@storybook/preview-api" "7.0.18"
+    "@storybook/types" "7.0.18"
 
 "@storybook/api@7.0.17":
   version "7.0.17"
