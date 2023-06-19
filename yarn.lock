@@ -3066,11 +3066,11 @@
     ts-dedent "^2.0.0"
 
 "@storybook/addon-mdx-gfm@^7.0.5":
-  version "7.0.21"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-mdx-gfm/-/addon-mdx-gfm-7.0.21.tgz#1d821e4e029f5d24c5a7f3b89daca226a4a25938"
-  integrity sha512-M+KJng4Vv2Y6azBKGC3RYqGGgSd7UrjRpLbM4aTVLjZcZeECasxNQgHcncoqbpCm/1D8dRIlx73bSBc6zCcRLQ==
+  version "7.0.22"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-mdx-gfm/-/addon-mdx-gfm-7.0.22.tgz#d5ca68accd66a01669ae621d27258d89e762b74d"
+  integrity sha512-YJqpsv0B4uEXfd8LlbeW7nnvwljIIkDqVQxLCMvoY//m9msLA2Xz+p2mDjofgJZBNT7tgRvrsvpRGRfb+iqZ2w==
   dependencies:
-    "@storybook/node-logger" "7.0.21"
+    "@storybook/node-logger" "7.0.22"
     remark-gfm "^3.0.1"
     ts-dedent "^2.0.0"
 
@@ -3640,16 +3640,6 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/mdx2-csf/-/mdx2-csf-1.0.0.tgz#ce4b2e44c9082bf382db835eef611b0097b7d771"
   integrity sha512-dBAnEL4HfxxJmv7LdEYUoZlQbWj9APZNIbOaq0tgF8XkxiIbzqvgB0jhL/9UOrysSDbQWBiCRTu2wOVxedGfmw==
-
-"@storybook/node-logger@7.0.21":
-  version "7.0.21"
-  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-7.0.21.tgz#3a2df6879ffacc76a82d7336ec445e221ebe213f"
-  integrity sha512-km7MfQ7Hk04UsH/ZgwW5iqSxlGi/Z/lw8Mb0Zdv7ms+FllPBPf5BhgjuC7LA6y+3WUghl6ESpDoig2771TNy4w==
-  dependencies:
-    "@types/npmlog" "^4.1.2"
-    chalk "^4.1.0"
-    npmlog "^5.0.1"
-    pretty-hrtime "^1.0.3"
 
 "@storybook/node-logger@7.0.22", "@storybook/node-logger@^7.0.12":
   version "7.0.22"
