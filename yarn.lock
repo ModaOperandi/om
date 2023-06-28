@@ -3163,7 +3163,7 @@
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
 
-"@storybook/addons@7.0.24":
+"@storybook/addons@7.0.24", "@storybook/addons@^7.0.2":
   version "7.0.24"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.0.24.tgz#7834401931d3a15b43895ca714514e356a9b027a"
   integrity sha512-e15hORnOD0ugvOVOTyZyLJhbDTWa4G1OHVUlboazy8O4TSvAXNBdLV1wOdY5RGoGD6Z5A4iR/gZXM0qc6Fh9xg==
@@ -3171,15 +3171,6 @@
     "@storybook/manager-api" "7.0.24"
     "@storybook/preview-api" "7.0.24"
     "@storybook/types" "7.0.24"
-
-"@storybook/addons@^7.0.2":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.0.23.tgz#ae185b813a9b28231d4c331373f24b37b18124d1"
-  integrity sha512-o+bw63OYDLWAd8VC4ebwU4o+QS58ETV5n52exlOQ1RzvEkbejtlzkxB+5oDndnfUIHYXRvgXleFo+d1KNxOJRw==
-  dependencies:
-    "@storybook/manager-api" "7.0.23"
-    "@storybook/preview-api" "7.0.23"
-    "@storybook/types" "7.0.23"
 
 "@storybook/api@7.0.24":
   version "7.0.24"
@@ -3295,18 +3286,6 @@
     webpack-dev-middleware "^5.3.1"
     webpack-hot-middleware "^2.25.1"
     webpack-virtual-modules "^0.4.3"
-
-"@storybook/channel-postmessage@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-7.0.23.tgz#eff248def859a0106cb45d535eb13111b8abb2df"
-  integrity sha512-SfXTV55Z9U5rN1OuyR56s+PUpav3b4SgXtP67bnNsrv7dkKhBwr0DUUJogIRnjmY0Loy/hLvJ23kfmKXPWC4vQ==
-  dependencies:
-    "@storybook/channels" "7.0.23"
-    "@storybook/client-logger" "7.0.23"
-    "@storybook/core-events" "7.0.23"
-    "@storybook/global" "^5.0.0"
-    qs "^6.10.0"
-    telejson "^7.0.3"
 
 "@storybook/channel-postmessage@7.0.24":
   version "7.0.24"
@@ -3709,27 +3688,6 @@
     react-refresh "^0.11.0"
     semver "^7.3.7"
     webpack "5"
-
-"@storybook/preview-api@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/preview-api/-/preview-api-7.0.23.tgz#6f4d98a54c7367341e086a1818866e2e1e97faea"
-  integrity sha512-kXhDX6gVjQu4Lx4SnCW5Yt5W/TbQofp9SL0paB1ywsJ15xSAPU5KVILe9OWAOba2YUnk7sHux/xDX/gH5RCpVw==
-  dependencies:
-    "@storybook/channel-postmessage" "7.0.23"
-    "@storybook/channels" "7.0.23"
-    "@storybook/client-logger" "7.0.23"
-    "@storybook/core-events" "7.0.23"
-    "@storybook/csf" "^0.1.0"
-    "@storybook/global" "^5.0.0"
-    "@storybook/types" "7.0.23"
-    "@types/qs" "^6.9.5"
-    dequal "^2.0.2"
-    lodash "^4.17.21"
-    memoizerific "^1.11.3"
-    qs "^6.10.0"
-    synchronous-promise "^2.0.15"
-    ts-dedent "^2.0.0"
-    util-deprecate "^1.0.2"
 
 "@storybook/preview-api@7.0.24", "@storybook/preview-api@^7.0.12":
   version "7.0.24"
