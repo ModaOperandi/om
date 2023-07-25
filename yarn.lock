@@ -2699,7 +2699,7 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@storybook/addon-actions@7.1.0", "@storybook/addon-actions@^7.0.2":
+"@storybook/addon-actions@7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.1.0.tgz#8cc516a08840b257d4b6fafc66ddab2c39e2b7d0"
   integrity sha512-JQfcR1AjVWE/M4ayxfyCU/qSj5Jf5djKgvan0YaxTjtQr9tzIgTc93jeF+IPJMnv7ZoaeDW6BS/6n+zSDqJeTg==
@@ -2712,6 +2712,28 @@
     "@storybook/preview-api" "7.1.0"
     "@storybook/theming" "7.1.0"
     "@storybook/types" "7.1.0"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    polished "^4.2.2"
+    prop-types "^15.7.2"
+    react-inspector "^6.0.0"
+    telejson "^7.0.3"
+    ts-dedent "^2.0.0"
+    uuid "^9.0.0"
+
+"@storybook/addon-actions@^7.0.2":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.1.1.tgz#fb7f94b63896d7b395de9ce19c3eb6c35e5c196f"
+  integrity sha512-IDxBmNnVgLFfQ407MxOUJmqjz0hgiZB9syi4sfp7BKp5MIPUDT1m+z603kGrvx0bk0W0DPqkp/H8ySEGEx0x6g==
+  dependencies:
+    "@storybook/client-logger" "7.1.1"
+    "@storybook/components" "7.1.1"
+    "@storybook/core-events" "7.1.1"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.1.1"
+    "@storybook/preview-api" "7.1.1"
+    "@storybook/theming" "7.1.1"
+    "@storybook/types" "7.1.1"
     dequal "^2.0.2"
     lodash "^4.17.21"
     polished "^4.2.2"
