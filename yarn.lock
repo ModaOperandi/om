@@ -2907,7 +2907,7 @@
     "@storybook/preview-api" "7.1.0"
     "@storybook/theming" "7.1.0"
 
-"@storybook/addon-viewport@7.1.0", "@storybook/addon-viewport@^7.0.2":
+"@storybook/addon-viewport@7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.1.0.tgz#3d5d1ec7892fe5624f0d98aadec834a6650fc2de"
   integrity sha512-dvaD11qp2AG8xc9LubkYqp0yW+5ybaqTOn2uwK4qDDbwypkL+uE9K8G+8tQGIvfQPFye3ggpuqRzStZHr/JbsQ==
@@ -2919,6 +2919,21 @@
     "@storybook/manager-api" "7.1.0"
     "@storybook/preview-api" "7.1.0"
     "@storybook/theming" "7.1.0"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+
+"@storybook/addon-viewport@^7.0.2":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.1.1.tgz#b20682f216c91e0c78438ce966a727d95d9c5f74"
+  integrity sha512-OAb3+NSQF0zAVdKhZwW0YOC/VMCXDncXp51ufxaz/LkF3qOGuqfmHTOfDDwjx3P6d3kX1aWV+vLVuoRS0JRK5g==
+  dependencies:
+    "@storybook/client-logger" "7.1.1"
+    "@storybook/components" "7.1.1"
+    "@storybook/core-events" "7.1.1"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.1.1"
+    "@storybook/preview-api" "7.1.1"
+    "@storybook/theming" "7.1.1"
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
 
@@ -3192,7 +3207,7 @@
     prettier "^2.8.0"
     recast "^0.23.1"
 
-"@storybook/components@7.1.0", "@storybook/components@^7.0.12":
+"@storybook/components@7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.1.0.tgz#0cd45d43f8a756f328393826eba339048b0a0f14"
   integrity sha512-o8Z5L7cxxNCUhbEA+vGwoVrZ0vWhuZJb/AUc+347RIlH1QZF4Cu6fmgA49pKBsrJWPbtOmlLCbN/9LshszH0Zw==
@@ -3206,7 +3221,7 @@
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
 
-"@storybook/components@7.1.1":
+"@storybook/components@7.1.1", "@storybook/components@^7.0.12":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.1.1.tgz#26c88bada3a04bf62a44e9468becd4634cb457af"
   integrity sha512-RUSjDj2RDTZsdKfs48oY+3iaL/y3GHU07zuHm/V4kuEHqJscXUt3n5vIX/Z/GtezMrxc0aPDlCSyS/N/EU6bUQ==
@@ -3289,12 +3304,12 @@
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.27.tgz#94c7f8877998a25e8d14bafa51839fedfa442769"
   integrity sha512-sNnqgO5i5DUIqeQfNbr987KWvAciMN9FmMBuYdKjVFMqWFyr44HTgnhfKwZZKl+VMDYkHA9Do7UGSYZIKy0P4g==
 
-"@storybook/core-events@7.1.0", "@storybook/core-events@^7.0.12":
+"@storybook/core-events@7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.1.0.tgz#342cf47e2b49b0e19586a2a4ad9da49b253e8afd"
   integrity sha512-b0kZ5ElPZj3NPqWhGsHHuLn0riA4wJXJ5mNBOe2scd8Cw52ELQr5rVHOMROhONOgpOaZBZ+QZd/MDvJDRyxTQw==
 
-"@storybook/core-events@7.1.1":
+"@storybook/core-events@7.1.1", "@storybook/core-events@^7.0.12":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.1.1.tgz#c2c30085bd254a27cdbd266a8e7755876abf9361"
   integrity sha512-P5iI4zvCJo85de/sghglEHFK/GGkWAQQKzRFrz9kbVBX5LNaosfD7IYHIz/6ZWNPzxWR+RBOKcrRUfcArL4Njg==
@@ -3724,7 +3739,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.1.0", "@storybook/theming@^7.0.12":
+"@storybook/theming@7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.1.0.tgz#44839745ac2684cf38407b68251efe33b49b770e"
   integrity sha512-bO56c7NFlK7sfjsCbV56VLU59HHvQTW/HVu8RxUuoY+0WutyGAq6uZCmtQnMMGORzxh0p/uU2dSBVYEfW8QoTQ==
@@ -3734,7 +3749,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.1.1":
+"@storybook/theming@7.1.1", "@storybook/theming@^7.0.12":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.1.1.tgz#5dc1bf43c7522aa6f4d24a01d361f0c2825f109c"
   integrity sha512-8ri/BvfgUzBln9EYB8N/xgRaxZIFFTG0IEEekuV2H5uv4q9JW9p3E5zqghmM1OC/vspJJa8e4Eajb1YiTO0W6w==
