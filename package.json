@@ -101,7 +101,7 @@
     "css-loader": "^6.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.18.0",
-    "eslint-config-prettier": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-prettier-react": "^0.0.24",
     "eslint-config-standard-jsx": "^11.0.0",
     "eslint-plugin-import": "^2.18.2",
