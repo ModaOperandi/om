@@ -3181,7 +3181,7 @@
     "@storybook/preview-api" "7.2.1"
     "@storybook/theming" "7.2.1"
 
-"@storybook/addon-viewport@7.2.1", "@storybook/addon-viewport@^7.0.2":
+"@storybook/addon-viewport@7.2.1":
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.2.1.tgz#a8e4fda99a222a048938c0f30a35852dc42a016b"
   integrity sha512-aHl3rCh4MNByfWVtjBzkwMtz0iHQHFhatWXVt7mQoTQFBbZHpeynKvLfKBprp+2whK9RoDHqBUjqGTZrECdpRA==
@@ -3193,6 +3193,21 @@
     "@storybook/manager-api" "7.2.1"
     "@storybook/preview-api" "7.2.1"
     "@storybook/theming" "7.2.1"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+
+"@storybook/addon-viewport@^7.0.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.2.2.tgz#24e837357c0aae3a5c421dabc1b9048cb9cc7204"
+  integrity sha512-6qjtkFSV+9Fxw/nS5X7b5xC1kbk+CMGUEZhzmqM+iYtijHZmK0K1+x6AoR/mOul/rLL2YT73U3OYCCKWV9lemQ==
+  dependencies:
+    "@storybook/client-logger" "7.2.2"
+    "@storybook/components" "7.2.2"
+    "@storybook/core-events" "7.2.2"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.2.2"
+    "@storybook/preview-api" "7.2.2"
+    "@storybook/theming" "7.2.2"
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
 
@@ -3455,7 +3470,7 @@
     prettier "^2.8.0"
     recast "^0.23.1"
 
-"@storybook/components@7.2.1", "@storybook/components@^7.0.12":
+"@storybook/components@7.2.1":
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.2.1.tgz#ea2f46f4f84614e14f0946878a3085aea2d3fcec"
   integrity sha512-7JuMT2yK9FGPu9hFCo38tC3FDyr/hJ3CQwU6dSR6E5rT9E658dq31Xl3y/fM5OMzl8MX8Off7TWiybHSuwYJTA==
@@ -3467,6 +3482,22 @@
     "@storybook/icons" "^1.1.0"
     "@storybook/theming" "7.2.1"
     "@storybook/types" "7.2.1"
+    memoizerific "^1.11.3"
+    use-resize-observer "^9.1.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/components@7.2.2", "@storybook/components@^7.0.12":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-7.2.2.tgz#8736a1fd8d6ecc8095d4af9b85c06dc2c3bd0096"
+  integrity sha512-A2SavROGKFK76w4pfMGr0Zf3A2QaQrnJqPZOfVB6dKrXBwgwM3VhdUj6N8cI9X4W7VaEvEyUWXVTCv+bG+yZtQ==
+  dependencies:
+    "@radix-ui/react-select" "^1.2.2"
+    "@storybook/client-logger" "7.2.2"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/icons" "^1.1.0"
+    "@storybook/theming" "7.2.2"
+    "@storybook/types" "7.2.2"
     memoizerific "^1.11.3"
     use-resize-observer "^9.1.0"
     util-deprecate "^1.0.2"
