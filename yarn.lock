@@ -4471,9 +4471,9 @@
     "@types/react" "*"
 
 "@types/react-input-mask@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@types/react-input-mask/-/react-input-mask-3.0.2.tgz#60df645cdb2415c97a8f97316011eb3ede78dc1e"
-  integrity sha512-WTli3kUyvUqqaOLYG/so2pLqUvRb+n4qnx2He5klfqZDiQmRyD07jVIt/bco/1BrcErkPMtpOm+bHii4Oed6cQ==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/react-input-mask/-/react-input-mask-3.0.3.tgz#1b55538f59aa228436c1b3d94e58b1a1b0d7d9b6"
+  integrity sha512-woaVZxXcze6i+I45mQfpImnG1n5S1ZFTMBx46BoP4xOyCuiF3DGy1a4lCKM4r7iQqdb34XN9f8IbrAOQGNsEkg==
   dependencies:
     "@types/react" "*"
 
