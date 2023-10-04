@@ -3308,7 +3308,7 @@
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
 
-"@storybook/addons@7.4.6":
+"@storybook/addons@7.4.6", "@storybook/addons@^7.0.2":
   version "7.4.6"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.4.6.tgz#cca556ca30aa34652f9bbab30467a538df5b10fe"
   integrity sha512-c+4awrtwNlJayFdgLkEXa5H2Gj+KNlxuN+Z5oDAdZBLqXI8g0gn7eYO2F/eCSIDWdd/+zcU2uq57XPFKc8veHQ==
@@ -3316,15 +3316,6 @@
     "@storybook/manager-api" "7.4.6"
     "@storybook/preview-api" "7.4.6"
     "@storybook/types" "7.4.6"
-
-"@storybook/addons@^7.0.2":
-  version "7.4.5"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.4.5.tgz#d1ac1fc3b5e4681e16b727149593efd53c4b1168"
-  integrity sha512-jmdQf39XhwVi8d0J99qpk51fOAwNhYlCtVctvFWPX4qC1cq1d1pxLmTb5OBV2VHQ11BKwlKLzA7coiOgAQmNRg==
-  dependencies:
-    "@storybook/manager-api" "7.4.5"
-    "@storybook/preview-api" "7.4.5"
-    "@storybook/types" "7.4.5"
 
 "@storybook/api@^7.0.12":
   version "7.1.1"
@@ -3832,27 +3823,6 @@
     telejson "^7.0.3"
     ts-dedent "^2.0.0"
 
-"@storybook/manager-api@7.4.5":
-  version "7.4.5"
-  resolved "https://registry.yarnpkg.com/@storybook/manager-api/-/manager-api-7.4.5.tgz#23acaf71f46ddae9dbde8f8ec2811000ea38280e"
-  integrity sha512-8Hdh5Tutet8xRy2fAknczfvpshz09eVnLd8m34vcFceUOYvEnvDbWerufhlEzovsF4v7U32uqbDHKdKTamWEQQ==
-  dependencies:
-    "@storybook/channels" "7.4.5"
-    "@storybook/client-logger" "7.4.5"
-    "@storybook/core-events" "7.4.5"
-    "@storybook/csf" "^0.1.0"
-    "@storybook/global" "^5.0.0"
-    "@storybook/router" "7.4.5"
-    "@storybook/theming" "7.4.5"
-    "@storybook/types" "7.4.5"
-    dequal "^2.0.2"
-    lodash "^4.17.21"
-    memoizerific "^1.11.3"
-    semver "^7.3.7"
-    store2 "^2.14.2"
-    telejson "^7.2.0"
-    ts-dedent "^2.0.0"
-
 "@storybook/manager-api@7.4.6", "@storybook/manager-api@^7.0.12":
   version "7.4.6"
   resolved "https://registry.yarnpkg.com/@storybook/manager-api/-/manager-api-7.4.6.tgz#e74bd0a0a983d6b9b7f66dfe0d94d8465f5e7a34"
@@ -4038,15 +4008,6 @@
   integrity sha512-GRYYWVsqAtDm7DHxnGXuaAmr3PQfj+tonYsP8/L3gC5sOdQNF3yaBmvv1pu+bqezwXVowq0ew+iVYECiaGoB3Q==
   dependencies:
     "@storybook/client-logger" "7.1.1"
-    memoizerific "^1.11.3"
-    qs "^6.10.0"
-
-"@storybook/router@7.4.5":
-  version "7.4.5"
-  resolved "https://registry.yarnpkg.com/@storybook/router/-/router-7.4.5.tgz#837c82cdecd8ce5e081770b50a2a70169105f8fd"
-  integrity sha512-IM4IhiPiXsx3FAUeUOAB47uiuUS8Yd37VQcNlXLBO28GgHoTSYOrjS+VTGLIV5cAGKr8+H5pFB+q35BnlFUpkQ==
-  dependencies:
-    "@storybook/client-logger" "7.4.5"
     memoizerific "^1.11.3"
     qs "^6.10.0"
 
