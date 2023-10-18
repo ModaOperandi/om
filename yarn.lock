@@ -3135,7 +3135,7 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@storybook/addon-actions@7.4.6", "@storybook/addon-actions@^7.0.2":
+"@storybook/addon-actions@7.4.6":
   version "7.4.6"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.4.6.tgz#080bd1612a744cc3fc4a435a07a63d2d8c05f030"
   integrity sha512-SsqZr3js5NinKPnC8AeNI7Ij+Q6fIl9tRdRmSulEgjksjOg7E5S1/Wsn5Bb2CCgj7MaX6VxGyC7s3XskQtDiIQ==
@@ -3148,6 +3148,28 @@
     "@storybook/preview-api" "7.4.6"
     "@storybook/theming" "7.4.6"
     "@storybook/types" "7.4.6"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    polished "^4.2.2"
+    prop-types "^15.7.2"
+    react-inspector "^6.0.0"
+    telejson "^7.2.0"
+    ts-dedent "^2.0.0"
+    uuid "^9.0.0"
+
+"@storybook/addon-actions@^7.0.2":
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.5.0.tgz#efbcf6e5bccf856b2d67a2d84a8e041e80a20a94"
+  integrity sha512-eeHIFpZXGyhkfmrbHRf3rndL+ppFqlKTgN74y+UfFaAWNUhV3caXxRbHV3BbcPSLkRAsNShBH9hTNTlUAHSVjA==
+  dependencies:
+    "@storybook/client-logger" "7.5.0"
+    "@storybook/components" "7.5.0"
+    "@storybook/core-events" "7.5.0"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.5.0"
+    "@storybook/preview-api" "7.5.0"
+    "@storybook/theming" "7.5.0"
+    "@storybook/types" "7.5.0"
     dequal "^2.0.2"
     lodash "^4.17.21"
     polished "^4.2.2"
@@ -4170,7 +4192,7 @@
     "@types/express" "^4.7.0"
     file-system-cache "2.3.0"
 
-"@storybook/types@7.4.6", "@storybook/types@^7.0.12":
+"@storybook/types@7.4.6":
   version "7.4.6"
   resolved "https://registry.yarnpkg.com/@storybook/types/-/types-7.4.6.tgz#536f21b82e1f809052b4d09802f99a580e960175"
   integrity sha512-6QLXtMVsFZFpzPkdGWsu/iuc8na9dnS67AMOBKm5qCLPwtUJOYkwhMdFRSSeJthLRpzV7JLAL8Kwvl7MFP3QSw==
@@ -4180,7 +4202,7 @@
     "@types/express" "^4.7.0"
     file-system-cache "2.3.0"
 
-"@storybook/types@7.5.0":
+"@storybook/types@7.5.0", "@storybook/types@^7.0.12":
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/@storybook/types/-/types-7.5.0.tgz#a3e862056e68398787ce71c5764b9ff124f55d40"
   integrity sha512-fiOUnHKFi/UZSfvc53F0WEQCiquqcSqslL3f5EffwQRiXfeXlGavJb0kU03BO+CvOXcliRn6qKSF2dL0Rgb7Xw==
