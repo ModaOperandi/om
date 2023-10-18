@@ -3397,13 +3397,13 @@
     prop-types "^15.7.2"
 
 "@storybook/addons@^7.0.2":
-  version "7.4.6"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.4.6.tgz#cca556ca30aa34652f9bbab30467a538df5b10fe"
-  integrity sha512-c+4awrtwNlJayFdgLkEXa5H2Gj+KNlxuN+Z5oDAdZBLqXI8g0gn7eYO2F/eCSIDWdd/+zcU2uq57XPFKc8veHQ==
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.5.0.tgz#f8a691c487cfa1c93e05d47f93e287a32087ff1c"
+  integrity sha512-ENvleXaJfOUVfWlh+T/318+UpmHfdQz5nB7QxkgK+AX7mQ3tPC41oUivwuEaVE6lP4BsijBtJBrGHEnA29xhUg==
   dependencies:
-    "@storybook/manager-api" "7.4.6"
-    "@storybook/preview-api" "7.4.6"
-    "@storybook/types" "7.4.6"
+    "@storybook/manager-api" "7.5.0"
+    "@storybook/preview-api" "7.5.0"
+    "@storybook/types" "7.5.0"
 
 "@storybook/api@^7.0.12":
   version "7.1.1"
