@@ -2056,7 +2056,7 @@
     "@storybook/addon-styling" "^1.0.1"
     "@types/classnames" "^2.2.9"
     classnames "^2.2.6"
-    credit-card-type "^9.0.0"
+    credit-card-type "^10.0.0"
     focus-visible "^5.0.2"
     proportional-scale "^4.0.0"
     react-focus-on "^3.3.0"
@@ -2909,10 +2909,10 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@20.9.0":
-  version "20.9.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.0.tgz#bfcdc230583aeb891cf51e73cfdaacdd8deae298"
-  integrity sha512-nekiGu2NDb1BcVofVcEKMIwzlx4NjHlcjhoxxKBNLtz15Y1z7MYf549DFvkHSId02Ax6kGwWntIBPC3l/JZcmw==
+"@types/node@*", "@types/node@20.9.1":
+  version "20.9.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.1.tgz#9d578c610ce1e984adda087f685ace940954fe19"
+  integrity sha512-HhmzZh5LSJNS5O8jQKpJ/3ZcrrlG6L70hpGqMIAoM9YVD0YBRNWYsfwcXq8VnSjlNpCpgLzMXdiPo+dxcvSmiA==
   dependencies:
     undici-types "~5.26.4"
 
@@ -4448,10 +4448,10 @@ cosmiconfig@^8.1.3:
     parse-json "^5.0.0"
     path-type "^4.0.0"
 
-credit-card-type@^9.0.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/credit-card-type/-/credit-card-type-9.1.0.tgz#54dd96c93b6579623e9c8656e6798fc2b93f5f05"
-  integrity sha512-CpNFuLxiPFxuZqhSKml3M+t0K/484pMAnfYWH14JoD7OZMnmC0Lmo+P7JX9SobqFpRoo7ifA18kOHdxJywYPEA==
+credit-card-type@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/credit-card-type/-/credit-card-type-10.0.0.tgz#f3b24df51c4e4659c49a46e9adf888e1710c6131"
+  integrity sha512-X09zdwnZd75Ne+YFZywuga4pa6Bd+ME90h8C8fQofL9O0MlRHLEb2fgwDQ9at8SGvSY2DYrLKRoTaW9zK0jAxQ==
 
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
