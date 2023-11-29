@@ -3277,7 +3277,7 @@
     "@storybook/preview-api" "7.5.3"
     "@storybook/theming" "7.5.3"
 
-"@storybook/addon-viewport@7.5.3", "@storybook/addon-viewport@^7.0.2":
+"@storybook/addon-viewport@7.5.3":
   version "7.5.3"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.5.3.tgz#05fb97114d0186977e25a5a448dea5fba66042ce"
   integrity sha512-gT2XX0NNBrzSs1nrxadl6LnvcwgN7z2R0LzTK8/hxvx4D0EnXrV3feXLzjewr8ZYjzfEeSpO+W+bQTVNm3fNsg==
@@ -3291,6 +3291,13 @@
     "@storybook/theming" "7.5.3"
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
+
+"@storybook/addon-viewport@^7.0.2":
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.6.0.tgz#d0e2a2f79c2fa7e68478cd2d8213e40b72ce2dd5"
+  integrity sha512-1NGgoEnDYLWw0HuRTTrIHCj8I0Xtc76PgPtArj92HQu+ENu4Hy0Y8MypZ+ZmAFddykaInwmZeQo2CD0GXU9qUQ==
+  dependencies:
+    memoizerific "^1.11.3"
 
 "@storybook/addons@^7.0.2":
   version "7.6.0"
@@ -3622,14 +3629,14 @@
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.1.1.tgz#c2c30085bd254a27cdbd266a8e7755876abf9361"
   integrity sha512-P5iI4zvCJo85de/sghglEHFK/GGkWAQQKzRFrz9kbVBX5LNaosfD7IYHIz/6ZWNPzxWR+RBOKcrRUfcArL4Njg==
 
-"@storybook/core-events@7.5.3", "@storybook/core-events@^7.0.12":
+"@storybook/core-events@7.5.3":
   version "7.5.3"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.5.3.tgz#210089576844569a914cc0cd1e07119bac6eb0e4"
   integrity sha512-DFOpyQ22JD5C1oeOFzL8wlqSWZzrqgDfDbUGP8xdO4wJu+FVTxnnWN6ZYLdTPB1u27DOhd7TzjQMfLDHLu7kbQ==
   dependencies:
     ts-dedent "^2.0.0"
 
-"@storybook/core-events@7.6.0":
+"@storybook/core-events@7.6.0", "@storybook/core-events@^7.0.12":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.6.0.tgz#efe10c3da0140c3bee8cd6cc7cf5904f9127d29d"
   integrity sha512-13d4YOcXPu0j5PDjqE2iy+mG68w2TLit408cF/ZbJ8d6V4QwuUiz6mUt34vTuTc3yB93q5moYXYo6a/AhrsPnQ==
@@ -4063,7 +4070,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.5.3", "@storybook/theming@^7.0.12":
+"@storybook/theming@7.5.3":
   version "7.5.3"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.5.3.tgz#bbcf547c8b3ec1e59e641c58155a44781d5f310d"
   integrity sha512-Cjmthe1MAk0z4RKCZ7m72gAD8YD0zTAH97z5ryM1Qv84QXjiCQ143fGOmYz1xEQdNFpOThPcwW6FEccLHTkVcg==
@@ -4073,7 +4080,7 @@
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
 
-"@storybook/theming@7.6.0":
+"@storybook/theming@7.6.0", "@storybook/theming@^7.0.12":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.6.0.tgz#7a877407588949d3ac7a25fce5fa3ae4a0c2efbd"
   integrity sha512-F5PTGkaRQ0TWIWRrZgQ2dmVxVcjX77vDc6QfUYxvOfez9/zrduKRHP5lGqHoqJlugJc8i2zpRNEFbL99frdUKg==
