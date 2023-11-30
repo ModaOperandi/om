@@ -3324,9 +3324,9 @@
     prop-types "^15.7.2"
 
 "@storybook/addon-viewport@^7.0.2":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.6.0.tgz#d0e2a2f79c2fa7e68478cd2d8213e40b72ce2dd5"
-  integrity sha512-1NGgoEnDYLWw0HuRTTrIHCj8I0Xtc76PgPtArj92HQu+ENu4Hy0Y8MypZ+ZmAFddykaInwmZeQo2CD0GXU9qUQ==
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.6.1.tgz#4343dbc4cad3e010b8080f4b641783638ad963c1"
+  integrity sha512-f+CYKLk6ftEzwf7Q48CBiJBaERzGzxBcMlcS1/xPg6n2AGpVl++HvFRpvDR/vuE22YpHVz5B1mwUusoXHemhyw==
   dependencies:
     memoizerific "^1.11.3"
 
