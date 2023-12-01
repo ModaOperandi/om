@@ -3039,9 +3039,9 @@
     "@storybook/global" "^5.0.0"
 
 "@storybook/addon-links@^7.0.2":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-7.6.0.tgz#adefec37dfdff08630838be51d05c0d7f02e958e"
-  integrity sha512-Qfq6U7EuxlXUFSbWVH8XRzQWva+CNtNgqjwO2hGsbhCisX5cb8vjl1mQF9DH00Lc021UcUjDPXiCCEEhj6Mpvg==
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-7.6.2.tgz#b323eb76725551c01770a7ece7438178ac7a48ae"
+  integrity sha512-NPhzm5VZlLBnN7qpKi4YkWG/j9GQUTIQo2KvjDVDrVuY0AzYOypiXjvW2fSlsr71eAL0mam9mK1+pqIeUOg1Sg==
   dependencies:
     "@storybook/csf" "^0.1.2"
     "@storybook/global" "^5.0.0"
