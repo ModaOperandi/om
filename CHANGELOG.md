@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.5.0](https://github.com/ModaOperandi/om/compare/v18.4.0...v18.5.0) (2023-12-07)
+
+
+### Features
+
+* NavigationPreventer ([f78bec1](https://github.com/ModaOperandi/om/commit/f78bec194869ea93e30f36f48eed24e78a7fa9d0))
+
 # [18.4.0](https://github.com/ModaOperandi/om/compare/v18.3.2...v18.4.0) (2023-05-12)
 
 
