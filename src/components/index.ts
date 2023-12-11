@@ -19,6 +19,7 @@ export * from './LoadingBalls';
 export * from './LoadingShapes';
 export * from './Modal';
 export * from './ModalOverlay';
+export * from './NavigationPreventer';
 export * from './Overlay';
 export * from './Paginator';
 export * from './Popover';

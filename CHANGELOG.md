@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/ModaOperandi/om/compare/v18.5.0...v19.0.0) (2023-12-07)
+
+
+### Features
+
+* **tabs:** allow controlling the selected tab ([#4344](https://github.com/ModaOperandi/om/issues/4344)) ([5e87374](https://github.com/ModaOperandi/om/commit/5e873745735d9cc8e3c4728f91b989fb52852973))
+
+
+### BREAKING CHANGES
+
+* **tabs:** `activeTab` now controls the component, for uncontrolled behavior, use
+`defaultActiveTab` instead.
+
+# [18.5.0](https://github.com/ModaOperandi/om/compare/v18.4.0...v18.5.0) (2023-12-07)
+
+
+### Features
+
+* NavigationPreventer ([f78bec1](https://github.com/ModaOperandi/om/commit/f78bec194869ea93e30f36f48eed24e78a7fa9d0))
+
 # [18.4.0](https://github.com/ModaOperandi/om/compare/v18.3.2...v18.4.0) (2023-05-12)
 
 
