@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.1.0](https://github.com/ModaOperandi/om/compare/v19.0.0...v19.1.0) (2023-12-11)
+
+
+### Features
+
+* usePreventNavigation ([02eb5ab](https://github.com/ModaOperandi/om/commit/02eb5ab1f8527eff806ff3f0f59cc8a68ba4d0d1))
+
 # [19.0.0](https://github.com/ModaOperandi/om/compare/v18.5.0...v19.0.0) (2023-12-07)
 
 
