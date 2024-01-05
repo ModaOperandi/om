@@ -19,6 +19,10 @@
     color: color(cement);
   }
 
+  &__input--round-borders { 
+    border-radius: 2.5rem;
+  }
+
   &__icon {
     left: 0;
     pointer-events: none;
