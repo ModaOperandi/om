@@ -14,7 +14,7 @@ export const Default = () => (
 
 export const RoundedBorders = () => (
   <States<SearchInputProps> states={[{}, { value: 'prada' }, { autoFocus: true }]}>
-    <SearchInput placeholder='Search' roundedBorders onChange={action('onChange')} />
+    <SearchInput placeholder='Search' roundBorders onChange={action('onChange')} />
   </States>
 );
 
