@@ -51,7 +51,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
 
       <TextInput
         className={classNames('SearchInput__input', {
-          'SearchsInput__input--round-borders': roundBorders
+          'SearchInput__input--round-borders': roundBorders
         })}
         onChange={handleChange}
         value={controlledValue}
