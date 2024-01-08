@@ -26,6 +26,7 @@ export type SelectProps = Omit<
   name?: string;
   onChange?: (value: string) => void;
   options: SelectableOption[];
+  placeholder?: string;
   searchable?: boolean;
   shiftIconLeftwards?: boolean;
   value?: string | undefined;
