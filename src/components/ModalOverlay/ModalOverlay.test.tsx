@@ -32,11 +32,11 @@ describe('ModalOverlay', () => {
     expect(screen.queryByText('Modal Content')).not.toBeInTheDocument();
 
     // Should show after clicking button
-    userEvent.click(screen.getByTestId('button'));
+    await userEvent.click(screen.getByTestId('button'));
     await screen.findByText('Modal Content');
 
     // Should hide after clicking wrapper
-    userEvent.click(screen.getByTestId('modal'));
+    await userEvent.click(screen.getByTestId('modal'));
     await waitFor(() => expect(screen.queryByText('Modal Content')).not.toBeInTheDocument());
   });
 });

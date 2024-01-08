@@ -9,35 +9,35 @@ jobs:
       - checkout
       - run:
           name: install
-          command: yarn install
+          command: npm ci --include=dev
       - run:
           name: build
-          command: yarn build
+          command: npm run build
       - run:
           name: lint
-          command: yarn lint
+          command: npm run lint
       - run:
           name: test
-          command: yarn test
+          command: npm run test
       - run:
           name: release
-          command: yarn semantic-release || true
+          command: npm run semantic-release || true
   test:
     <<: *defaults
     steps:
       - checkout
       - run:
           name: install
-          command: yarn install
+          command: npm ci --include=dev
       - run:
           name: build
-          command: yarn build
+          command: npm run build
       - run:
           name: lint
-          command: yarn lint
+          command: npm run lint
       - run:
           name: test
-          command: yarn test
+          command: npm run test
 workflows:
   version: 2
   pull_request:

@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "refresh": "rm -rf node_modules/@moda/om && yarn add file:.."
+    "refresh": "rm -rf node_modules/@moda/om && npm install .."
   },
   "eslintConfig": {
     "extends": "react-app"

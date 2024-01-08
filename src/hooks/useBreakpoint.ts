@@ -32,8 +32,8 @@ export const useBreakpoint = (props: At | GreaterThan | LessThan) => {
     typeof defaultWidth === 'number'
       ? isBetweenBounds(getMediaQueryBounds({ mode, breakpoint }), defaultWidth)
       : defaultWidth === 'auto' && typeof window !== 'undefined'
-      ? window.matchMedia(mediaQuery).matches
-      : true
+        ? window.matchMedia(mediaQuery).matches
+        : true
   );
 
   const handleChange = useCallback(

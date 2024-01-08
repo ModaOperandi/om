@@ -6,10 +6,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
     "module": "commonjs",
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -18,15 +15,8 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "es5"
+    "target": "es6"
   },
-  "include": [
-    "*.js",
-    ".*.js",
-    "src",
-    "test"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["*.js", ".*.js", "src", "test"],
+  "exclude": ["node_modules"]
 }
