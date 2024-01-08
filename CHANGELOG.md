@@ -1,3 +1,10 @@
+# [19.3.0](https://github.com/ModaOperandi/om/compare/v19.2.0...19.3.0) (2024-01-08)
+
+
+### Features
+
+* migrate to npm ([#4421](https://github.com/ModaOperandi/om/issues/4421)) ([435e9de](https://github.com/ModaOperandi/om/commit/435e9de4597d4b4e3a34120b7a1770934fe7bff1))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See
