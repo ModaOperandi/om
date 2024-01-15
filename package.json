@@ -137,7 +137,7 @@
     "rollup-plugin-scss": "^4.0.0",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",
-    "semantic-release": "^22.0.12",
+    "semantic-release": "^23.0.0",
     "semantic-release-npm-github": "^5.0.0",
     "storybook-states": "^1.2.0",
     "style-loader": "^3.3.3",
