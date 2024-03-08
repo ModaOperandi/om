@@ -5,9 +5,9 @@ import { useBreakpoint, discriminate } from '../../hooks/useBreakpoint';
 
 import './Breakpoint.scss';
 
-type At = { at: string };
-type GreaterThan = { gt: string };
-type LessThan = { lt: string };
+type At = { at: string; gt?: undefined; lt?: undefined };
+type GreaterThan = { at?: undefined; gt: string; lt?: undefined };
+type LessThan = { at?: undefined; gt?: undefined; lt: string };
 
 export type BreakpointProps = (At | GreaterThan | LessThan) & HTMLAttributes<HTMLDivElement>;
 
