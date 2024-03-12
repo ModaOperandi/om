@@ -61,7 +61,7 @@
     "react-focus-on": "^3.9.1",
     "react-input-mask": "^2.0.4",
     "scroll-into-view-if-needed": "^3.1.0",
-    "storybook": "^7.6.7",
+    "storybook": "^8.0.0",
     "use-cursor": "^1.2.3"
   },
   "devDependencies": {
