@@ -1,3 +1,59 @@
+# [19.4.0](https://github.com/ModaOperandi/om/compare/19.3.0...19.4.0) (2024-03-19)
+
+
+### Bug Fixes
+
+* release ([8cfbed8](https://github.com/ModaOperandi/om/commit/8cfbed82de44c9269bfd7cee330ff178a6dc2d8b))
+* release ([051579c](https://github.com/ModaOperandi/om/commit/051579c9d6cfbcba219cb3c09173bef9321f8eb9))
+* try releasing again ([110b86d](https://github.com/ModaOperandi/om/commit/110b86d93d831a1b00ed040e4d8b59156fdffa2d))
+
+
+### Features
+
+* Dialog and Confirm ([#4713](https://github.com/ModaOperandi/om/issues/4713)) ([af972be](https://github.com/ModaOperandi/om/commit/af972bee5d903755a71faf4f8d3fcf328c9e4170))
+
+# [19.4.0](https://github.com/ModaOperandi/om/compare/19.3.0...19.4.0) (2024-03-19)
+
+
+### Bug Fixes
+
+* release ([8cfbed8](https://github.com/ModaOperandi/om/commit/8cfbed82de44c9269bfd7cee330ff178a6dc2d8b))
+* release ([051579c](https://github.com/ModaOperandi/om/commit/051579c9d6cfbcba219cb3c09173bef9321f8eb9))
+* try releasing again ([110b86d](https://github.com/ModaOperandi/om/commit/110b86d93d831a1b00ed040e4d8b59156fdffa2d))
+
+
+### Features
+
+* Dialog and Confirm ([#4713](https://github.com/ModaOperandi/om/issues/4713)) ([af972be](https://github.com/ModaOperandi/om/commit/af972bee5d903755a71faf4f8d3fcf328c9e4170))
+
+# [19.4.0](https://github.com/ModaOperandi/om/compare/19.3.0...19.4.0) (2024-03-19)
+
+
+### Bug Fixes
+
+* release ([8cfbed8](https://github.com/ModaOperandi/om/commit/8cfbed82de44c9269bfd7cee330ff178a6dc2d8b))
+* release ([051579c](https://github.com/ModaOperandi/om/commit/051579c9d6cfbcba219cb3c09173bef9321f8eb9))
+* try releasing again ([110b86d](https://github.com/ModaOperandi/om/commit/110b86d93d831a1b00ed040e4d8b59156fdffa2d))
+
+
+### Features
+
+* Dialog and Confirm ([#4713](https://github.com/ModaOperandi/om/issues/4713)) ([af972be](https://github.com/ModaOperandi/om/commit/af972bee5d903755a71faf4f8d3fcf328c9e4170))
+
+# [19.4.0](https://github.com/ModaOperandi/om/compare/19.3.0...19.4.0) (2024-03-19)
+
+
+### Bug Fixes
+
+* release ([8cfbed8](https://github.com/ModaOperandi/om/commit/8cfbed82de44c9269bfd7cee330ff178a6dc2d8b))
+* release ([051579c](https://github.com/ModaOperandi/om/commit/051579c9d6cfbcba219cb3c09173bef9321f8eb9))
+* try releasing again ([110b86d](https://github.com/ModaOperandi/om/commit/110b86d93d831a1b00ed040e4d8b59156fdffa2d))
+
+
+### Features
+
+* Dialog and Confirm ([#4713](https://github.com/ModaOperandi/om/issues/4713)) ([af972be](https://github.com/ModaOperandi/om/commit/af972bee5d903755a71faf4f8d3fcf328c9e4170))
+
 # [19.3.0](https://github.com/ModaOperandi/om/compare/v19.2.0...19.3.0) (2024-01-08)
 
 

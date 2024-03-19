@@ -1,6 +1,6 @@
 {
   "name": "@moda/om",
-  "version": "19.3.0",
+  "version": "19.4.0",
   "description": "Moda Operandi design system",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -31,7 +31,7 @@
     "lint-staged": "lint-staged",
     "postpublish": "pinst --enable",
     "predeploy:documentation": "NODE_ENV=production npm run build && cd documentation && npm install && npm run build",
-    "prepare": "husky install",
+    "prepare": "husky install && echo ''",
     "prepublishOnly": "npm run clean && npm run build && pinst --disable",
     "scaffold:component": "node scripts/scaffold/react Components",
     "scaffold:function": "node scripts/scaffold/sass Functions",
