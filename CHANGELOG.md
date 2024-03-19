@@ -1,3 +1,10 @@
+## [19.4.1](https://github.com/ModaOperandi/om/compare/19.4.0...19.4.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* release ([9feadab](https://github.com/ModaOperandi/om/commit/9feadab5fc63b9626f38dd889ed54a96285a3d13))
+
 # [19.4.0](https://github.com/ModaOperandi/om/compare/19.3.0...19.4.0) (2024-03-19)
 
 
