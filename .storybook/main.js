@@ -1,12 +1,14 @@
 const path = require('path');
 const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-webpack-plugin');
+
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-postcss',
-    '@storybook/addon-mdx-gfm'
+    '@storybook/addon-mdx-gfm',
+    '@storybook/addon-webpack5-compiler-babel'
   ],
   webpackFinal: config => ({
     ...config,
