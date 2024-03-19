@@ -1,0 +1,15 @@
+@import '~om';
+
+.Dialog {
+  max-width: 90vw;
+  background-color: color('snow');
+  text-align: center;
+
+  &__content {
+    padding: spacing(6);
+  }
+
+  @include breakpoint(md) {
+    max-width: 40rem;
+  }
+}
