@@ -141,7 +141,7 @@
     "semantic-release": "^23.0.5",
     "semantic-release-npm-github": "^5.0.0",
     "storybook-states": "^1.2.0",
-    "style-loader": "^3.3.4",
+    "style-loader": "^4.0.0",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.2",
     "waait": "^1.0.5",
