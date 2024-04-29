@@ -129,7 +129,7 @@
     "postcss": "^8.4.36",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.2.5",
-    "ramda": "^0.29.1",
+    "ramda": "^0.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.1.2",
