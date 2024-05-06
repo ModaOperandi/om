@@ -91,7 +91,7 @@
     "@types/cheerio": "^0.22.35",
     "@types/credit-card-type": "^9.0.0",
     "@types/jest": "^29.5.12",
-    "@types/ramda": "^0.29.11",
+    "@types/ramda": "^0.30.0",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "@types/react-input-mask": "^3.0.5",
