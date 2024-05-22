@@ -1,4 +1,4 @@
 {
   "extends": "semantic-release-npm-github",
-  "branch": "master"
+  "branch": "main"
 }

@@ -1,6 +1,6 @@
 # @moda/om
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![](https://img.shields.io/npm/v/@moda/om)](https://www.npmjs.com/package/@moda/om) [![](https://img.shields.io/circleci/build/gh/ModaOperandi/om/master)](https://circleci.com/gh/ModaOperandi/om)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![](https://img.shields.io/npm/v/@moda/om)](https://www.npmjs.com/package/@moda/om) [![](https://img.shields.io/circleci/build/gh/ModaOperandi/om/main)](https://circleci.com/gh/ModaOperandi/om)
 
 Moda Operandi's design system expressed as React components.
 
@@ -67,7 +67,7 @@ We are using [semantic release](https://github.com/semantic-release/semantic-rel
 
 Once you want to commit something, `git add` it then run the commitizen CLI. If you have it installed globally (`npm install -g commitizen`), you can run `git cz` and it will walk you through the steps.
 
-When you're happy push to a feature branch and once the code is in `master`, semantic release will detect how to version it and automatically publish it to NPM.
+When you're happy push to a feature branch and once the code is in `main`, semantic release will detect how to version it and automatically publish it to NPM.
 
 ## Usage
 
@@ -101,4 +101,3 @@ body {
   padding: spacing(2, 4);
 }
 ```
-

@@ -44,11 +44,11 @@ workflows:
     jobs:
       - test:
           context: devops-dev
-  master:
+  main:
     jobs:
       - build:
           context: devops-dev
           filters:
             branches:
               only:
-                - master
+                - main
