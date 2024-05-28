@@ -1,0 +1,20 @@
+[build]
+  base = "/"
+  publish = "storybook-static"
+  command = "npm run build:storybook"
+
+[functions]
+  directory = "netlify/functions"
+
+[context.production]
+  publish = "storybook-static"
+  command = "npm run build:storybook"
+
+[context.deploy-preview]
+  publish = "storybook-static"
+  command = "npm run build:storybook"
+
+[dev]
+  command = "npm run storybook"
+  port = 6006
+  publish = ""
