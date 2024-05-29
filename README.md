@@ -7,10 +7,10 @@ Moda Operandi's design system expressed as React components.
 ## Meta
 
 - **State**: development
-- **Point people**: [@jmcriffey](https://github.com/jmcriffey)
+- **Point people**: Ecommerce Team
 - **URLS**:
   - **Documentation**: https://moda-om-documentation.netlify.com/
-  - **Storybook**: https://moda-om-storybook.netlify.com/
+  - **Storybook**: https://moda-om-storybook.netlify.app/
 
 ## Developing
 
@@ -68,6 +68,9 @@ We are using [semantic release](https://github.com/semantic-release/semantic-rel
 Once you want to commit something, `git add` it then run the commitizen CLI. If you have it installed globally (`npm install -g commitizen`), you can run `git cz` and it will walk you through the steps.
 
 When you're happy push to a feature branch and once the code is in `main`, semantic release will detect how to version it and automatically publish it to NPM.
+
+- **Netlify deploy config** is located here: https://app.netlify.com/sites/moda-om-storybook/configuration/deploys
+- **Netlify site overview**: https://app.netlify.com/sites/moda-om-storybook/overview
 
 ## Usage
 
