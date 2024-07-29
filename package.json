@@ -137,7 +137,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^4.0.0",
     "sass": "^1.72.0",
-    "sass-loader": "^15.0.0",
+    "sass-loader": "^16.0.0",
     "semantic-release": "^24.0.0",
     "semantic-release-npm-github": "^5.0.0",
     "storybook-states": "^1.2.0",
