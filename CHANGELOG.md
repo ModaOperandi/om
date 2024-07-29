@@ -1,3 +1,10 @@
+# [19.5.0](https://github.com/ModaOperandi/om/compare/19.4.3...19.5.0) (2024-07-29)
+
+
+### Features
+
+* **search:** add noBorders prop ([f3cf435](https://github.com/ModaOperandi/om/commit/f3cf43588f4d706f770e4251ebd26dd33df5d8e3))
+
 ## [19.4.3](https://github.com/ModaOperandi/om/compare/19.4.2...19.4.3) (2024-05-29)
 
 ## [19.4.2](https://github.com/ModaOperandi/om/compare/19.4.1...19.4.2) (2024-05-22)
