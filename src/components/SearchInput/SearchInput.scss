@@ -19,8 +19,12 @@
     color: color(cement);
   }
 
-  &__input--round-borders { 
+  &__input--round-borders {
     border-radius: 2.5rem;
+  }
+
+  &__input--no-borders {
+    border: none;
   }
 
   &__icon {
