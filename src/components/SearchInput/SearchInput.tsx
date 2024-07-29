@@ -10,6 +10,7 @@ export type SearchInputProps = TextInputProps & {
   value?: string;
   onClear?(): void;
   roundBorders?: boolean;
+  noBorders?: boolean;
 };
 
 const DEFAULT_INPUT_VALUE = '';
@@ -19,6 +20,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   onChange,
   onClear,
   roundBorders = false,
+  noBorders = false,
   value = DEFAULT_INPUT_VALUE,
   ...rest
 }) => {
@@ -51,7 +53,8 @@ export const SearchInput: React.FC<SearchInputProps> = ({
 
       <TextInput
         className={classNames('SearchInput__input', {
-          'SearchInput__input--round-borders': roundBorders
+          'SearchInput__input--round-borders': roundBorders,
+          'SearchInput__input--no-borders': noBorders
         })}
         onChange={handleChange}
         value={controlledValue}

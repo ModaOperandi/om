@@ -18,6 +18,12 @@ export const RoundedBorders = () => (
   </States>
 );
 
+export const NoBorders = () => (
+  <States<SearchInputProps> states={[{}, { value: 'prada' }, { autoFocus: true }]}>
+    <SearchInput placeholder='Search' noBorders onChange={action('onChange')} />
+  </States>
+);
+
 export const DropdownExample = () => {
   const [query, setQuery] = useState('');
 
