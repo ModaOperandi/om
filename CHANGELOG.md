@@ -1,3 +1,10 @@
+# [19.6.0](https://github.com/ModaOperandi/om/compare/19.5.0...19.6.0) (2024-07-30)
+
+
+### Features
+
+* **promo banner:** default color ([43a2c6e](https://github.com/ModaOperandi/om/commit/43a2c6e4deaec17a8960bc91dbb970eae80738b2))
+
 # [19.5.0](https://github.com/ModaOperandi/om/compare/19.4.3...19.5.0) (2024-07-29)
 
 
