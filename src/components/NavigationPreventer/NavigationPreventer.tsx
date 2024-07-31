@@ -1,9 +1,9 @@
 import React from 'react';
-import { Prompt } from 'react-router-dom';
+import { Prompt, PromptProps } from 'react-router-dom';
 import { usePreventNavigation } from './usePreventNavigation';
 
 interface Props {
-  message?: string;
+  message?: PromptProps['message'];
   enabled: boolean | undefined;
 }
 
