@@ -1,3 +1,10 @@
+# [19.7.0](https://github.com/ModaOperandi/om/compare/19.6.0...19.7.0) (2024-07-31)
+
+
+### Features
+
+* **NavigationPreventer:** allow passing in a function for message ([d8fd13b](https://github.com/ModaOperandi/om/commit/d8fd13b397afd622a44d0edfca0f7017cb7c4a2e))
+
 # [19.6.0](https://github.com/ModaOperandi/om/compare/19.5.0...19.6.0) (2024-07-30)
 
 
