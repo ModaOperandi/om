@@ -1,3 +1,5 @@
+## [19.7.2](https://github.com/ModaOperandi/om/compare/19.7.1...19.7.2) (2024-08-06)
+
 ## [19.7.1](https://github.com/ModaOperandi/om/compare/19.7.0...19.7.1) (2024-08-01)
 
 # [19.7.0](https://github.com/ModaOperandi/om/compare/19.6.0...19.7.0) (2024-07-31)
