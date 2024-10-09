@@ -1,3 +1,10 @@
+# [19.8.0](https://github.com/ModaOperandi/om/compare/19.7.2...19.8.0) (2024-10-09)
+
+
+### Features
+
+* **search-input:** adds ability to change search icon size ([#5415](https://github.com/ModaOperandi/om/issues/5415)) ([6639e84](https://github.com/ModaOperandi/om/commit/6639e84c5d346c882c10cb8745b35fdbf75303a8))
+
 ## [19.7.2](https://github.com/ModaOperandi/om/compare/19.7.1...19.7.2) (2024-08-06)
 
 ## [19.7.1](https://github.com/ModaOperandi/om/compare/19.7.0...19.7.1) (2024-08-01)
