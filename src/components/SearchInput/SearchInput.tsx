@@ -4,13 +4,17 @@ import ExitIcon from '@moda/icons/exit-20';
 import SearchIcon from '@moda/icons/search-20';
 import { TextInput, TextInputProps } from '../TextInput';
 import { Clickable } from '../Clickable';
+
 import './SearchInput.scss';
+
+const SEARCH_ICON_DEFAULT_SIZE = 20;
 
 export type SearchInputProps = TextInputProps & {
   value?: string;
   onClear?(): void;
   roundBorders?: boolean;
   noBorders?: boolean;
+  searchIconSize?: number;
 };
 
 const DEFAULT_INPUT_VALUE = '';
@@ -22,6 +26,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   roundBorders = false,
   noBorders = false,
   value = DEFAULT_INPUT_VALUE,
+  searchIconSize = SEARCH_ICON_DEFAULT_SIZE,
   ...rest
 }) => {
   const ref = useRef<HTMLInputElement>(null);
@@ -48,7 +53,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   return (
     <div className={classNames('SearchInput', className)}>
       <div className='SearchInput__icon'>
-        <SearchIcon />
+        <SearchIcon height={`${searchIconSize}px`} width={`${searchIconSize}px`} />
       </div>
 
       <TextInput
