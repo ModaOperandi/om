@@ -1,3 +1,10 @@
+## [19.8.1](https://github.com/ModaOperandi/om/compare/19.8.0...19.8.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* **select:** adds a color swatch whenever a color is provided ([#5423](https://github.com/ModaOperandi/om/issues/5423)) ([665ff72](https://github.com/ModaOperandi/om/commit/665ff72fbdcf31a43994b6e5310403dff31a3927))
+
 # [19.8.0](https://github.com/ModaOperandi/om/compare/19.7.2...19.8.0) (2024-10-09)
 
 
