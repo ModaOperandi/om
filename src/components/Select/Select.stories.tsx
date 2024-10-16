@@ -42,6 +42,19 @@ export const Default = () => (
   </States>
 );
 
+export const Colored = () => (
+  <States<Partial<SelectProps>>>
+    <Select
+      label='Sort by'
+      disabled
+      color='strawberry'
+      options={OPTIONS}
+      onChange={action('onChange')}
+      value='high'
+    />
+  </States>
+);
+
 export const ChangingValue = () => {
   const [cursor, setCursor] = useState(0);
 

@@ -103,4 +103,18 @@
     width: 0;
     height: 0;
   }
+
+  &__selected-color {
+    border-color: color(ink);
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    display: inline-block;
+    height: space(4);
+    margin-left: space(1);
+    margin-right: space(1);
+    position: absolute;
+    right: space(6);
+    width: space(4);
+  }
 }

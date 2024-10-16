@@ -2,7 +2,9 @@ import React, { useCallback, useMemo } from 'react';
 import classNames from 'classnames';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
+import { colors } from '@moda/tokens';
 import { Clickable } from '../Clickable';
+import { TextColor } from '../Text';
 import { SelectOptions } from './SelectOptions';
 import { SelectLabel } from './SelectLabel';
 import { useSelect } from './useSelect';
@@ -31,6 +33,7 @@ export type SelectProps = Omit<
   shiftIconLeftwards?: boolean;
   value?: string | undefined;
   dataTestId?: string;
+  colorSwatch?: TextColor;
 };
 
 export const Select: React.FC<SelectProps> = ({
@@ -51,6 +54,7 @@ export const Select: React.FC<SelectProps> = ({
   shiftIconLeftwards = false,
   value,
   dataTestId,
+  colorSwatch,
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
@@ -59,7 +63,7 @@ export const Select: React.FC<SelectProps> = ({
     (option: SelectableOption) => {
       dispatch({
         type: 'SELECT',
-        payload: { value: autoSelect ? option.value : value ?? option.value }
+        payload: { value: autoSelect ? option.value : (value ?? option.value) }
       });
       onChange?.(option.value);
     },
@@ -128,6 +132,13 @@ export const Select: React.FC<SelectProps> = ({
           />
 
           {(focused ?? selected)?.label}
+
+          {colorSwatch && (
+            <div
+              className='Select__selected-color'
+              style={{ backgroundColor: colors.all[colorSwatch] }}
+            />
+          )}
 
           <span
             className={classNames('Select__icon', { 'Select__icon--shifted': shiftIconLeftwards })}
