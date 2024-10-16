@@ -111,10 +111,9 @@
     border-width: 1px;
     display: inline-block;
     height: space(4);
-    margin-left: space(1);
-    margin-right: space(1);
     position: absolute;
-    right: space(6);
+    right: space(7);
+    transform: translateY(25%);
     width: space(4);
   }
 }
