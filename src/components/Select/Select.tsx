@@ -132,7 +132,7 @@ export const Select: React.FC<SelectProps> = ({
             hasValue={focused != null || selected != null}
           />
 
-          <span className='Select__selected-label'>{(focused ?? selected)?.label}</span>
+          {(focused ?? selected)?.label}
 
           {color && (
             <div
