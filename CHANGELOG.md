@@ -1,3 +1,10 @@
+## [19.8.2](https://github.com/ModaOperandi/om/compare/19.8.1...19.8.2) (2024-10-16)
+
+
+### Bug Fixes
+
+* **select:** fixes color swatch props ([#5424](https://github.com/ModaOperandi/om/issues/5424)) ([9c444f2](https://github.com/ModaOperandi/om/commit/9c444f248142dae605b26c622adad7f385a1178f))
+
 ## [19.8.1](https://github.com/ModaOperandi/om/compare/19.8.0...19.8.1) (2024-10-16)
 
 
