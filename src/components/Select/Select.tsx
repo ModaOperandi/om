@@ -33,7 +33,7 @@ export type SelectProps = Omit<
   shiftIconLeftwards?: boolean;
   value?: string | undefined;
   dataTestId?: string;
-  color?: TextColor;
+  colorSwatch?: TextColor;
 };
 
 export const Select: React.FC<SelectProps> = ({
@@ -54,7 +54,7 @@ export const Select: React.FC<SelectProps> = ({
   shiftIconLeftwards = false,
   value,
   dataTestId,
-  color,
+  colorSwatch,
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
@@ -126,7 +126,6 @@ export const Select: React.FC<SelectProps> = ({
           title='Select'
         >
           <SelectLabel
-            color={color}
             idRef={idRef}
             label={label || (selected === undefined ? placeholder : undefined)}
             hasValue={focused != null || selected != null}
@@ -134,10 +133,10 @@ export const Select: React.FC<SelectProps> = ({
 
           {(focused ?? selected)?.label}
 
-          {color && (
+          {colorSwatch && (
             <div
               className='Select__selected-color'
-              style={{ backgroundColor: colors.all[color] }}
+              style={{ backgroundColor: colors.all[colorSwatch] }}
             />
           )}
 
