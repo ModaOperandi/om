@@ -47,7 +47,7 @@ export const Colored = () => (
     <Select
       label='Sort by'
       disabled
-      color='strawberry'
+      colorSwatch='strawberry'
       options={OPTIONS}
       onChange={action('onChange')}
       value='high'
