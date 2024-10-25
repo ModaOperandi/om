@@ -40,14 +40,14 @@ export const ColorSwatch: React.FC<ColorSwatchProps> = ({
 }) => {
   const handleClick = useCallback(
     (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      onClick && onClick(color, title);
+      onClick?.(color, title);
     },
     [color, title, onClick]
   );
 
   const handleMouseEnter = useCallback(
     (_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      onMouseEnter && onMouseEnter(color, title);
+      onMouseEnter?.(color, title);
     },
     [color, title, onMouseEnter]
   );

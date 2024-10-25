@@ -71,7 +71,7 @@ export const MultiSelect: React.FC<Props> = ({
   );
 
   useEffect(() => {
-    onChange && onChange(values);
+    onChange?.(values);
   }, [onChange, values]);
 
   return (

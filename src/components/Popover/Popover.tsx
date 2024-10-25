@@ -69,7 +69,7 @@ export const Popover: React.FC<PopoverProps> = ({
 
   const handleMouseEnter = useCallback(() => {
     if (!open) {
-      timeout.current && clearTimeout(timeout.current);
+      if (timeout.current) clearTimeout(timeout.current);
       handleOpen();
     }
   }, [handleOpen, open]);
@@ -115,7 +115,11 @@ export const Popover: React.FC<PopoverProps> = ({
   useEffect(() => {
     if (open === undefined) return;
 
-    open ? handleOpen() : handleClose();
+    if (open) {
+      handleOpen();
+    } else {
+      handleClose();
+    }
   }, [handleClose, handleOpen, open]);
 
   const isOpen =

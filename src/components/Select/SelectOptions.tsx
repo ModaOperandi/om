@@ -51,12 +51,12 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
 
   useEffect(() => {
     if (autoFocus) {
-      ref.current && ref.current.focus();
+      ref.current?.focus();
     }
   }, [autoFocus]);
 
   useUpdateEffect(() => {
-    onFocus && activeOption && onFocus(activeOption);
+    if (activeOption) onFocus?.(activeOption);
   }, [activeOption, onFocus]);
 
   return (
