@@ -78,7 +78,7 @@ export const useSelect = ({ value, defaultValue }: UseSelectProps) => {
   }, [handleKeyDown]);
 
   useUpdateEffect(() => {
-    value && dispatch({ type: 'SELECT', payload: { value } });
+    if (value) dispatch({ type: 'SELECT', payload: { value } });
   }, [value]);
 
   return { state, dispatch, Mode, selectRef };

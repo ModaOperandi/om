@@ -41,7 +41,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   const handleChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       if (typeof checked === 'undefined') setIsChecked(event.currentTarget.checked);
-      onChange && onChange(event);
+      onChange?.(event);
     },
     [onChange, checked]
   );

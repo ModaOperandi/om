@@ -25,7 +25,7 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
   const handleClick = useCallback(
     (event: React.MouseEvent<HTMLLIElement>) => {
       event.preventDefault();
-      !option.disabled && onClick(option);
+      if (!option.disabled) onClick(option);
     },
     [onClick, option]
   );
