@@ -1,3 +1,10 @@
+# [19.9.0](https://github.com/ModaOperandi/om/compare/19.8.2...19.9.0) (2024-10-25)
+
+
+### Features
+
+* upgrade to eslint v9 ([#5467](https://github.com/ModaOperandi/om/issues/5467)) ([be0430a](https://github.com/ModaOperandi/om/commit/be0430a99557b7e92e1ff93aefc0142f3a6a92e0))
+
 ## [19.8.2](https://github.com/ModaOperandi/om/compare/19.8.1...19.8.2) (2024-10-16)
 
 
