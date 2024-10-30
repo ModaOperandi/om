@@ -1,3 +1,18 @@
+# [20.0.0](https://github.com/ModaOperandi/om/compare/19.9.0...20.0.0) (2024-10-30)
+
+
+### Features
+
+* **sass:** fix deprecation warnings ([#5488](https://github.com/ModaOperandi/om/issues/5488)) ([c2cc424](https://github.com/ModaOperandi/om/commit/c2cc424c9e58730e9a8b18a492ae1d36ea324d08))
+
+
+### BREAKING CHANGES
+
+* **sass:** Importing this pacakge with `@import` will no longer work. Users will have to use
+the `@use` syntax.
+
+ECOM-4074
+
 # [19.9.0](https://github.com/ModaOperandi/om/compare/19.8.2...19.9.0) (2024-10-25)
 
 
