@@ -1,15 +1,15 @@
-@import '~om';
+@use '~@moda/om';
 
 .Dialog {
   max-width: 90vw;
-  background-color: color('snow');
+  background-color: om.color('snow');
   text-align: center;
 
   &__content {
-    padding: spacing(6);
+    padding: om.spacing(6);
   }
 
-  @include breakpoint(md) {
+  @include om.breakpoint(md) {
     max-width: 40rem;
   }
 }

@@ -1,5 +1,5 @@
-@import './visually-hidden';
+@use './visually-hidden';
 
 .Story.visually-hidden {
-  @include visually-hidden();
+  @include visually-hidden.visually-hidden();
 }

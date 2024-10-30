@@ -1,25 +1,25 @@
-@import '~om';
+@use '~@moda/om';
 
 .ControlLink {
   $self: &;
-  @include text(body1);
+  @include om.text(body1);
 
   display: inline-flex;
 
   &:hover,
   &:focus {
     &:not(#{$self}--disabled) {
-      @include thin-underline();
-      color: color(ink);
+      @include om.thin-underline();
+      color: om.color(ink);
       opacity: 0.7;
     }
   }
 
   &--underlined {
-    @include thin-underline();
+    @include om.thin-underline();
   }
 
   &--disabled {
-    color: color(fog);
+    color: om.color(fog);
   }
 }

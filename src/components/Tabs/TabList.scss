@@ -1,7 +1,7 @@
-@import '~om';
+@use '~@moda/om';
 
 .TabList {
-  @include stack(4, $direction: horizontal);
+  @include om.stack(4, $direction: horizontal);
 
-  border-bottom: 1px solid color(elephant);
+  border-bottom: 1px solid om.color(elephant);
 }

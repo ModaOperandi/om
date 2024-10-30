@@ -1,5 +1,5 @@
-@import '~om';
+@use '~@moda/om';
 
 .TextInput {
-  @include input-styles();
+  @include om.input-styles();
 }

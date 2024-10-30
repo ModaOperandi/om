@@ -1,5 +1,5 @@
-@import '~om';
+@use '~@moda/om';
 
 .States {
-  @include stack(6);
+  @include om.stack(6);
 }

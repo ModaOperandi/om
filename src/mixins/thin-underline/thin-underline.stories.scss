@@ -1,7 +1,7 @@
-@import './thin-underline';
+@use './thin-underline';
 
 .Story.thin-underline {
-  @include thin-underline();
+  @include thin-underline.thin-underline();
 
   display: inline-block;
 }

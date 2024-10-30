@@ -1,12 +1,14 @@
-@import '~om';
+@use 'sass:list';
+@use 'sass:map';
+@use '~@moda/om';
 
 .Stack {
-  $scale: map-get($space, 'scale');
+  $scale: map.get(om.$space, 'scale');
   @each $direction in (horizontal, vertical) {
     @each $value in $scale {
-      $i: (index($scale, $value) - 1);
+      $i: (list.index($scale, $value) - 1);
       &.Stack--#{$direction}-#{$i} {
-        @include stack($i, $direction);
+        @include om.stack($i, $direction);
       }
     }
   }

@@ -1,4 +1,4 @@
-@import '~@moda/tokens';
+@forward '~@moda/tokens';
 
-@import './mixins/mixins';
-@import './functions/functions';
+@forward './mixins/mixins';
+@forward './functions/functions';

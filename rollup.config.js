@@ -32,8 +32,8 @@ export default {
       use: {
         sass: {
           importer: [
-            packageImporter(),
-            url => (url === '~om' ? { file: path.join(__dirname, 'src/index.scss') } : null)
+            url => (url === '~@moda/om' ? { file: path.join(__dirname, 'src/index.scss') } : null),
+            packageImporter()
           ]
         }
       }

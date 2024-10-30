@@ -1,10 +1,10 @@
-@import '~om';
+@use '~@moda/om';
 
 .VerticalDivider {
-  border-left: 1px solid color(ink);
+  border-left: 1px solid om.color(ink);
 
   &--double {
     width: 0.175rem;
-    border-right: 1px solid color(ink);
+    border-right: 1px solid om.color(ink);
   }
 }

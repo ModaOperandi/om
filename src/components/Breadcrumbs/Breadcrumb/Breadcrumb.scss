@@ -1,9 +1,9 @@
-@import '~om';
+@use '~@moda/om';
 
 .Breadcrumb {
   position: relative;
-  padding-right: space(4);
-  margin-right: space(2);
+  padding-right: om.space(4);
+  margin-right: om.space(2);
   white-space: nowrap;
   overflow: hidden;
 
@@ -13,9 +13,9 @@
     content: ' ';
     position: absolute;
     top: 50%;
-    right: space(1);
+    right: om.space(1);
     transform: translateY(-50%) rotate(25deg);
-    border-right: 1px solid color(fog);
+    border-right: 1px solid om.color(fog);
     height: 75%;
   }
 

@@ -1,17 +1,19 @@
+@use '~@moda/tokens';
+
 @mixin input-styles() {
-  @include text(body1);
+  @include tokens.text(body1);
 
   //ios devices zoom in if inputs are smaller than 16px
-  @include breakpoint(sm, $prop: max-width) {
-    @include text(h6);
+  @include tokens.breakpoint(sm, $prop: max-width) {
+    @include tokens.text(h6);
   }
 
   appearance: none;
   line-height: 1;
   width: 100%;
-  padding: spacing(3, 4);
-  border: 1px solid color(elephant);
-  background-color: color('snow');
+  padding: tokens.spacing(3, 4);
+  border: 1px solid tokens.color(elephant);
+  background-color: tokens.color('snow');
   border-radius: 0;
 
   &::placeholder {
@@ -21,24 +23,24 @@
   &--focus,
   &:focus {
     outline: none;
-    border-color: color(ink);
+    border-color: tokens.color(ink);
   }
 
   &--disabled,
   &:disabled {
-    color: color(elephant);
-    border-color: color(elephant);
-    background-color: color(noise);
+    color: tokens.color(elephant);
+    border-color: tokens.color(elephant);
+    background-color: tokens.color(noise);
   }
 
   &--valid {
-    border-color: color(money-good);
+    border-color: tokens.color(money-good);
   }
 
   &--error {
     &,
     &:focus {
-      border-color: color(code-red);
+      border-color: tokens.color(code-red);
     }
   }
 }

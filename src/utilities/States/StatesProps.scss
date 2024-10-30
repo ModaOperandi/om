@@ -1,24 +1,24 @@
-@import '~om';
+@use '~@moda/om';
 
 .StatesProps {
-  @include text(body1, $font: code);
+  @include om.text(body1, $font: code);
 
-  padding-top: space(2);
-  color: color(fog);
-  border-top: 1px dotted color(elephant);
+  padding-top: om.space(2);
+  color: om.color(fog);
+  border-top: 1px dotted om.color(elephant);
 
   > strong {
     text-decoration: underline;
-    color: color(ink);
+    color: om.color(ink);
   }
 
   &::before {
     content: '<';
-    color: color(elephant);
+    color: om.color(elephant);
   }
 
   &::after {
     content: '/>';
-    color: color(elephant);
+    color: om.color(elephant);
   }
 }

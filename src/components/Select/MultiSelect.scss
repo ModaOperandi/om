@@ -1,4 +1,4 @@
-@import '~om';
+@use '~@moda/om';
 
 .MultiSelect {
   $self: &;
@@ -12,27 +12,27 @@
     cursor: default;
 
     #{$self}__search {
-      color: color(fog);
+      color: om.color(fog);
       cursor: default;
 
       &:hover,
       &:focus {
-        border-color: color(elephant);
-        background-color: color(noise);
+        border-color: om.color(elephant);
+        background-color: om.color(noise);
       }
     }
   }
 
   &--error {
-    border: 1px solid color(code-red);
+    border: 1px solid om.color(code-red);
   }
 
   &__search {
-    @include input-styles();
+    @include om.input-styles();
 
     display: flex;
     align-items: center;
-    padding: spacing(1, 7, 1, 1);
+    padding: om.spacing(1, 7, 1, 1);
   }
 
   &__selected-items {
@@ -43,10 +43,10 @@
   &__selected-item {
     display: flex;
     align-items: center;
-    border: 1px solid color('ink');
-    border-radius: space(2);
-    margin: space(1);
-    padding: space(1);
+    border: 1px solid om.color('ink');
+    border-radius: om.space(2);
+    margin: om.space(1);
+    padding: om.space(1);
   }
 
   &__selected-value {
@@ -54,19 +54,19 @@
   }
 
   &__exit {
-    margin-left: space(1);
+    margin-left: om.space(1);
     cursor: pointer;
   }
 
   &__icon {
     pointer-events: none;
     position: absolute;
-    right: space(4);
+    right: om.space(4);
     top: 50%;
     transform: translateY(-50%);
 
     &--shifted {
-      right: space(6);
+      right: om.space(6);
     }
   }
 }

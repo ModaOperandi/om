@@ -1,17 +1,17 @@
-@import '~om';
+@use '~@moda/om';
 
 .Tab {
-  @include text(eyebrow);
+  @include om.text(eyebrow);
 
-  padding: spacing(4, 0);
+  padding: om.spacing(4, 0);
   border-bottom: 2px solid transparent;
-  color: color(cement);
+  color: om.color(cement);
   text-align: left;
   cursor: pointer;
 
   &--active {
-    color: color(ink);
-    border-bottom: 2px solid color(ink);
+    color: om.color(ink);
+    border-bottom: 2px solid om.color(ink);
   }
 
   &:active,

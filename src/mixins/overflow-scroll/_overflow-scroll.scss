@@ -1,5 +1,3 @@
-@import '~@moda/tokens';
-
 @mixin overflow-scroll($direction: y) {
   @if $direction == x {
     overflow-x: auto;

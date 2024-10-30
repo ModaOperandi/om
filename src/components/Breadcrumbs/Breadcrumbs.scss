@@ -1,7 +1,7 @@
-@import '~om';
+@use '~@moda/om';
 
 .Breadcrumbs {
-  @include text(body1);
+  @include om.text(body1);
 
   display: flex;
   flex-flow: wrap;

@@ -1,7 +1,7 @@
-@import 'stack/stack';
-@import 'font-smoothing/font-smoothing';
-@import 'global-styles/global-styles';
-@import 'input-styles/input-styles';
-@import 'visually-hidden/visually-hidden';
-@import 'overflow-scroll/overflow-scroll';
-@import 'thin-underline/thin-underline';
+@forward 'stack/stack';
+@forward 'font-smoothing/font-smoothing';
+@forward 'global-styles/global-styles';
+@forward 'input-styles/input-styles';
+@forward 'visually-hidden/visually-hidden';
+@forward 'overflow-scroll/overflow-scroll';
+@forward 'thin-underline/thin-underline';

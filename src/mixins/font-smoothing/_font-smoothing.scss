@@ -1,5 +1,3 @@
-@import '~@moda/tokens';
-
 @mixin font-smoothing($value: antialiased) {
   @if $value == antialiased {
     -webkit-font-smoothing: antialiased;

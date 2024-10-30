@@ -1,10 +1,11 @@
-@import '~om';
+@use 'sass:map';
+@use '~@moda/om';
 
 .Text {
-  $treatments: map-get($typography, 'text-treatments');
+  $treatments: map.get(om.$typography, 'text-treatments');
   @each $name, $_values in $treatments {
     &--#{$name} {
-      @include text($name);
+      @include om.text($name);
     }
   }
 

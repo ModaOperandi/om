@@ -1,5 +1,5 @@
-@import '~om';
+@use '~@moda/om';
 
 .TabPanels {
-  margin-top: space(4);
+  margin-top: om.space(4);
 }

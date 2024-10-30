@@ -1,11 +1,11 @@
-@import '~om';
+@use '~@moda/om';
 
 .Select {
   $self: &;
 
   //ios devices zoom in if inputs are smaller than 16px
-  @include breakpoint(sm, $prop: max-width) {
-    @include text(h6);
+  @include om.breakpoint(sm, $prop: max-width) {
+    @include om.text(h6);
   }
 
   min-height: 2.5625rem;
@@ -17,35 +17,35 @@
     cursor: default;
 
     #{$self}__value {
-      color: color(fog);
+      color: om.color(fog);
       cursor: default;
 
       &:hover,
       &:focus {
-        border-color: color(elephant);
-        background-color: color('snow');
+        border-color: om.color(elephant);
+        background-color: om.color('snow');
       }
     }
   }
 
   &--error {
-    border: 1px solid color(code-red);
+    border: 1px solid om.color(code-red);
   }
 
   &__value {
-    @include text(body1);
+    @include om.text(body1);
 
     //ios devices zoom in if inputs are smaller than 16px
-    @include breakpoint(sm, $prop: max-width) {
-      @include text(h6);
+    @include om.breakpoint(sm, $prop: max-width) {
+      @include om.text(h6);
     }
 
     display: block;
     width: 100%;
     text-align: left;
-    padding: spacing(2, 7, 2, 3);
-    color: color(ink);
-    border: 1px solid color(elephant);
+    padding: om.spacing(2, 7, 2, 3);
+    color: om.color(ink);
+    border: 1px solid om.color(elephant);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -53,25 +53,25 @@
     cursor: pointer;
 
     &:hover {
-      border-color: color(cement);
-      background-color: color(noise);
+      border-color: om.color(cement);
+      background-color: om.color(noise);
     }
 
     &:focus {
-      border-color: color(cement);
-      background-color: color(elephant);
+      border-color: om.color(cement);
+      background-color: om.color(elephant);
     }
   }
 
   &__icon {
     pointer-events: none;
     position: absolute;
-    right: space(4);
+    right: om.space(4);
     top: 50%;
     transform: translateY(-50%);
 
     &--shifted {
-      right: space(6);
+      right: om.space(6);
     }
   }
 
@@ -85,12 +85,12 @@
     &--up {
       flex-direction: column-reverse;
       bottom: 100%;
-      margin-bottom: space(1);
+      margin-bottom: om.space(1);
     }
 
     &--down {
       flex-direction: column;
-      margin-top: space(1);
+      margin-top: om.space(1);
       top: 100%;
     }
   }
@@ -105,15 +105,15 @@
   }
 
   &__selected-color {
-    border-color: color(ink);
+    border-color: om.color(ink);
     border-style: solid;
     border-radius: 50%;
     border-width: 1px;
     display: inline-block;
-    height: space(4);
+    height: om.space(4);
     position: absolute;
-    right: space(7);
+    right: om.space(7);
     transform: translateY(25%);
-    width: space(4);
+    width: om.space(4);
   }
 }
