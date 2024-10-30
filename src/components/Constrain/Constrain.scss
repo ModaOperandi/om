@@ -1,22 +1,23 @@
-@import '~om';
+@use 'sass:map';
+@use '~@moda/om';
 
 .Constrain {
   width: 90%;
   margin: 0 auto;
-  max-width: map-get($breakpoints, xl);
+  max-width: map.get(om.$breakpoints, xl);
 
-  @include breakpoint(md, $prop: max-width) {
+  @include om.breakpoint(md, $prop: max-width) {
     width: 100%;
-    padding: spacing(0, 6);
+    padding: om.spacing(0, 6);
   }
 
-  @include breakpoint(sm, $prop: max-width) {
+  @include om.breakpoint(sm, $prop: max-width) {
     width: 100%;
-    padding: spacing(0, 4);
+    padding: om.spacing(0, 4);
   }
 
-  @include breakpoint(xs, $prop: max-width) {
+  @include om.breakpoint(xs, $prop: max-width) {
     width: 100%;
-    padding: spacing(0, 2);
+    padding: om.spacing(0, 2);
   }
 }

@@ -12,7 +12,8 @@
   "license": "MIT",
   "files": [
     "dist",
-    "src"
+    "src",
+    "index.scss"
   ],
   "sideEffects": [
     "*.css",
@@ -51,7 +52,7 @@
   },
   "dependencies": {
     "@moda/icons": "^5.29.9",
-    "@moda/tokens": "^5.10.101",
+    "@moda/tokens": "^6.0.0",
     "@storybook/addon-styling": "^1.3.7",
     "@types/classnames": "^2.3.4",
     "classnames": "^2.5.1",

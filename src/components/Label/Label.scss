@@ -1,11 +1,11 @@
-@import '~om';
+@use '~@moda/om';
 
 .Label {
-  @include text(body1);
+  @include om.text(body1);
 
-  color: color(cement);
+  color: om.color(cement);
 
   &--hidden {
-    @include visually-hidden();
+    @include om.visually-hidden();
   }
 }

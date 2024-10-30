@@ -1,4 +1,4 @@
-@import '~om';
+@use '~@moda/om';
 
 .Divider {
   $self: &;
@@ -12,14 +12,14 @@
     content: '';
     flex: 1;
     border: none;
-    background-color: color(elephant);
+    background-color: om.color(elephant);
     height: 1px;
     width: 50%;
   }
 
   &__text {
     width: auto;
-    padding: 0 space(4);
+    padding: 0 om.space(4);
   }
 
   &--two-line {
@@ -28,8 +28,8 @@
       $space-between-lines: 0.175rem;
       $offset: calc($space-between-lines / 2);
       transform: translateY(calc(-#{$offset}));
-      background-color: color(ink);
-      box-shadow: 0 $space-between-lines 0 0 color(ink);
+      background-color: om.color(ink);
+      box-shadow: 0 $space-between-lines 0 0 om.color(ink);
     }
   }
 

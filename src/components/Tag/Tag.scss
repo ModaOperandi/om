@@ -1,26 +1,26 @@
-@import '~om';
+@use '~@moda/om';
 
 .Tag {
-  @include stack(2, $direction: horizontal);
-  @include text(body1);
+  @include om.stack(2, $direction: horizontal);
+  @include om.text(body1);
 
   display: inline-flex;
   align-items: center;
-  padding: spacing(2);
-  border: 1px solid color(elephant);
+  padding: om.spacing(2);
+  border: 1px solid om.color(elephant);
   white-space: nowrap;
 
   &:hover,
   &:focus {
-    border-color: color(ink);
+    border-color: om.color(ink);
   }
 
   &--disabled {
-    color: color(fog);
+    color: om.color(fog);
 
     &:hover,
     &:focus {
-      border-color: color(elephant);
+      border-color: om.color(elephant);
     }
   }
 }

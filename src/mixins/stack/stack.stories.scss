@@ -1,13 +1,13 @@
-@import './stack';
+@use './stack';
 
 .Story.Mixins.stack {
-  @include stack(4);
+  @include stack.stack(4);
 
   > * {
     background-color: yellow;
   }
 
   &--horizontal {
-    @include stack(6, $direction: horizontal);
+    @include stack.stack(6, $direction: horizontal);
   }
 }

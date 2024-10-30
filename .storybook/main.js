@@ -16,7 +16,7 @@ module.exports = {
       ...config.resolve,
       alias: {
         ...config.resolve.alias,
-        om: path.join(__dirname, '../src/index.scss')
+        '@moda/om': path.join(__dirname, '../src/index.scss')
       }
     },
     module: {

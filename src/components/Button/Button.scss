@@ -1,15 +1,15 @@
-@import '~om';
+@use '~@moda/om';
 
 .Button {
   $self: &;
 
-  @include text(eyebrow);
+  @include om.text(eyebrow);
   appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: spacing(4, 7);
+  padding: om.spacing(4, 7);
   border: 1px solid;
   cursor: pointer;
   text-decoration: none;
@@ -17,105 +17,106 @@
 
   // Insert space after icon if present
   > * {
-    margin-right: space(2);
+    margin-right: om.space(2);
   }
 
   &,
   &--primary {
-    color: color('snow');
-    border-color: color(ink);
-    background-color: color(ink);
-    @include font-smoothing(subpixel);
+    color: om.color('snow');
+    border-color: om.color(ink);
+    background-color: om.color(ink);
+    @include om.font-smoothing(subpixel);
 
     &#{$self}--hover,
     &:hover {
-      color: color('snow');
-      border-color: color(fog, 0.32);
-      background: linear-gradient(0deg, color(fog, 0.32), color(fog, 0.32)), color(ink);
+      color: om.color('snow');
+      border-color: om.color(fog, 0.32);
+      background: linear-gradient(0deg, om.color(fog, 0.32), om.color(fog, 0.32)), om.color(ink);
     }
 
     &#{$self}--focus,
     &:focus {
-      color: color('snow');
-      border-color: color(fog, 0.12);
-      background: linear-gradient(0deg, color('snow', 0.12), color('snow', 0.12)), color(ink);
+      color: om.color('snow');
+      border-color: om.color(fog, 0.12);
+      background: linear-gradient(0deg, om.color('snow', 0.12), om.color('snow', 0.12)),
+        om.color(ink);
     }
 
     &#{$self}--disabled,
     &:disabled {
-      color: color(ink);
-      border-color: color(noise);
-      background-color: color(noise);
+      color: om.color(ink);
+      border-color: om.color(noise);
+      background-color: om.color(noise);
       cursor: default;
       pointer-events: none;
     }
   }
 
   &--secondary {
-    color: color(ink);
-    border-color: color(ink);
-    background-color: color('snow');
+    color: om.color(ink);
+    border-color: om.color(ink);
+    background-color: om.color('snow');
 
     &#{$self}--hover,
     &:hover {
-      color: color(ink);
-      border-color: color(ink);
-      background-color: color(noise, 0.32);
+      color: om.color(ink);
+      border-color: om.color(ink);
+      background-color: om.color(noise, 0.32);
     }
 
     &#{$self}--focus,
     &:focus {
-      color: color(ink);
-      border-color: color(ink);
-      background-color: color(noise);
+      color: om.color(ink);
+      border-color: om.color(ink);
+      background-color: om.color(noise);
     }
 
     &#{$self}--disabled,
     &:disabled {
-      color: color(cement);
-      border-color: color(fog);
-      background-color: color(noise);
+      color: om.color(cement);
+      border-color: om.color(fog);
+      background-color: om.color(noise);
       cursor: default;
       pointer-events: none;
     }
   }
 
   &--tertiary {
-    @include text(body1);
+    @include om.text(body1);
 
-    padding: spacing(2, 3);
-    color: color(ink);
-    border-color: color(elephant);
-    background-color: color('snow');
+    padding: om.spacing(2, 3);
+    color: om.color(ink);
+    border-color: om.color(elephant);
+    background-color: om.color('snow');
     text-transform: none;
     line-height: 1.4;
 
     &#{$self}--hover,
     &:hover {
-      color: color(ink);
-      border-color: color(elephant);
-      background-color: color(noise, 0.32);
+      color: om.color(ink);
+      border-color: om.color(elephant);
+      background-color: om.color(noise, 0.32);
     }
 
     &#{$self}--focus,
     &:focus {
-      color: color(ink);
-      border-color: color(elephant);
-      background-color: color(noise);
+      color: om.color(ink);
+      border-color: om.color(elephant);
+      background-color: om.color(noise);
     }
 
     &#{$self}--disabled,
     &:disabled {
-      color: color(cement);
-      border-color: color(fog);
-      background-color: color(noise);
+      color: om.color(cement);
+      border-color: om.color(fog);
+      background-color: om.color(noise);
       cursor: default;
       pointer-events: none;
     }
   }
 
   &--elevated {
-    box-shadow: 0px 1px 4px color(coal, 0.09);
+    box-shadow: 0px 1px 4px om.color(coal, 0.09);
   }
 
   &--chip {

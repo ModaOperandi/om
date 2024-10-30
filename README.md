@@ -70,7 +70,6 @@ Once you want to commit something, `git add` it then run the commitizen CLI. If 
 When you're happy push to a feature branch and once the code is in `main`, semantic release will detect how to version it and automatically publish it to NPM.
 
 - **Netlify deploy config** is located here: https://app.netlify.com/sites/moda-om-storybook/configuration/deploys
-  
 - **Netlify site overview**: https://app.netlify.com/sites/moda-om-storybook/overview
 
 (settings specified in netlify.toml override any corresponding settings in the Netlify UI)
@@ -103,7 +102,7 @@ Import and use the mixins/functions library:
 @import '~@moda/om';
 
 body {
-  @include text(body1);
+  @include om.text(body1);
   padding: spacing(2, 4);
 }
 ```

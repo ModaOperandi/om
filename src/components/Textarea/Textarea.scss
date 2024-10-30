@@ -1,8 +1,8 @@
-@import '~om';
+@use '~@moda/om';
 
 .Textarea {
-  @include input-styles();
-  @include text(body1);
+  @include om.input-styles();
+  @include om.text(body1);
 
   resize: none;
 }

@@ -1,9 +1,9 @@
-@import './overflow-scroll';
+@use 'overflow-scroll';
 
 .Story.overflow-scroll {
-  @include overflow-scroll();
+  @include overflow-scroll.overflow-scroll();
 }
 
 .Story.overflow-scroll-x {
-  @include overflow-scroll(x);
+  @include overflow-scroll.overflow-scroll(x);
 }

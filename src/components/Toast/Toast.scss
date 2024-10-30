@@ -1,18 +1,18 @@
-@import '~om';
+@use '~@moda/om';
 
 .Toast {
-  color: color('snow');
-  padding: spacing(3);
+  color: om.color('snow');
+  padding: om.spacing(3);
 
   &--success {
-    background-color: color(money-good);
+    background-color: om.color(money-good);
   }
 
   &--warning {
-    background-color: color(burnt-orange);
+    background-color: om.color(burnt-orange);
   }
 
   &--error {
-    background-color: color(code-red);
+    background-color: om.color(code-red);
   }
 }

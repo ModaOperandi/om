@@ -1,7 +1,7 @@
-@import '~om';
+@use '~@moda/om';
 
 .SearchInput {
-  $icon-width: space(7);
+  $icon-width: om.space(7);
 
   position: relative;
   display: inline-block;
@@ -16,7 +16,7 @@
     bottom: 0;
     width: $icon-width;
     height: 100%;
-    color: color(cement);
+    color: om.color(cement);
   }
 
   &__input--round-borders {
@@ -37,7 +37,7 @@
     right: 0;
 
     &:hover {
-      color: color(ink);
+      color: om.color(ink);
       cursor: pointer;
     }
   }

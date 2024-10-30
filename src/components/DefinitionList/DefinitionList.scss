@@ -1,7 +1,7 @@
-@import '~om';
+@use '~@moda/om';
 
 .DefinitionList {
-  @include text(body1);
+  @include om.text(body1);
   margin: 0;
 
   > dt,
@@ -11,14 +11,14 @@
   }
 
   > dt {
-    color: color(ink);
-    margin-right: space(2);
+    color: om.color(ink);
+    margin-right: om.space(2);
   }
 
   > dd {
     &,
     > a {
-      color: color(cement);
+      color: om.color(cement);
     }
 
     > a {

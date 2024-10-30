@@ -1,30 +1,30 @@
-@import '~om';
+@use '~@moda/om';
 
 .Checkbox {
-  $checkbox-size: space(4);
-  $checkbox-check-offset: calc(space(1) / 2);
+  $checkbox-size: om.space(4);
+  $checkbox-check-offset: calc(om.space(1) / 2);
 
-  @include stack(2, $direction: horizontal);
+  @include om.stack(2, $direction: horizontal);
 
   position: relative;
   align-items: flex-start;
   user-select: none;
   cursor: pointer;
-  color: color(ink);
+  color: om.color(ink);
 
   &__indicator {
     position: relative;
     width: $checkbox-size;
     height: $checkbox-size;
-    margin-top: calc(space(1) / 2);
+    margin-top: calc(om.space(1) / 2);
     flex-shrink: 0;
     border: 1px solid;
 
     &--disabled {
-      color: color(elephant);
+      color: om.color(elephant);
       pointer-events: none;
       &::after {
-        background-color: color(elephant);
+        background-color: om.color(elephant);
       }
     }
   }
@@ -34,12 +34,12 @@
   }
 
   &__input {
-    @include visually-hidden();
+    @include om.visually-hidden();
   }
 
   &__label {
-    @include text(body1);
+    @include om.text(body1);
 
-    color: color(ink);
+    color: om.color(ink);
   }
 }

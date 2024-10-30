@@ -1,24 +1,24 @@
-@import '~om';
+@use '~@moda/om';
 
 .SelectOptions {
-  background-color: color('snow');
-  border: 1px solid color(elephant);
+  background-color: om.color('snow');
+  border: 1px solid om.color(elephant);
 
   &:focus {
     outline: 0;
-    border-color: color(cement);
+    border-color: om.color(cement);
   }
 
   &__search {
-    margin: space(2);
+    margin: om.space(2);
   }
 
   &__none {
-    padding: spacing(2, 3);
+    padding: om.spacing(2, 3);
   }
 
   &__list {
-    @include overflow-scroll();
-    max-height: space(12);
+    @include om.overflow-scroll();
+    max-height: om.space(12);
   }
 }

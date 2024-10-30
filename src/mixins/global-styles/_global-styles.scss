@@ -1,10 +1,11 @@
-@import '~@moda/tokens';
-@import '../font-smoothing/font-smoothing';
+@use 'sass:map';
+@use '~@moda/tokens';
+@use '../font-smoothing/font-smoothing';
 
 @mixin global-styles() {
   html {
     box-sizing: border-box;
-    font-size: map-get($typography, 'root-font-size');
+    font-size: map.get(tokens.$typography, 'root-font-size');
   }
 
   *,
@@ -44,7 +45,7 @@
 
   body,
   input {
-    @include font-smoothing(antialiased);
+    @include font-smoothing.font-smoothing(antialiased);
   }
 
   // :focus-visible polyfill
@@ -54,6 +55,6 @@
   }
   // custom outlines on :focus-visible
   .focus-visible {
-    outline: 2px solid color(burnt-orange);
+    outline: 2px solid tokens.color(burnt-orange);
   }
 }

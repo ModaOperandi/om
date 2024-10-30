@@ -1,51 +1,51 @@
-@import '~om';
+@use '~@moda/om';
 
 .Badge {
-  @include text(eyebrow);
+  @include om.text(eyebrow);
   display: inline-block;
-  color: color(ink);
+  color: om.color(ink);
   border: 1px solid;
-  padding: space(1);
+  padding: om.space(1);
   user-select: none;
 
   &,
   &--default {
     background-color: transparent;
-    border-color: color(fog);
-    color: color(cement);
+    border-color: om.color(fog);
+    color: om.color(cement);
   }
 
   &--forest-green {
-    background-color: color(forest-green);
+    background-color: om.color(forest-green);
     border-color: transparent;
-    color: color('snow');
+    color: om.color('snow');
   }
 
   &--klein-blue {
-    background-color: color(klein-blue);
+    background-color: om.color(klein-blue);
     border-color: transparent;
-    color: color('snow');
+    color: om.color('snow');
   }
 
   &--brick {
-    background-color: color(brick);
+    background-color: om.color(brick);
     border-color: transparent;
-    color: color('snow');
+    color: om.color('snow');
   }
 
   &--dark-fuchsia {
-    border-color: color(dark-fuchsia);
-    color: color(dark-fuchsia);
+    border-color: om.color(dark-fuchsia);
+    color: om.color(dark-fuchsia);
     font-weight: 700;
     text-transform: none;
   }
 
   &--noise {
-    @include text(body1);
+    @include om.text(body1);
 
-    background-color: color(noise);
+    background-color: om.color(noise);
     border-color: transparent;
-    color: color(ink);
+    color: om.color(ink);
     text-transform: none;
     line-height: 1.4;
   }

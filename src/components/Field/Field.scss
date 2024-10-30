@@ -1,7 +1,7 @@
-@import '~om';
+@use '~@moda/om';
 
 .Field {
-  @include stack(1);
+  @include om.stack(1);
 
   &__context {
     position: relative;
@@ -10,23 +10,23 @@
   &__icon {
     position: absolute;
     top: 50%;
-    right: space(2);
-    color: color(code-red);
+    right: om.space(2);
+    color: om.color(code-red);
     transform: translateY(-50%);
     pointer-events: none;
   }
 
   &__label,
   &__error {
-    @include text(body1);
+    @include om.text(body1);
   }
 
   &__label {
-    color: color(cement);
+    color: om.color(cement);
   }
 
   &__error {
-    color: color(code-red);
+    color: om.color(code-red);
     // Offset error border-thickness
     padding-top: 1px;
   }

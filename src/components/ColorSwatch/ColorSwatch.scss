@@ -1,11 +1,11 @@
-@import '~om';
+@use '~@moda/om';
 
 .ColorSwatch {
   $self: &;
   $outer-border-color: rgba(black, 0.5);
-  $on-sale-dot-size: space(1);
-  $default-size: space(6);
-  $small-size: space(5);
+  $on-sale-dot-size: om.space(1);
+  $default-size: om.space(6);
+  $small-size: om.space(5);
 
   position: relative;
   width: $default-size;
@@ -33,7 +33,7 @@
     height: 33%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: color('snow');
+    background-color: om.color('snow');
     z-index: 1;
   }
 
@@ -60,7 +60,7 @@
 
   &:hover,
   &--hover {
-    border-color: color(elephant);
+    border-color: om.color(elephant);
 
     // Inset dot
     &::before {
@@ -113,7 +113,7 @@
       width: $on-sale-dot-size;
       height: $on-sale-dot-size;
       border-radius: 50%;
-      background-color: color('code-red');
+      background-color: om.color('code-red');
     }
   }
 
@@ -125,11 +125,11 @@
   &--light {
     // Inset dot
     &::before {
-      background-color: color(ink);
+      background-color: om.color(ink);
     }
 
     #{$self}__chip {
-      border: 1px solid color(ink, 0.25);
+      border: 1px solid om.color(ink, 0.25);
     }
   }
 }

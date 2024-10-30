@@ -1,16 +1,16 @@
-@import '~om';
+@use '~@moda/om';
 
 .RadioButton {
-  $radio-button-size: space(4);
-  $radio-button-check-offset: space(1);
+  $radio-button-size: om.space(4);
+  $radio-button-check-offset: om.space(1);
 
-  @include stack(2, $direction: horizontal);
+  @include om.stack(2, $direction: horizontal);
 
   position: relative;
   align-items: center;
   user-select: none;
   cursor: pointer;
-  color: color(ink);
+  color: om.color(ink);
 
   &__indicator {
     position: relative;
@@ -19,10 +19,10 @@
     flex-shrink: 0;
     border: 1px solid;
     border-radius: 50%;
-    background-color: color('snow');
+    background-color: om.color('snow');
 
     &--checked {
-      background-color: color(ink);
+      background-color: om.color(ink);
 
       &::after {
         content: '';
@@ -33,27 +33,27 @@
         bottom: $radio-button-check-offset;
         left: $radio-button-check-offset;
         border-radius: 50%;
-        background-color: color('snow');
+        background-color: om.color('snow');
       }
     }
 
     &--disabled {
-      color: color(elephant);
+      color: om.color(elephant);
       pointer-events: none;
-      background-color: color('snow');
+      background-color: om.color('snow');
       &::after {
-        background-color: color(elephant);
+        background-color: om.color(elephant);
       }
     }
   }
 
   &__input {
-    @include visually-hidden();
+    @include om.visually-hidden();
   }
 
   &__label {
-    @include text(body1);
+    @include om.text(body1);
 
-    color: color(ink);
+    color: om.color(ink);
   }
 }

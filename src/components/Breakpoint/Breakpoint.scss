@@ -1,20 +1,22 @@
+@use 'sass:list';
+@use 'sass:map';
 @use 'sass:math';
-@import '~om';
+@use '~@moda/om';
 
 .Breakpoint {
   $onePixel: math.div(1, 16);
-  $keys: map-keys($breakpoints);
+  $keys: map.keys(om.$breakpoints);
 
   display: none;
 
-  @for $i from 1 through length($keys) {
-    $key: nth($keys, $i);
-    $width: map-get($breakpoints, $key);
+  @for $i from 1 through list.length($keys) {
+    $key: list.nth($keys, $i);
+    $width: map.get(om.$breakpoints, $key);
 
     $prevWidth: null;
     @if $i - 1 > 1 {
-      $prevKey: nth($keys, $i - 1);
-      $prevWidth: map-get($breakpoints, $prevKey) + $onePixel;
+      $prevKey: list.nth($keys, $i - 1);
+      $prevWidth: map.get(om.$breakpoints, $prevKey) + $onePixel;
     } @else {
       $prevWidth: 0;
     }

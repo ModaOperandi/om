@@ -1,21 +1,21 @@
-@import '~om';
+@use '~@moda/om';
 
 .Paginator {
   display: flex;
   justify-content: center;
 
   &__button {
-    @include text(body1);
+    @include om.text(body1);
 
     border: none;
-    height: space(6);
-    width: space(6);
+    height: om.space(6);
+    width: om.space(6);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-right: space(1);
-    margin-left: space(1);
+    margin-right: om.space(1);
+    margin-left: om.space(1);
     background-color: transparent;
 
     &:first-child {
@@ -27,7 +27,7 @@
     }
 
     &:hover {
-      background-color: color(noise);
+      background-color: om.color(noise);
     }
 
     &--next,
@@ -36,16 +36,16 @@
     }
 
     &--currentPage {
-      background-color: color(noise);
+      background-color: om.color(noise);
     }
   }
 
   &__next-chevron {
-    margin-left: space(2);
+    margin-left: om.space(2);
   }
 
   &__previous-chevron {
-    margin-right: space(2);
+    margin-right: om.space(2);
   }
 
   &__button--ellipsis {

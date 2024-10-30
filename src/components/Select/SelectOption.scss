@@ -1,13 +1,13 @@
-@import '~om';
+@use '~@moda/om';
 
 .SelectOption {
-  @include text(body1);
+  @include om.text(body1);
 
   display: block;
   width: 100%;
   text-align: left;
-  padding: spacing(2, 3);
-  color: color(ink);
+  padding: om.spacing(2, 3);
+  color: om.color(ink);
 
   &--selected {
     text-decoration: underline;
@@ -15,15 +15,15 @@
 
   &:hover,
   &--active {
-    background-color: color(noise);
+    background-color: om.color(noise);
   }
 
   &--disabled {
-    color: color(fog);
+    color: om.color(fog);
     cursor: default;
 
     &:hover {
-      background-color: color('snow');
+      background-color: om.color('snow');
     }
   }
 }

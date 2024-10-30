@@ -1,7 +1,7 @@
-@import '~om';
+@use '~@moda/om';
 
 .Loading {
-  padding: space(5);
+  padding: om.space(5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +13,8 @@
   .Diamond,
   .ArcWindow,
   .Circle {
-    width: space(7);
-    height: space(7);
+    width: om.space(7);
+    height: om.space(7);
     opacity: 1;
     animation: fade 1s linear;
   }

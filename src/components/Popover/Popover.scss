@@ -1,17 +1,17 @@
-@import '~om';
+@use '~@moda/om';
 
 .Popover {
   $self: &;
-  $caret-size: space(2);
+  $caret-size: om.space(2);
   $border-width: calc(1rem / 16);
-  $offset: space(2);
+  $offset: om.space(2);
 
   position: relative;
 
   &__content {
     position: absolute;
-    background-color: color('snow');
-    border: $border-width solid color(elephant);
+    background-color: om.color('snow');
+    border: $border-width solid om.color(elephant);
     z-index: 1;
 
     // Fills space of offset so hover works without issue
@@ -119,11 +119,11 @@
         top: auto;
         bottom: -($border-width + $offset);
         border-top: none;
-        border-bottom: $caret-size solid color('snow');
+        border-bottom: $caret-size solid om.color('snow');
       }
 
       &:before {
-        border-bottom: $caret-size solid color(ink);
+        border-bottom: $caret-size solid om.color(ink);
       }
     }
   }
@@ -137,12 +137,12 @@
       &:before {
         top: -($border-width + $offset);
         bottom: auto;
-        border-top: $caret-size solid color('snow');
+        border-top: $caret-size solid om.color('snow');
         border-bottom: none;
       }
 
       &:before {
-        border-top: $caret-size solid color(ink);
+        border-top: $caret-size solid om.color(ink);
       }
     }
   }
