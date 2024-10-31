@@ -1,0 +1,9 @@
+@use '~@moda/om';
+
+.LoadingShapesPinkGreen__item {
+  display: block;
+}
+
+.LoadingShapesPinkGreen__item--current {
+  display: none;
+}
