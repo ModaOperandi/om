@@ -1,3 +1,10 @@
+# [20.1.0](https://github.com/ModaOperandi/om/compare/20.0.0...20.1.0) (2024-10-31)
+
+
+### Features
+
+* **ECOM-4038:** add new moda loading shapes ([4a99468](https://github.com/ModaOperandi/om/commit/4a99468e4fe0d5208dda928644029555fec39c93))
+
 # [20.0.0](https://github.com/ModaOperandi/om/compare/19.9.0...20.0.0) (2024-10-30)
 
 
