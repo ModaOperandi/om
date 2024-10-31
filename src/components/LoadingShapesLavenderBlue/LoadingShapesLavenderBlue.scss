@@ -1,0 +1,9 @@
+@use '~@moda/om';
+
+.LoadingShapesLavenderBlue__item {
+  display: block;
+}
+
+.LoadingShapesLavenderBlue__item--current {
+  display: none;
+}
