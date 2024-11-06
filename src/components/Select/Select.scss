@@ -110,9 +110,9 @@
     border-radius: 50%;
     border-width: 1px;
     display: inline-block;
+    margin-left: om.space(1);
+    margin-right: om.space(1);
     height: om.space(4);
-    position: absolute;
-    right: om.space(7);
     transform: translateY(25%);
     width: om.space(4);
   }

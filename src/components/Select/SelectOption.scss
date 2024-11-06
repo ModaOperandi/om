@@ -26,4 +26,17 @@
       background-color: om.color('snow');
     }
   }
+
+  &__color-swatch {
+    border-color: om.color(ink);
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    display: inline-block;
+    margin-left: om.space(1);
+    margin-right: om.space(1);
+    height: om.space(4);
+    transform: translateY(25%);
+    width: om.space(4);
+  }
 }

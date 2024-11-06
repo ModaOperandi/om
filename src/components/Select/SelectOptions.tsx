@@ -6,6 +6,7 @@ import { Text } from '../Text';
 import { SearchInput } from '../SearchInput';
 import { SelectOption } from './SelectOption';
 import { SelectableOption } from './Select';
+
 import './SelectOptions.scss';
 
 export type SelectOptionsProps = Omit<
@@ -70,6 +71,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
           onClear={() => setSearchPhrase('')}
         />
       )}
+
       <ul
         className='SelectOptions__list'
         tabIndex={-1}
@@ -88,11 +90,10 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
             active={activeOption?.value === option.value}
             selected={selectedOption?.value === option.value}
             onClick={onSelect}
-          >
-            {option.label}
-          </SelectOption>
+          />
         ))}
       </ul>
+
       {options.length === 0 && (
         <Text className='SelectOptions__none' color='cement'>
           Nothing found
