@@ -1,7 +1,9 @@
 import React, { useCallback, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import scrollIntoView from 'scroll-into-view-if-needed';
+import { colors } from '@moda/tokens';
 import { SelectableOption } from './Select';
+
 import './SelectOption.scss';
 
 export type SelectOptionProps = Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> & {
@@ -16,6 +18,7 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
   active,
   selected,
   option,
+  option: { disabled, colorSwatch, label },
   onClick,
   className,
   dataTestId
@@ -25,9 +28,10 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
   const handleClick = useCallback(
     (event: React.MouseEvent<HTMLLIElement>) => {
       event.preventDefault();
-      if (!option.disabled) onClick(option);
+
+      if (!disabled) onClick(option);
     },
-    [onClick, option]
+    [disabled, onClick, option]
   );
 
   useEffect(() => {
@@ -42,15 +46,22 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
       className={classNames('SelectOption', className, {
         'SelectOption--active': active,
         'SelectOption--selected': selected,
-        'SelectOption--disabled': option.disabled
+        'SelectOption--disabled': disabled
       })}
       onClick={handleClick}
-      data-test-id={dataTestId ? `${dataTestId}--${option.label.replace(' ', '-')}` : undefined}
-      aria-label={option.label}
+      data-test-id={dataTestId ? `${dataTestId}--${label.replace(' ', '-')}` : undefined}
+      aria-label={label}
       aria-selected={selected}
       role='option'
     >
-      {option.label}
+      {colorSwatch && (
+        <div
+          className='SelectOption__color-swatch'
+          style={{ backgroundColor: colors.all[colorSwatch] }}
+        />
+      )}
+
+      {label}
     </li>
   );
 };

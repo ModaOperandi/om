@@ -11,7 +11,12 @@ import { useSelect } from './useSelect';
 
 import './Select.scss';
 
-export type SelectableOption = { value: string; label: string; disabled?: boolean };
+export type SelectableOption = {
+  value: string;
+  label: string;
+  disabled?: boolean;
+  colorSwatch?: TextColor;
+};
 
 export type SelectProps = Omit<
   React.HTMLAttributes<HTMLDivElement>,
@@ -131,14 +136,14 @@ export const Select: React.FC<SelectProps> = ({
             hasValue={focused != null || selected != null}
           />
 
-          {(focused ?? selected)?.label}
-
           {colorSwatch && (
             <div
               className='Select__selected-color'
               style={{ backgroundColor: colors.all[colorSwatch] }}
             />
           )}
+
+          {(focused ?? selected)?.label}
 
           <span
             className={classNames('Select__icon', { 'Select__icon--shifted': shiftIconLeftwards })}

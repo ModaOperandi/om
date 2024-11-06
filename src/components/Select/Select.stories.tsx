@@ -45,12 +45,25 @@ export const Default = () => (
 export const Colored = () => (
   <States<Partial<SelectProps>>>
     <Select
-      label='Sort by'
-      disabled
+      label='Color'
       colorSwatch='strawberry'
-      options={OPTIONS}
+      options={[
+        { value: '🍓', label: 'Strawberry', colorSwatch: 'strawberry' },
+        {
+          value: 'ink',
+          label: 'Ink',
+          disabled: true,
+          colorSwatch: 'ink'
+        },
+        {
+          value: 'money-good',
+          label: 'Money Good',
+          disabled: true,
+          colorSwatch: 'money-good'
+        }
+      ]}
       onChange={action('onChange')}
-      value='high'
+      value='🍓'
     />
   </States>
 );
