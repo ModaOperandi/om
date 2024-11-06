@@ -1,3 +1,10 @@
+# [20.2.0](https://github.com/ModaOperandi/om/compare/20.1.0...20.2.0) (2024-11-06)
+
+
+### Features
+
+* **select component:** adds color swatches for every subcompponent within [#5534](https://github.com/ModaOperandi/om/issues/5534) ([71fde1f](https://github.com/ModaOperandi/om/commit/71fde1fa8e743f64fc71daee3a11153a65c244c2))
+
 # [20.1.0](https://github.com/ModaOperandi/om/compare/20.0.0...20.1.0) (2024-10-31)
 
 
