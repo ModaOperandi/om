@@ -1,7 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
-import { BrowserRouter } from 'react-router-dom';
 import { ControlLink, ControlLinkProps } from './ControlLink';
 
 export default { title: 'Components/ControlLink' };
@@ -15,17 +14,13 @@ const states = [
 ];
 
 export const Underlined = () => (
-  <BrowserRouter>
-    <States<ControlLinkProps> states={states}>
-      <ControlLink>Underlined Control Link</ControlLink>
-    </States>
-  </BrowserRouter>
+  <States<ControlLinkProps> states={states}>
+    <ControlLink>Underlined Control Link</ControlLink>
+  </States>
 );
 
 export const Blank = () => (
-  <BrowserRouter>
-    <States<ControlLinkProps> states={states}>
-      <ControlLink underlined={false}>Blank Control Link</ControlLink>
-    </States>
-  </BrowserRouter>
+  <States<ControlLinkProps> states={states}>
+    <ControlLink underlined={false}>Blank Control Link</ControlLink>
+  </States>
 );

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
-import { Link, LinkProps } from 'react-router-dom';
+import Link, { LinkProps as NextLinkProps } from 'next/link';
 
 import './Clickable.scss';
 
@@ -11,6 +11,8 @@ export type ClickableProps = {
   disabled?: boolean;
   styleless?: boolean;
 } & (ButtonElProps | AnchorElProps | LinkProps);
+
+type LinkProps = NextLinkProps & { to: string; className?: string; children?: ReactNode };
 
 const isLink = (props: ButtonElProps | AnchorElProps | LinkProps): props is LinkProps =>
   'to' in props;
@@ -30,7 +32,8 @@ export const Clickable = React.forwardRef(
       disabled
     };
 
-    if (isLink(props)) return <Link {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
+    if (isLink(props))
+      return <Link {...props} href={props.to} ref={ref as React.Ref<HTMLAnchorElement>} />;
     if (isAnchor(props)) return <a {...props} ref={ref as React.Ref<HTMLAnchorElement>} />;
     if (isButton(props)) return <button {...props} ref={ref as React.Ref<HTMLButtonElement>} />;
 

@@ -1,5 +1,3 @@
-import 'focus-visible';
-
 import { colors, typography, space, breakpoints } from '@moda/tokens';
 
 import { States } from './utilities';

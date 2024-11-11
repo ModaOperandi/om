@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { action } from '@storybook/addon-actions';
 import { States } from 'storybook-states';
 
@@ -64,13 +63,11 @@ export const PrimaryWithHref = () => (
 );
 
 export const PrimaryAsReactRouterLink = () => (
-  <BrowserRouter>
-    <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
-      <Button to='#href' onClick={action('clicked')}>
-        Add to Cart
-      </Button>
-    </States>
-  </BrowserRouter>
+  <States<ButtonProps> states={[{}, { hover: true }, { focus: true }, { disabled: true }]}>
+    <Button to='#href' onClick={action('clicked')}>
+      Add to Cart
+    </Button>
+  </States>
 );
 
 export const PrimaryWithIcon = () => (
