@@ -1,3 +1,17 @@
+# [21.0.0-next.1](https://github.com/ModaOperandi/om/compare/20.2.0...21.0.0-next.1) (2024-11-11)
+
+
+### Features
+
+* migrate to Next.JS ([b6ba0c0](https://github.com/ModaOperandi/om/commit/b6ba0c0de607be06f18256295e84746435efe219))
+
+
+### BREAKING CHANGES
+
+* Supports Next.JS routing instead of react-router now.
+
+ECOM-4001
+
 # [20.2.0](https://github.com/ModaOperandi/om/compare/20.1.0...20.2.0) (2024-11-06)
 
 
