@@ -11,7 +11,7 @@
 
   @each $family in (sans, serif) {
     &--#{$family} {
-      font-family: font-family($family);
+      font-family: om.font-family($family);
     }
   }
 }
