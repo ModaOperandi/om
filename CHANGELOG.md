@@ -1,3 +1,10 @@
+## [20.3.1](https://github.com/ModaOperandi/om/compare/20.3.0...20.3.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* **font-family usage:** fixes using in Text.scss the om.font-family mixin ([#5584](https://github.com/ModaOperandi/om/issues/5584)) ([df92ef5](https://github.com/ModaOperandi/om/commit/df92ef5f0a643a4614b59052d01d3af423507149))
+
 # [20.3.0](https://github.com/ModaOperandi/om/compare/20.2.0...20.3.0) (2024-11-13)
 
 
