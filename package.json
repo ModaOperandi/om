@@ -48,7 +48,7 @@
   "peerDependencies": {
     "react": ">=18.1.0",
     "react-dom": ">=18.1.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^7.0.1"
   },
   "dependencies": {
     "@moda/icons": "^5.29.9",
@@ -134,7 +134,7 @@
     "ramda": "^0.30.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^5.1.2",
+    "react-router-dom": "^7.0.1",
     "rollup": "^4.24.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^4.0.0",
