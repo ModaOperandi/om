@@ -49,12 +49,9 @@ const Watcher: React.FC<{ from: string }> = ({ from }) => {
     console.log('<Watcher /> mounted', { from });
   }, [from]);
 
-  return (
-    <>
-      {console.log('<Watcher /> rendered', { from })}
-      <div>View console</div>
-    </>
-  );
+  console.log('<Watcher /> rendered', { from });
+
+  return <div>View console</div>;
 };
 
 export const Values = () => (
