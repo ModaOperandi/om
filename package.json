@@ -76,7 +76,7 @@
     "@moda/rollup-plugin-postcss": "^4.0.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.1",
-    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
     "@storybook/addon-actions": "^8.3.6",
     "@storybook/addon-essentials": "^8.3.6",
     "@storybook/addon-links": "^8.3.6",
