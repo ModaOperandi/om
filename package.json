@@ -118,7 +118,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-testing-library": "^7.0.0",
-    "globals": "^15.11.0",
+    "globals": "^16.0.0",
     "husky": "^9.1.6",
     "identity-obj-proxy": "^3.0.0",
     "ignore-not-found-export-webpack-plugin": "^1.0.2",
