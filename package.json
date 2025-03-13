@@ -53,7 +53,7 @@
   "dependencies": {
     "@moda/icons": "^5.29.9",
     "@moda/tokens": "^6.2.0",
-    "@storybook/addon-styling": "^1.3.7",
+    "@storybook/addon-styling": "^2.0.0",
     "@types/classnames": "^2.3.4",
     "classnames": "^2.5.1",
     "credit-card-type": "^10.0.1",
