@@ -1,3 +1,10 @@
+# [20.4.0](https://github.com/ModaOperandi/om/compare/20.3.1...20.4.0) (2025-04-15)
+
+
+### Features
+
+* upgrade tokens ([8e4569a](https://github.com/ModaOperandi/om/commit/8e4569aec8a719f3e2c2dd6ab3b9ed95b80ec963))
+
 ## [20.3.1](https://github.com/ModaOperandi/om/compare/20.3.0...20.3.1) (2024-11-20)
 
 
