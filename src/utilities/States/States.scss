@@ -1,5 +1,0 @@
-@use '~@moda/om';
-
-.States {
-  @include om.stack(6);
-}

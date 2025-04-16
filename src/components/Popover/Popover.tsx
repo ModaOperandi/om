@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef, ReactNode } from 'react';
+import React, { useState, useCallback, useEffect, useRef, ReactNode, JSX } from 'react';
 import classNames from 'classnames';
 import './Popover.scss';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Tag, TagProps } from './Tag';
 
 export default { title: 'Components/Tag' };

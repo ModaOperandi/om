@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Stack } from '../Stack';
 import { ColorSwatch, ColorSwatchProps, SKU_COLORS } from '.';
 

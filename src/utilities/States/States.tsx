@@ -1,22 +1,20 @@
-import React from 'react';
-import { RenderProps } from './isRenderProps';
+import React, { JSX } from 'react';
+import { RenderProps } from '../isRenderProps';
 import { State } from './State';
-import './States.scss';
 
-export interface Props {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  states?: any[];
-  children: JSX.Element | RenderProps;
+export interface Props<T> {
+  states?: T[];
+  children: JSX.Element | RenderProps<T>;
 }
 
-export const States: React.FC<Props> = ({ states = [{}], children, ...rest }) => {
+export const States = <T extends object>({ states = [{} as T], children, ...rest }: Props<T>) => {
   return (
-    <div className='States'>
+    <>
       {states.map((props, index) => (
-        <State key={index} props={props} {...rest}>
+        <State<T> key={index} props={props} {...rest}>
           {children}
         </State>
       ))}
-    </div>
+    </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, isValidElement } from 'react';
+import React, { Children, cloneElement, isValidElement, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import './Breadcrumbs.scss';
@@ -16,7 +16,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ children, className, .
       {...rest}
     >
       {Children.map(children, (child, index) => {
-        if (isValidElement(child)) {
+        if (isValidElement<{ children?: ReactNode; position: number }>(child)) {
           position = position + 1;
           return cloneElement(
             child,

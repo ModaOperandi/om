@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Button } from '../Button';
 import { Overlay } from './Overlay';
 

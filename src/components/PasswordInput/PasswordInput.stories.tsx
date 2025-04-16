@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { PasswordInput, PasswordInputProps } from './PasswordInput';
 
 export default { title: 'Components/PasswordInput' };

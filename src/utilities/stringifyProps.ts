@@ -1,11 +1,6 @@
-const truncate = (string: string, maxLength = 25) => {
-  if (!string) return null;
-  const ellipsis = string.length > maxLength;
-  return `${string.substring(0, maxLength)}${ellipsis ? '...' : ''}`;
-};
+import { truncate } from './truncate';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const stringifyProps = (props: any) => {
+export const stringifyProps = (props: unknown) => {
   const stringifiedProps = Object.entries(props || {}).reduce((memo: string, [key, value]) => {
     if (key === 'children') return `${memo} children={...}`;
     if (typeof value === 'string') return `${memo} ${key}="${truncate(value)}"`;

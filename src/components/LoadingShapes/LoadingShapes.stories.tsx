@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { LoadingShapes } from './LoadingShapes';
 
 export default { title: 'Components/LoadingShapes' };

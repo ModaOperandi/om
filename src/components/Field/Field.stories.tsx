@@ -1,6 +1,6 @@
 import React from 'react';
-import { States } from 'storybook-states';
 import { action } from '@storybook/addon-actions';
+import { States } from '../../utilities';
 import { Textarea } from '../Textarea';
 import { Select } from '../Select';
 import { Field, FieldProps } from './Field';

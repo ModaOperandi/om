@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import InputMask, { Props as InputMaskProps } from 'react-input-mask';
+import InputMask from '@mona-health/react-input-mask';
+import { Props as InputMaskProps } from 'react-input-mask';
 import creditCardType from 'credit-card-type';
 import { FieldProps } from '../Field';
-import {
-  CreditCardNumberInputField,
-  CreditCardNumberInputFieldProps
-} from './CreditCardNumberInputField';
+import { CreditCardNumberInputField } from './CreditCardNumberInputField';
 
 export type CreditCardNumberInputProps = Omit<
   InputMaskProps & FieldProps,
@@ -61,16 +59,10 @@ export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
     [setValue, onChange]
   );
 
-  // TODO: get rid of the any, the types of react-input-mask are incorrect here, it should expect a function as a child, but it expects a ReactNode
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const renderInputField: any = (inputProps: CreditCardNumberInputFieldProps) => (
-    <CreditCardNumberInputField {...rest} {...inputProps} />
-  );
-
   return (
     <InputMask
       mask={mask}
-      maskChar={maskChar}
+      maskPlaceholder={maskChar}
       alwaysShowMask={alwaysShowMask}
       disabled={disabled}
       readOnly={readOnly}
@@ -80,7 +72,7 @@ export const CreditCardNumberInput: React.FC<CreditCardNumberInputProps> = ({
       onFocus={onFocus}
       onBlur={onBlur}
     >
-      {renderInputField}
+      <CreditCardNumberInputField {...rest} />
     </InputMask>
   );
 };

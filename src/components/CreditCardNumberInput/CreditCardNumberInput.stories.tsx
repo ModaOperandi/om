@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { CreditCardNumberInput, CreditCardNumberInputProps } from './CreditCardNumberInput';
 
 export default { title: 'Components/CreditCardNumberInput' };

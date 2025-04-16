@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { action } from '@storybook/addon-actions';
-import { States } from 'storybook-states';
-import { useCallback } from 'react';
+import { States } from '../../utilities';
 import { Input } from '../Field';
 import { Select, SelectProps } from './Select';
 import { MultiSelect } from './MultiSelect';

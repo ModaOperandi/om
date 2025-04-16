@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Textarea, TextareaProps } from './Textarea';
 
 export default { title: 'Components/Textarea' };

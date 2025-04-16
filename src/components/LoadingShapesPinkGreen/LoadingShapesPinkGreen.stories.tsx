@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { LoadingShapesPinkGreen } from './LoadingShapesPinkGreen';
 
 export default { title: 'Components/LoadingShapesPinkGreen' };

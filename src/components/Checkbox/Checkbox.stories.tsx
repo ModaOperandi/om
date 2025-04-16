@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { States } from 'storybook-states';
 
+import { States } from '../../utilities';
 import { Text } from '../Text';
 import { Stack } from '../Stack';
 import { RadioButton } from '../RadioButton';

@@ -1,6 +1,6 @@
 import React from 'react';
-import { States } from 'storybook-states';
 import { space } from '@moda/tokens';
+import { States } from '../../utilities';
 import { Stack, StackProps } from './Stack';
 
 export default { title: 'Components/Stack' };

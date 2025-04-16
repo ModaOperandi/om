@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { JSX, useCallback } from 'react';
 import { Clickable } from '../Clickable';
 import './Tab.scss';
 
