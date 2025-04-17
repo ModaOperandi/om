@@ -1,25 +1,25 @@
-import React from 'react';
-import { isRenderProps, RenderProps } from './isRenderProps';
-import { StatesProps } from './StatesProps';
-import './State.scss';
+import React, { JSX } from 'react';
+import { isRenderProps, RenderProps } from '../isRenderProps';
+import { StateProps } from './StateProps';
+import { useStyles } from './Styles';
 
-interface Props {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  props: any;
-  children: JSX.Element | RenderProps;
+interface Props<T> {
+  props: T;
+  children: JSX.Element | RenderProps<T>;
 }
 
-export const State: React.FC<Props> = ({ props, children, ...rest }) => {
+export const State = <T extends object>({ props, children, ...rest }: Props<T>) => {
+  const styles = useStyles();
+
   const Specimen = isRenderProps(children) ? children(props) : React.cloneElement(children, props);
+
   const innerChildren = isRenderProps(children) ? children(props) : children;
 
   return (
-    <div className='State' {...rest}>
+    <div style={styles.state} {...rest}>
       {Specimen}
 
-      <code className='State__props'>
-        <StatesProps props={props}>{innerChildren}</StatesProps>
-      </code>
+      <StateProps props={props}>{innerChildren}</StateProps>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import classNames from 'classnames';
 import WarningIcon from '@moda/icons/warning-16';
 import { TextInput, TextInputProps } from '../TextInput';

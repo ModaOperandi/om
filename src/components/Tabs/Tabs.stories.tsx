@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Text } from '../Text';
 import { Tabs, TabsProps } from './Tabs';
 

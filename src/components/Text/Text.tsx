@@ -1,4 +1,4 @@
-import React, { ReactHTML } from 'react';
+import React, { HTMLElementType } from 'react';
 import classNames from 'classnames';
 import { typography, colors } from '@moda/tokens';
 import './Text.scss';
@@ -8,7 +8,7 @@ export type TextColor = keyof typeof colors.all;
 export type TextFontFamily = keyof typeof typography.fonts;
 
 export type TextProps = React.HTMLAttributes<HTMLSpanElement> & {
-  as?: keyof ReactHTML;
+  as?: HTMLElementType;
   treatment?: TextTreatment;
   color?: TextColor;
   family?: TextFontFamily;

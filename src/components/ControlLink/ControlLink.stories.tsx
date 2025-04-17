@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { States } from 'storybook-states';
 import { BrowserRouter } from 'react-router-dom';
+import { States } from '../../utilities';
 import { ControlLink, ControlLinkProps } from './ControlLink';
 
 export default { title: 'Components/ControlLink' };

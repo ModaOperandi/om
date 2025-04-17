@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { PromoBanner, PromoBannerProps } from './PromoBanner';
 
 export default { title: 'Components/PromoBanner' };

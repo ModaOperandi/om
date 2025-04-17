@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { States } from 'storybook-states';
 import { BrowserRouter } from 'react-router-dom';
+import { States } from '../../utilities';
 import { Clickable, ClickableProps } from './Clickable';
 
 export default { title: 'Components/Clickable' };

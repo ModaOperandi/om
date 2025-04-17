@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { ControlLink } from '..';
 import { Text } from '../Text';
 import { Popover, PopoverProps } from './Popover';

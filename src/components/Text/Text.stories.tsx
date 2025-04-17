@@ -1,6 +1,6 @@
 import React from 'react';
 import { typography, colors } from '@moda/tokens';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Text, TextProps, TextTreatment, TextColor, TextFontFamily } from './Text';
 
 export default { title: 'Components/Text' };

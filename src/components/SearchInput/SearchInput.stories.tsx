@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { action } from '@storybook/addon-actions';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Text } from '../Text';
 import { SearchInput, SearchInputProps } from './SearchInput';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Text } from '../Text';
 import { DefinitionList, DefinitionListProps } from './DefinitionList';
 

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, JSX } from 'react';
 import classNames from 'classnames';
 import CheckmarkIcon from '@moda/icons/checkmark-16';
 import CircleIcon from '@moda/icons/circle-12';

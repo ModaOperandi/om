@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { States } from 'storybook-states';
+import { States } from '../../utilities';
 import { Stack } from '../Stack';
 import { VerticalDivider } from './VerticalDivider';
 

@@ -10,8 +10,7 @@ describe('credit card number input', () => {
     expect(input).toBeInTheDocument();
   });
 
-  // TODO: userEvent.type does not work here for some reason
-  xit('does not allow non-numeric characters', async () => {
+  it('does not allow non-numeric characters', async () => {
     render(<CreditCardNumberInput label='Card Number' />);
     const input = screen.getByLabelText('Card Number') as HTMLInputElement;
 
@@ -20,8 +19,7 @@ describe('credit card number input', () => {
     expect(input.value).toBe('1234 ____ ____ ____');
   });
 
-  // TODO: userEvent.type does not work here for some reason
-  xit('puts spaces between the numbers', async () => {
+  it('puts spaces between the numbers', async () => {
     render(<CreditCardNumberInput label='Card Number' />);
     const input = screen.getByLabelText('Card Number') as HTMLInputElement;
 
@@ -30,8 +28,7 @@ describe('credit card number input', () => {
     expect(input.value).toBe('5510 0000 0000 0000');
   });
 
-  // TODO: userEvent.type does not work here for some reason
-  xit('does not allow more characters than required', async () => {
+  it('does not allow more characters than required', async () => {
     render(<CreditCardNumberInput label='Card Number' />);
     const input = screen.getByLabelText('Card Number') as HTMLInputElement;
 
