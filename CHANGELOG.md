@@ -1,3 +1,5 @@
+## [21.0.1](https://github.com/ModaOperandi/om/compare/21.0.0...21.0.1) (2025-04-17)
+
 # [21.0.0](https://github.com/ModaOperandi/om/compare/20.4.0...21.0.0) (2025-04-17)
 
 
