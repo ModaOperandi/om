@@ -1,3 +1,22 @@
+# [21.0.0](https://github.com/ModaOperandi/om/compare/20.4.0...21.0.0) (2025-04-17)
+
+
+### Bug Fixes
+
+* release ([46e4971](https://github.com/ModaOperandi/om/commit/46e4971b74a1fc7f840cafef3504b9a7087fb057))
+
+
+### Features
+
+* react 19 ([#6114](https://github.com/ModaOperandi/om/issues/6114)) ([9585488](https://github.com/ModaOperandi/om/commit/9585488266b57e798d6a69ad8401f2a0d92a0ee5))
+
+
+### BREAKING CHANGES
+
+* This requires react >= 19.1.0 now.
+
+ECOM-4149
+
 # [20.4.0](https://github.com/ModaOperandi/om/compare/20.3.1...20.4.0) (2025-04-15)
 
 
