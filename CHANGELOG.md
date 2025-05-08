@@ -1,3 +1,10 @@
+# [21.1.0](https://github.com/ModaOperandi/om/compare/21.0.1...21.1.0) (2025-05-08)
+
+
+### Features
+
+* upgrade to node 22.15.0 ([#6162](https://github.com/ModaOperandi/om/issues/6162)) ([fffb203](https://github.com/ModaOperandi/om/commit/fffb20380f3a67927d5fa72146f2c947c2eb4e31))
+
 ## [21.0.1](https://github.com/ModaOperandi/om/compare/21.0.0...21.0.1) (2025-04-17)
 
 # [21.0.0](https://github.com/ModaOperandi/om/compare/20.4.0...21.0.0) (2025-04-17)
