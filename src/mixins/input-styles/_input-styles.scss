@@ -8,13 +8,15 @@
     @include tokens.text(h6);
   }
 
-  appearance: none;
-  line-height: 1;
-  width: 100%;
-  padding: tokens.spacing(3, 4);
-  border: 1px solid tokens.color(elephant);
-  background-color: tokens.color('snow');
-  border-radius: 0;
+  & {
+    appearance: none;
+    line-height: 1;
+    width: 100%;
+    padding: tokens.spacing(3, 4);
+    border: 1px solid tokens.color(elephant);
+    background-color: tokens.color('snow');
+    border-radius: 0;
+  }
 
   &::placeholder {
     line-height: normal;
