@@ -1,3 +1,10 @@
+## [21.1.1](https://github.com/ModaOperandi/om/compare/21.1.0...21.1.1) (2025-05-26)
+
+
+### Bug Fixes
+
+* sass warning ([c2f0f15](https://github.com/ModaOperandi/om/commit/c2f0f154f4782bce0540a7341509dacf4acc0a45))
+
 # [21.1.0](https://github.com/ModaOperandi/om/compare/21.0.1...21.1.0) (2025-05-08)
 
 
