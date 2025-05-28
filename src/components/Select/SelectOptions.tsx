@@ -4,9 +4,9 @@ import { useKeyboardListNavigation } from '../../hooks/useKeyboardListNavigation
 import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 import { Text } from '../Text';
 import { SearchInput } from '../SearchInput';
+import { ControlLink } from '../ControlLink';
 import { SelectOption } from './SelectOption';
 import { SelectableOption, SelectExtraOption } from './Select';
-import { ControlLink } from '../ControlLink';
 
 import './SelectOptions.scss';
 

@@ -289,6 +289,8 @@ export const WithExtraOption = () => {
     { label: 'second item', value: '2' }
   ]);
 
+  const maxNumOfItems = 4;
+
   const handleCallback = useCallback(() => {
     setItems(prev => [
       ...prev,
@@ -302,7 +304,9 @@ export const WithExtraOption = () => {
   return (
     <Select
       options={items}
-      extraOption={items.length < 4 ? { label: 'Load More', callback: handleCallback } : undefined}
+      extraOption={
+        items.length < maxNumOfItems ? { label: 'Load More', callback: handleCallback } : undefined
+      }
     />
   );
 };
