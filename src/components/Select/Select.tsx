@@ -11,6 +11,8 @@ import { useSelect } from './useSelect';
 
 import './Select.scss';
 
+export type SelectExtraOption = { callback: () => void; disabled?: boolean; label: string };
+
 export type SelectableOption = {
   value: string;
   label: string;
@@ -39,6 +41,7 @@ export type SelectProps = Omit<
   value?: string | undefined;
   dataTestId?: string;
   colorSwatch?: TextColor;
+  extraOption?: SelectExtraOption;
 };
 
 export const Select: React.FC<SelectProps> = ({
@@ -60,6 +63,7 @@ export const Select: React.FC<SelectProps> = ({
   value,
   dataTestId,
   colorSwatch,
+  extraOption,
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
@@ -165,6 +169,7 @@ export const Select: React.FC<SelectProps> = ({
             onSelect={handleSelect}
             onFocus={handleFocus}
             selectedOption={selected}
+            extraOption={extraOption}
           />
         )}
       </div>

@@ -4,8 +4,9 @@ import { useKeyboardListNavigation } from '../../hooks/useKeyboardListNavigation
 import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 import { Text } from '../Text';
 import { SearchInput } from '../SearchInput';
+import { ControlLink } from '../ControlLink';
 import { SelectOption } from './SelectOption';
-import { SelectableOption } from './Select';
+import { SelectableOption, SelectExtraOption } from './Select';
 
 import './SelectOptions.scss';
 
@@ -21,6 +22,7 @@ export type SelectOptionsProps = Omit<
   onFocus?(option: SelectableOption): void;
   onSelect(option: SelectableOption): void;
   dataTestId?: string;
+  extraOption?: SelectExtraOption;
 };
 
 export const SelectOptions: React.FC<SelectOptionsProps> = ({
@@ -33,6 +35,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   onFocus,
   className,
   dataTestId,
+  extraOption,
   ...rest
 }) => {
   const [searchPhrase, setSearchPhrase] = useState('');
@@ -92,6 +95,16 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
             onClick={onSelect}
           />
         ))}
+
+        {extraOption && (
+          <ControlLink
+            className='SelectOptions__extra-option'
+            disabled={extraOption.disabled}
+            onClick={extraOption.callback}
+          >
+            {extraOption.label}
+          </ControlLink>
+        )}
       </ul>
 
       {options.length === 0 && (
