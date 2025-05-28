@@ -21,4 +21,11 @@
     @include om.overflow-scroll();
     max-height: om.space(12);
   }
+
+  &__extra-option {
+    left: 50%;
+    margin-bottom: om.space(1);
+    margin-top: om.space(2);
+    transform: translate(-50%);
+  }
 }

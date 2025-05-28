@@ -9,19 +9,9 @@ export default { title: 'Components/Select' };
 
 const OPTIONS = [
   { value: 'featured', label: 'Featured' },
-  {
-    value: 'recency',
-    label: "What's New",
-    disabled: true
-  },
-  {
-    value: 'high',
-    label: 'Price High to Low'
-  },
-  {
-    value: 'low',
-    label: 'Price Low to High'
-  }
+  { value: 'recency', label: "What's New", disabled: true },
+  { value: 'high', label: 'Price High to Low' },
+  { value: 'low', label: 'Price Low to High' }
 ];
 
 export const Default = () => (
@@ -48,18 +38,8 @@ export const Colored = () => (
       colorSwatch='strawberry'
       options={[
         { value: '🍓', label: 'Strawberry', colorSwatch: 'strawberry' },
-        {
-          value: 'ink',
-          label: 'Ink',
-          disabled: true,
-          colorSwatch: 'ink'
-        },
-        {
-          value: 'money-good',
-          label: 'Money Good',
-          disabled: true,
-          colorSwatch: 'money-good'
-        }
+        { value: 'ink', label: 'Ink', disabled: true, colorSwatch: 'ink' },
+        { value: 'money-good', label: 'Money Good', disabled: true, colorSwatch: 'money-good' }
       ]}
       onChange={action('onChange')}
       value='🍓'
@@ -302,6 +282,30 @@ export const AutoFill = () => (
     </Input>
   </>
 );
+
+export const WithExtraOption = () => {
+  const [items, setItems] = useState([
+    { label: 'first item', value: '1' },
+    { label: 'second item', value: '2' }
+  ]);
+
+  const handleCallback = useCallback(() => {
+    setItems(prev => [
+      ...prev,
+      ...[
+        { label: 'third item', value: '3' },
+        { label: 'forth item', value: '4' }
+      ]
+    ]);
+  }, []);
+
+  return (
+    <Select
+      options={items}
+      extraOption={items.length < 4 ? { label: 'Load More', callback: handleCallback } : undefined}
+    />
+  );
+};
 
 export const InsideInputComponent = () => (
   <Input error>
