@@ -1,3 +1,10 @@
+# [21.2.0](https://github.com/ModaOperandi/om/compare/21.1.1...21.2.0) (2025-05-28)
+
+
+### Features
+
+* **select:** adds ability to add an extra option that servers a callback (load more) ([#6216](https://github.com/ModaOperandi/om/issues/6216)) ([b31ed0f](https://github.com/ModaOperandi/om/commit/b31ed0fa06165191f43a57114a74172b03faa942))
+
 ## [21.1.1](https://github.com/ModaOperandi/om/compare/21.1.0...21.1.1) (2025-05-26)
 
 
