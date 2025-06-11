@@ -75,7 +75,7 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@storybook/addon-actions": "^8.6.12",
     "@storybook/addon-essentials": "^8.6.12",
-    "@storybook/addon-links": "^8.6.12",
+    "@storybook/addon-links": "^9.0.8",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-viewport": "^9.0.0",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.6",
