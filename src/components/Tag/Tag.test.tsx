@@ -11,6 +11,6 @@ describe('Tag', () => {
     expect(screen.getByText('Hello')).toBeInTheDocument();
 
     await userEvent.click(screen.getByRole('button'));
-    expect(onRemove).toBeCalled();
+    expect(onRemove).toHaveBeenCalled();
   });
 });

@@ -15,7 +15,7 @@ describe('Checkbox', () => {
 
     await userEvent.click(screen.getByTestId('checkbox'));
 
-    expect(handleChange).toBeCalled();
+    expect(handleChange).toHaveBeenCalled();
     expect(screen.getByRole('checkbox') as HTMLInputElement).toBeChecked();
 
     rerender(<Checkbox data-testid='checkbox' checked={false} onChange={handleChange} />);
@@ -31,7 +31,7 @@ describe('Checkbox', () => {
 
     await userEvent.click(screen.getByTestId('checkbox'));
 
-    expect(handleChange).toBeCalled();
+    expect(handleChange).toHaveBeenCalled();
     expect(screen.getByRole('checkbox') as HTMLInputElement).toBeChecked();
   });
 });

@@ -15,6 +15,6 @@ describe('Toast', () => {
     expect(screen.getByText('Hello')).toBeInTheDocument();
 
     await userEvent.click(screen.getByRole('button', { name: 'Remove' }));
-    expect(onRemove).toBeCalled();
+    expect(onRemove).toHaveBeenCalled();
   });
 });

@@ -24,11 +24,11 @@ describe('Modal', () => {
     const button = screen.getByTestId('button');
 
     await userEvent.click(button);
-    expect(onClose).toBeCalledTimes(0);
-    expect(onClickButton).toBeCalledTimes(1);
+    expect(onClose).toHaveBeenCalledTimes(0);
+    expect(onClickButton).toHaveBeenCalledTimes(1);
 
     await userEvent.click(modal);
-    expect(onClose).toBeCalledTimes(1);
-    expect(onClickButton).toBeCalledTimes(1);
+    expect(onClose).toHaveBeenCalledTimes(1);
+    expect(onClickButton).toHaveBeenCalledTimes(1);
   });
 });
