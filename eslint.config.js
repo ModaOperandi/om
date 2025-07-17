@@ -1,4 +1,5 @@
 const react = require('eslint-plugin-react');
+const path = require('path');
 const noLoops = require('eslint-plugin-no-loops');
 const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 const importPlugin = require('eslint-plugin-import');
@@ -41,7 +42,7 @@ module.exports = [
         ecmaFeatures: {
           jsx: true
         },
-        project: './tsconfig.json'
+        project: path.resolve(__dirname, './tsconfig.json')
       }
     },
     settings: {

@@ -12,8 +12,8 @@ describe('Breadcrumbs', () => {
         <Breadcrumb>Three</Breadcrumb>
       </Breadcrumbs>
     );
-    expect(screen.getAllByRole('listitem').at(0)).toHaveAttribute('itemprop');
-    expect(screen.getAllByRole('listitem').at(0)).toHaveAttribute('itemscope');
-    expect(screen.getAllByRole('listitem').at(0)).toHaveAttribute('itemtype');
+    expect(screen.getAllByRole('listitem')[0]).toHaveAttribute('itemprop');
+    expect(screen.getAllByRole('listitem')[0]).toHaveAttribute('itemscope');
+    expect(screen.getAllByRole('listitem')[0]).toHaveAttribute('itemtype');
   });
 });
