@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 import Heart from '@moda/icons/favorite-outline-16';
 
 import { States } from '../../utilities';

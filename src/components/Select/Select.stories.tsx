@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 import { States } from '../../utilities';
 import { Input } from '../Field';
 import { Select, SelectProps } from './Select';

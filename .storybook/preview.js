@@ -1,5 +1,5 @@
 import 'focus-visible';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import { breakpoints } from '@moda/tokens';
 import { globalStyles } from './decorators/globalStyles';
 

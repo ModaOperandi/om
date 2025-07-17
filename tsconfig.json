@@ -16,7 +16,7 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "es6",
-    "types": ["node"]
+    "types": ["node", "chai"]
   },
   "include": ["*.js", ".*.js", "src", "test"],
   "exclude": ["node_modules"]
