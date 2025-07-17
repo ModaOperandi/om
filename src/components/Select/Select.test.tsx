@@ -65,7 +65,7 @@ describe('Select', () => {
     await userEvent.click(button);
     const option = screen.getByLabelText('Bar');
     await userEvent.click(option);
-    expect(onChange).toBeCalledWith('bar');
+    expect(onChange).toHaveBeenCalledWith('bar');
   });
 
   it('does not call onChange when selecting a disabled option', async () => {
@@ -84,7 +84,7 @@ describe('Select', () => {
     await userEvent.click(button);
     const option = screen.getByLabelText('Baz');
     await userEvent.click(option);
-    expect(onChange).not.toBeCalled();
+    expect(onChange).not.toHaveBeenCalled();
   });
 
   it('renders correctly with ":" between label and value if value is not undefined', async () => {

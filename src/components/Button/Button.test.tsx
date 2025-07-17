@@ -17,6 +17,6 @@ describe('Button', () => {
     render(<Button onClick={onClick}>Click me</Button>);
 
     await user.click(screen.getByRole('button', { name: 'Click me' }));
-    expect(onClick).toBeCalled();
+    expect(onClick).toHaveBeenCalled();
   });
 });

@@ -153,7 +153,7 @@ describe('useKeyboardListNavigation', () => {
 
     fireEvent.keyDown(window, { key: 'Enter' });
 
-    expect(onEnter).toBeCalledTimes(1);
+    expect(onEnter).toHaveBeenCalledTimes(1);
     expect(onEnter).toHaveBeenCalledWith({
       element: 'first',
       event: expect.anything(),
@@ -166,7 +166,7 @@ describe('useKeyboardListNavigation', () => {
 
     fireEvent.keyDown(window, { key: 'Enter' });
 
-    expect(onEnter).toBeCalledTimes(2);
+    expect(onEnter).toHaveBeenCalledTimes(2);
     expect(onEnter).toHaveBeenLastCalledWith({
       element: 'third',
       event: expect.anything(),
@@ -220,13 +220,13 @@ describe('useKeyboardListNavigation', () => {
 
       fireEvent.keyDown(window, { key: 'Enter' });
 
-      expect(onEnter).toBeCalledTimes(0);
+      expect(onEnter).toHaveBeenCalledTimes(0);
 
       fireEvent.keyDown(window, { key: 'ArrowDown' });
 
       fireEvent.keyDown(window, { key: 'Enter' });
 
-      expect(onEnter).toBeCalledTimes(1);
+      expect(onEnter).toHaveBeenCalledTimes(1);
     });
   });
 });
