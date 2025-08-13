@@ -1,3 +1,10 @@
+# [21.3.0](https://github.com/ModaOperandi/om/compare/21.2.1...21.3.0) (2025-08-13)
+
+
+### Features
+
+* **ECOM-4580:** add padding right option for select element ([4cd4eff](https://github.com/ModaOperandi/om/commit/4cd4effb20d33a55f09e0a2adda347cd1e3f9d1f))
+
 ## [21.2.1](https://github.com/ModaOperandi/om/compare/21.2.0...21.2.1) (2025-07-17)
 
 # [21.2.0](https://github.com/ModaOperandi/om/compare/21.1.1...21.2.0) (2025-05-28)
