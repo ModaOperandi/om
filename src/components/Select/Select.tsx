@@ -42,6 +42,7 @@ export type SelectProps = Omit<
   dataTestId?: string;
   colorSwatch?: TextColor;
   extraOption?: SelectExtraOption;
+  paddingRight?: number;
 };
 
 export const Select: React.FC<SelectProps> = ({
@@ -64,6 +65,7 @@ export const Select: React.FC<SelectProps> = ({
   dataTestId,
   colorSwatch,
   extraOption,
+  paddingRight,
   ...rest
 }) => {
   const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
@@ -124,7 +126,9 @@ export const Select: React.FC<SelectProps> = ({
 
         <Clickable
           id={idRef && `Select__value--${idRef}`}
-          className='Select__value'
+          className={classNames('Select__value', {
+            [`Select__value--padding-${paddingRight}`]: paddingRight != null
+          })}
           disabled={disabled}
           onClick={handleToggle}
           data-test-id={dataTestId}
