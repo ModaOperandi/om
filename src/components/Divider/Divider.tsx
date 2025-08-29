@@ -9,7 +9,7 @@ export type DividerProps = React.HTMLAttributes<HTMLDivElement> & {
   treatment?: TextTreatment;
   color?: TextColor;
   family?: TextFontFamily;
-  type?: 'no-line' | 'two-line';
+  type?: 'no-line' | 'two-line' | 'line-above';
   verticalPadding?: string;
 };
 

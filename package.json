@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@moda/icons": "^6.1.14",
-    "@moda/tokens": "^6.4.58",
+    "@moda/tokens": "^6.5.0",
     "@mona-health/react-input-mask": "^3.0.3",
     "@storybook/addon-styling": "^2.0.0",
     "classnames": "^2.5.1",
