@@ -1,3 +1,15 @@
+# [21.5.0](https://github.com/ModaOperandi/om/compare/21.4.0...21.5.0) (2025-09-11)
+
+
+### Bug Fixes
+
+* **ECOM-4253:** add small text prop to select component ([b4ded22](https://github.com/ModaOperandi/om/commit/b4ded223fee02e1b597dcea3bf8534cafbc06383))
+
+
+### Features
+
+* **ECOM-4597:** add top margin for mobile divider with line above ([7be3cfb](https://github.com/ModaOperandi/om/commit/7be3cfb9f8d7a6d53cc0bb765189c3b0593983a8))
+
 # [21.4.0](https://github.com/ModaOperandi/om/compare/21.3.0...21.4.0) (2025-08-29)
 
 
