@@ -1,3 +1,10 @@
+## [21.5.1](https://github.com/ModaOperandi/om/compare/21.5.0...21.5.1) (2025-09-11)
+
+
+### Bug Fixes
+
+* **ECOM-4253:** inlcude sm size not just xs size for select small text ([26aa7c1](https://github.com/ModaOperandi/om/commit/26aa7c1024e723cfa884b731329b8cd355d4ff42))
+
 # [21.5.0](https://github.com/ModaOperandi/om/compare/21.4.0...21.5.0) (2025-09-11)
 
 
