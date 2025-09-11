@@ -64,7 +64,7 @@
   }
 
   &__value--small {
-    @include om.breakpoint(xs, $prop: max-width) {
+    @include om.breakpoint(sm, $prop: max-width) {
       font-size: om.space(3);
     }
   }
