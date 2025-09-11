@@ -1,3 +1,10 @@
+# [21.4.0](https://github.com/ModaOperandi/om/compare/21.3.0...21.4.0) (2025-08-29)
+
+
+### Features
+
+* **ECOM-4597:** add new type of Divider ([59eef77](https://github.com/ModaOperandi/om/commit/59eef77a0c720fb1a8ee367be07c5c845fd12889))
+
 # [21.3.0](https://github.com/ModaOperandi/om/compare/21.2.1...21.3.0) (2025-08-13)
 
 
