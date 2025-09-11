@@ -63,6 +63,12 @@
     }
   }
 
+  &__value--small {
+    @include om.breakpoint(xs, $prop: max-width) {
+      font-size: om.space(3);
+    }
+  }
+
   @for $i from 1 through 12 {
     &__value--padding-#{$i} {
       padding-right: om.space($i);
