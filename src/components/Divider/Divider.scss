@@ -41,16 +41,22 @@
   }
 
   &--line-above {
-    border-top: 1px solid om.color('silver');
-    padding: om.space(6) 0;
-
-    @include om.breakpoint(sm, $prop: max-width) {
-      padding: om.space(4) 0;
-    }
+    padding: om.space(4) 0;
 
     &:before,
     &:after {
       display: none;
+    }
+  }
+
+  &__content--line-above {
+    border-top: 1px solid om.color('silver');
+    padding-top: om.space(6);
+    width: 100%;
+    text-align: center;
+
+    @include om.breakpoint(sm, $prop: max-width) {
+      padding: om.space(4) 0;
     }
   }
 }
