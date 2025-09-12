@@ -1,3 +1,10 @@
+## [21.5.2](https://github.com/ModaOperandi/om/compare/21.5.1...21.5.2) (2025-09-12)
+
+
+### Bug Fixes
+
+* **ECOM-4597:** add extra container with padding to new divider ([e77beaf](https://github.com/ModaOperandi/om/commit/e77beafb356a1510ae2441d882b5005ea23b7e33))
+
 ## [21.5.1](https://github.com/ModaOperandi/om/compare/21.5.0...21.5.1) (2025-09-11)
 
 
