@@ -27,16 +27,25 @@ export const Divider: React.FC<DividerProps> = ({
 
   return (
     <div className={classNames('Divider', type ? `Divider--${type}` : '', className)} {...rest}>
-      {text && (
-        <Text
-          className='Divider__text'
-          treatment={treatment ?? defaultTreatment}
-          color={color}
-          family={family ?? defaultFamily}
-        >
-          {text}
-        </Text>
-      )}
+      <div
+        className={classNames(
+          'Divider__content',
+          type ? `Divider__content--${type}` : '',
+          className
+        )}
+        {...rest}
+      >
+        {text && (
+          <Text
+            className='Divider__text'
+            treatment={treatment ?? defaultTreatment}
+            color={color}
+            family={family ?? defaultFamily}
+          >
+            {text}
+          </Text>
+        )}
+      </div>
     </div>
   );
 };
