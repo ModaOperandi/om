@@ -1,3 +1,18 @@
+# [21.6.0](https://github.com/ModaOperandi/om/compare/21.5.2...21.6.0) (2025-10-23)
+
+
+### Bug Fixes
+
+* circular dependency ([da7a1f8](https://github.com/ModaOperandi/om/commit/da7a1f84885aa790fa8afa1f7999edff6ca1819f))
+* unused export ([3249bd1](https://github.com/ModaOperandi/om/commit/3249bd16b35e94000cf037cebe358b5c14e33d6c))
+* update version to 2.1 ([1d33f1a](https://github.com/ModaOperandi/om/commit/1d33f1aee818649566fa1be8e14c31168fe3dccb))
+
+
+### Features
+
+* make Clickable compatible with v7 react router dom ([618955e](https://github.com/ModaOperandi/om/commit/618955e32af919a1153241d183b80d65b4a32a19))
+* remove navigationpreventer ([6655993](https://github.com/ModaOperandi/om/commit/665599396ea0e81c9a4041588c74e5d31da05196))
+
 ## [21.5.2](https://github.com/ModaOperandi/om/compare/21.5.1...21.5.2) (2025-09-12)
 
 
