@@ -45,7 +45,12 @@
   "peerDependencies": {
     "react": ">=19.1.0",
     "react-dom": ">=19.1.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2 || ^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-router-dom": {
+      "optional": false
+    }
   },
   "dependencies": {
     "@moda/icons": "^6.1.14",
