@@ -1,5 +1,6 @@
 import React from 'react';
-import { Tab, TabPanel } from '.';
+import { Tab } from './Tab';
+import { TabPanel } from './TabPanel';
 import './TabPanels.scss';
 
 export type TabPanelsProps = {

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
-import { Tab, TabList, TabPanels } from '.';
+import { Tab } from './Tab';
+import { TabList } from './TabList';
+import { TabPanels } from './TabPanels';
 import './Tabs.scss';
 
 export type TabsProps = React.HTMLAttributes<HTMLDivElement> & {
