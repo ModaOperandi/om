@@ -25,7 +25,6 @@ export * from './LoadingShapesLavenderBlue';
 export * from './LoadingItemsLavenderBlue';
 export * from './Modal';
 export * from './ModalOverlay';
-export * from './NavigationPreventer';
 export * from './Overlay';
 export * from './Paginator';
 export * from './PasswordInput';
