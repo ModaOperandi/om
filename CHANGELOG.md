@@ -1,3 +1,10 @@
+## [21.6.1](https://github.com/ModaOperandi/om/compare/21.6.0...21.6.1) (2025-11-21)
+
+
+### Bug Fixes
+
+* add optional event parameter to callback ([b01ab85](https://github.com/ModaOperandi/om/commit/b01ab85b92a462c36e5eba0f304d9cb1bbe885ca))
+
 # [21.6.0](https://github.com/ModaOperandi/om/compare/21.5.2...21.6.0) (2025-10-23)
 
 
