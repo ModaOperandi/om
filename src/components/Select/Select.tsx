@@ -11,7 +11,11 @@ import { useSelect } from './useSelect';
 
 import './Select.scss';
 
-export type SelectExtraOption = { callback: () => void; disabled?: boolean; label: string };
+export type SelectExtraOption = {
+  callback: (event?: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
+  label: string;
+};
 
 export type SelectableOption = {
   value: string;
