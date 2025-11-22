@@ -1,3 +1,10 @@
+## [21.6.4](https://github.com/ModaOperandi/om/compare/21.6.3...21.6.4) (2025-11-22)
+
+
+### Bug Fixes
+
+* **select:** dispatch close if disabled ([5f85a1c](https://github.com/ModaOperandi/om/commit/5f85a1ca20e94ac53c3e1e2f93cde104b63aca4d))
+
 ## [21.6.3](https://github.com/ModaOperandi/om/compare/21.6.2...21.6.3) (2025-11-22)
 
 
