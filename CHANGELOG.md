@@ -1,3 +1,10 @@
+## [21.6.3](https://github.com/ModaOperandi/om/compare/21.6.2...21.6.3) (2025-11-22)
+
+
+### Bug Fixes
+
+* allow setting value to undefined ([489d25e](https://github.com/ModaOperandi/om/commit/489d25eec77f6efc8806d3fd6c3e848bf9f22354))
+
 ## [21.6.2](https://github.com/ModaOperandi/om/compare/21.6.1...21.6.2) (2025-11-22)
 
 
