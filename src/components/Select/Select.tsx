@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import classNames from 'classnames';
 import ChevronDownIcon from '@moda/icons/chevron-down-12';
 import ChevronUpIcon from '@moda/icons/chevron-up-12';
@@ -114,6 +114,12 @@ export const Select: React.FC<SelectProps> = ({
     () => options.find(option => state.focused === option.value),
     [options, state.focused]
   );
+
+  useEffect(() => {
+    if (disabled && state.mode === Mode.Open) {
+      dispatch({ type: 'CLOSE' });
+    }
+  }, [disabled, state.mode, Mode, dispatch]);
 
   return (
     <>
