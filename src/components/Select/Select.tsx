@@ -15,6 +15,7 @@ export type SelectExtraOption = {
   callback: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
   label: string;
+  closeOnClick?: boolean;
 };
 
 export type SelectableOption = {
@@ -181,6 +182,7 @@ export const Select: React.FC<SelectProps> = ({
             onFocus={handleFocus}
             selectedOption={selected}
             extraOption={extraOption}
+            onCloseDropdown={() => dispatch({ type: 'CLOSE' })}
           />
         )}
       </div>

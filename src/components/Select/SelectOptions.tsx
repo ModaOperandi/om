@@ -23,6 +23,7 @@ export type SelectOptionsProps = Omit<
   onSelect(option: SelectableOption): void;
   dataTestId?: string;
   extraOption?: SelectExtraOption;
+  onCloseDropdown?: () => void;
 };
 
 export const SelectOptions: React.FC<SelectOptionsProps> = ({
@@ -36,6 +37,7 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
   className,
   dataTestId,
   extraOption,
+  onCloseDropdown,
   ...rest
 }) => {
   const [searchPhrase, setSearchPhrase] = useState('');
@@ -100,7 +102,12 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
           <ControlLink
             className='SelectOptions__extra-option'
             disabled={extraOption.disabled}
-            onClick={extraOption.callback}
+            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+              extraOption.callback(event);
+              if (extraOption.closeOnClick) {
+                onCloseDropdown?.();
+              }
+            }}
           >
             {extraOption.label}
           </ControlLink>
