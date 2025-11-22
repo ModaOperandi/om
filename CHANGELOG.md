@@ -1,3 +1,10 @@
+## [21.6.2](https://github.com/ModaOperandi/om/compare/21.6.1...21.6.2) (2025-11-22)
+
+
+### Bug Fixes
+
+* add onCloseDropdown ([5cc7538](https://github.com/ModaOperandi/om/commit/5cc7538d18a5551b5c28962795b2d34174b7c32e))
+
 ## [21.6.1](https://github.com/ModaOperandi/om/compare/21.6.0...21.6.1) (2025-11-21)
 
 
