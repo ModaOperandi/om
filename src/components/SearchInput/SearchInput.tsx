@@ -52,11 +52,12 @@ export const SearchInput: React.FC<SearchInputProps> = ({
 
   return (
     <div className={classNames('SearchInput', className)}>
-      <div className='SearchInput__icon'>
+      <div className='SearchInput__icon' aria-hidden='true'>
         <SearchIcon height={`${searchIconSize}px`} width={`${searchIconSize}px`} />
       </div>
 
       <TextInput
+        type='search'
         className={classNames('SearchInput__input', {
           'SearchInput__input--round-borders': roundBorders,
           'SearchInput__input--no-borders': noBorders
@@ -68,8 +69,13 @@ export const SearchInput: React.FC<SearchInputProps> = ({
       />
 
       {controlledValue && (
-        <Clickable className='SearchInput__clear' onClick={handleClear} type='reset'>
-          <ExitIcon />
+        <Clickable
+          className='SearchInput__clear'
+          onClick={handleClear}
+          type='reset'
+          aria-label='Clear search'
+        >
+          <ExitIcon aria-hidden='true' />
         </Clickable>
       )}
     </div>
