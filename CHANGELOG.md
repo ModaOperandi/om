@@ -1,3 +1,10 @@
+## [21.6.5](https://github.com/ModaOperandi/om/compare/21.6.4...21.6.5) (2025-11-30)
+
+
+### Bug Fixes
+
+* **modal:** improve accessibility for screen readers ([6294f2b](https://github.com/ModaOperandi/om/commit/6294f2b74b9ad6a25daca740b693264a445eba32))
+
 ## [21.6.4](https://github.com/ModaOperandi/om/compare/21.6.3...21.6.4) (2025-11-22)
 
 
