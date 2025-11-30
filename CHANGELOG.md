@@ -1,3 +1,10 @@
+## [21.6.7](https://github.com/ModaOperandi/om/compare/21.6.6...21.6.7) (2025-11-30)
+
+
+### Bug Fixes
+
+* **radio-button:** improve keyboard accessibility ([f88f5c1](https://github.com/ModaOperandi/om/commit/f88f5c1c18c2212f71ab54ead43d74e6a98878b1))
+
 ## [21.6.6](https://github.com/ModaOperandi/om/compare/21.6.5...21.6.6) (2025-11-30)
 
 
