@@ -1,3 +1,10 @@
+## [21.6.9](https://github.com/ModaOperandi/om/compare/21.6.8...21.6.9) (2025-11-30)
+
+
+### Bug Fixes
+
+* **search-input:** hide native browser search decorations ([bab6c4b](https://github.com/ModaOperandi/om/commit/bab6c4bd07b6f4c3088b16bbf750d75ab8e7290f))
+
 ## [21.6.8](https://github.com/ModaOperandi/om/compare/21.6.7...21.6.8) (2025-11-30)
 
 
