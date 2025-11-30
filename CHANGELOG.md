@@ -1,3 +1,10 @@
+## [21.6.6](https://github.com/ModaOperandi/om/compare/21.6.5...21.6.6) (2025-11-30)
+
+
+### Bug Fixes
+
+* **checkbox:** improve keyboard accessibility ([541c6f7](https://github.com/ModaOperandi/om/commit/541c6f71f958a3bfa80ddccd796cafea29c9aaea))
+
 ## [21.6.5](https://github.com/ModaOperandi/om/compare/21.6.4...21.6.5) (2025-11-30)
 
 
