@@ -46,5 +46,12 @@
     width: 100%;
     padding-right: $icon-width;
     padding-left: $icon-width;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
   }
 }
