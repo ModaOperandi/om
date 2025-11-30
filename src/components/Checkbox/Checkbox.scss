@@ -37,6 +37,11 @@
     @include om.visually-hidden();
   }
 
+  &:has(.Checkbox__input:focus-visible) .Checkbox__indicator {
+    outline: 2px solid om.color(ink);
+    outline-offset: 2px;
+  }
+
   &__label {
     @include om.text(body1);
 

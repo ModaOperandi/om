@@ -49,14 +49,13 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   return (
     <label
       htmlFor={id}
-      tabIndex={0}
       className={classNames('Checkbox', className, {
         'Checkbox--disabled': disabled
       })}
       data-test-id={dataTestId && `${dataTestId}--label`}
     >
       <span
-        tabIndex={-1}
+        aria-hidden='true'
         className={classNames('Checkbox__indicator', {
           'Checkbox__indicator--disabled': disabled
         })}
@@ -72,7 +71,6 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 
       <input
         id={id}
-        tabIndex={-1}
         className='Checkbox__input'
         type='checkbox'
         checked={isChecked}
