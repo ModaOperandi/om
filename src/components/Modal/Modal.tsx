@@ -8,6 +8,8 @@ export type ModalProps = React.HTMLAttributes<HTMLDivElement> & {
   onClose(): void;
   shards?: ComponentProps<typeof FocusOn>['shards'];
   autoFocus?: boolean;
+  'aria-label'?: string;
+  'aria-labelledby'?: string;
 };
 
 export const Modal: React.FC<ModalProps> = ({
@@ -15,10 +17,10 @@ export const Modal: React.FC<ModalProps> = ({
   children,
   onClose,
   shards,
-  autoFocus,
+  autoFocus = true,
   ...rest
 }) => (
-  <div className={classNames('Modal', className)} {...rest}>
+  <div className={classNames('Modal', className)} role='dialog' aria-modal='true' {...rest}>
     <FocusOn autoFocus={autoFocus} shards={shards} onClickOutside={onClose} onEscapeKey={onClose}>
       {children}
     </FocusOn>

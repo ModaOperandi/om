@@ -19,7 +19,9 @@ export const Default = () => {
       <Button onClick={() => setMode(Mode.Open)}>Open Modal</Button>
       {mode === Mode.Open && (
         <Modal onClose={() => setMode(Mode.Resting)}>
-          <Text>Click (or press &lt;esc&gt;) to close</Text>
+          <div tabIndex={-1}>
+            <Text>Click (or press &lt;esc&gt;) to close</Text>
+          </div>
         </Modal>
       )}
     </>
@@ -45,6 +47,7 @@ export const BackdropContent = () => {
             }}
           >
             <div
+              tabIndex={-1}
               style={{
                 backgroundColor: 'white',
                 padding: '1rem 1.5rem'
