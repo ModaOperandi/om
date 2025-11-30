@@ -51,6 +51,11 @@
     @include om.visually-hidden();
   }
 
+  &:has(.RadioButton__input:focus-visible) .RadioButton__indicator {
+    outline: 2px solid om.color(ink);
+    outline-offset: 2px;
+  }
+
   &__label {
     @include om.text(body1);
 

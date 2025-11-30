@@ -1,4 +1,4 @@
-import React, { JSX, useRef } from 'react';
+import React, { JSX } from 'react';
 import classNames from 'classnames';
 import './RadioButton.scss';
 
@@ -10,23 +10,18 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   checked,
   children,
   value,
-  tabIndex,
   disabled,
   ...rest
 }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-
   return (
     <label
-      tabIndex={tabIndex ?? 0}
-      onKeyDown={({ key }) => (key === 'Enter' || key === ' ') && inputRef.current?.click()}
       className={classNames('RadioButton', className, {
         'RadioButton--checked': checked,
         'RadioButton--disabled': disabled
       })}
     >
       <span
-        tabIndex={-1}
+        aria-hidden='true'
         className={classNames('RadioButton__indicator', {
           'RadioButton__indicator--checked': checked,
           'RadioButton__indicator--unchecked': !checked,
@@ -34,21 +29,14 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
         })}
       />
       <input
-        ref={inputRef}
-        tabIndex={-1}
         className='RadioButton__input'
         type='radio'
-        role='radio'
         checked={checked}
         value={value}
         disabled={disabled}
         {...rest}
       />
-      {children && (
-        <span className='RadioButton__label' tabIndex={-1}>
-          {children}
-        </span>
-      )}
+      {children && <span className='RadioButton__label'>{children}</span>}
     </label>
   );
 };

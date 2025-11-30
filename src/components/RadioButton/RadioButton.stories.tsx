@@ -23,28 +23,26 @@ export const Default = () => (
 
 const EXAMPLES = ['Foo', 'Bar', 'Baz'];
 
-export const Select = () => {
-  const [selected, select] = useState('Foo');
+export const Group = () => {
+  const [selected, setSelected] = useState('Foo');
 
   return (
-    <States>
-      <Stack space={3}>
-        <Text color='burnt-orange'>{selected}</Text>
+    <Stack space={3}>
+      <Text color='burnt-orange'>Selected: {selected}</Text>
 
-        {EXAMPLES.map(value => (
-          <RadioButton
-            key={value}
-            name={value}
-            value={value}
-            checked={selected === value}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              select(event.currentTarget.value)
-            }
-          >
-            {value}
-          </RadioButton>
-        ))}
-      </Stack>
-    </States>
+      {EXAMPLES.map(value => (
+        <RadioButton
+          key={value}
+          name='example-group'
+          value={value}
+          checked={selected === value}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            setSelected(event.currentTarget.value)
+          }
+        >
+          {value}
+        </RadioButton>
+      ))}
+    </Stack>
   );
 };
