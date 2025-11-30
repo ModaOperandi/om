@@ -8,11 +8,11 @@ describe('SearchInput', () => {
   it('clears the input when the button is clicked', async () => {
     render(<SearchInput value='Hello' />);
 
-    expect(screen.getByRole('textbox')).toHaveValue('Hello');
+    expect(screen.getByRole('searchbox')).toHaveValue('Hello');
 
     await userEvent.click(screen.getByRole('button'));
 
-    expect(screen.getByRole('textbox')).toHaveValue('');
+    expect(screen.getByRole('searchbox')).toHaveValue('');
   });
 
   it('calls onChange when typing', async () => {
@@ -20,7 +20,7 @@ describe('SearchInput', () => {
 
     render(<SearchInput value='' onChange={onChange} />);
 
-    await userEvent.type(screen.getByRole('textbox'), 'Greetings');
+    await userEvent.type(screen.getByRole('searchbox'), 'Greetings');
 
     expect(onChange).toHaveBeenCalledWith('Greetings');
 
