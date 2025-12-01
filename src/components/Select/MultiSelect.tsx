@@ -43,6 +43,16 @@ export const MultiSelect: React.FC<Props> = ({
 
   const values = useMemo(() => (Array.isArray(state.value) ? state.value : []), [state.value]);
 
+  const selectedLabels = useMemo(
+    () => values.map(value => options.find(option => option.value === value)?.label || value),
+    [values, options]
+  );
+
+  const accessibleLabel = useMemo(() => {
+    if (selectedLabels.length === 0) return 'Select options';
+    return `Select options, ${selectedLabels.length} selected: ${selectedLabels.join(', ')}`;
+  }, [selectedLabels]);
+
   const handleSelect = useCallback(
     (option: SelectableOption) => {
       dispatch({ type: 'SELECT', payload: { value: uniq([...values, option.value]) } });
@@ -85,7 +95,16 @@ export const MultiSelect: React.FC<Props> = ({
       ref={selectRef}
       {...rest}
     >
-      <Clickable className='MultiSelect__search' disabled={disabled} onClick={handleToggle}>
+      <Clickable
+        className='MultiSelect__search'
+        disabled={disabled}
+        onClick={handleToggle}
+        aria-haspopup='listbox'
+        aria-expanded={state.mode === Mode.Open}
+        aria-controls={state.mode === Mode.Open ? `Select__listbox--${idRef}` : undefined}
+        aria-label={accessibleLabel}
+        type='button'
+      >
         <div className='MultiSelect__selected-items'>
           {values.map((value, index) => (
             <span className='MultiSelect__selected-item' key={index}>
@@ -120,7 +139,6 @@ export const MultiSelect: React.FC<Props> = ({
           options={options}
           onSelect={handleSelect}
           onFocus={handleFocus}
-          autoFocus={false}
         />
       )}
     </div>
