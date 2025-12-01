@@ -1,3 +1,11 @@
+## [21.6.10](https://github.com/ModaOperandi/om/compare/21.6.9...21.6.10) (2025-12-01)
+
+
+### Bug Fixes
+
+* **multiselect:** add screenreader accessibility ([20bbbff](https://github.com/ModaOperandi/om/commit/20bbbffb79eaf56dd9928c6a773ae5c957d34030))
+* **select:** add screenreader accessibility ([3af9646](https://github.com/ModaOperandi/om/commit/3af9646641897a1a41df9b2120d69fb2b210d930))
+
 ## [21.6.9](https://github.com/ModaOperandi/om/compare/21.6.8...21.6.9) (2025-11-30)
 
 
