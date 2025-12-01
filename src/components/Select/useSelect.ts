@@ -19,12 +19,12 @@ type Action =
   | { type: 'SELECT'; payload: { value: string | string[] } }
   | { type: 'FOCUS'; payload: { value: string } };
 
-const reducer = (state: State, action: Action) => {
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'OPEN':
       return { ...state, mode: Mode.Open };
     case 'CLOSE':
-      return { ...state, mode: Mode.Resting };
+      return { ...state, mode: Mode.Resting, focused: undefined };
     case 'SELECT':
       return {
         ...state,
@@ -44,6 +44,7 @@ interface UseSelectProps {
 
 export const useSelect = ({ value, defaultValue }: UseSelectProps) => {
   const selectRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const initialValue = value ?? defaultValue;
 
@@ -57,7 +58,9 @@ export const useSelect = ({ value, defaultValue }: UseSelectProps) => {
     switch (event.key) {
       case 'Escape': {
         event.preventDefault();
-        return dispatch({ type: 'CLOSE' });
+        dispatch({ type: 'CLOSE' });
+        buttonRef.current?.focus();
+        break;
       }
       default:
         break;
@@ -81,5 +84,5 @@ export const useSelect = ({ value, defaultValue }: UseSelectProps) => {
     dispatch({ type: 'SELECT', payload: { value: value ?? '' } });
   }, [value]);
 
-  return { state, dispatch, Mode, selectRef };
+  return { state, dispatch, Mode, selectRef, buttonRef };
 };

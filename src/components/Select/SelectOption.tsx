@@ -7,6 +7,7 @@ import { SelectableOption } from './Select';
 import './SelectOption.scss';
 
 export type SelectOptionProps = Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> & {
+  id?: string;
   active: boolean;
   selected: boolean;
   option: SelectableOption;
@@ -15,6 +16,7 @@ export type SelectOptionProps = Omit<React.HTMLAttributes<HTMLLIElement>, 'onCli
 };
 
 export const SelectOption: React.FC<SelectOptionProps> = ({
+  id,
   active,
   selected,
   option,
@@ -42,6 +44,7 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
 
   return (
     <li
+      id={id}
       ref={ref}
       className={classNames('SelectOption', className, {
         'SelectOption--active': active,
@@ -50,8 +53,8 @@ export const SelectOption: React.FC<SelectOptionProps> = ({
       })}
       onClick={handleClick}
       data-test-id={dataTestId ? `${dataTestId}--${label.replace(' ', '-')}` : undefined}
-      aria-label={label}
       aria-selected={selected}
+      aria-disabled={disabled || undefined}
       role='option'
     >
       {colorSwatch && (

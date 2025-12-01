@@ -128,4 +128,8 @@
     transform: translateY(25%);
     width: om.space(4);
   }
+
+  &__live-region {
+    @include om.visually-hidden;
+  }
 }

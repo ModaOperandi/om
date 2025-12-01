@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type SelectLabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & {
+export type SelectLabelProps = React.HTMLAttributes<HTMLSpanElement> & {
   idRef?: string;
   label?: string;
   hasValue: boolean;
@@ -8,5 +8,10 @@ export type SelectLabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & {
 
 export const SelectLabel: React.FC<SelectLabelProps> = ({ idRef, label, hasValue }) => {
   if (!label) return null;
-  return <label id={`Select__label--${idRef}`}>{`${label}${hasValue ? ': ' : ''}`}</label>;
+  return (
+    <span
+      id={`Select__label--${idRef}`}
+      className='Select__label'
+    >{`${label}${hasValue ? ': ' : ''}`}</span>
+  );
 };

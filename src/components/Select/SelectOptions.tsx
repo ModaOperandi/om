@@ -78,12 +78,17 @@ export const SelectOptions: React.FC<SelectOptionsProps> = ({
       )}
 
       <ul
+        id={`Select__listbox--${idRef}`}
         className='SelectOptions__list'
         tabIndex={-1}
         role='listbox'
         ref={ref}
-        aria-labelledby={`Select__label${idRef ? `--${idRef}` : ''}`}
-        aria-activedescendant={`SelectOption--${activeOption?.value}${idRef ? `-${idRef}` : ''}`}
+        aria-label='Options'
+        aria-activedescendant={
+          activeOption
+            ? `SelectOption--${activeOption.value}${idRef ? `-${idRef}` : ''}`
+            : undefined
+        }
         {...rest}
       >
         {options.map(option => (

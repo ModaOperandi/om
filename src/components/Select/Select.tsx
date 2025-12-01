@@ -75,7 +75,10 @@ export const Select: React.FC<SelectProps> = ({
   smallMobileText = false,
   ...rest
 }) => {
-  const { state, dispatch, Mode, selectRef } = useSelect({ value, defaultValue });
+  const { state, dispatch, Mode, selectRef, buttonRef } = useSelect({
+    value,
+    defaultValue
+  });
 
   const handleSelect = useCallback(
     (option: SelectableOption) => {
@@ -134,10 +137,11 @@ export const Select: React.FC<SelectProps> = ({
         {...rest}
       >
         {!allowAutoFill && name && (
-          <input id={idRef} name={name} type='hidden' value={state.value} />
+          <input id={idRef} name={name} type='hidden' value={state.value || ''} />
         )}
 
         <Clickable
+          ref={buttonRef}
           id={idRef && `Select__value--${idRef}`}
           className={classNames('Select__value', {
             [`Select__value--padding-${paddingRight}`]: paddingRight != null,
@@ -148,9 +152,15 @@ export const Select: React.FC<SelectProps> = ({
           data-test-id={dataTestId}
           aria-haspopup='listbox'
           aria-expanded={state.mode === Mode.Open}
-          aria-labelledby={`Select__label--${idRef} Select__value--${idRef}`}
+          aria-labelledby={
+            label
+              ? `Select__label--${idRef}${(focused ?? selected)?.label ? ` Select__valueText--${idRef}` : ''}`
+              : undefined
+          }
+          aria-label={!label ? placeholder || 'Select an option' : undefined}
+          aria-invalid={error ? true : undefined}
+          aria-controls={state.mode === Mode.Open ? `Select__listbox--${idRef}` : undefined}
           type='button'
-          title='Select'
         >
           <SelectLabel
             idRef={idRef}
@@ -165,12 +175,16 @@ export const Select: React.FC<SelectProps> = ({
             />
           )}
 
-          {(focused ?? selected)?.label}
+          <span id={`Select__valueText--${idRef}`}>{(focused ?? selected)?.label}</span>
 
           <span
             className={classNames('Select__icon', { 'Select__icon--shifted': shiftIconLeftwards })}
           >
-            {state.mode === Mode.Open ? <ChevronUpIcon /> : <ChevronDownIcon />}
+            {state.mode === Mode.Open ? (
+              <ChevronUpIcon aria-hidden='true' />
+            ) : (
+              <ChevronDownIcon aria-hidden='true' />
+            )}
           </span>
         </Clickable>
 
@@ -192,6 +206,12 @@ export const Select: React.FC<SelectProps> = ({
           />
         )}
       </div>
+
+      {typeof error === 'string' && (
+        <div role='status' aria-live='polite' aria-atomic='true' className='Select__live-region'>
+          {error}
+        </div>
+      )}
 
       {allowAutoFill && (
         <input
