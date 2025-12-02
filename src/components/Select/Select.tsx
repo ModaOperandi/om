@@ -5,6 +5,7 @@ import ChevronUpIcon from '@moda/icons/chevron-up-12';
 import { colors } from '@moda/tokens';
 import { Clickable } from '../Clickable';
 import { TextColor } from '../Text';
+import { useFormControlContext } from '../Field/FormControlContext';
 import { SelectOptions } from './SelectOptions';
 import { SelectLabel } from './SelectLabel';
 import { useSelect } from './useSelect';
@@ -75,6 +76,7 @@ export const Select: React.FC<SelectProps> = ({
   smallMobileText = false,
   ...rest
 }) => {
+  const { displaysError: errorDisplayedByParent } = useFormControlContext();
   const { state, dispatch, Mode, selectRef, buttonRef } = useSelect({
     value,
     defaultValue
@@ -207,7 +209,7 @@ export const Select: React.FC<SelectProps> = ({
         )}
       </div>
 
-      {typeof error === 'string' && (
+      {typeof error === 'string' && !errorDisplayedByParent && (
         <div role='status' aria-live='polite' aria-atomic='true' className='Select__live-region'>
           {error}
         </div>
