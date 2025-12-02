@@ -1,3 +1,10 @@
+## [21.6.11](https://github.com/ModaOperandi/om/compare/21.6.10...21.6.11) (2025-12-02)
+
+
+### Bug Fixes
+
+* **Field:** prevent duplicate error messages when Select is a child ([238b8a8](https://github.com/ModaOperandi/om/commit/238b8a89e5af612372ec871b3652417f6221988d))
+
 ## [21.6.10](https://github.com/ModaOperandi/om/compare/21.6.9...21.6.10) (2025-12-01)
 
 
