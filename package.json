@@ -78,7 +78,7 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
-    "@storybook/addon-links": "^9.0.17",
+    "@storybook/addon-links": "^10.1.4",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-webpack5-compiler-babel": "^4.0.0",
     "@storybook/addons": "^7.6.17",
