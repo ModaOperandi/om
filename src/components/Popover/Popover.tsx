@@ -10,6 +10,22 @@ export type PopoverProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'content'>
   zIndex?: number;
   autoPreview?: boolean;
   smoothTransitioning?: boolean;
+  /** Semantic role for the popover content (e.g., 'tooltip', 'dialog', 'menu', 'listbox') */
+  role?: 'tooltip' | 'dialog' | 'menu' | 'listbox';
+  /** Accessible label for the popover content */
+  'aria-label'?: string;
+  /** ID of element that labels the popover */
+  'aria-labelledby'?: string;
+  /** ID for the popover content */
+  popoverId?: string;
+  /** Open popover when trigger receives focus */
+  openOnFocus?: boolean;
+  /** Close popover when Escape is pressed */
+  closeOnEscape?: boolean;
+  /** Callback fired when user attempts to close (e.g., Escape key). */
+  onClose?: () => void;
+  /** Automatically focus the popover content when opened */
+  autoFocus?: boolean;
 };
 
 export const POPOVER_MOUSEOUT_DELAY_MS = 200;
@@ -35,6 +51,14 @@ export const Popover: React.FC<PopoverProps> = ({
   zIndex,
   autoPreview = false,
   smoothTransitioning = false,
+  role,
+  'aria-label': ariaLabel,
+  'aria-labelledby': ariaLabelledby,
+  popoverId,
+  openOnFocus = false,
+  closeOnEscape = true,
+  onClose,
+  autoFocus = false,
   ...rest
 }) => {
   const [mode, setMode] = useState(() => {
@@ -54,6 +78,7 @@ export const Popover: React.FC<PopoverProps> = ({
   });
 
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const handleOpen = useCallback(() => {
     if (smoothTransitioning) setMode(Mode.Opening);
@@ -79,6 +104,36 @@ export const Popover: React.FC<PopoverProps> = ({
 
     timeout.current = setTimeout(handleClose, POPOVER_MOUSEOUT_DELAY_MS);
   }, [handleClose, open]);
+
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      if (closeOnEscape && event.key === 'Escape') {
+        onClose?.();
+        handleClose();
+        event.preventDefault();
+      }
+    },
+    [closeOnEscape, onClose, handleClose]
+  );
+
+  const handleFocus = useCallback(() => {
+    if (openOnFocus && open === undefined) {
+      if (timeout.current) clearTimeout(timeout.current);
+      handleOpen();
+    }
+  }, [openOnFocus, open, handleOpen]);
+
+  const handleBlur = useCallback(
+    (event: React.FocusEvent) => {
+      if (openOnFocus && open === undefined) {
+        // Only close if focus moved outside the popover entirely
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          timeout.current = setTimeout(handleClose, POPOVER_MOUSEOUT_DELAY_MS);
+        }
+      }
+    },
+    [openOnFocus, open, handleClose]
+  );
 
   useEffect(() => {
     if (mode !== Mode.Closing) return;
@@ -125,11 +180,20 @@ export const Popover: React.FC<PopoverProps> = ({
   const isOpen =
     mode === Mode.AutoOpen || mode === Mode.Opening || mode === Mode.Open || mode === Mode.Closing;
 
+  useEffect(() => {
+    if (autoFocus && isOpen && contentRef.current) {
+      contentRef.current.focus();
+    }
+  }, [autoFocus, isOpen]);
+
   return (
     <div
       className={classNames(`Popover Popover--anchor-${anchor}`, className)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onKeyDown={handleKeyDown}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
       {...rest}
     >
       <span className='Popover__trigger'>
@@ -142,10 +206,20 @@ export const Popover: React.FC<PopoverProps> = ({
           >
             <div
               className='Popover__caret'
+              aria-hidden='true'
               style={{ zIndex: zIndex != null ? zIndex + 1 : undefined }}
             />
 
-            <div className='Popover__content' style={{ zIndex }}>
+            <div
+              ref={contentRef}
+              id={popoverId}
+              role={role}
+              aria-label={ariaLabel}
+              aria-labelledby={ariaLabelledby}
+              tabIndex={autoFocus ? -1 : undefined}
+              className='Popover__content'
+              style={{ zIndex }}
+            >
               {content}
             </div>
           </div>
