@@ -1,3 +1,10 @@
+## [21.6.12](https://github.com/ModaOperandi/om/compare/21.6.11...21.6.12) (2025-12-14)
+
+
+### Bug Fixes
+
+* **popover:** add accessibility props to enable accessibility ([3523c9f](https://github.com/ModaOperandi/om/commit/3523c9f1846f704c76a51952e2f52f822a92a6f5))
+
 ## [21.6.11](https://github.com/ModaOperandi/om/compare/21.6.10...21.6.11) (2025-12-02)
 
 
