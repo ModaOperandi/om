@@ -12,6 +12,7 @@ export type SlidingPaneProps = React.HTMLAttributes<HTMLDivElement> & {
   title: string;
   visible: boolean;
   onClose: () => void;
+  autoFocus?: boolean;
 };
 
 export const SlidingPane: React.FC<SlidingPaneProps> = ({
@@ -20,6 +21,7 @@ export const SlidingPane: React.FC<SlidingPaneProps> = ({
   visible,
   children,
   onClose,
+  autoFocus = true,
   ...rest
 }) => {
   return (
@@ -31,7 +33,12 @@ export const SlidingPane: React.FC<SlidingPaneProps> = ({
         onClick={onClose}
       ></div>
 
-      <FocusOn enabled={visible} onClickOutside={onClose} onEscapeKey={onClose}>
+      <FocusOn
+        enabled={visible}
+        autoFocus={autoFocus}
+        onClickOutside={onClose}
+        onEscapeKey={onClose}
+      >
         <div
           className={classNames('SlidingPane', className, {
             'SlidingPane--active': visible
