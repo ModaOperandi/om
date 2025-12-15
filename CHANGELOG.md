@@ -1,3 +1,10 @@
+# [21.7.0](https://github.com/ModaOperandi/om/compare/21.6.12...21.7.0) (2025-12-15)
+
+
+### Features
+
+* **SlidingPane:** add autoFocus prop ([0f32e3b](https://github.com/ModaOperandi/om/commit/0f32e3bab47e13a95f214047db8fb41bcaebcf66))
+
 ## [21.6.12](https://github.com/ModaOperandi/om/compare/21.6.11...21.6.12) (2025-12-14)
 
 
