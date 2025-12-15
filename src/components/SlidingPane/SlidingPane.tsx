@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import classNames from 'classnames';
 import ExitIcon from '@moda/icons/exit-16';
 import { FocusOn } from 'react-focus-on';
@@ -24,6 +24,8 @@ export const SlidingPane: React.FC<SlidingPaneProps> = ({
   autoFocus = true,
   ...rest
 }) => {
+  const titleId = useId();
+
   return (
     <>
       <div
@@ -40,6 +42,9 @@ export const SlidingPane: React.FC<SlidingPaneProps> = ({
         onEscapeKey={onClose}
       >
         <div
+          role='dialog'
+          aria-modal='true'
+          aria-labelledby={titleId}
           className={classNames('SlidingPane', className, {
             'SlidingPane--active': visible
           })}
@@ -51,7 +56,7 @@ export const SlidingPane: React.FC<SlidingPaneProps> = ({
             direction='horizontal'
             className='SlidingPane__top'
           >
-            <Text treatment='h5' family='serif'>
+            <Text id={titleId} treatment='h5' family='serif'>
               {title}
             </Text>
             <Clickable className='SlidingPane__close' aria-label='Close' onClick={onClose}>
