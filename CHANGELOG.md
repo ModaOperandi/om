@@ -1,3 +1,10 @@
+## [21.7.1](https://github.com/ModaOperandi/om/compare/21.7.0...21.7.1) (2025-12-15)
+
+
+### Bug Fixes
+
+* **SlidingPane:** add ARIA attributes for screen reader support ([b87c209](https://github.com/ModaOperandi/om/commit/b87c209ef3d51182d03226e3fdd3830f53fe613a))
+
 # [21.7.0](https://github.com/ModaOperandi/om/compare/21.6.12...21.7.0) (2025-12-15)
 
 
