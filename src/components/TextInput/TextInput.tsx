@@ -39,6 +39,7 @@ export const TextInput = React.forwardRef(
         disabled={disabled}
         placeholder={placeholder}
         aria-label={label || placeholder}
+        aria-invalid={error ? true : undefined}
         ref={ref}
         onChange={event => {
           onChange?.(event.target.value);

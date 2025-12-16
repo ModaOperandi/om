@@ -1,4 +1,4 @@
-import React, { JSX, useMemo } from 'react';
+import React, { JSX, useId, useMemo } from 'react';
 import classNames from 'classnames';
 import WarningIcon from '@moda/icons/warning-16';
 import { TextInput, TextInputProps } from '../TextInput';
@@ -16,7 +16,13 @@ export const Field = React.forwardRef(
     { className, children, error, label, placeholder, ...rest }: FieldProps,
     ref: React.Ref<HTMLInputElement>
   ) => {
+    const id = useId();
+    const errorId = `${id}-error`;
     const fieldContextValue = useMemo(() => ({ displaysError: Boolean(error) }), [error]);
+
+    // Combine any existing aria-describedby with our error ID
+    const ariaDescribedBy =
+      [rest['aria-describedby'], error ? errorId : null].filter(Boolean).join(' ') || undefined;
 
     return (
       <FormControlContext.Provider value={fieldContextValue}>
@@ -33,6 +39,7 @@ export const Field = React.forwardRef(
                   placeholder,
                   label,
                   shiftIconLeftwards: error && children.type === Select,
+                  'aria-describedby': ariaDescribedBy,
                   ...rest,
                   ...children.props
                 })}
@@ -50,6 +57,7 @@ export const Field = React.forwardRef(
                   placeholder={placeholder}
                   label={label}
                   error={error}
+                  aria-describedby={ariaDescribedBy}
                   {...rest}
                 />
                 {error && (
@@ -61,7 +69,11 @@ export const Field = React.forwardRef(
             )}
           </span>
 
-          {error && <span className='Field__error'>{error}</span>}
+          {error && (
+            <span id={errorId} className='Field__error' role='alert'>
+              {error}
+            </span>
+          )}
         </label>
       </FormControlContext.Provider>
     );
