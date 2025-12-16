@@ -1,3 +1,10 @@
+## [21.7.2](https://github.com/ModaOperandi/om/compare/21.7.1...21.7.2) (2025-12-16)
+
+
+### Bug Fixes
+
+* **Field:** add ARIA attributes for form error accessibility ([66e9543](https://github.com/ModaOperandi/om/commit/66e9543091b242394908da19926c0d2dae16e54f))
+
 ## [21.7.1](https://github.com/ModaOperandi/om/compare/21.7.0...21.7.1) (2025-12-15)
 
 
