@@ -1,3 +1,10 @@
+# [21.8.0](https://github.com/ModaOperandi/om/compare/21.7.2...21.8.0) (2026-02-03)
+
+
+### Features
+
+* **tabs:** adds ability to add classname(s) to depth:1 component, TabList ([#6933](https://github.com/ModaOperandi/om/issues/6933)) ([0fa8880](https://github.com/ModaOperandi/om/commit/0fa88806175696b6337f84c86dd57c3cb0979f47))
+
 ## [21.7.2](https://github.com/ModaOperandi/om/compare/21.7.1...21.7.2) (2025-12-16)
 
 
