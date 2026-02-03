@@ -10,6 +10,7 @@ export type TabsProps = React.HTMLAttributes<HTMLDivElement> & {
   onTabClicked?: (tabName: string) => void;
   defaultActiveTab?: string;
   activeTab?: string;
+  tabListClassName?: string;
 };
 
 export const Tabs: React.FC<TabsProps> = ({
@@ -18,6 +19,7 @@ export const Tabs: React.FC<TabsProps> = ({
   defaultActiveTab,
   activeTab,
   className,
+  tabListClassName,
   ...rest
 }) => {
   const [activePanel, setActivePanel] = useState(activeTab || defaultActiveTab || tabs[0].name);
@@ -33,7 +35,12 @@ export const Tabs: React.FC<TabsProps> = ({
 
   return (
     <div className={classNames('Tabs', className)} {...rest}>
-      <TabList tabs={tabs} onTabSelected={handleTabClick} activePanel={activePanel} />
+      <TabList
+        tabs={tabs}
+        onTabSelected={handleTabClick}
+        activePanel={activePanel}
+        className={tabListClassName}
+      />
       <TabPanels panels={tabs} activePanel={activePanel} />
     </div>
   );
