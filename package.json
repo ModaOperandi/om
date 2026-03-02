@@ -73,7 +73,7 @@
     "@babel/preset-typescript": "^7.28.5",
     "@commitlint/cli": "^20.3.0",
     "@commitlint/config-conventional": "^20.3.0",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.1",
     "@moda/rollup-plugin-postcss": "^4.0.1",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-commonjs": "^29.0.0",
