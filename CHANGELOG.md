@@ -1,3 +1,10 @@
+# [21.11.0](https://github.com/ModaOperandi/om/compare/21.10.0...21.11.0) (2026-04-20)
+
+
+### Features
+
+* **Field:** showErrorIcon ([7f0f77b](https://github.com/ModaOperandi/om/commit/7f0f77bdbc86c9ab6e755fd20d030478561daeed))
+
 # [21.10.0](https://github.com/ModaOperandi/om/compare/21.9.0...21.10.0) (2026-04-20)
 
 
