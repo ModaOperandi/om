@@ -9,11 +9,12 @@ import './Field.scss';
 
 export type FieldProps = TextInputProps & {
   children?: JSX.Element;
+  showErrorIcon?: boolean;
 };
 
 export const Field = React.forwardRef(
   (
-    { className, children, error, label, placeholder, ...rest }: FieldProps,
+    { className, children, error, label, placeholder, showErrorIcon = true, ...rest }: FieldProps,
     ref: React.Ref<HTMLInputElement>
   ) => {
     const id = useId();
@@ -44,7 +45,7 @@ export const Field = React.forwardRef(
                   ...children.props
                 })}
 
-                {error && (
+                {error && showErrorIcon && (
                   <span className='Field__icon'>
                     <WarningIcon />
                   </span>
