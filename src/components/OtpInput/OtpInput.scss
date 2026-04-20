@@ -1,0 +1,24 @@
+@use '~@moda/om';
+
+.OtpInput {
+  display: flex;
+  gap: om.space(5);
+
+  &__input {
+    @include om.input-styles();
+    @include om.text(h4);
+
+    @include om.breakpoint(sm, $prop: max-width) {
+      @include om.text(h4);
+    }
+
+    width: om.space(6);
+    min-width: 0;
+    padding: om.space(2);
+    text-align: center;
+
+    &::placeholder {
+      text-align: center;
+    }
+  }
+}

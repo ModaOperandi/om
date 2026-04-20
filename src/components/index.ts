@@ -27,6 +27,7 @@ export * from './Modal';
 export * from './ModalOverlay';
 export * from './Overlay';
 export * from './Paginator';
+export * from './OtpInput';
 export * from './PasswordInput';
 export * from './Popover';
 export * from './PromoBanner';
