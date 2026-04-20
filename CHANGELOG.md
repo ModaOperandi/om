@@ -1,3 +1,10 @@
+# [21.10.0](https://github.com/ModaOperandi/om/compare/21.9.0...21.10.0) (2026-04-20)
+
+
+### Features
+
+* OtpInput improvements ([f706521](https://github.com/ModaOperandi/om/commit/f706521ce77c49cceff8b0e66dc12253d266fd11))
+
 # [21.9.0](https://github.com/ModaOperandi/om/compare/21.8.0...21.9.0) (2026-04-20)
 
 
