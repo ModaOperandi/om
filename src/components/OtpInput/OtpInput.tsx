@@ -56,39 +56,43 @@ export const OtpInput: React.FC<OtpInputProps> = ({
   renderSeparator,
   required,
   shouldAutoFocus,
-  value = ''
+  value = '',
+  ...rest
 }) => {
   return (
-    <ReactOtpInput
-      containerStyle={classNames('OtpInput', className)}
-      inputType={inputType}
-      numInputs={numInputs}
-      onChange={onChange}
-      onPaste={onPaste}
-      placeholder={placeholder}
-      renderSeparator={renderSeparator}
-      shouldAutoFocus={shouldAutoFocus}
-      skipDefaultStyles
-      value={value}
-      renderInput={(inputProps: ReactOtpInputInputProps, index: number) => (
-        <input
-          {...inputProps}
-          id={id ? `${id}-${index + 1}` : undefined}
-          autoComplete={autoComplete}
-          aria-describedby={ariaDescribedBy}
-          aria-invalid={error ? true : undefined}
-          aria-label={getInputAriaLabel(index, numInputs, ariaLabel, label)}
-          className={classNames(inputProps.className, 'OtpInput__input', inputClassName, {
-            'OtpInput__input--disabled': disabled,
-            'OtpInput__input--error': error,
-            'OtpInput__input--focus': focus
-          })}
-          disabled={disabled}
-          name={name}
-          required={required}
-        />
-      )}
-    />
+    <>
+      <input type='hidden' name={name} value={value} />
+      <ReactOtpInput
+        {...rest}
+        containerStyle={classNames('OtpInput', className)}
+        inputType={inputType}
+        numInputs={numInputs}
+        onChange={onChange}
+        onPaste={onPaste}
+        placeholder={placeholder}
+        renderSeparator={renderSeparator}
+        shouldAutoFocus={shouldAutoFocus}
+        skipDefaultStyles
+        value={value}
+        renderInput={(inputProps: ReactOtpInputInputProps, index: number) => (
+          <input
+            {...inputProps}
+            id={id ? `${id}-${index + 1}` : undefined}
+            autoComplete={autoComplete}
+            aria-describedby={ariaDescribedBy}
+            aria-invalid={error ? true : undefined}
+            aria-label={getInputAriaLabel(index, numInputs, ariaLabel, label)}
+            className={classNames(inputProps.className, 'OtpInput__input', inputClassName, {
+              'OtpInput__input--disabled': disabled,
+              'OtpInput__input--error': error,
+              'OtpInput__input--focus': focus
+            })}
+            disabled={disabled}
+            required={required}
+          />
+        )}
+      />
+    </>
   );
 };
 
