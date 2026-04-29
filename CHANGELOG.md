@@ -1,3 +1,10 @@
+# [21.12.0](https://github.com/ModaOperandi/om/compare/21.11.0...21.12.0) (2026-04-29)
+
+
+### Features
+
+* **otpinput:** style updates ([a3a25a0](https://github.com/ModaOperandi/om/commit/a3a25a030dc99df8342d1e838f84ccc06f383c28))
+
 # [21.11.0](https://github.com/ModaOperandi/om/compare/21.10.0...21.11.0) (2026-04-20)
 
 
