@@ -2,7 +2,7 @@
 
 .OtpInput {
   display: flex;
-  gap: om.space(5);
+  gap: om.space(4);
 
   &__input {
     @include om.input-styles();
@@ -12,7 +12,7 @@
       @include om.text(h4);
     }
 
-    width: om.space(6);
+    width: 2.375rem;
     min-width: 0;
     padding: om.space(2);
     text-align: center;
