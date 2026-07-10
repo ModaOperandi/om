@@ -1,6 +1,18 @@
 # [21.13.0](https://github.com/ModaOperandi/om/compare/21.12.0...21.13.0) (2026-07-10)
 
 
+### Bug Fixes
+
+* new release ([3394b7e](https://github.com/ModaOperandi/om/commit/3394b7e45c1bc7981bc2b79096fb36ab8f806dc2))
+
+
+### Features
+
+* **Paginator:** make scrollToTopOnPageChange optional ([#7212](https://github.com/ModaOperandi/om/issues/7212)) ([e25c807](https://github.com/ModaOperandi/om/commit/e25c80739bfb79cb4558484bf334ad1548385631))
+
+# [21.13.0](https://github.com/ModaOperandi/om/compare/21.12.0...21.13.0) (2026-07-10)
+
+
 ### Features
 
 * **Paginator:** make scrollToTopOnPageChange optional ([#7212](https://github.com/ModaOperandi/om/issues/7212)) ([e25c807](https://github.com/ModaOperandi/om/commit/e25c80739bfb79cb4558484bf334ad1548385631))
