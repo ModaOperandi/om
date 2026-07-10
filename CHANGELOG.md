@@ -1,3 +1,10 @@
+# [21.13.0](https://github.com/ModaOperandi/om/compare/21.12.0...21.13.0) (2026-07-10)
+
+
+### Features
+
+* **Paginator:** make scrollToTopOnPageChange optional ([#7212](https://github.com/ModaOperandi/om/issues/7212)) ([e25c807](https://github.com/ModaOperandi/om/commit/e25c80739bfb79cb4558484bf334ad1548385631))
+
 # [21.12.0](https://github.com/ModaOperandi/om/compare/21.11.0...21.12.0) (2026-04-29)
 
 
