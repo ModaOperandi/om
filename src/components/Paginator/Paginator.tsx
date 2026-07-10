@@ -10,6 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   selectedPage: number;
   totalPages: number;
   maximumPagesToShow?: number;
+  scrollToTopOnPageChange?: boolean;
   onGoToPage: (page: number) => void;
 }
 
@@ -57,6 +58,7 @@ export const Paginator: React.FC<Props> = ({
   selectedPage,
   totalPages,
   maximumPagesToShow = defaultMaximumNumberOfPagesToShow,
+  scrollToTopOnPageChange = true,
   onGoToPage,
   className
 }: Props) => {
@@ -71,7 +73,7 @@ export const Paginator: React.FC<Props> = ({
         disabled={!canDoPrev(selectedPage)}
         onClick={() => {
           prevPage(selectedPage);
-          window.scrollTo(0, 0);
+          if (scrollToTopOnPageChange) window.scrollTo(0, 0);
         }}
         className={classNames('Paginator__button', 'Paginator__button--previous')}
       >
@@ -83,7 +85,7 @@ export const Paginator: React.FC<Props> = ({
           <button
             onClick={() => {
               onGoToPage(page);
-              window.scrollTo(0, 0);
+              if (scrollToTopOnPageChange) window.scrollTo(0, 0);
             }}
             className={classNames('Paginator__button', {
               'Paginator__button--currentPage': page === selectedPage
@@ -104,7 +106,7 @@ export const Paginator: React.FC<Props> = ({
         disabled={!canDoNext(selectedPage, totalPages)}
         onClick={() => {
           nextPage(selectedPage);
-          window.scrollTo(0, 0);
+          if (scrollToTopOnPageChange) window.scrollTo(0, 0);
         }}
         className={classNames('Paginator__button', 'Paginator__button--next')}
       >
