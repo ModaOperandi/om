@@ -68,7 +68,7 @@
     "use-cursor": "^1.2.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.5",
+    "@babel/core": "^8.0.1",
     "@babel/preset-env": "^7.28.5",
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
