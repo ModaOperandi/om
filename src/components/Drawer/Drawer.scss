@@ -1,0 +1,19 @@
+@use '~@moda/om';
+
+.Drawer {
+  --drawer-width: 15rem;
+
+  flex: 0 0 auto;
+  width: 0;
+  overflow: hidden;
+  transition: width 250ms ease;
+
+  &--open {
+    width: var(--drawer-width);
+  }
+
+  &__content {
+    width: var(--drawer-width);
+    height: 100%;
+  }
+}

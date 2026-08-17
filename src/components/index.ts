@@ -13,6 +13,7 @@ export * from './CreditCardNumberInput';
 export * from './DefinitionList';
 export * from './Dialog';
 export * from './Divider';
+export * from './Drawer';
 export * from './Expandable';
 export * from './Field';
 export * from './Label';
