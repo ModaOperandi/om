@@ -6,6 +6,10 @@
   margin: 0 auto;
   max-width: map.get(om.$breakpoints, xl);
 
+  &--wide {
+    width: 95%;
+  }
+
   @include om.breakpoint(md, $prop: max-width) {
     width: 100%;
     padding: om.spacing(0, 6);
