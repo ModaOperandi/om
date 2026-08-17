@@ -1,5 +1,5 @@
 const path = require('path');
-const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-webpack-plugin');
+const IgnoreNotFoundExportWarningsPlugin = require('./ignoreNotFoundExportWarningsPlugin');
 
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -28,7 +28,7 @@ module.exports = {
         }
       ]
     },
-    plugins: [...config.plugins, new IgnoreNotFoundExportPlugin()]
+    plugins: [...config.plugins, new IgnoreNotFoundExportWarningsPlugin()]
   }),
   framework: {
     name: '@storybook/react-webpack5',

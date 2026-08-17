@@ -1,0 +1,22 @@
+@use '~@moda/om';
+
+.Drawer {
+  --drawer-width: 15rem;
+
+  flex: 0 0 auto;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: width 250ms ease, visibility 0s 250ms;
+
+  &--open {
+    width: var(--drawer-width);
+    visibility: visible;
+    transition: width 250ms ease, visibility 0s;
+  }
+
+  &__content {
+    width: var(--drawer-width);
+    height: 100%;
+  }
+}
