@@ -10,12 +10,18 @@ describe('Drawer', () => {
   });
 
   it('toggles the open class based on the open prop', () => {
-    const { rerender } = render(<Drawer open={false}>Hello</Drawer>);
-    // eslint-disable-next-line testing-library/no-node-access
-    expect(screen.getByText('Hello').parentNode).not.toHaveClass('Drawer--open');
+    const { rerender } = render(
+      <Drawer open={false} data-testid='drawer'>
+        Hello
+      </Drawer>
+    );
+    expect(screen.getByTestId('drawer')).not.toHaveClass('Drawer--open');
 
-    rerender(<Drawer open>Hello</Drawer>);
-    // eslint-disable-next-line testing-library/no-node-access
-    expect(screen.getByText('Hello').parentNode).toHaveClass('Drawer--open');
+    rerender(
+      <Drawer open data-testid='drawer'>
+        Hello
+      </Drawer>
+    );
+    expect(screen.getByTestId('drawer')).toHaveClass('Drawer--open');
   });
 });
