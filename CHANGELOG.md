@@ -1,3 +1,10 @@
+# [21.14.0](https://github.com/ModaOperandi/om/compare/21.13.0...21.14.0) (2026-08-17)
+
+
+### Features
+
+* **ECX-579:** add Drawer component and wide Constrain variant ([#7220](https://github.com/ModaOperandi/om/issues/7220)) ([7fae603](https://github.com/ModaOperandi/om/commit/7fae603a4c3aa5c8a229a6a191e8051f85f7ac7f))
+
 # [21.13.0](https://github.com/ModaOperandi/om/compare/21.12.0...21.13.0) (2026-07-10)
 
 
