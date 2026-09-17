@@ -1,3 +1,10 @@
+## [22.0.1](https://github.com/ModaOperandi/om/compare/22.0.0...22.0.1) (2026-09-17)
+
+
+### Bug Fixes
+
+* **deps:** preserve type-only import elision under babel 8 ([#7239](https://github.com/ModaOperandi/om/issues/7239)) ([88c63ec](https://github.com/ModaOperandi/om/commit/88c63ecaee2f26e98303d462da714bbebf4dd36a)), closes [ModaOperandi/tsconfigs#271](https://github.com/ModaOperandi/tsconfigs/issues/271)
+
 # [22.0.0](https://github.com/ModaOperandi/om/compare/21.14.0...22.0.0) (2026-09-17)
 
 
