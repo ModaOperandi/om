@@ -68,10 +68,10 @@
     "use-cursor": "^1.2.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.5",
-    "@babel/preset-env": "^7.28.5",
-    "@babel/preset-react": "^7.28.5",
-    "@babel/preset-typescript": "^7.28.5",
+    "@babel/core": "^8.0.5",
+    "@babel/preset-env": "^8.0.5",
+    "@babel/preset-react": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
     "@eslint/js": "^9.39.2",
@@ -152,7 +152,13 @@
   "overrides": {
     "@types/react": "^19.2.7",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "@rollup/plugin-babel": {
+      "@babel/core": "$@babel/core"
+    },
+    "ts-jest": {
+      "@babel/core": "$@babel/core"
+    }
   },
   "config": {
     "commitizen": {
