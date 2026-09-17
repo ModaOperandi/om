@@ -1,3 +1,15 @@
+# [22.0.0](https://github.com/ModaOperandi/om/compare/21.14.0...22.0.0) (2026-09-17)
+
+
+* feat(deps)!: upgrade babel to v8 ([#7238](https://github.com/ModaOperandi/om/issues/7238)) ([25c808e](https://github.com/ModaOperandi/om/commit/25c808e390d92fe5f45d1c3cc18a76a729c6cf42)), closes [rollup/plugins#2010](https://github.com/rollup/plugins/issues/2010) [rollup/plugins#2021](https://github.com/rollup/plugins/issues/2021)
+
+
+### BREAKING CHANGES
+
+* requires @babel/core@^8 throughout the toolchain.
+
+Co-authored-by: Claude Sonnet 5 <noreply@anthropic.com>
+
 # [21.14.0](https://github.com/ModaOperandi/om/compare/21.13.0...21.14.0) (2026-08-17)
 
 
