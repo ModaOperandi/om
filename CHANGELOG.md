@@ -1,3 +1,10 @@
+## [22.0.3](https://github.com/ModaOperandi/om/compare/22.0.2...22.0.3) (2026-09-23)
+
+
+### Bug Fixes
+
+* consolidate Storybook 10.6.0 bump and unblock TS build ([7b760f4](https://github.com/ModaOperandi/om/commit/7b760f401b495fb115666c24c00cda27f6322ade))
+
 ## [22.0.2](https://github.com/ModaOperandi/om/compare/22.0.1...22.0.2) (2026-09-23)
 
 
