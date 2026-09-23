@@ -1,3 +1,10 @@
+## [22.0.2](https://github.com/ModaOperandi/om/compare/22.0.1...22.0.2) (2026-09-23)
+
+
+### Bug Fixes
+
+* align typescript-eslint meta package with eslint-plugin/parser version ([e83f38d](https://github.com/ModaOperandi/om/commit/e83f38dccf7e9eca1b7566515c590a59a0587d29))
+
 ## [22.0.1](https://github.com/ModaOperandi/om/compare/22.0.0...22.0.1) (2026-09-17)
 
 
