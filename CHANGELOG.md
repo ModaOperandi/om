@@ -1,3 +1,10 @@
+## [22.0.4](https://github.com/ModaOperandi/om/compare/22.0.3...22.0.4) (2026-09-24)
+
+
+### Bug Fixes
+
+* polyfill TextEncoder/TextDecoder for react-router-dom v7 in jest ([65360d6](https://github.com/ModaOperandi/om/commit/65360d6e932c6dce7e44cecc6356a0e7e13e3a31))
+
 ## [22.0.3](https://github.com/ModaOperandi/om/compare/22.0.2...22.0.3) (2026-09-23)
 
 
