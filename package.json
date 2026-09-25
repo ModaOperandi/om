@@ -93,7 +93,7 @@
     "@types/classnames": "^2.3.4",
     "@types/credit-card-type": "^9.0.3",
     "@types/jest": "^30.0.0",
-    "@types/ramda": "^0.31.1",
+    "@types/ramda": "^0.32.0",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@types/react-input-mask": "^3.0.6",
