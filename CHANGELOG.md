@@ -1,3 +1,10 @@
+## [22.0.6](https://github.com/ModaOperandi/om/compare/22.0.5...22.0.6) (2026-10-06)
+
+
+### Bug Fixes
+
+* **build:** adopt native TypeScript 7 with compatible tooling ([22c5706](https://github.com/ModaOperandi/om/commit/22c57067ac0a0ca9ef18156de99c89a42f80329f))
+
 ## [22.0.5](https://github.com/ModaOperandi/om/compare/22.0.4...22.0.5) (2026-10-05)
 
 
