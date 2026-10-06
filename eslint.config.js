@@ -3,7 +3,6 @@ const path = require('path');
 const { fixupConfigRules } = require('@eslint/compat');
 const react = require('eslint-plugin-react');
 const noLoops = require('eslint-plugin-no-loops');
-const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 const importPlugin = require('eslint-plugin-import');
 const reactHooks = require('eslint-plugin-react-hooks');
 const jestDom = require('eslint-plugin-jest-dom');
@@ -55,7 +54,6 @@ module.exports = fixupConfigRules([
     plugins: {
       react,
       'no-loops': noLoops,
-      '@typescript-eslint': typescriptEslint,
       import: importPlugin,
       'react-hooks': reactHooks,
       'testing-library': testingLibrary

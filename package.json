@@ -38,8 +38,8 @@
     "semantic-release": "semantic-release",
     "storybook": "storybook dev -p 6006",
     "test": "jest -w 1",
-    "tsc": "tsc",
-    "types": "tsc -p tsconfig.json --emitDeclarationOnly",
+    "tsc": "node ./node_modules/@typescript/native/bin/tsc",
+    "types": "node ./node_modules/@typescript/native/bin/tsc -p tsconfig.json --emitDeclarationOnly",
     "unlink-all": "yalc remove --all && npm install"
   },
   "peerDependencies": {
@@ -143,12 +143,13 @@
     "semantic-release-npm-github": "^6.0.0",
     "style-loader": "^4.0.0",
     "ts-jest": "^29.4.6",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.70.0",
     "waait": "^1.0.5",
     "webpack": "^5.104.1",
     "webpack-cli": "^7.0.0",
-    "@eslint/compat": "^2.1.1"
+    "@eslint/compat": "^2.1.1",
+    "@typescript/native": "npm:typescript@^7.0.2"
   },
   "overrides": {
     "@types/react": "^19.2.7",
