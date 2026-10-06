@@ -1,3 +1,10 @@
+## [22.0.5](https://github.com/ModaOperandi/om/compare/22.0.4...22.0.5) (2026-10-05)
+
+
+### Bug Fixes
+
+* preserve legacy lint rules with ESLint 10 ([f5159b9](https://github.com/ModaOperandi/om/commit/f5159b99f3a3e01e5ae805c1ecf892f3149d88e5))
+
 ## [22.0.4](https://github.com/ModaOperandi/om/compare/22.0.3...22.0.4) (2026-09-24)
 
 

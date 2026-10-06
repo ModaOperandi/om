@@ -1,7 +1,8 @@
-const react = require('eslint-plugin-react');
+/* eslint-disable @typescript-eslint/no-require-imports -- ESLint loads this configuration as CommonJS. */
 const path = require('path');
+const { fixupConfigRules } = require('@eslint/compat');
+const react = require('eslint-plugin-react');
 const noLoops = require('eslint-plugin-no-loops');
-const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 const importPlugin = require('eslint-plugin-import');
 const reactHooks = require('eslint-plugin-react-hooks');
 const jestDom = require('eslint-plugin-jest-dom');
@@ -12,7 +13,7 @@ const tseslint = require('typescript-eslint');
 const globals = require('globals');
 const js = require('@eslint/js');
 
-module.exports = [
+module.exports = fixupConfigRules([
   js.configs.recommended,
   react.configs.flat.recommended,
   ...tseslint.configs.recommended,
@@ -53,7 +54,6 @@ module.exports = [
     plugins: {
       react,
       'no-loops': noLoops,
-      '@typescript-eslint': typescriptEslint,
       import: importPlugin,
       'react-hooks': reactHooks,
       'testing-library': testingLibrary
@@ -166,4 +166,4 @@ module.exports = [
       'id-length': ['error', { properties: 'never', exceptions: ['_'] }]
     }
   }
-];
+]);
